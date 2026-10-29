@@ -141,6 +141,7 @@ const generalSettingColumnTypes = <String, DriftSqlType>{
   'historySuggestionsEnabled': DriftSqlType.bool,
   'privateSearchSuggestionsEnabled': DriftSqlType.bool,
   'pureBlack': DriftSqlType.bool,
+  'hideStatusBar': DriftSqlType.bool,
   'showSearchCloseButton': DriftSqlType.bool,
   'homeTarget': DriftSqlType.string,
   'homeTargetUrl': DriftSqlType.string,

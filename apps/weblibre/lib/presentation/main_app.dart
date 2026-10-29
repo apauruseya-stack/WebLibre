@@ -27,7 +27,7 @@ import 'package:weblibre/domain/services/app_initialization.dart';
 import 'package:weblibre/features/geckoview/domain/providers.dart';
 import 'package:weblibre/features/sync/domain/entities/sync_repository_state.dart';
 import 'package:weblibre/features/sync/domain/repositories/sync.dart';
-import 'package:weblibre/features/web_search/domain/controllers/sandbox_capture_controller.dart';
+import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/l10n/generated/app_localizations.dart';
 import 'package:weblibre/presentation/utils/app_initialization_l10n.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
@@ -84,11 +84,13 @@ class MainApp extends HookConsumerWidget {
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
             builder: (context, child) {
-              return _AppMediaQueryOverrides(
-                uiScaleFactor: uiScaleFactor,
-                disableAnimations: disableAnimations,
-                child: NavigationBarStyle(
-                  child: child ?? const SizedBox.shrink(),
+              return _StatusBarInsetsOverride(
+                child: _AppMediaQueryOverrides(
+                  uiScaleFactor: uiScaleFactor,
+                  disableAnimations: disableAnimations,
+                  child: NavigationBarStyle(
+                    child: child ?? const SizedBox.shrink(),
+                  ),
                 ),
               );
             },
@@ -130,13 +132,13 @@ class MainApp extends HookConsumerWidget {
           supportedLocales: AppLocalizations.supportedLocales,
           routerConfig: router.value,
           builder: (context, child) {
-            return _AppMediaQueryOverrides(
-              uiScaleFactor: uiScaleFactor,
-              disableAnimations: disableAnimations,
-              child: NavigationBarStyle(
-                child: MultiFingerTapGuard(
-                  child: _SyncEventListener(
-                    child: _SandboxCaptureErrorListener(
+            return _StatusBarInsetsOverride(
+              child: _AppMediaQueryOverrides(
+                uiScaleFactor: uiScaleFactor,
+                disableAnimations: disableAnimations,
+                child: NavigationBarStyle(
+                  child: MultiFingerTapGuard(
+                    child: _SyncEventListener(
                       child: _DownloadStoppedListener(
                         child: _StrictContainerBlockListener(
                           child: child ?? const SizedBox.shrink(),
@@ -164,11 +166,13 @@ class MainApp extends HookConsumerWidget {
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           builder: (context, child) {
-            return _AppMediaQueryOverrides(
-              uiScaleFactor: uiScaleFactor,
-              disableAnimations: disableAnimations,
-              child: NavigationBarStyle(
-                child: child ?? const SizedBox.shrink(),
+            return _StatusBarInsetsOverride(
+              child: _AppMediaQueryOverrides(
+                uiScaleFactor: uiScaleFactor,
+                disableAnimations: disableAnimations,
+                child: NavigationBarStyle(
+                  child: child ?? const SizedBox.shrink(),
+                ),
               ),
             );
           },
@@ -330,6 +334,36 @@ class _LocaleChangeObserver extends WidgetsBindingObserver {
   void didChangeLocales(List<Locale>? locales) => onChanged();
 }
 
+/// Removes the top system-bar inset from [MediaQuery] while the status bar is
+/// hidden, so fullscreen content really reaches the top edge of the screen
+/// instead of leaving an empty strip where the status bar used to be.
+class _StatusBarInsetsOverride extends ConsumerWidget {
+  final Widget child;
+
+  const _StatusBarInsetsOverride({required this.child});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hideStatusBar = ref.watch(
+      generalSettingsWithDefaultsProvider.select((s) => s.hideStatusBar),
+    );
+
+    if (!hideStatusBar) {
+      return child;
+    }
+
+    final mediaQuery = MediaQuery.of(context);
+
+    return MediaQuery(
+      data: mediaQuery.copyWith(
+        padding: mediaQuery.padding.copyWith(top: 0),
+        viewPadding: mediaQuery.viewPadding.copyWith(top: 0),
+      ),
+      child: child,
+    );
+  }
+}
+
 class _AppMediaQueryOverrides extends StatelessWidget {
   final double uiScaleFactor;
   final bool disableAnimations;
@@ -387,43 +421,6 @@ class _AppTextScaler extends TextScaler {
 
   @override
   int get hashCode => Object.hash(baseTextScaler, uiScaleFactor);
-}
-
-class _SandboxCaptureErrorListener extends ConsumerWidget {
-  final Widget child;
-
-  const _SandboxCaptureErrorListener({required this.child});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.listen(sandboxCaptureErrorsProvider, (previous, next) {
-      final error = next.value;
-      if (error == null) return;
-      final l10n = AppLocalizations.of(context);
-      final message = switch (error.kind) {
-        SandboxCaptureErrorKind.insufficientCredits =>
-          error.detail ?? l10n.mainApp_sandboxNoCredits,
-        SandboxCaptureErrorKind.tokenIssuanceFailed =>
-          error.detail ?? l10n.mainApp_sandboxTokenIssuanceFailed,
-        SandboxCaptureErrorKind.fetchPolicyRejected =>
-          l10n.mainApp_sandboxFetchPolicyRejected(
-            error.detail ?? l10n.mainApp_sandboxDetailNotAllowed,
-          ),
-        SandboxCaptureErrorKind.captureFailed =>
-          l10n.mainApp_sandboxCaptureFailed(
-            error.detail ?? l10n.mainApp_sandboxDetailUnknownError,
-          ),
-        SandboxCaptureErrorKind.downloadFailed =>
-          l10n.mainApp_sandboxDownloadFailed,
-        SandboxCaptureErrorKind.unknown => l10n.mainApp_sandboxUnknownError(
-          error.detail ?? l10n.mainApp_sandboxDetailUnknownError,
-        ),
-      };
-      ui_helper.showErrorMessage(context, message);
-    });
-
-    return child;
-  }
 }
 
 class _SyncEventListener extends ConsumerWidget {

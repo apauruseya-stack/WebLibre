@@ -81,6 +81,12 @@ List<SettingsSectionDefinition> generalSettingsSections(BuildContext context) {
           child: const _PureBlackTile(),
         ),
         SettingsEntryDefinition(
+          title: 'Hide status bar',
+          subtitle: 'Hide the system status bar for a fullscreen experience',
+          keywords: const ['status', 'bar', 'fullscreen', 'hide'],
+          child: const _HideStatusBarTile(),
+        ),
+        SettingsEntryDefinition(
           title: l10n.settings_uiZoomTitle,
           subtitle: l10n.settings_uiZoomSubtitle,
           keywords: settingsKeywords(l10n.settings_uiZoomKeywords),
@@ -479,6 +485,35 @@ class _PureBlackTile extends HookConsumerWidget {
                   );
             }
           : null,
+    );
+  }
+}
+
+class _HideStatusBarTile extends HookConsumerWidget {
+  const _HideStatusBarTile();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hideStatusBar = ref.watch(
+      generalSettingsWithDefaultsProvider.select((s) => s.hideStatusBar),
+    );
+    final l10n = AppLocalizations.of(context);
+
+    return SwitchListTile.adaptive(
+      title: const Text('Hide status bar'),
+      subtitle: const Text(
+        'Hide the system status bar for a fullscreen experience',
+      ),
+      secondary: const Icon(Icons.fullscreen),
+      value: hideStatusBar,
+      onChanged: (value) async {
+        await ref
+            .read(saveGeneralSettingsControllerProvider.notifier)
+            .save(
+              (currentSettings) =>
+                  currentSettings.copyWith.hideStatusBar(value),
+            );
+      },
     );
   }
 }

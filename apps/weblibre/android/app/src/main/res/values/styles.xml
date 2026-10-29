@@ -13,6 +13,9 @@
         <item name="android:windowLightStatusBar">@bool/light_system_bars</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">@bool/light_system_bars</item>
         <item name="android:enforceNavigationBarContrast" tools:targetApi="29">false</item>
+        <!-- Let the window extend into a display cutout so fullscreen mode has
+             no letterboxed strip at the top. -->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="28">shortEdges</item>
         <!-- Required by Mozilla Components (e.g. the add-on permission dialog's
              message bars, mozac_feature_addons_message_bars.xml) wherever it's
              inflated over this theme; unset it throws UnsupportedOperationException. -->

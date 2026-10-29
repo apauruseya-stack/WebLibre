@@ -241,6 +241,8 @@ abstract class _$GeneralSettingsCWProxy {
 
   GeneralSettings pureBlack(bool pureBlack);
 
+  GeneralSettings hideStatusBar(bool hideStatusBar);
+
   GeneralSettings globalDesktopMode(bool globalDesktopMode);
 
   GeneralSettings desktopModeSites(List<String> desktopModeSites);
@@ -352,6 +354,7 @@ abstract class _$GeneralSettingsCWProxy {
     bool historySuggestionsEnabled,
     bool privateSearchSuggestionsEnabled,
     bool pureBlack,
+    bool hideStatusBar,
     bool globalDesktopMode,
     List<String> desktopModeSites,
     bool unmountGeckoViewOffRoute,
@@ -783,6 +786,10 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
   GeneralSettings pureBlack(bool pureBlack) => call(pureBlack: pureBlack);
 
   @override
+  GeneralSettings hideStatusBar(bool hideStatusBar) =>
+      call(hideStatusBar: hideStatusBar);
+
+  @override
   GeneralSettings globalDesktopMode(bool globalDesktopMode) =>
       call(globalDesktopMode: globalDesktopMode);
 
@@ -903,6 +910,7 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? historySuggestionsEnabled = const $CopyWithPlaceholder(),
     Object? privateSearchSuggestionsEnabled = const $CopyWithPlaceholder(),
     Object? pureBlack = const $CopyWithPlaceholder(),
+    Object? hideStatusBar = const $CopyWithPlaceholder(),
     Object? globalDesktopMode = const $CopyWithPlaceholder(),
     Object? desktopModeSites = const $CopyWithPlaceholder(),
     Object? unmountGeckoViewOffRoute = const $CopyWithPlaceholder(),
@@ -1465,6 +1473,11 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.pureBlack
           // ignore: cast_nullable_to_non_nullable
           : pureBlack as bool,
+      hideStatusBar:
+          hideStatusBar == const $CopyWithPlaceholder() || hideStatusBar == null
+          ? _value.hideStatusBar
+          // ignore: cast_nullable_to_non_nullable
+          : hideStatusBar as bool,
       globalDesktopMode:
           globalDesktopMode == const $CopyWithPlaceholder() ||
               globalDesktopMode == null
@@ -1688,6 +1701,7 @@ GeneralSettings _$GeneralSettingsFromJson(
   privateSearchSuggestionsEnabled:
       json['privateSearchSuggestionsEnabled'] as bool?,
   pureBlack: json['pureBlack'] as bool?,
+  hideStatusBar: json['hideStatusBar'] as bool?,
   globalDesktopMode: json['globalDesktopMode'] as bool?,
   desktopModeSites: (json['desktopModeSites'] as List<dynamic>?)
       ?.map((e) => e as String)
@@ -1817,6 +1831,7 @@ Map<String, dynamic> _$GeneralSettingsToJson(
   'historySuggestionsEnabled': instance.historySuggestionsEnabled,
   'privateSearchSuggestionsEnabled': instance.privateSearchSuggestionsEnabled,
   'pureBlack': instance.pureBlack,
+  'hideStatusBar': instance.hideStatusBar,
   'globalDesktopMode': instance.globalDesktopMode,
   'desktopModeSites': instance.desktopModeSites,
   'unmountGeckoViewOffRoute': instance.unmountGeckoViewOffRoute,

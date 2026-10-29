@@ -54,10 +54,10 @@ import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/core/providers/app_state.dart';
 import 'package:weblibre/core/providers/defaults.dart';
 import 'package:weblibre/core/providers/router.dart';
-import 'package:weblibre/core/rust_lib.dart';
 import 'package:weblibre/core/secure_storage/secure_storage_migration.dart';
 import 'package:weblibre/domain/services/app_initialization.dart';
 import 'package:weblibre/domain/services/display_mode.dart';
+import 'package:weblibre/domain/services/status_bar.dart';
 import 'package:weblibre/features/account/domain/services/account_callback_handler.dart';
 import 'package:weblibre/features/app_widget/domain/services/home_widget.dart';
 import 'package:weblibre/features/bangs/domain/services/search_history_cleanup.dart';
@@ -232,6 +232,8 @@ class _MainWidget extends HookConsumerWidget {
     // Apply the configured display refresh rate from app start and keep it in
     // sync with the setting (Flutter defaults to 60Hz otherwise).
     ref.watch(displayModeApplierProvider);
+    // Apply the configured status bar visibility (hide status bar / fullscreen).
+    ref.watch(statusBarApplierProvider);
     // Watch the proxy log level so changing it restarts a running runtime;
     // sing-box only reads `log.level` from the config it is started with.
     ref.watch(proxyLogLevelApplierProvider);
@@ -865,7 +867,7 @@ void main() async {
 
   // Started, not awaited: nothing before the first frame uses it. See
   // `ensureRustLibInitialized`.
-  unawaited(ensureRustLibInitialized());
+  // unawaited(ensureRustLibInitialized());
 
   if (kDebugMode) {
     final serviceProtocolInfo = await Service.getInfo();

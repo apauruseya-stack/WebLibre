@@ -658,6 +658,10 @@ class GeneralSettings with FastEquatable {
   /// Only takes effect when the effective brightness is dark. Defaults to false.
   final bool pureBlack;
 
+  /// Whether the Android status bar is hidden for an immersive, fullscreen
+  /// experience (like Fulguris). Defaults to false.
+  final bool hideStatusBar;
+
   /// Browser-wide default desktop mode. When true, newly opened tabs request
   /// the desktop version of sites by default. The per-tab desktop-mode toggle
   /// still overrides this for an individual tab. Defaults to false.
@@ -780,6 +784,7 @@ class GeneralSettings with FastEquatable {
     required this.historySuggestionsEnabled,
     required this.privateSearchSuggestionsEnabled,
     required this.pureBlack,
+    required this.hideStatusBar,
     required this.globalDesktopMode,
     required this.desktopModeSites,
     required this.unmountGeckoViewOffRoute,
@@ -882,6 +887,7 @@ class GeneralSettings with FastEquatable {
     bool? historySuggestionsEnabled,
     bool? privateSearchSuggestionsEnabled,
     bool? pureBlack,
+    bool? hideStatusBar,
     bool? globalDesktopMode,
     List<String>? desktopModeSites,
     bool? unmountGeckoViewOffRoute,
@@ -1015,6 +1021,7 @@ class GeneralSettings with FastEquatable {
        privateSearchSuggestionsEnabled =
            privateSearchSuggestionsEnabled ?? false,
        pureBlack = pureBlack ?? false,
+       hideStatusBar = hideStatusBar ?? false,
        globalDesktopMode = globalDesktopMode ?? false,
        desktopModeSites = desktopModeSites ?? const [],
        unmountGeckoViewOffRoute = unmountGeckoViewOffRoute ?? false;
@@ -1285,6 +1292,7 @@ class GeneralSettings with FastEquatable {
     historySuggestionsEnabled,
     privateSearchSuggestionsEnabled,
     pureBlack,
+    hideStatusBar,
     globalDesktopMode,
     desktopModeSites,
     unmountGeckoViewOffRoute,
