@@ -23,4 +23,3 @@
 /// is not available, and the proxy/Tor transport that depended on it has been
 /// removed. Search keeps working over the normal direct connection.
 Future<void> ensureRustLibInitialized() async {}
-"""
