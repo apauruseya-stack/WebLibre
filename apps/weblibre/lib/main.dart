@@ -228,7 +228,8 @@ class _MainWidget extends HookConsumerWidget {
     // Keep proxy/Tor log subscriptions active from app start so startup
     // messages reach the ring buffer before the browser view (or logs
     // screen) mounts and would otherwise drop them.
-    ref.watch(singboxProxyLogsProvider);
+    // (Disabled in this build: proxy/Tor transport removed.)
+    // ref.watch(singboxProxyLogsProvider);
     // Apply the configured display refresh rate from app start and keep it in
     // sync with the setting (Flutter defaults to 60Hz otherwise).
     ref.watch(displayModeApplierProvider);
@@ -236,7 +237,8 @@ class _MainWidget extends HookConsumerWidget {
     ref.watch(statusBarApplierProvider);
     // Watch the proxy log level so changing it restarts a running runtime;
     // sing-box only reads `log.level` from the config it is started with.
-    ref.watch(proxyLogLevelApplierProvider);
+    // (Disabled in this build: proxy/Tor transport removed.)
+    // ref.watch(proxyLogLevelApplierProvider);
 
     final rootKey = ref.watch(appStateKeyProvider);
 
@@ -696,14 +698,17 @@ class _MainWidget extends HookConsumerWidget {
         // bootstrap can't stall startup — tabs that need one of them wait on
         // the pending start instead of prompting, and stay blocked until it
         // resolves.
-        unawaited(ref.read(proxyAutostartServiceProvider.notifier).run());
+        // Proxy autostart/demand disabled in this build (proxy/Tor transport removed).
+        // unawaited(ref.read(proxyAutostartServiceProvider.notifier).run());
+        // unawaited(ref.read(proxyDemandServiceProvider.notifier).run());
 
         // The other half of the same answer, and in the same `finally` for the
         // same reason: a Custom Tab or PWA can be waiting right now for a proxy
         // only this isolate can start, and until this has asked, every relation
         // without a live endpoint is published as still coming up. It does not
         // terminate — it keeps answering launches for the life of the isolate.
-        unawaited(ref.read(proxyDemandServiceProvider.notifier).run());
+        // Proxy demand disabled in this build (proxy/Tor transport removed).
+        // unawaited(ref.read(proxyDemandServiceProvider.notifier).run());
 
         // What startup claimed from the broker and never got to deliver goes
         // back: left claimed, it would be kept from every other engine for the
