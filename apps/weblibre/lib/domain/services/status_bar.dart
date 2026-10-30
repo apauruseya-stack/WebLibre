@@ -28,16 +28,17 @@ import 'package:weblibre/features/user/domain/repositories/general_settings.dart
 
 part 'status_bar.g.dart';
 
+/// Applies the configured system-UI mode.
+///
+/// Hiding uses [SystemUiMode.immersiveSticky] rather than
+/// `SystemUiMode.manual` with only the bottom overlay: on Android 11+ with
+/// edge-to-edge enabled, the manual mode is frequently re-shown by the
+/// platform after a resume or a transient dialog. Immersive-sticky reliably
+/// removes the status bar and lets the content draw to the very top edge.
 Future<void> _applyStatusBarMode(bool hide) async {
   try {
     if (hide) {
-      // Hide only the status bar: the navigation bar stays available so the
-      // system gestures keep working. Combined with the MediaQuery override in
-      // MainApp this leaves no empty strip at the top.
-      await SystemChrome.setEnabledSystemUIMode(
-        SystemUiMode.manual,
-        overlays: const [SystemUiOverlay.bottom],
-      );
+      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     } else {
       await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     }
@@ -46,21 +47,29 @@ Future<void> _applyStatusBarMode(bool hide) async {
   }
 }
 
-/// Re-applies the status bar mode when the app comes back to the foreground.
+/// Re-applies the status bar mode when the app comes back to the foreground or
+/// the window metrics change (rotation, multi-window, cutout changes).
 ///
 /// Android restores the system bars after some transient dialogs, permission
 /// prompts and the notification shade; without this the status bar would
 /// silently reappear until the setting is toggled again.
 class _StatusBarLifecycleObserver extends WidgetsBindingObserver {
-  _StatusBarLifecycleObserver(this._isHidden);
+  _StatusBarLifecycleObserver(this._readHidden);
 
-  final bool Function() _isHidden;
+  /// Reads the current setting instead of capturing it, so a toggle made after
+  /// the observer was created is honoured on the next resume.
+  final bool Function() _readHidden;
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      unawaited(_applyStatusBarMode(_isHidden()));
+      unawaited(_applyStatusBarMode(_readHidden()));
     }
+  }
+
+  @override
+  void didChangeMetrics() {
+    unawaited(_applyStatusBarMode(_readHidden()));
   }
 }
 
@@ -68,13 +77,16 @@ class _StatusBarLifecycleObserver extends WidgetsBindingObserver {
 /// according to the [GeneralSettings.hideStatusBar] setting.
 @Riverpod(keepAlive: true)
 void statusBarApplier(Ref ref) {
-  final hide = ref.watch(
+  bool readHidden() =>
+      ref.read(generalSettingsWithDefaultsProvider).hideStatusBar;
+
+  ref.listen(
     generalSettingsWithDefaultsProvider.select((s) => s.hideStatusBar),
+    (_, hide) => unawaited(_applyStatusBarMode(hide)),
+    fireImmediately: true,
   );
 
-  unawaited(_applyStatusBarMode(hide));
-
-  final observer = _StatusBarLifecycleObserver(() => hide);
+  final observer = _StatusBarLifecycleObserver(readHidden);
   WidgetsBinding.instance.addObserver(observer);
   ref.onDispose(() => WidgetsBinding.instance.removeObserver(observer));
 }
