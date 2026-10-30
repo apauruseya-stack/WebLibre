@@ -31,7 +31,6 @@ import 'package:weblibre/features/settings/presentation/screens/extensions_setti
 import 'package:weblibre/features/settings/presentation/screens/general_settings.dart';
 import 'package:weblibre/features/settings/presentation/screens/home_settings.dart';
 import 'package:weblibre/features/settings/presentation/screens/privacy_security_settings.dart';
-import 'package:weblibre/features/settings/presentation/screens/proxy_settings.dart';
 import 'package:weblibre/features/settings/presentation/screens/search_settings.dart';
 import 'package:weblibre/features/settings/presentation/screens/web_content_settings.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
@@ -204,14 +203,6 @@ _CategoryGroups _buildCategories(BuildContext context) {
       keywords: settingsKeywords(l10n.settings_categoryPrivacySecurityKeywords),
       sections: privacySecuritySettingsSections(context),
       onTap: (context) => PrivacySecuritySettingsRoute().push(context),
-    ),
-    _SettingsCategoryDefinition(
-      title: l10n.settings_categoryProxyTitle,
-      subtitle: l10n.settings_categoryProxySubtitle,
-      icon: MdiIcons.lanConnect,
-      keywords: settingsKeywords(l10n.settings_categoryProxyKeywords),
-      sections: proxySettingsSections(context),
-      onTap: (context) => const ProxySettingsRoute().push(context),
     ),
   ];
 
