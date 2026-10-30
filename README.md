@@ -151,6 +151,7 @@ Full user documentation is available at **[docs.weblibre.eu](https://docs.weblib
 - **[Feedback Platform](https://feedback.weblibre.eu/)** - Suggest and vote on features.
 - **[Matrix Chat](https://matrix.to/#/#weblibre:unredacted.org)** - Ask questions and talk with the community.
 - **[GitHub Issues](https://github.com/FaFre/WebLibre/issues)** - Report reproducible bugs and follow development.
+- **[Roadmap](ROADMAP.md)** - Detailed implementation plans for cookie/banner handling, browser profile import, accessibility, local protection stats, and on-device AI.
 
 ## Support the Project
 
