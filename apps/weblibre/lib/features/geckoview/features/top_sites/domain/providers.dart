@@ -23,20 +23,7 @@ import 'package:weblibre/features/geckoview/features/top_sites/domain/repositori
 
 part 'providers.g.dart';
 
-const defaultTopSites = [
-  (title: 'Wikipedia', url: 'https://wikipedia.org/'),
-  (title: 'OpenStreetMap', url: 'https://www.openstreetmap.org/'),
-  (
-    title:
-        'Internet Archive: Digital Library of Free & Borrowable Texts, Movies, Music & Wayback Machine',
-    url: 'https://archive.org/',
-  ),
-  (
-    title: 'Mozilla - Internet for people, not profit',
-    url: 'https://www.mozilla.org/',
-  ),
-  (title: 'Tor Project | Anonymity Online', url: 'https://www.torproject.org/'),
-];
+const defaultTopSites = <({String title, String url})>[];
 
 @Riverpod()
 Stream<List<TopSiteItem>> topSiteList(Ref ref, {int limit = 8}) {

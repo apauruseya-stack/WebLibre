@@ -41,6 +41,7 @@ class UBlockOptInPage extends HookConsumerWidget implements IFormPage {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context);
     final installUBlock = useState(true);
+    final installPrivacyBadger = useState(true);
 
     return BrowserPage(
       child: BrowserPageContent(
@@ -79,6 +80,31 @@ class UBlockOptInPage extends HookConsumerWidget implements IFormPage {
                   onChanged: (value) {
                     field.didChange(value);
                     installUBlock.value = value;
+                  },
+                ),
+              ),
+              FormField(
+                initialValue: true,
+                onSaved: (newValue) {
+                  installPrivacyBadger.value = newValue ?? false;
+                  if (newValue == true) {
+                    unawaited(
+                      ref
+                          .read(browserAddonServiceProvider.notifier)
+                          .install('jid1-MnnxcxisBPnSXQ@jetpack'),
+                    );
+                  }
+                },
+                builder: (field) => SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  value: field.value ?? false,
+                  title: const Text('Privacy Badger'),
+                  subtitle: const Text(
+                    'Install the EFF Privacy Badger tracking blocker',
+                  ),
+                  onChanged: (value) {
+                    field.didChange(value);
+                    installPrivacyBadger.value = value;
                   },
                 ),
               ),

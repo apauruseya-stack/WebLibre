@@ -33,6 +33,8 @@ part 'engine_settings.g.dart';
 enum BuiltInDohProviders {
   quad9('Quad9', 'https://dns.quad9.net/dns-query'),
   adguard('AdGuard', 'https://dns.adguard-dns.com/dns-query'),
+  cloudflare('Cloudflare', 'https://cloudflare-dns.com/dns-query'),
+  nextdns('NextDNS', 'https://dns.nextdns.io'),
   ffmuc('Freifunk München', 'https://doh.ffmuc.net/dns-query');
 
   final String name;

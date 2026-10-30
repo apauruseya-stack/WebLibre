@@ -975,7 +975,7 @@ class GeneralSettings with FastEquatable {
        tabBarShowContextualBar = tabBarShowContextualBar ?? true,
        tabBarPosition = tabBarPosition ?? TabBarPositionSetting.auto,
        tabBarLayout = tabBarLayout ?? TabBarLayout.compact,
-       tabBarStackingMode = tabBarStackingMode ?? TabBarStackingMode.accordion,
+       tabBarStackingMode = tabBarStackingMode ?? TabBarStackingMode.disabled,
        quickTabSwitcherPlacement =
            quickTabSwitcherPlacement ?? QuickTabSwitcherPlacement.auto,
        tabTrayActionsAtBottom = tabTrayActionsAtBottom ?? false,
