@@ -30,6 +30,7 @@ import 'package:weblibre/features/geckoview/features/browser/presentation/widget
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/desktop_mode_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/gesture_exclusion_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/permissions_section.dart';
+import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/privacy_xray_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/routing_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/tracking_protection_section.dart';
 import 'package:weblibre/features/geckoview/features/tabs/data/entities/tab_mode.dart';
@@ -124,6 +125,11 @@ class ViewTabSheetWidget extends HookConsumerWidget {
           // Ordered by the questions people open this sheet with: is the site
           // tracking me, where does my traffic go, what may it access. How the
           // browser behaves on it, and wiping it, come after.
+          PrivacyXRaySection(
+            tabId: initialTabState.id,
+            onExpandedChanged: onSectionExpandedChanged,
+          ),
+          const Divider(),
           TrackingProtectionSection(
             tabId: initialTabState.id,
             onExpandedChanged: onSectionExpandedChanged,
