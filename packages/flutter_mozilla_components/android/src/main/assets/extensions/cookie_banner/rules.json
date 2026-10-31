@@ -1,0 +1,454 @@
+{
+  "version": 1,
+  "updated": "2026-10-31",
+  "textPhrases": [
+    "reject all",
+    "reject all cookies",
+    "reject cookies",
+    "reject non-essential",
+    "reject non essential",
+    "reject optional",
+    "decline all",
+    "decline cookies",
+    "decline optional",
+    "decline",
+    "only necessary",
+    "necessary only",
+    "only necessary cookies",
+    "necessary cookies only",
+    "essential only",
+    "only essential",
+    "essential cookies only",
+    "use necessary cookies only",
+    "continue without accepting",
+    "continue without consent",
+    "refuse all",
+    "disagree",
+    "alle ablehnen",
+    "alle cookies ablehnen",
+    "nur notwendige",
+    "nur notwendige cookies",
+    "nur erforderliche",
+    "nicht einverstanden",
+    "ablehnen",
+    "tout refuser",
+    "refuser tout",
+    "refuser",
+    "continuer sans accepter",
+    "uniquement necessaires",
+    "uniquement les necessaires",
+    "rechazar todo",
+    "rechazar todas",
+    "rechazar",
+    "solo necesarias",
+    "solo esenciales",
+    "rifiuta tutto",
+    "rifiuta",
+    "solo necessari",
+    "recusar tudo",
+    "rejeitar tudo",
+    "recusar",
+    "apenas necessarios",
+    "alles weigeren",
+    "weigeren",
+    "alleen noodzakelijke",
+    "odrzuc wszystko",
+    "odrzuc",
+    "tylko niezbedne",
+    "отклонить все",
+    "отклонить",
+    "только необходимые",
+    "tolak semua",
+    "tolak",
+    "hanya yang diperlukan",
+    "拒绝全部",
+    "全部拒绝",
+    "拒绝",
+    "仅必要",
+    "すべて拒否",
+    "拒否する",
+    "必須のみ",
+    "모두 거부",
+    "거부",
+    "필수만"
+  ],
+  "rules": [
+    {
+      "id": "cookiebot",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#CybotCookiebotDialog" },
+        { "type": "global", "name": "Cookiebot" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#CybotCookiebotDialogBodyButtonDecline" },
+        { "type": "text" }
+      ],
+      "hide": [
+        "#CybotCookiebotDialog",
+        "#CybotCookiebotDialogBodyUnderlay",
+        "#CybotCookiebotDialogBodyUnderlay ~ div"
+      ],
+      "allowHideRoot": true,
+      "confidence": 0.97
+    },
+    {
+      "id": "onetrust",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#onetrust-banner-sdk" },
+        { "type": "global", "name": "OneTrust" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#onetrust-reject-all-handler" },
+        { "type": "click", "selector": ".ot-sdk-container .ot-reject-all-handler" },
+        { "type": "text" }
+      ],
+      "hide": ["#onetrust-banner-sdk", "#onetrust-consent-sdk"],
+      "allowHideRoot": true,
+      "confidence": 0.97
+    },
+    {
+      "id": "didomi",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#didomi-host" },
+        { "type": "css", "selector": ".didomi-popup-container" },
+        { "type": "global", "name": "Didomi" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#didomi-notice-disagree-button" },
+        { "type": "click", "selector": ".didomi-continue-without-agreeing" },
+        { "type": "text" }
+      ],
+      "hide": ["#didomi-host", ".didomi-popup-container"],
+      "allowHideRoot": true,
+      "confidence": 0.96
+    },
+    {
+      "id": "usercentrics",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "shadow", "selector": "#usercentrics-root" },
+        { "type": "shadow", "selector": "button[data-testid='uc-deny-all-button']" },
+        { "type": "global", "name": "UC_UI" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "button[data-testid='uc-deny-all-button']" },
+        { "type": "click", "selector": "button[data-testid='uc-save-button']" },
+        { "type": "text" }
+      ],
+      "hide": ["#usercentrics-root"],
+      "allowHideRoot": true,
+      "confidence": 0.96
+    },
+    {
+      "id": "sourcepoint",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".message-component" },
+        { "type": "css", "selector": ".sp-message-container" },
+        { "type": "global", "name": "_sp_"} 
+      ],
+      "reject": [
+        { "type": "click", "selector": ".sp_choice_type_REJECT_ALL" },
+        { "type": "click", "selector": "button[title='Reject All']" },
+        { "type": "text" }
+      ],
+      "hide": [".sp-message-container", ".message-component"],
+      "allowHideRoot": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "funding-choices",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".fc-consent-root" },
+        { "type": "css", "selector": "div.fc-dialog-container" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".fc-cta-do-not-consent" },
+        { "type": "text" }
+      ],
+      "hide": [".fc-consent-root"],
+      "allowHideRoot": true,
+      "confidence": 0.95
+    },
+    {
+      "id": "trustarc",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#truste-consent-track" },
+        { "type": "css", "selector": ".truste_box_overlay" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#truste-consent-required" },
+        { "type": "text" }
+      ],
+      "hide": ["#truste-consent-track", ".truste_box_overlay"],
+      "allowHideRoot": true,
+      "confidence": 0.93
+    },
+    {
+      "id": "osano",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".osano-cm-window" },
+        { "type": "global", "name": "Osano" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".osano-cm-denyAll" },
+        { "type": "text" }
+      ],
+      "hide": [".osano-cm-window", ".osano-cm-dialog"],
+      "allowHideRoot": true,
+      "confidence": 0.94
+    },
+    {
+      "id": "iubenda",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#iubenda-cs-banner" },
+        { "type": "css", "selector": ".iubenda-cs-container" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".iubenda-cs-reject-btn" },
+        { "type": "text" }
+      ],
+      "hide": ["#iubenda-cs-banner", ".iubenda-cs-container"],
+      "allowHideRoot": true,
+      "confidence": 0.94
+    },
+    {
+      "id": "complianz",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".cmplz-cookiebanner" },
+        { "type": "css", "selector": "#cmplz-cookiebanner-container" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".cmplz-btn.cmplz-deny" },
+        { "type": "text" }
+      ],
+      "hide": [".cmplz-cookiebanner", "#cmplz-cookiebanner-container"],
+      "allowHideRoot": true,
+      "confidence": 0.93
+    },
+    {
+      "id": "cookieyes",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".cky-consent-container" },
+        { "type": "css", "selector": "#cookieyes" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".cky-btn-reject" },
+        { "type": "text" }
+      ],
+      "hide": [".cky-consent-container", ".cky-overlay"],
+      "allowHideRoot": true,
+      "confidence": 0.93
+    },
+    {
+      "id": "hubspot",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#hs-eu-cookie-confirmation" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#hs-eu-decline-button" },
+        { "type": "text" }
+      ],
+      "hide": ["#hs-eu-cookie-confirmation"],
+      "allowHideRoot": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "termly",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#termly-code-snippet-support" },
+        { "type": "css", "selector": "[data-tid='banner-content']" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "button[data-tid='banner-decline']" },
+        { "type": "text" }
+      ],
+      "hide": ["#termly-code-snippet-support"],
+      "allowHideRoot": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "shopify",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#shopify-pc__banner" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#shopify-pc__banner__btn-decline" },
+        { "type": "text" }
+      ],
+      "hide": ["#shopify-pc__banner"],
+      "allowHideRoot": true,
+      "confidence": 0.93
+    },
+    {
+      "id": "webtoffee",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#cookie-law-info-bar" },
+        { "type": "css", "selector": ".cli-modal" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".cli-plugin-reject-all" },
+        { "type": "click", "selector": "#cookie_action_close_header_reject" },
+        { "type": "text" }
+      ],
+      "hide": ["#cookie-law-info-bar", ".cli-modal-backdrop"],
+      "allowHideRoot": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "moove-gdpr",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#moove_gdpr_cookie_info_bar" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".moove-gdpr-infobar-reject-btn" },
+        { "type": "text" }
+      ],
+      "hide": ["#moove_gdpr_cookie_info_bar"],
+      "allowHideRoot": true,
+      "confidence": 0.92
+    },
+    {
+      "id": "tarteaucitron",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#tarteaucitronRoot" }
+      ],
+      "reject": [
+        { "type": "text" }
+      ],
+      "hide": ["#tarteaucitronRoot"],
+      "allowHideRoot": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "axeptio",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#axeptio_overlay" },
+        { "type": "global", "name": "axeptio" }
+      ],
+      "reject": [
+        { "type": "text" }
+      ],
+      "hide": ["#axeptio_overlay"],
+      "allowHideRoot": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "klaro",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".klaro .cookie-modal" },
+        { "type": "global", "name": "klaro" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".cm-btn-decline" },
+        { "type": "text" }
+      ],
+      "hide": [".klaro .cookie-modal"],
+      "allowHideRoot": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "consentmanager",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#cmpbox" },
+        { "type": "css", "selector": ".cmpbox" }
+      ],
+      "reject": [
+        { "type": "text" }
+      ],
+      "hide": ["#cmpbox"],
+      "allowHideRoot": true,
+      "confidence": 0.8
+    },
+    {
+      "id": "evidon",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#_evidon-banner" }
+      ],
+      "reject": [
+        { "type": "click", "selector": "#_evidon-banner-declinebutton" },
+        { "type": "text" }
+      ],
+      "hide": ["#_evidon-banner"],
+      "allowHideRoot": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "cookieinformation",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#cookie-information-template-wrapper" },
+        { "type": "css", "selector": ".coi-banner__wrapper" }
+      ],
+      "reject": [
+        { "type": "click", "selector": ".coi-banner__decline" },
+        { "type": "text" }
+      ],
+      "hide": ["#cookie-information-template-wrapper", ".coi-banner__wrapper"],
+      "allowHideRoot": true,
+      "confidence": 0.88
+    },
+    {
+      "id": "quantcast",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": ".qc-cmp2-container" },
+        { "type": "global", "name": "__qc" }
+      ],
+      "reject": [
+        { "type": "text" }
+      ],
+      "hide": [".qc-cmp2-container"],
+      "allowHideRoot": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "borlabs",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "#BorlabsCookieBox" }
+      ],
+      "reject": [
+        { "type": "text" }
+      ],
+      "hide": ["#BorlabsCookieBox"],
+      "allowHideRoot": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "generic-consent",
+      "domains": ["*"],
+      "detectors": [
+        { "type": "css", "selector": "[id*='cookie-consent']" },
+        { "type": "css", "selector": "[class*='cookie-consent']" },
+        { "type": "css", "selector": "[class*='consent-banner']" },
+        { "type": "css", "selector": "[aria-label*='cookie' i]" }
+      ],
+      "reject": [
+        { "type": "text" }
+      ],
+      "hide": [],
+      "allowHideRoot": false,
+      "confidence": 0.5
+    }
+  ]
+}

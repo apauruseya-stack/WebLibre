@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cookie-banner@weblibre.eu"
+    }
+  },
+  "name": "WebLibre cookie banner handler",
+  "version": "1.0",
+  "description": "Rejects non-essential cookie consent where a reject control exists. Never accepts on the user's behalf.",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false,
+      "match_about_blank": false
+    }
+  ],
+  "permissions": [
+    "nativeMessaging",
+    "geckoViewAddons",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ]
+}

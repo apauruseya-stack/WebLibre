@@ -5456,6 +5456,118 @@ data class ProxyLoadError (
   }
 }
 
+/**
+ * Configuration for the built-in cookie banner handler.
+ *
+ * [mode] is one of `off`, `detect`, `reject`, `rejectOrHide`. [siteModes]
+ * maps a host (or a parent domain) to an override of that mode.
+ *
+ * Generated class from Pigeon that represents data sent in messages.
+ */
+data class CookieBannerConfig (
+  val mode: String,
+  val siteModes: Map<String, String>
+)
+ {
+  companion object {
+    fun fromList(pigeonVar_list: List<Any?>): CookieBannerConfig {
+      val mode = pigeonVar_list[0] as String
+      val siteModes = pigeonVar_list[1] as Map<String, String>
+      return CookieBannerConfig(mode, siteModes)
+    }
+  }
+  fun toList(): List<Any?> {
+    return listOf(
+      mode,
+      siteModes,
+    )
+  }
+  override fun equals(other: Any?): Boolean {
+    if (other == null || other.javaClass != javaClass) {
+      return false
+    }
+    if (this === other) {
+      return true
+    }
+    val other = other as CookieBannerConfig
+    return GeckoPigeonUtils.deepEquals(this.mode, other.mode) && GeckoPigeonUtils.deepEquals(this.siteModes, other.siteModes)
+  }
+
+  override fun hashCode(): Int {
+    var result = javaClass.hashCode()
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.mode)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.siteModes)
+    return result
+  }
+  override fun toString(): String {
+    return "CookieBannerConfig(mode=$mode, siteModes=$siteModes)"
+  }
+}
+
+/**
+ * A decision the cookie banner handler made on a page.
+ *
+ * [action] is one of `detected`, `rejected`, `hidden`, `failed`. Nothing is
+ * ever reported for an accept-like click, because none is ever made.
+ *
+ * Generated class from Pigeon that represents data sent in messages.
+ */
+data class CookieBannerEventData (
+  val url: String,
+  val siteKey: String,
+  val action: String,
+  val ruleId: String? = null,
+  val confidence: Double? = null,
+  val occurredAtMs: Long
+)
+ {
+  companion object {
+    fun fromList(pigeonVar_list: List<Any?>): CookieBannerEventData {
+      val url = pigeonVar_list[0] as String
+      val siteKey = pigeonVar_list[1] as String
+      val action = pigeonVar_list[2] as String
+      val ruleId = pigeonVar_list[3] as String?
+      val confidence = pigeonVar_list[4] as Double?
+      val occurredAtMs = pigeonVar_list[5] as Long
+      return CookieBannerEventData(url, siteKey, action, ruleId, confidence, occurredAtMs)
+    }
+  }
+  fun toList(): List<Any?> {
+    return listOf(
+      url,
+      siteKey,
+      action,
+      ruleId,
+      confidence,
+      occurredAtMs,
+    )
+  }
+  override fun equals(other: Any?): Boolean {
+    if (other == null || other.javaClass != javaClass) {
+      return false
+    }
+    if (this === other) {
+      return true
+    }
+    val other = other as CookieBannerEventData
+    return GeckoPigeonUtils.deepEquals(this.url, other.url) && GeckoPigeonUtils.deepEquals(this.siteKey, other.siteKey) && GeckoPigeonUtils.deepEquals(this.action, other.action) && GeckoPigeonUtils.deepEquals(this.ruleId, other.ruleId) && GeckoPigeonUtils.deepEquals(this.confidence, other.confidence) && GeckoPigeonUtils.deepEquals(this.occurredAtMs, other.occurredAtMs)
+  }
+
+  override fun hashCode(): Int {
+    var result = javaClass.hashCode()
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.url)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.siteKey)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.action)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.ruleId)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.confidence)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.occurredAtMs)
+    return result
+  }
+  override fun toString(): String {
+    return "CookieBannerEventData(url=$url, siteKey=$siteKey, action=$action, ruleId=$ruleId, confidence=$confidence, occurredAtMs=$occurredAtMs)"
+  }
+}
+
 /** Generated class from Pigeon that represents data sent in messages. */
 data class GeckoHeader (
   val key: String,
@@ -7357,52 +7469,56 @@ private data class GeckoPigeonInternalCodecOverflow (
         
     when (type.toInt()) {
       0 ->
-        return BookmarkInfo.fromList(wrapped as List<Any?>)
+        return BookmarkImportNode.fromList(wrapped as List<Any?>)
       1 ->
-        return SitePermissions.fromList(wrapped as List<Any?>)
+        return BookmarkInsertTreeResult.fromList(wrapped as List<Any?>)
       2 ->
-        return TrackingProtectionException.fromList(wrapped as List<Any?>)
+        return BookmarkInfo.fromList(wrapped as List<Any?>)
       3 ->
-        return TrackerLogEntry.fromList(wrapped as List<Any?>)
+        return SitePermissions.fromList(wrapped as List<Any?>)
       4 ->
-        return TrackingStatisticsRecord.fromList(wrapped as List<Any?>)
+        return TrackingProtectionException.fromList(wrapped as List<Any?>)
       5 ->
-        return TrackingStatistics.fromList(wrapped as List<Any?>)
+        return TrackerLogEntry.fromList(wrapped as List<Any?>)
       6 ->
-        return AppLinkTarget.fromList(wrapped as List<Any?>)
+        return TrackingStatisticsRecord.fromList(wrapped as List<Any?>)
       7 ->
-        return ProtectedTargetPattern.fromList(wrapped as List<Any?>)
+        return TrackingStatistics.fromList(wrapped as List<Any?>)
       8 ->
-        return NativeAppLinkRule.fromList(wrapped as List<Any?>)
+        return AppLinkTarget.fromList(wrapped as List<Any?>)
       9 ->
-        return NativeContextAppLinkPolicy.fromList(wrapped as List<Any?>)
+        return ProtectedTargetPattern.fromList(wrapped as List<Any?>)
       10 ->
-        return AppLinkPolicySnapshot.fromList(wrapped as List<Any?>)
+        return NativeAppLinkRule.fromList(wrapped as List<Any?>)
       11 ->
-        return AppLinkPromptRequest.fromList(wrapped as List<Any?>)
+        return NativeContextAppLinkPolicy.fromList(wrapped as List<Any?>)
       12 ->
-        return AppLinkResolutionResult.fromList(wrapped as List<Any?>)
+        return AppLinkPolicySnapshot.fromList(wrapped as List<Any?>)
       13 ->
-        return PwaIcon.fromList(wrapped as List<Any?>)
+        return AppLinkPromptRequest.fromList(wrapped as List<Any?>)
       14 ->
-        return ShareTargetFiles.fromList(wrapped as List<Any?>)
+        return AppLinkResolutionResult.fromList(wrapped as List<Any?>)
       15 ->
-        return ShareTargetParams.fromList(wrapped as List<Any?>)
+        return PwaIcon.fromList(wrapped as List<Any?>)
       16 ->
-        return ShareTarget.fromList(wrapped as List<Any?>)
+        return ShareTargetFiles.fromList(wrapped as List<Any?>)
       17 ->
-        return ExternalApplicationResource.fromList(wrapped as List<Any?>)
+        return ShareTargetParams.fromList(wrapped as List<Any?>)
       18 ->
-        return PwaManifest.fromList(wrapped as List<Any?>)
+        return ShareTarget.fromList(wrapped as List<Any?>)
       19 ->
-        return SandboxCaptureEntry.fromList(wrapped as List<Any?>)
+        return ExternalApplicationResource.fromList(wrapped as List<Any?>)
       20 ->
-        return GestureConfig.fromList(wrapped as List<Any?>)
+        return PwaManifest.fromList(wrapped as List<Any?>)
       21 ->
-        return PushDistributor.fromList(wrapped as List<Any?>)
+        return SandboxCaptureEntry.fromList(wrapped as List<Any?>)
       22 ->
-        return PushStatus.fromList(wrapped as List<Any?>)
+        return GestureConfig.fromList(wrapped as List<Any?>)
       23 ->
+        return PushDistributor.fromList(wrapped as List<Any?>)
+      24 ->
+        return PushStatus.fromList(wrapped as List<Any?>)
+      25 ->
         return PushSubscription.fromList(wrapped as List<Any?>)
     }
     return null
@@ -8013,32 +8129,32 @@ private open class GeckoPigeonCodec : StandardMessageCodec() {
       }
       249.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          GeckoHeader.fromList(it)
+          CookieBannerConfig.fromList(it)
         }
       }
       250.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          GeckoFetchRequest.fromList(it)
+          CookieBannerEventData.fromList(it)
         }
       }
       251.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          GeckoFetchResponse.fromList(it)
+          GeckoHeader.fromList(it)
         }
       }
       252.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          BookmarkNode.fromList(it)
+          GeckoFetchRequest.fromList(it)
         }
       }
       253.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          BookmarkImportNode.fromList(it)
+          GeckoFetchResponse.fromList(it)
         }
       }
       254.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          BookmarkInsertTreeResult.fromList(it)
+          BookmarkNode.fromList(it)
         }
       }
       255.toByte() -> {
@@ -8531,147 +8647,157 @@ private open class GeckoPigeonCodec : StandardMessageCodec() {
         stream.write(248)
         writeValue(stream, value.toList())
       }
-      is GeckoHeader -> {
+      is CookieBannerConfig -> {
         stream.write(249)
         writeValue(stream, value.toList())
       }
-      is GeckoFetchRequest -> {
+      is CookieBannerEventData -> {
         stream.write(250)
         writeValue(stream, value.toList())
       }
-      is GeckoFetchResponse -> {
+      is GeckoHeader -> {
         stream.write(251)
         writeValue(stream, value.toList())
       }
-      is BookmarkNode -> {
+      is GeckoFetchRequest -> {
         stream.write(252)
         writeValue(stream, value.toList())
       }
-      is BookmarkImportNode -> {
+      is GeckoFetchResponse -> {
         stream.write(253)
         writeValue(stream, value.toList())
       }
-      is BookmarkInsertTreeResult -> {
+      is BookmarkNode -> {
         stream.write(254)
         writeValue(stream, value.toList())
       }
-      is BookmarkInfo -> {
+      is BookmarkImportNode -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 0, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is SitePermissions -> {
+      is BookmarkInsertTreeResult -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 1, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is TrackingProtectionException -> {
+      is BookmarkInfo -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 2, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is TrackerLogEntry -> {
+      is SitePermissions -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 3, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is TrackingStatisticsRecord -> {
+      is TrackingProtectionException -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 4, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is TrackingStatistics -> {
+      is TrackerLogEntry -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 5, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is AppLinkTarget -> {
+      is TrackingStatisticsRecord -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 6, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is ProtectedTargetPattern -> {
+      is TrackingStatistics -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 7, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is NativeAppLinkRule -> {
+      is AppLinkTarget -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 8, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is NativeContextAppLinkPolicy -> {
+      is ProtectedTargetPattern -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 9, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is AppLinkPolicySnapshot -> {
+      is NativeAppLinkRule -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 10, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is AppLinkPromptRequest -> {
+      is NativeContextAppLinkPolicy -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 11, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is AppLinkResolutionResult -> {
+      is AppLinkPolicySnapshot -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 12, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is PwaIcon -> {
+      is AppLinkPromptRequest -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 13, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is ShareTargetFiles -> {
+      is AppLinkResolutionResult -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 14, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is ShareTargetParams -> {
+      is PwaIcon -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 15, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is ShareTarget -> {
+      is ShareTargetFiles -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 16, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is ExternalApplicationResource -> {
+      is ShareTargetParams -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 17, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is PwaManifest -> {
+      is ShareTarget -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 18, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is SandboxCaptureEntry -> {
+      is ExternalApplicationResource -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 19, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is GestureConfig -> {
+      is PwaManifest -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 20, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is PushDistributor -> {
+      is SandboxCaptureEntry -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 21, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is PushStatus -> {
+      is GestureConfig -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 22, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
-      is PushSubscription -> {
+      is PushDistributor -> {
         val wrap = GeckoPigeonInternalCodecOverflow(type = 23, wrapped = value.toList())
+        stream.write(255)
+        writeValue(stream, wrap.toList())
+      }
+      is PushStatus -> {
+        val wrap = GeckoPigeonInternalCodecOverflow(type = 24, wrapped = value.toList())
+        stream.write(255)
+        writeValue(stream, wrap.toList())
+      }
+      is PushSubscription -> {
+        val wrap = GeckoPigeonInternalCodecOverflow(type = 25, wrapped = value.toList())
         stream.write(255)
         writeValue(stream, wrap.toList())
       }
@@ -10989,6 +11115,42 @@ interface GeckoCookieApi {
     }
   }
 }
+/** Generated interface from Pigeon that represents a handler of messages from Flutter. */
+interface GeckoCookieBannerApi {
+  suspend fun setConfig(config: CookieBannerConfig)
+
+  companion object {
+    /** The codec used by GeckoCookieBannerApi. */
+    val codec: MessageCodec<Any?> by lazy {
+      GeckoPigeonCodec()
+    }
+    /** Sets up an instance of `GeckoCookieBannerApi` to handle messages through the `binaryMessenger`. */
+    @JvmOverloads
+    fun setUp(binaryMessenger: BinaryMessenger, api: GeckoCookieBannerApi?, messageChannelSuffix: String = "") {
+      val separatedMessageChannelSuffix = if (messageChannelSuffix.isNotEmpty()) ".$messageChannelSuffix" else ""
+      run {
+        val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.flutter_mozilla_components.GeckoCookieBannerApi.setConfig$separatedMessageChannelSuffix", codec)
+        if (api != null) {
+          channel.setMessageHandler { message, reply ->
+            val args = message as List<Any?>
+            val configArg = args[0] as CookieBannerConfig
+            CoroutineScope(Dispatchers.Main).launch {
+              val wrapped: List<Any?> = try {
+                api.setConfig(configArg)
+                listOf(null)
+              } catch (exception: Throwable) {
+                GeckoPigeonUtils.wrapError(exception)
+              }
+              reply.reply(wrapped)
+            }
+          }
+        } else {
+          channel.setMessageHandler(null)
+        }
+      }
+    }
+  }
+}
 /** Generated class from Pigeon that represents Flutter messages that can be called from Kotlin. */
 class GeckoStateEvents(private val binaryMessenger: BinaryMessenger, private val messageChannelSuffix: String = "") {
   companion object {
@@ -11386,6 +11548,27 @@ class GeckoStateEvents(private val binaryMessenger: BinaryMessenger, private val
     val channelName = "dev.flutter.pigeon.flutter_mozilla_components.GeckoStateEvents.onTabTranslationStateChange$separatedMessageChannelSuffix"
     val channel = BasicMessageChannel<Any?>(binaryMessenger, channelName, codec)
     channel.send(listOf(sequenceArg, stateArg)) {
+      if (it is List<*>) {
+        if (it.size > 1) {
+          callback(Result.failure(FlutterError(it[0] as String, it[1] as String, it[2] as String?)))
+        } else {
+          callback(Result.success(Unit))
+        }
+      } else {
+        callback(Result.failure(GeckoPigeonUtils.createConnectionError(channelName)))
+      } 
+    }
+  }
+  /**
+   * A cookie banner decision made by the built-in handler. Purely advisory:
+   * losing one only means the per-site status is not shown.
+   */
+  fun onCookieBannerEvent(sequenceArg: Long, eventArg: CookieBannerEventData, callback: (Result<Unit>) -> Unit)
+{
+    val separatedMessageChannelSuffix = if (messageChannelSuffix.isNotEmpty()) ".$messageChannelSuffix" else ""
+    val channelName = "dev.flutter.pigeon.flutter_mozilla_components.GeckoStateEvents.onCookieBannerEvent$separatedMessageChannelSuffix"
+    val channel = BasicMessageChannel<Any?>(binaryMessenger, channelName, codec)
+    channel.send(listOf(sequenceArg, eventArg)) {
       if (it is List<*>) {
         if (it.size > 1) {
           callback(Result.failure(FlutterError(it[0] as String, it[1] as String, it[2] as String?)))

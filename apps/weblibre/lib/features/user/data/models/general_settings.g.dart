@@ -247,6 +247,10 @@ abstract class _$GeneralSettingsCWProxy {
 
   GeneralSettings hideStatusBar(bool hideStatusBar);
 
+  GeneralSettings cookieBannerHandling(
+    CookieBannerHandling cookieBannerHandling,
+  );
+
   GeneralSettings globalDesktopMode(bool globalDesktopMode);
 
   GeneralSettings desktopModeSites(List<String> desktopModeSites);
@@ -360,6 +364,7 @@ abstract class _$GeneralSettingsCWProxy {
     bool privateSearchSuggestionsEnabled,
     bool pureBlack,
     bool hideStatusBar,
+    CookieBannerHandling cookieBannerHandling,
     bool globalDesktopMode,
     List<String> desktopModeSites,
     bool unmountGeckoViewOffRoute,
@@ -800,6 +805,11 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
       call(hideStatusBar: hideStatusBar);
 
   @override
+  GeneralSettings cookieBannerHandling(
+    CookieBannerHandling cookieBannerHandling,
+  ) => call(cookieBannerHandling: cookieBannerHandling);
+
+  @override
   GeneralSettings globalDesktopMode(bool globalDesktopMode) =>
       call(globalDesktopMode: globalDesktopMode);
 
@@ -922,6 +932,7 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? privateSearchSuggestionsEnabled = const $CopyWithPlaceholder(),
     Object? pureBlack = const $CopyWithPlaceholder(),
     Object? hideStatusBar = const $CopyWithPlaceholder(),
+    Object? cookieBannerHandling = const $CopyWithPlaceholder(),
     Object? globalDesktopMode = const $CopyWithPlaceholder(),
     Object? desktopModeSites = const $CopyWithPlaceholder(),
     Object? unmountGeckoViewOffRoute = const $CopyWithPlaceholder(),
@@ -1495,6 +1506,12 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.hideStatusBar
           // ignore: cast_nullable_to_non_nullable
           : hideStatusBar as bool,
+      cookieBannerHandling:
+          cookieBannerHandling == const $CopyWithPlaceholder() ||
+              cookieBannerHandling == null
+          ? _value.cookieBannerHandling
+          // ignore: cast_nullable_to_non_nullable
+          : cookieBannerHandling as CookieBannerHandling,
       globalDesktopMode:
           globalDesktopMode == const $CopyWithPlaceholder() ||
               globalDesktopMode == null
@@ -1724,6 +1741,10 @@ GeneralSettings _$GeneralSettingsFromJson(
       json['privateSearchSuggestionsEnabled'] as bool?,
   pureBlack: json['pureBlack'] as bool?,
   hideStatusBar: json['hideStatusBar'] as bool?,
+  cookieBannerHandling: $enumDecodeNullable(
+    _$CookieBannerHandlingEnumMap,
+    json['cookieBannerHandling'],
+  ),
   globalDesktopMode: json['globalDesktopMode'] as bool?,
   desktopModeSites: (json['desktopModeSites'] as List<dynamic>?)
       ?.map((e) => e as String)
@@ -1856,6 +1877,8 @@ Map<String, dynamic> _$GeneralSettingsToJson(
   'privateSearchSuggestionsEnabled': instance.privateSearchSuggestionsEnabled,
   'pureBlack': instance.pureBlack,
   'hideStatusBar': instance.hideStatusBar,
+  'cookieBannerHandling':
+      _$CookieBannerHandlingEnumMap[instance.cookieBannerHandling]!,
   'globalDesktopMode': instance.globalDesktopMode,
   'desktopModeSites': instance.desktopModeSites,
   'unmountGeckoViewOffRoute': instance.unmountGeckoViewOffRoute,
@@ -1995,4 +2018,11 @@ const _$AppLinksModeEnumMap = {
   AppLinksMode.always: 'always',
   AppLinksMode.ask: 'ask',
   AppLinksMode.never: 'never',
+};
+
+const _$CookieBannerHandlingEnumMap = {
+  CookieBannerHandling.off: 'off',
+  CookieBannerHandling.detect: 'detect',
+  CookieBannerHandling.reject: 'reject',
+  CookieBannerHandling.rejectOrHide: 'rejectOrHide',
 };

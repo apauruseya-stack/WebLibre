@@ -22,7 +22,9 @@ import 'package:flutter_material_design_icons/flutter_material_design_icons.dart
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:weblibre/core/logger.dart';
+import 'package:weblibre/features/cookie_banners/domain/services/cookie_banner.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_session.dart';
+import 'package:weblibre/features/geckoview/domain/providers/tab_state.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/providers/blocked_trackers.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/repositories/tracking_protection.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/utils/blocked_trackers_l10n.dart';
@@ -66,6 +68,7 @@ class TrackingProtectionSection extends HookConsumerWidget {
               tabId: tabId,
               onExpandedChanged: onExpandedChanged,
             ),
+          _CookieBannerStatusRow(tabId: tabId),
         ],
       ),
       loading: () => Skeletonizer(
@@ -218,6 +221,58 @@ class _BlockedTrackers extends ConsumerWidget {
             ],
           ),
       ],
+    );
+  }
+}
+class _CookieBannerStatusRow extends ConsumerWidget {
+  const _CookieBannerStatusRow({required this.tabId});
+
+  final String tabId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final url = ref.watch(tabStateProvider(tabId).select((tab) => tab?.url));
+    String? host;
+    try {
+      host = url?.host;
+    } catch (_) {
+      host = null;
+    }
+    if (host == null || host.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    final event = ref.watch(cookieBannerStatusForProvider(host));
+    if (event == null) {
+      return const SizedBox.shrink();
+    }
+
+    final l10n = AppLocalizations.of(context);
+
+    final String title = switch (event.action) {
+      'rejected' => l10n.browser_cookieBannerRejected,
+      'hidden' => l10n.browser_cookieBannerHidden,
+      'detected' => l10n.browser_cookieBannerDetected,
+      _ => l10n.browser_cookieBannerFailed,
+    };
+
+    final IconData icon = switch (event.action) {
+      'rejected' => Icons.check_circle_outline,
+      'hidden' => Icons.visibility_off_outlined,
+      'detected' => Icons.info_outline,
+      _ => Icons.error_outline,
+    };
+
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+        vertical: 4,
+      ),
+      leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
+      title: Text(title),
+      subtitle: event.ruleId == null
+          ? null
+          : Text(l10n.browser_cookieBannerRule(event.ruleId!)),
     );
   }
 }

@@ -65,6 +65,7 @@ import 'package:weblibre/features/geckoview/domain/providers/web_extensions_stat
 import 'package:weblibre/features/geckoview/features/browser/domain/providers/intent.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/services/engine_settings_replication.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/services/proxy_settings_replication.dart';
+import 'package:weblibre/features/cookie_banners/domain/services/cookie_banner.dart';
 import 'package:weblibre/features/geckoview/features/browser/features/contextual_toolbar/data/providers/toolbar_button_configs.dart';
 import 'package:weblibre/features/geckoview/features/browser/features/contextual_toolbar/domain/entities/toolbar_config_location.dart';
 import 'package:weblibre/features/geckoview/features/history/domain/services/history_exclusion_replication.dart';
@@ -553,6 +554,10 @@ class _MainWidget extends HookConsumerWidget {
       // has to keep running first for the same reason.
       _activateService(ref, preferenceFixatorProvider);
       _activateService(ref, engineSettingsReplicationServiceProvider);
+
+      // Pushes the cookie banner mode before any page can load. The extension
+      // itself is installed by the engine; this only sets its limits.
+      _activateService(ref, cookieBannerReplicationServiceProvider);
       _activateService(
         ref,
         webExtensionsStateProvider(WebExtensionActionType.browser),

@@ -26,6 +26,7 @@ typedef ManifestUpdateEvent = ({String tabId, PwaManifest? manifest});
 typedef TabTranslationEvent = ({String tabId, TabTranslationStateData state});
 typedef TranslationEngineEvent = TranslationEngineStateData;
 typedef DownloadStoppedEvent = DownloadState;
+typedef CookieBannerEvent = CookieBannerEventData;
 
 class GeckoEventService extends GeckoStateEvents {
   // Stream controllers
@@ -82,6 +83,7 @@ class GeckoEventService extends GeckoStateEvents {
   final _translationEngineSubject = BehaviorSubject<TranslationEngineEvent>();
   final _tabTranslationSubject =
       LatestPerKeySubject<String, TabTranslationEvent>((event) => event.tabId);
+  final _cookieBannerSubject = PublishSubject<CookieBannerEvent>();
 
   /// The tabs of the last accepted tab list, to tell which tabs a new one
   /// closed.
@@ -121,6 +123,8 @@ class GeckoEventService extends GeckoStateEvents {
       _translationEngineSubject.stream;
   Stream<TabTranslationEvent> get tabTranslationEvents =>
       _tabTranslationSubject.stream;
+  Stream<CookieBannerEvent> get cookieBannerEvents =>
+      _cookieBannerSubject.stream;
 
   @override
   Future<void> onViewReadyStateChange(int sequence, bool state) async {
@@ -393,6 +397,14 @@ class GeckoEventService extends GeckoStateEvents {
     ));
   }
 
+  @override
+  Future<void> onCookieBannerEvent(
+    int sequence,
+    CookieBannerEventData event,
+  ) async {
+    _cookieBannerSubject.add(event);
+  }
+
   GeckoEventService.setUp({
     BinaryMessenger? binaryMessenger,
     String messageChannelSuffix = '',
@@ -428,5 +440,6 @@ class GeckoEventService extends GeckoStateEvents {
     await _manifestUpdateSubject.close();
     await _translationEngineSubject.close();
     await _tabTranslationSubject.close();
+    await _cookieBannerSubject.close();
   }
 }

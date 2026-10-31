@@ -349,6 +349,31 @@ enum DeleteBrowsingDataType {
   downloads,
 }
 
+/// How far the built-in cookie banner handler may go.
+///
+/// Every mode is on-device and rule-driven. None of them ever clicks an
+/// accept-like control: [reject] and [rejectOrHide] only choose a reject
+/// control, and [rejectOrHide] falls back to hiding the overlay when the site
+/// offers no reject path at all.
+enum CookieBannerHandling {
+  /// Do nothing. No detection, no clicks, no hiding.
+  off,
+
+  /// Detect and report banners, but never interact with them. The safe preview.
+  detect,
+
+  /// Reject non-essential consent where a reject control exists. Leave the
+  /// banner alone when there is none.
+  reject,
+
+  /// Reject where possible, otherwise hide the overlay. This is the default.
+  rejectOrHide;
+
+  bool get isEnabled => this != CookieBannerHandling.off;
+  bool get mayClick => this == CookieBannerHandling.reject || this == CookieBannerHandling.rejectOrHide;
+  bool get mayHide => this == CookieBannerHandling.rejectOrHide;
+}
+
 @CopyWith()
 @JsonSerializable(includeIfNull: true, constructor: 'withDefaults')
 class GeneralSettings with FastEquatable {
@@ -677,6 +702,11 @@ class GeneralSettings with FastEquatable {
   /// experience (like Fulguris). Defaults to false.
   final bool hideStatusBar;
 
+  /// How the built-in cookie banner handler treats consent banners. Defaults to
+  /// [CookieBannerHandling.rejectOrHide]: reject where the site offers a reject
+  /// control, hide the overlay otherwise, and never accept on the user's behalf.
+  final CookieBannerHandling cookieBannerHandling;
+
   /// Browser-wide default desktop mode. When true, newly opened tabs request
   /// the desktop version of sites by default. The per-tab desktop-mode toggle
   /// still overrides this for an individual tab. Defaults to false.
@@ -801,6 +831,7 @@ class GeneralSettings with FastEquatable {
     required this.privateSearchSuggestionsEnabled,
     required this.pureBlack,
     required this.hideStatusBar,
+    required this.cookieBannerHandling,
     required this.globalDesktopMode,
     required this.desktopModeSites,
     required this.unmountGeckoViewOffRoute,
@@ -905,6 +936,7 @@ class GeneralSettings with FastEquatable {
     bool? privateSearchSuggestionsEnabled,
     bool? pureBlack,
     bool? hideStatusBar,
+    CookieBannerHandling? cookieBannerHandling,
     bool? globalDesktopMode,
     List<String>? desktopModeSites,
     bool? unmountGeckoViewOffRoute,
@@ -1040,6 +1072,8 @@ class GeneralSettings with FastEquatable {
            privateSearchSuggestionsEnabled ?? false,
        pureBlack = pureBlack ?? false,
        hideStatusBar = hideStatusBar ?? false,
+       cookieBannerHandling =
+           cookieBannerHandling ?? CookieBannerHandling.rejectOrHide,
        globalDesktopMode = globalDesktopMode ?? false,
        desktopModeSites = desktopModeSites ?? const [],
        unmountGeckoViewOffRoute = unmountGeckoViewOffRoute ?? false;

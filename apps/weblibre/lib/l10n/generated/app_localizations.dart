@@ -16018,6 +16018,102 @@ abstract class AppLocalizations {
   /// **'Manage filter lists and apply WebLibre hardenings'**
   String get settings_uBlockFilterListsTileSubtitle;
 
+  /// Settings section for the built-in consent banner handler.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie banners'**
+  String get settings_cookieBannersTitle;
+
+  /// Comma-separated search terms for this setting. Not displayed; include synonyms users might type.
+  ///
+  /// In en, this message translates to:
+  /// **'consent, gdpr, cookiebot, onetrust, reject'**
+  String get settings_cookieBannersKeywords;
+
+  /// Explanation under the cookie banner setting. The handler never clicks an accept button.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject non-essential consent where a reject control exists. Never accepts on your behalf.'**
+  String get settings_cookieBannersSubtitle;
+
+  /// Cookie banner option: do nothing at all.
+  ///
+  /// In en, this message translates to:
+  /// **'Off'**
+  String get settings_cookieBannersOff;
+
+  /// Explanation for the Off cookie banner option.
+  ///
+  /// In en, this message translates to:
+  /// **'No detection and no interaction.'**
+  String get settings_cookieBannersOffDescription;
+
+  /// Cookie banner option: report banners without interacting with them.
+  ///
+  /// In en, this message translates to:
+  /// **'Detect only'**
+  String get settings_cookieBannersDetect;
+
+  /// Explanation for the Detect only cookie banner option.
+  ///
+  /// In en, this message translates to:
+  /// **'Report banners without clicking or hiding anything.'**
+  String get settings_cookieBannersDetectDescription;
+
+  /// Cookie banner option: click a reject control, leave the banner when there is none.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get settings_cookieBannersReject;
+
+  /// Explanation for the Reject cookie banner option.
+  ///
+  /// In en, this message translates to:
+  /// **'Click a reject control where the site has one. Leave the banner alone otherwise.'**
+  String get settings_cookieBannersRejectDescription;
+
+  /// Cookie banner option: reject where possible, hide the overlay otherwise.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject or hide'**
+  String get settings_cookieBannersRejectOrHide;
+
+  /// Explanation for the Reject or hide cookie banner option.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject where possible, hide the overlay otherwise.'**
+  String get settings_cookieBannersRejectOrHideDescription;
+
+  /// Status row in the tracking protection sheet: a reject control was clicked.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie banner rejected'**
+  String get browser_cookieBannerRejected;
+
+  /// Status row in the tracking protection sheet: the overlay was hidden because no reject control existed.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie banner hidden'**
+  String get browser_cookieBannerHidden;
+
+  /// Status row in the tracking protection sheet: a banner was detected but detect-only mode is on.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie banner detected'**
+  String get browser_cookieBannerDetected;
+
+  /// Status row in the tracking protection sheet: a banner was found but no reject control could be used.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie banner could not be rejected'**
+  String get browser_cookieBannerFailed;
+
+  /// Subtitle of the cookie banner status row naming the rule that matched.
+  ///
+  /// In en, this message translates to:
+  /// **'Rule: {ruleId}'**
+  String browser_cookieBannerRule(String ruleId);
+
   /// Switch for site isolation (each website in its own process). "Fission" is Mozilla's project name.
   ///
   /// In en, this message translates to:

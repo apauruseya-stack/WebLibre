@@ -11871,6 +11871,75 @@
   "@settings_uBlockFilterListsTileSubtitle": {
     "description": "Explanation under that row. WebLibre is the app name."
   },
+  "settings_cookieBannersTitle": "Cookie banners",
+  "@settings_cookieBannersTitle": {
+    "description": "Settings section for the built-in consent banner handler."
+  },
+  "settings_cookieBannersKeywords": "consent, gdpr, cookiebot, onetrust, reject",
+  "@settings_cookieBannersKeywords": {
+    "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
+  },
+  "settings_cookieBannersSubtitle": "Reject non-essential consent where a reject control exists. Never accepts on your behalf.",
+  "@settings_cookieBannersSubtitle": {
+    "description": "Explanation under the cookie banner setting. The handler never clicks an accept button."
+  },
+  "settings_cookieBannersOff": "Off",
+  "@settings_cookieBannersOff": {
+    "description": "Cookie banner option: do nothing at all."
+  },
+  "settings_cookieBannersOffDescription": "No detection and no interaction.",
+  "@settings_cookieBannersOffDescription": {
+    "description": "Explanation for the Off cookie banner option."
+  },
+  "settings_cookieBannersDetect": "Detect only",
+  "@settings_cookieBannersDetect": {
+    "description": "Cookie banner option: report banners without interacting with them."
+  },
+  "settings_cookieBannersDetectDescription": "Report banners without clicking or hiding anything.",
+  "@settings_cookieBannersDetectDescription": {
+    "description": "Explanation for the Detect only cookie banner option."
+  },
+  "settings_cookieBannersReject": "Reject",
+  "@settings_cookieBannersReject": {
+    "description": "Cookie banner option: click a reject control, leave the banner when there is none."
+  },
+  "settings_cookieBannersRejectDescription": "Click a reject control where the site has one. Leave the banner alone otherwise.",
+  "@settings_cookieBannersRejectDescription": {
+    "description": "Explanation for the Reject cookie banner option."
+  },
+  "settings_cookieBannersRejectOrHide": "Reject or hide",
+  "@settings_cookieBannersRejectOrHide": {
+    "description": "Cookie banner option: reject where possible, hide the overlay otherwise."
+  },
+  "settings_cookieBannersRejectOrHideDescription": "Reject where possible, hide the overlay otherwise.",
+  "@settings_cookieBannersRejectOrHideDescription": {
+    "description": "Explanation for the Reject or hide cookie banner option."
+  },
+  "browser_cookieBannerRejected": "Cookie banner rejected",
+  "@browser_cookieBannerRejected": {
+    "description": "Status row in the tracking protection sheet: a reject control was clicked."
+  },
+  "browser_cookieBannerHidden": "Cookie banner hidden",
+  "@browser_cookieBannerHidden": {
+    "description": "Status row in the tracking protection sheet: the overlay was hidden because no reject control existed."
+  },
+  "browser_cookieBannerDetected": "Cookie banner detected",
+  "@browser_cookieBannerDetected": {
+    "description": "Status row in the tracking protection sheet: a banner was detected but detect-only mode is on."
+  },
+  "browser_cookieBannerFailed": "Cookie banner could not be rejected",
+  "@browser_cookieBannerFailed": {
+    "description": "Status row in the tracking protection sheet: a banner was found but no reject control could be used."
+  },
+  "browser_cookieBannerRule": "Rule: {ruleId}",
+  "@browser_cookieBannerRule": {
+    "description": "Subtitle of the cookie banner status row naming the rule that matched.",
+    "placeholders": {
+      "ruleId": {
+        "type": "String"
+      }
+    }
+  },
   "settings_fissionEnabledTitle": "Fission (Site Isolation)",
   "@settings_fissionEnabledTitle": {
     "description": "Switch for site isolation (each website in its own process). \"Fission\" is Mozilla's project name."

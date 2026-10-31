@@ -7,6 +7,7 @@ package eu.weblibre.flutter_mozilla_components
 import android.content.Context
 import androidx.preference.PreferenceManager
 import eu.weblibre.flutter_mozilla_components.feature.ContainerProxyFeature
+import eu.weblibre.flutter_mozilla_components.feature.CookieBannerFeature
 import eu.weblibre.flutter_mozilla_components.feature.CookieManagerFeature
 import eu.weblibre.flutter_mozilla_components.feature.BrowserExtensionFeature
 import eu.weblibre.flutter_mozilla_components.feature.MLEngineFeature
@@ -188,6 +189,10 @@ object EngineProvider {
             ).install(it)
 
             SandboxCaptureFeature.install(it)
+
+            // Built-in consent handling. The extension reports decisions to
+            // Dart through the same state-event channel as everything else.
+            CookieBannerFeature.install(it, stateEvents)
 
             // Installs Mozilla's reader view extension early and wires the
             // WebLibre "pure black" (AMOLED) appearance bridge into it.

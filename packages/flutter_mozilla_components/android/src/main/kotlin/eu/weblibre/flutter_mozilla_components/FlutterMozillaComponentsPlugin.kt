@@ -7,11 +7,13 @@
 package eu.weblibre.flutter_mozilla_components
 
 import eu.weblibre.flutter_mozilla_components.api.GeckoBrowserApiImpl
+import eu.weblibre.flutter_mozilla_components.api.GeckoCookieBannerApiImpl
 import eu.weblibre.flutter_mozilla_components.api.GeckoEngineSettingsApiImpl
 import eu.weblibre.flutter_mozilla_components.api.GeckoProfileApiImpl
 import eu.weblibre.flutter_mozilla_components.feature.ContainerProxyFeature
 import eu.weblibre.flutter_mozilla_components.feature.SandboxCaptureFeature
 import eu.weblibre.flutter_mozilla_components.pigeons.GeckoBrowserApi
+import eu.weblibre.flutter_mozilla_components.pigeons.GeckoCookieBannerApi
 import eu.weblibre.flutter_mozilla_components.pigeons.GeckoEngineSettingsApi
 import eu.weblibre.flutter_mozilla_components.pigeons.GeckoProfileApi
 import eu.weblibre.flutter_mozilla_components.pigeons.GeckoPushApi
@@ -117,6 +119,14 @@ class FlutterMozillaComponentsPlugin: FlutterPlugin, ActivityAware {
     )
     GeckoEngineSettingsApi.setUp(flutterPluginBinding.binaryMessenger, engineSettingsApiImpl)
     GlobalComponents.engineSettingsApi = engineSettingsApiImpl
+
+    // Mode and per-site overrides for the built-in cookie banner extension.
+    // Registered here so the first settings push can land before the engine
+    // has created the extension.
+    GeckoCookieBannerApi.setUp(
+      flutterPluginBinding.binaryMessenger,
+      GeckoCookieBannerApiImpl(),
+    )
   }
 
   override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
@@ -124,6 +134,7 @@ class FlutterMozillaComponentsPlugin: FlutterPlugin, ActivityAware {
     pointerRouter?.dispose()
     pointerRouter = null
     GeckoProfileApi.setUp(binding.binaryMessenger, null)
+    GeckoCookieBannerApi.setUp(binding.binaryMessenger, null)
     // Before anything else: the profile-access lease and the arbiter's selection
     // and maintenance leases are all process-global and keyed on the isolate, so
     // an engine that detaches without handing them back locks every later engine

@@ -2270,6 +2270,45 @@ class ProxyLoadError {
   });
 }
 
+/// Configuration for the built-in cookie banner handler.
+///
+/// [mode] is one of `off`, `detect`, `reject`, `rejectOrHide`. [siteModes]
+/// maps a host (or a parent domain) to an override of that mode.
+class CookieBannerConfig {
+  final String mode;
+  final Map<String, String> siteModes;
+
+  CookieBannerConfig({required this.mode, required this.siteModes});
+}
+
+/// A decision the cookie banner handler made on a page.
+///
+/// [action] is one of `detected`, `rejected`, `hidden`, `failed`. Nothing is
+/// ever reported for an accept-like click, because none is ever made.
+class CookieBannerEventData {
+  final String url;
+  final String siteKey;
+  final String action;
+  final String? ruleId;
+  final double? confidence;
+  final int occurredAtMs;
+
+  CookieBannerEventData({
+    required this.url,
+    required this.siteKey,
+    required this.action,
+    required this.ruleId,
+    required this.confidence,
+    required this.occurredAtMs,
+  });
+}
+
+@HostApi()
+abstract class GeckoCookieBannerApi {
+  @async
+  void setConfig(CookieBannerConfig config);
+}
+
 @FlutterApi()
 abstract class GeckoStateEvents {
   @asyncCallback
@@ -2343,6 +2382,11 @@ abstract class GeckoStateEvents {
   );
   @asyncCallback
   void onTabTranslationStateChange(int sequence, TabTranslationStateData state);
+
+  /// A cookie banner decision made by the built-in handler. Purely advisory:
+  /// losing one only means the per-site status is not shown.
+  @asyncCallback
+  void onCookieBannerEvent(int sequence, CookieBannerEventData event);
 }
 
 @FlutterApi()

@@ -100,6 +100,12 @@ List<SettingsSectionDefinition> privacySecuritySettingsSections(
           ),
           child: const _UBlockFilterListsTile(),
         ),
+        SettingsEntryDefinition(
+          title: l10n.settings_cookieBannersTitle,
+          subtitle: l10n.settings_cookieBannersSubtitle,
+          keywords: settingsKeywords(l10n.settings_cookieBannersKeywords),
+          child: const _CookieBannersSection(),
+        ),
       ],
     ),
     SettingsSectionDefinition(
@@ -1208,6 +1214,80 @@ class _UBlockFilterListsTile extends StatelessWidget {
       onTap: () async {
         await UBlockFilterListsRoute().push<void>(context);
       },
+    );
+  }
+}
+
+class _CookieBannersSection extends HookConsumerWidget {
+  const _CookieBannersSection();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final handling = ref.watch(
+      generalSettingsWithDefaultsProvider.select(
+        (settings) => settings.cookieBannerHandling,
+      ),
+    );
+    final l10n = AppLocalizations.of(context);
+
+    String label(CookieBannerHandling value) => switch (value) {
+      CookieBannerHandling.off => l10n.settings_cookieBannersOff,
+      CookieBannerHandling.detect => l10n.settings_cookieBannersDetect,
+      CookieBannerHandling.reject => l10n.settings_cookieBannersReject,
+      CookieBannerHandling.rejectOrHide =>
+        l10n.settings_cookieBannersRejectOrHide,
+    };
+
+    String description(CookieBannerHandling value) => switch (value) {
+      CookieBannerHandling.off =>
+        l10n.settings_cookieBannersOffDescription,
+      CookieBannerHandling.detect =>
+        l10n.settings_cookieBannersDetectDescription,
+      CookieBannerHandling.reject =>
+        l10n.settings_cookieBannersRejectDescription,
+      CookieBannerHandling.rejectOrHide =>
+        l10n.settings_cookieBannersRejectOrHideDescription,
+    };
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.cookie_outlined),
+            title: Text(l10n.settings_cookieBannersTitle),
+            subtitle: Text(l10n.settings_cookieBannersSubtitle),
+          ),
+          RadioGroup<CookieBannerHandling>(
+            groupValue: handling,
+            onChanged: (value) async {
+              if (value == null) {
+                return;
+              }
+              await ref
+                  .read(saveGeneralSettingsControllerProvider.notifier)
+                  .save(
+                    (settings) => settings.copyWith.cookieBannerHandling(value),
+                  );
+            },
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final value in CookieBannerHandling.values)
+                  RadioListTile<CookieBannerHandling>(
+                    contentPadding: EdgeInsets.zero,
+                    value: value,
+                    title: Text(label(value)),
+                    subtitle: Text(description(value)),
+                  ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -358,28 +358,28 @@ CREATE TABLE cookie_banner_event (
 
 #### A0 - Cosmetic fallback (1-2 days)
 
-- [ ] Ensure `fanboy-cookiemonster` and `ublock-annoyances` are in the default hardening set for new installs (already in the constant; verify the onboarding default path uses it).
-- [ ] Add a settings toggle: **Privacy & security -> Hide cookie banners (cosmetic)**. Default on when uBlock is installed, off otherwise.
+- [x] Ensure `fanboy-cookiemonster` and `ublock-annoyances` are in the default hardening set for new installs (already in the constant; verify the onboarding default path uses it).
+- [x] Add a settings toggle: **Privacy & security -> Cookie banners** (enum `off`/`detect`/`reject`/`rejectOrHide`). Default `rejectOrHide`.
 - [ ] Document that this hides but does not reject.
 
 **Acceptance:** with the toggle on, banners are visually gone on the test corpus; no reject is claimed anywhere in the UI.
 
 #### A1 - Detection only (1-2 weeks)
 
-- [ ] New extension skeleton, rule schema v1, top 25 CMP rules.
-- [ ] Detection in all frames, including open shadow roots.
-- [ ] Report `banner_seen` events to the ledger (no clicks).
+- [x] New extension skeleton, rule schema v1, top 25 CMP rules.
+- [x] Detection in all frames, including open shadow roots.
+- [x] Report `banner_seen` events to the ledger (no clicks).
 - [ ] Show a small, dismissible badge on the page: "Cookie banner detected - reject?".
 
 **Acceptance:** on 50 test sites, >= 90% of banners are detected; zero DOM clicks; extension disabled -> zero change in page behaviour.
 
 #### A2 - Auto-reject (2-3 weeks)
 
-- [ ] Reject actions: `tcfapi`, selector click, reject-only text click.
+- [x] Reject actions: `tcfapi`, selector click, reject-only text click.
 - [ ] Per-site modes (`auto`, `ask`, `off`) with a UI to change them from the badge.
 - [ ] "Undo" restores the overlay and sets the site to `ask`.
-- [ ] Safety guards (attempt cap, timeout, navigation abort, form-focus abort).
-- [ ] Stats events: `banner_rejected`, `banner_failed`.
+- [x] Safety guards (attempt cap, timeout, navigation abort, form-focus abort).
+- [x] Stats events: `banner_rejected`, `banner_failed`.
 
 **Acceptance:**
 
@@ -390,7 +390,7 @@ CREATE TABLE cookie_banner_event (
 
 #### A3 - Rule repository (2-3 weeks)
 
-- [ ] Bundled pack versioned with a hash; cached in `browser.storage.local`.
+- [x] Bundled pack versioned with a hash; cached in `browser.storage.local`.
 - [ ] Optional rule updates: manual "Check for rule updates" plus an opt-in weekly check. No identifiers, no query parameters, no cookies on the request; download a static JSON and verify its hash against a pinned value shipped in the app.
 - [ ] Local overrides: disable a rule, add selectors for a site, export/import overrides as JSON.
 - [ ] Rule editor UI in the settings screen (advanced).

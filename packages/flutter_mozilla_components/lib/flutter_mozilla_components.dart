@@ -15,6 +15,7 @@ export 'src/domain/services/gecko_browser.dart';
 export 'src/domain/services/gecko_browser_extension.dart';
 export 'src/domain/services/gecko_container_proxy.dart';
 export 'src/domain/services/gecko_cookie.dart';
+export 'src/domain/services/gecko_cookie_banner.dart';
 export 'src/domain/services/gecko_delete_browser_data.dart';
 export 'src/domain/services/gecko_downloads.dart';
 export 'src/domain/services/gecko_engine_settings.dart';
@@ -72,6 +73,8 @@ export 'src/pigeons/gecko.g.dart'
         ColorScheme,
         ContainerSiteAssignment,
         ContentBlocking,
+        CookieBannerConfig,
+        CookieBannerEventData,
         CookieSameSiteStatus,
         CustomCookiePolicy,
         DocumentType,
