@@ -294,6 +294,29 @@ class _MainWidget extends HookConsumerWidget {
         (value) => value.disableAnimations,
       ),
     );
+    final textScaleMode = ref.watch(
+      generalSettingsWithDefaultsProvider.select(
+        (value) => value.textScaleMode,
+      ),
+    );
+    final textScaleFactor = ref.watch(
+      generalSettingsWithDefaultsProvider.select(
+        (value) => value.textScaleFactor,
+      ),
+    );
+    final maxSystemScale = ref.watch(
+      generalSettingsWithDefaultsProvider.select(
+        (value) => value.maxSystemScale,
+      ),
+    );
+    final boldText = ref.watch(
+      generalSettingsWithDefaultsProvider.select((value) => value.boldText),
+    );
+    final reduceMotionMode = ref.watch(
+      generalSettingsWithDefaultsProvider.select(
+        (value) => value.reduceMotionMode,
+      ),
+    );
     final showModalBarrier = ref.watch(
       generalSettingsWithDefaultsProvider.select(
         (value) => value.showModalBarrier,
@@ -857,6 +880,11 @@ class _MainWidget extends HookConsumerWidget {
           locale: appLocale,
           uiScaleFactor: uiScaleFactor,
           disableAnimations: disableAnimations,
+          textScaleMode: textScaleMode,
+          textScaleFactor: textScaleFactor,
+          maxSystemScale: maxSystemScale,
+          boldText: boldText,
+          reduceMotionMode: reduceMotionMode,
         );
       },
     );

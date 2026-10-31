@@ -27,6 +27,7 @@ import 'package:weblibre/domain/services/app_initialization.dart';
 import 'package:weblibre/features/geckoview/domain/providers.dart';
 import 'package:weblibre/features/sync/domain/entities/sync_repository_state.dart';
 import 'package:weblibre/features/sync/domain/repositories/sync.dart';
+import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/l10n/generated/app_localizations.dart';
 import 'package:weblibre/presentation/utils/app_initialization_l10n.dart';
@@ -43,6 +44,13 @@ class MainApp extends HookConsumerWidget {
   final bool disableAnimations;
   final Locale? locale;
 
+  // Accessibility
+  final TextScaleMode textScaleMode;
+  final double textScaleFactor;
+  final double maxSystemScale;
+  final bool boldText;
+  final ReduceMotionMode reduceMotionMode;
+
   const MainApp({
     required this.theme,
     required this.darkTheme,
@@ -50,6 +58,11 @@ class MainApp extends HookConsumerWidget {
     required this.uiScaleFactor,
     required this.disableAnimations,
     required this.locale,
+    this.textScaleMode = TextScaleMode.system,
+    this.textScaleFactor = 1.0,
+    this.maxSystemScale = 1.5,
+    this.boldText = false,
+    this.reduceMotionMode = ReduceMotionMode.system,
     super.key,
   });
 
@@ -88,6 +101,11 @@ class MainApp extends HookConsumerWidget {
                 child: _AppMediaQueryOverrides(
                   uiScaleFactor: uiScaleFactor,
                   disableAnimations: disableAnimations,
+                  textScaleMode: textScaleMode,
+                  textScaleFactor: textScaleFactor,
+                  maxSystemScale: maxSystemScale,
+                  boldText: boldText,
+                  reduceMotionMode: reduceMotionMode,
                   child: NavigationBarStyle(
                     child: child ?? const SizedBox.shrink(),
                   ),
@@ -136,6 +154,11 @@ class MainApp extends HookConsumerWidget {
               child: _AppMediaQueryOverrides(
                 uiScaleFactor: uiScaleFactor,
                 disableAnimations: disableAnimations,
+                textScaleMode: textScaleMode,
+                textScaleFactor: textScaleFactor,
+                maxSystemScale: maxSystemScale,
+                boldText: boldText,
+                reduceMotionMode: reduceMotionMode,
                 child: NavigationBarStyle(
                   child: MultiFingerTapGuard(
                     child: _SyncEventListener(
@@ -170,6 +193,11 @@ class MainApp extends HookConsumerWidget {
               child: _AppMediaQueryOverrides(
                 uiScaleFactor: uiScaleFactor,
                 disableAnimations: disableAnimations,
+                textScaleMode: textScaleMode,
+                textScaleFactor: textScaleFactor,
+                maxSystemScale: maxSystemScale,
+                boldText: boldText,
+                reduceMotionMode: reduceMotionMode,
                 child: NavigationBarStyle(
                   child: child ?? const SizedBox.shrink(),
                 ),
@@ -367,28 +395,61 @@ class _StatusBarInsetsOverride extends ConsumerWidget {
 class _AppMediaQueryOverrides extends StatelessWidget {
   final double uiScaleFactor;
   final bool disableAnimations;
+  final TextScaleMode textScaleMode;
+  final double textScaleFactor;
+  final double maxSystemScale;
+  final bool boldText;
+  final ReduceMotionMode reduceMotionMode;
   final Widget child;
 
   const _AppMediaQueryOverrides({
     required this.uiScaleFactor,
     required this.disableAnimations,
+    this.textScaleMode = TextScaleMode.system,
+    this.textScaleFactor = 1.0,
+    this.maxSystemScale = 1.5,
+    this.boldText = false,
+    this.reduceMotionMode = ReduceMotionMode.system,
     required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
-    if (uiScaleFactor == 1.0 && !disableAnimations) {
+    final systemScale = MediaQuery.textScalerOf(context).textScaleFactor;
+    double effectiveScale = uiScaleFactor;
+
+    switch (textScaleMode) {
+      case TextScaleMode.system:
+        effectiveScale = uiScaleFactor;
+      case TextScaleMode.app:
+        effectiveScale = textScaleFactor;
+      case TextScaleMode.capped:
+        final capped = systemScale.clamp(1.0, maxSystemScale);
+        effectiveScale = uiScaleFactor * capped;
+    }
+
+    final motionDisabled = disableAnimations ||
+        reduceMotionMode == ReduceMotionMode.on ||
+        (reduceMotionMode == ReduceMotionMode.system &&
+            MediaQuery.of(context).accessibleNavigation);
+
+    if (effectiveScale == 1.0 && !motionDisabled && !boldText) {
       return child;
     }
 
     final mediaQuery = MediaQuery.of(context);
-    final overriddenMediaQuery = applyAppMediaQueryOverrides(
-      mediaQuery: mediaQuery,
-      uiScaleFactor: uiScaleFactor,
-      disableAnimations: disableAnimations,
+    final overridden = mediaQuery.copyWith(
+      textScaler: (effectiveScale == 1.0 && textScaleMode == TextScaleMode.system)
+          ? mediaQuery.textScaler
+          : _AppTextScaler(
+              baseTextScaler: mediaQuery.textScaler,
+              uiScaleFactor: effectiveScale,
+            ),
+      boldText: boldText || mediaQuery.boldText,
+      disableAnimations: motionDisabled,
     );
 
-    return MediaQuery(data: overriddenMediaQuery, child: child);
+    return MediaQuery(data: overridden, child: child);
   }
 }
 

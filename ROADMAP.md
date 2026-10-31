@@ -758,9 +758,9 @@ Add an `AccessibilitySettings` section (or fields, if export simplicity wins):
 
 #### C2. Text scaling (1-2 weeks)
 
-- [ ] Raise the app ceiling from 1.5 to 2.0.
-- [ ] Add `capped` mode so system 200% does not multiply into 300%+.
-- [ ] Replace fixed-height rows and `SizedBox`-clamped text with intrinsic layouts where they clip.
+- [x] Raise the app ceiling from 1.5 to 2.0.
+- [x] Add `capped` mode so system 200% does not multiply into 300%+.
+- [x] Replace fixed-height rows and `SizedBox`-clamped text with intrinsic layouts where they clip.
 - [ ] Add golden tests at 1.0, 1.5, 2.0 and with `boldText` on.
 - [ ] Ensure dialogs, sheets, toolbars and the address bar remain usable at 2.0.
 
