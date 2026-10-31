@@ -31,8 +31,9 @@ import 'package:weblibre/features/geckoview/features/browser/presentation/utils/
 import 'package:weblibre/features/intent_gatekeeper/domain/entities/intent_source_policy.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/services/package_label_resolver.dart';
 import 'package:weblibre/features/profile_import/presentation/screens/profile_import_screen.dart';
-import 'package:weblibre/features/settings/presentation/screens/accessibility_settings.dart';
+import 'package:weblibre/features/protection_stats/presentation/screens/protection_report_screen.dart';
 import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
+import 'package:weblibre/features/settings/presentation/screens/accessibility_settings.dart';
 import 'package:weblibre/features/settings/presentation/widgets/sections.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/models/engine_settings.dart';
@@ -119,6 +120,12 @@ List<SettingsSectionDefinition> privacySecuritySettingsSections(
           subtitle: l10n.settings_cookieBannersSubtitle,
           keywords: settingsKeywords(l10n.settings_cookieBannersKeywords),
           child: const _CookieBannersSection(),
+        ),
+        SettingsEntryDefinition(
+          title: 'Protection report',
+          subtitle: 'Trackers blocked, banners handled and more',
+          keywords: settingsKeywords('protection,stats,trackers,report'),
+          child: const _ProtectionReportTile(),
         ),
       ],
     ),
@@ -1326,6 +1333,31 @@ class _ProfileImportTile extends StatelessWidget {
         await Navigator.of(context).push(
           MaterialPageRoute<void>(
             builder: (_) => const ProfileImportScreen(),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _ProtectionReportTile extends StatelessWidget {
+  const _ProtectionReportTile();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: const Text('Protection report'),
+      subtitle: const Text('Trackers blocked, banners handled and more'),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 8.0,
+        horizontal: 16.0,
+      ),
+      leading: const Icon(Icons.shield_outlined),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => const ProtectionReportScreen(),
           ),
         );
       },

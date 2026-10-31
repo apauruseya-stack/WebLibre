@@ -957,17 +957,17 @@ Layout:
 
 #### D0 - Schema and ETP ingest (1 week)
 
-- [ ] Ledger + rollup tables, retention job.
-- [ ] ETP diffing with reset handling.
+- [x] Ledger + rollup tables, retention job.
+- [x] ETP diffing with reset handling.
 - [ ] Unit tests with synthetic `TrackingStatistics`.
 
 **Acceptance:** totals match the existing inline summary within 1 count after a full sync; no duplicate rows after 100 resume cycles.
 
 #### D1 - Dashboard v1 (1-2 weeks)
 
-- [ ] Report screen with hero, sparkline, categories, top sites.
-- [ ] Empty, loading and error states.
-- [ ] Settings entry + search keywords.
+- [x] Report screen with hero, sparkline, categories, top sites.
+- [x] Empty, loading and error states.
+- [x] Settings entry + search keywords.
 
 **Acceptance:** loads in < 300 ms with 1 year of rollups; renders correctly in high contrast and at 200% text.
 
