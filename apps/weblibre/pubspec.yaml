@@ -147,6 +147,7 @@ flutter:
     - assets/sites/
     - assets/small_web/
     - assets/ublock/
+    - assets/wallpaper/
   fonts:
     - family: TorIcons
       fonts:

@@ -127,6 +127,28 @@ class WallpaperSweeper extends _$WallpaperSweeper {
 
 /// The resolution itself, apart from the providers, so it can be exercised
 /// directly and reused by the settings screen's preview.
+/// Reads the user's chosen logo variant ('black' or 'white') from a small
+/// marker file in the profile dir. Defaults to 'black'.
+String _readLogoChoice() {
+  try {
+    final file = File('${filesystem.selectedProfileDir}/home_wallpaper_logo_choice.txt');
+    if (file.existsSync()) {
+      final value = file.readAsStringSync().trim();
+      if (value == 'white') return 'white';
+    }
+  } catch (_) {}
+  return 'black';
+}
+
+/// Persists the user's chosen logo variant.
+Future<void> setHomeWallpaperLogoChoice(String choice) async {
+  try {
+    final file = File('${filesystem.selectedProfileDir}/home_wallpaper_logo_choice.txt');
+    await file.parent.create(recursive: true);
+    await file.writeAsString(choice, flush: true);
+  } catch (_) {}
+}
+
 HomeWallpaper? resolveHomeWallpaper({
   required WallpaperStore store,
   required GeneralSettings settings,
@@ -166,5 +188,15 @@ HomeWallpaper? resolveHomeWallpaper({
     );
   }
 
-  return null;
+  // Default to the bundled Cat Browser logo (black by default) as the home
+  // wallpaper, so a fresh install is never blank. The user can flip between
+  // the black and white variants by tapping the home clock.
+  final logoChoice = _readLogoChoice();
+  return HomeWallpaper(
+    assetPath: logoChoice == 'white'
+        ? 'assets/wallpaper/whitelogo.png'
+        : 'assets/wallpaper/blacklogo.png',
+    blur: settings.homeWallpaperBlur,
+    dim: settings.homeWallpaperDim,
+  );
 }

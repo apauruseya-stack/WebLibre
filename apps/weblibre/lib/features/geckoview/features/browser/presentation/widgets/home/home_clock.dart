@@ -21,17 +21,22 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/features/wallpaper/domain/providers.dart';
 
 /// A large, centred clock for the home surface, in the style of TablissNG.
 ///
 /// Replaces the brand mark in the home header so the page reads as a clock
 /// face rather than a logo. Updates once a second so the seconds hand (when
 /// shown) stays live; the minute is always current.
-class HomeClock extends HookWidget {
+///
+/// Tapping the clock flips the bundled Cat Browser logo wallpaper between its
+/// black and white variants (persisted in the profile dir).
+class HomeClock extends HookConsumerWidget {
   const HomeClock({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final now = useState(DateTime.now());
 
     useEffect(() {
@@ -48,9 +53,20 @@ class HomeClock extends HookWidget {
     final hour = time.hour.toString().padLeft(2, '0');
     final minute = time.minute.toString().padLeft(2, '0');
 
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
+    return GestureDetector(
+      onTap: () async {
+        // Flip the bundled logo wallpaper between black and white.
+        final currentWallpaper = ref.read(resolvedHomeWallpaperProvider);
+        final current = (currentWallpaper?.assetPath ?? '').contains('white')
+            ? 'white'
+            : 'black';
+        final next = current == 'white' ? 'black' : 'white';
+        await setHomeWallpaperLogoChoice(next);
+        ref.invalidate(resolvedHomeWallpaperProvider);
+      },
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
         Text(
           '$hour:$minute',
           style: theme.textTheme.displayLarge?.copyWith(
@@ -69,6 +85,7 @@ class HomeClock extends HookWidget {
           ),
         ),
       ],
+    );
     );
   }
 

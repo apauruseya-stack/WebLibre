@@ -62,10 +62,14 @@ const defaultHomeWallpaperDim = 0.35;
 /// the selected container's own wallpaper or the profile-wide one wins. Nothing
 /// downstream of that needs to know which of the two it got.
 class HomeWallpaper with FastEquatable {
-  // Compared by `file.path` in `hashParameters`: `File` has identity equality,
-  // so two handles on the same wallpaper would otherwise never match.
+  // Compared by `file.path`/`assetPath` in `hashParameters`: `File` has
+  // identity equality, so two handles on the same wallpaper would otherwise
+  // never match.
   // ignore: fast_equatable_lint/missing_field_in_equatable_props
-  final File file;
+  final File? file;
+
+  /// When set, the wallpaper is loaded from a bundled asset instead of [file].
+  final String? assetPath;
 
   /// Gaussian sigma in logical pixels; 0 means no blur.
   final double blur;
@@ -74,8 +78,8 @@ class HomeWallpaper with FastEquatable {
   /// [maxHomeWallpaperDim].
   final double dim;
 
-  HomeWallpaper({required this.file, required this.blur, required this.dim});
+  HomeWallpaper({this.file, this.assetPath, required this.blur, required this.dim});
 
   @override
-  List<Object?> get hashParameters => [file.path, blur, dim];
+  List<Object?> get hashParameters => [file?.path, assetPath, blur, dim];
 }

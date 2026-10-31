@@ -137,12 +137,23 @@ class _WallpaperLayer extends StatelessWidget {
             .round()
             .clamp(_minDecodeWidth, _maxDecodeWidth);
 
-    Widget image = Image(
-      image: ResizeImage(
-        FileImage(wallpaper.file),
+    final ImageProvider imageProvider;
+    if (wallpaper.assetPath != null) {
+      imageProvider = ResizeImage(
+        AssetImage(wallpaper.assetPath!),
         width: decodeWidth,
         allowUpscaling: false,
-      ),
+      );
+    } else {
+      imageProvider = ResizeImage(
+        FileImage(wallpaper.file!),
+        width: decodeWidth,
+        allowUpscaling: false,
+      );
+    }
+
+    Widget image = Image(
+      image: imageProvider,
       fit: BoxFit.cover,
       filterQuality: FilterQuality.medium,
       // The wallpaper survives a theme change or a settings write without
