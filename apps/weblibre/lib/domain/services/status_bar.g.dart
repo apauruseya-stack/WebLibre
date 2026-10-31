@@ -55,4 +55,4 @@ final class StatusBarApplierProvider
   }
 }
 
-String _$statusBarApplierHash() => r'0a4f59398ac188af7c9904995696bd6be2a9d339';
+String _$statusBarApplierHash() => r'cbff4cf419f58bbeaa12d9a810ba4ad5664d3360';

@@ -31,6 +31,7 @@ import 'package:weblibre/features/geckoview/features/browser/presentation/utils/
 import 'package:weblibre/features/intent_gatekeeper/domain/entities/intent_source_policy.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/services/package_label_resolver.dart';
 import 'package:weblibre/features/profile_import/presentation/screens/profile_import_screen.dart';
+import 'package:weblibre/features/settings/presentation/screens/accessibility_settings.dart';
 import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
 import 'package:weblibre/features/settings/presentation/widgets/sections.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
@@ -106,6 +107,12 @@ List<SettingsSectionDefinition> privacySecuritySettingsSections(
           subtitle: 'Import bookmarks, history and settings from another browser',
           keywords: settingsKeywords('import,migrate,chrome,firefox,brave'),
           child: const _ProfileImportTile(),
+        ),
+        SettingsEntryDefinition(
+          title: 'Accessibility',
+          subtitle: 'Text scale, contrast, motion and touch targets',
+          keywords: settingsKeywords('accessibility,a11y,contrast,motion'),
+          child: const _AccessibilityTile(),
         ),
         SettingsEntryDefinition(
           title: l10n.settings_cookieBannersTitle,
@@ -1319,6 +1326,31 @@ class _ProfileImportTile extends StatelessWidget {
         await Navigator.of(context).push(
           MaterialPageRoute<void>(
             builder: (_) => const ProfileImportScreen(),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _AccessibilityTile extends StatelessWidget {
+  const _AccessibilityTile();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: const Text('Accessibility'),
+      subtitle: const Text('Text scale, contrast, motion and touch targets'),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 8.0,
+        horizontal: 16.0,
+      ),
+      leading: const Icon(Icons.accessibility_new),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => const AccessibilitySettingsScreen(),
           ),
         );
       },

@@ -251,6 +251,24 @@ abstract class _$GeneralSettingsCWProxy {
     CookieBannerHandling cookieBannerHandling,
   );
 
+  GeneralSettings textScaleMode(TextScaleMode textScaleMode);
+
+  GeneralSettings textScaleFactor(double textScaleFactor);
+
+  GeneralSettings maxSystemScale(double maxSystemScale);
+
+  GeneralSettings boldText(bool boldText);
+
+  GeneralSettings highContrastMode(HighContrastMode highContrastMode);
+
+  GeneralSettings contrastLevel(double contrastLevel);
+
+  GeneralSettings reduceMotionMode(ReduceMotionMode reduceMotionMode);
+
+  GeneralSettings largeTouchTargets(bool largeTouchTargets);
+
+  GeneralSettings showFocusRing(bool showFocusRing);
+
   GeneralSettings globalDesktopMode(bool globalDesktopMode);
 
   GeneralSettings desktopModeSites(List<String> desktopModeSites);
@@ -365,6 +383,15 @@ abstract class _$GeneralSettingsCWProxy {
     bool pureBlack,
     bool hideStatusBar,
     CookieBannerHandling cookieBannerHandling,
+    TextScaleMode textScaleMode,
+    double textScaleFactor,
+    double maxSystemScale,
+    bool boldText,
+    HighContrastMode highContrastMode,
+    double contrastLevel,
+    ReduceMotionMode reduceMotionMode,
+    bool largeTouchTargets,
+    bool showFocusRing,
     bool globalDesktopMode,
     List<String> desktopModeSites,
     bool unmountGeckoViewOffRoute,
@@ -810,6 +837,41 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
   ) => call(cookieBannerHandling: cookieBannerHandling);
 
   @override
+  GeneralSettings textScaleMode(TextScaleMode textScaleMode) =>
+      call(textScaleMode: textScaleMode);
+
+  @override
+  GeneralSettings textScaleFactor(double textScaleFactor) =>
+      call(textScaleFactor: textScaleFactor);
+
+  @override
+  GeneralSettings maxSystemScale(double maxSystemScale) =>
+      call(maxSystemScale: maxSystemScale);
+
+  @override
+  GeneralSettings boldText(bool boldText) => call(boldText: boldText);
+
+  @override
+  GeneralSettings highContrastMode(HighContrastMode highContrastMode) =>
+      call(highContrastMode: highContrastMode);
+
+  @override
+  GeneralSettings contrastLevel(double contrastLevel) =>
+      call(contrastLevel: contrastLevel);
+
+  @override
+  GeneralSettings reduceMotionMode(ReduceMotionMode reduceMotionMode) =>
+      call(reduceMotionMode: reduceMotionMode);
+
+  @override
+  GeneralSettings largeTouchTargets(bool largeTouchTargets) =>
+      call(largeTouchTargets: largeTouchTargets);
+
+  @override
+  GeneralSettings showFocusRing(bool showFocusRing) =>
+      call(showFocusRing: showFocusRing);
+
+  @override
   GeneralSettings globalDesktopMode(bool globalDesktopMode) =>
       call(globalDesktopMode: globalDesktopMode);
 
@@ -933,6 +995,15 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? pureBlack = const $CopyWithPlaceholder(),
     Object? hideStatusBar = const $CopyWithPlaceholder(),
     Object? cookieBannerHandling = const $CopyWithPlaceholder(),
+    Object? textScaleMode = const $CopyWithPlaceholder(),
+    Object? textScaleFactor = const $CopyWithPlaceholder(),
+    Object? maxSystemScale = const $CopyWithPlaceholder(),
+    Object? boldText = const $CopyWithPlaceholder(),
+    Object? highContrastMode = const $CopyWithPlaceholder(),
+    Object? contrastLevel = const $CopyWithPlaceholder(),
+    Object? reduceMotionMode = const $CopyWithPlaceholder(),
+    Object? largeTouchTargets = const $CopyWithPlaceholder(),
+    Object? showFocusRing = const $CopyWithPlaceholder(),
     Object? globalDesktopMode = const $CopyWithPlaceholder(),
     Object? desktopModeSites = const $CopyWithPlaceholder(),
     Object? unmountGeckoViewOffRoute = const $CopyWithPlaceholder(),
@@ -1512,6 +1583,55 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.cookieBannerHandling
           // ignore: cast_nullable_to_non_nullable
           : cookieBannerHandling as CookieBannerHandling,
+      textScaleMode:
+          textScaleMode == const $CopyWithPlaceholder() || textScaleMode == null
+          ? _value.textScaleMode
+          // ignore: cast_nullable_to_non_nullable
+          : textScaleMode as TextScaleMode,
+      textScaleFactor:
+          textScaleFactor == const $CopyWithPlaceholder() ||
+              textScaleFactor == null
+          ? _value.textScaleFactor
+          // ignore: cast_nullable_to_non_nullable
+          : textScaleFactor as double,
+      maxSystemScale:
+          maxSystemScale == const $CopyWithPlaceholder() ||
+              maxSystemScale == null
+          ? _value.maxSystemScale
+          // ignore: cast_nullable_to_non_nullable
+          : maxSystemScale as double,
+      boldText: boldText == const $CopyWithPlaceholder() || boldText == null
+          ? _value.boldText
+          // ignore: cast_nullable_to_non_nullable
+          : boldText as bool,
+      highContrastMode:
+          highContrastMode == const $CopyWithPlaceholder() ||
+              highContrastMode == null
+          ? _value.highContrastMode
+          // ignore: cast_nullable_to_non_nullable
+          : highContrastMode as HighContrastMode,
+      contrastLevel:
+          contrastLevel == const $CopyWithPlaceholder() || contrastLevel == null
+          ? _value.contrastLevel
+          // ignore: cast_nullable_to_non_nullable
+          : contrastLevel as double,
+      reduceMotionMode:
+          reduceMotionMode == const $CopyWithPlaceholder() ||
+              reduceMotionMode == null
+          ? _value.reduceMotionMode
+          // ignore: cast_nullable_to_non_nullable
+          : reduceMotionMode as ReduceMotionMode,
+      largeTouchTargets:
+          largeTouchTargets == const $CopyWithPlaceholder() ||
+              largeTouchTargets == null
+          ? _value.largeTouchTargets
+          // ignore: cast_nullable_to_non_nullable
+          : largeTouchTargets as bool,
+      showFocusRing:
+          showFocusRing == const $CopyWithPlaceholder() || showFocusRing == null
+          ? _value.showFocusRing
+          // ignore: cast_nullable_to_non_nullable
+          : showFocusRing as bool,
       globalDesktopMode:
           globalDesktopMode == const $CopyWithPlaceholder() ||
               globalDesktopMode == null
@@ -1745,6 +1865,24 @@ GeneralSettings _$GeneralSettingsFromJson(
     _$CookieBannerHandlingEnumMap,
     json['cookieBannerHandling'],
   ),
+  textScaleMode: $enumDecodeNullable(
+    _$TextScaleModeEnumMap,
+    json['textScaleMode'],
+  ),
+  textScaleFactor: (json['textScaleFactor'] as num?)?.toDouble(),
+  maxSystemScale: (json['maxSystemScale'] as num?)?.toDouble(),
+  boldText: json['boldText'] as bool?,
+  highContrastMode: $enumDecodeNullable(
+    _$HighContrastModeEnumMap,
+    json['highContrastMode'],
+  ),
+  contrastLevel: (json['contrastLevel'] as num?)?.toDouble(),
+  reduceMotionMode: $enumDecodeNullable(
+    _$ReduceMotionModeEnumMap,
+    json['reduceMotionMode'],
+  ),
+  largeTouchTargets: json['largeTouchTargets'] as bool?,
+  showFocusRing: json['showFocusRing'] as bool?,
   globalDesktopMode: json['globalDesktopMode'] as bool?,
   desktopModeSites: (json['desktopModeSites'] as List<dynamic>?)
       ?.map((e) => e as String)
@@ -1879,6 +2017,15 @@ Map<String, dynamic> _$GeneralSettingsToJson(
   'hideStatusBar': instance.hideStatusBar,
   'cookieBannerHandling':
       _$CookieBannerHandlingEnumMap[instance.cookieBannerHandling]!,
+  'textScaleMode': _$TextScaleModeEnumMap[instance.textScaleMode]!,
+  'textScaleFactor': instance.textScaleFactor,
+  'maxSystemScale': instance.maxSystemScale,
+  'boldText': instance.boldText,
+  'highContrastMode': _$HighContrastModeEnumMap[instance.highContrastMode]!,
+  'contrastLevel': instance.contrastLevel,
+  'reduceMotionMode': _$ReduceMotionModeEnumMap[instance.reduceMotionMode]!,
+  'largeTouchTargets': instance.largeTouchTargets,
+  'showFocusRing': instance.showFocusRing,
   'globalDesktopMode': instance.globalDesktopMode,
   'desktopModeSites': instance.desktopModeSites,
   'unmountGeckoViewOffRoute': instance.unmountGeckoViewOffRoute,
@@ -2025,4 +2172,22 @@ const _$CookieBannerHandlingEnumMap = {
   CookieBannerHandling.detect: 'detect',
   CookieBannerHandling.reject: 'reject',
   CookieBannerHandling.rejectOrHide: 'rejectOrHide',
+};
+
+const _$TextScaleModeEnumMap = {
+  TextScaleMode.system: 'system',
+  TextScaleMode.app: 'app',
+  TextScaleMode.capped: 'capped',
+};
+
+const _$HighContrastModeEnumMap = {
+  HighContrastMode.system: 'system',
+  HighContrastMode.on: 'on',
+  HighContrastMode.off: 'off',
+};
+
+const _$ReduceMotionModeEnumMap = {
+  ReduceMotionMode.system: 'system',
+  ReduceMotionMode.on: 'on',
+  ReduceMotionMode.off: 'off',
 };

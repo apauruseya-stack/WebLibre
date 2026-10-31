@@ -748,8 +748,8 @@ Add an `AccessibilitySettings` section (or fields, if export simplicity wins):
 
 #### C1. Audit and quick wins (1 week)
 
-- [ ] Inventory every `IconButton`, `InkWell`, `GestureDetector`, custom paint and drag handle in `lib/`.
-- [ ] Add `tooltip` + `Semantics(label:)` where an icon has no text.
+- [x] Inventory every `IconButton`, `InkWell`, `GestureDetector`, custom paint and drag handle in `lib/`.
+- [x] Add `tooltip` + `Semantics(label:)` where an icon has no text.
 - [ ] Mark decorative images `ExcludeSemantics`.
 - [ ] Merge compound rows with `MergeSemantics` so TalkBack reads one sentence, not five.
 - [ ] Fix known offenders first: toolbar buttons, quick tab switcher chips, FABs, tab grid items, container chips, sheet drag handles.

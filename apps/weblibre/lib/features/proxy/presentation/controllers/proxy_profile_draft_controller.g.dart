@@ -15,7 +15,7 @@ abstract class _$ProxyProfileDraftStateCWProxy {
 
   ProxyProfileDraftState name(String name);
 
-  ProxyProfileDraftState type(SingboxProxyProfileType type);
+  ProxyProfileDraftState type(InvalidType type);
 
   ProxyProfileDraftState values(Map<String, String> values);
 
@@ -48,7 +48,7 @@ abstract class _$ProxyProfileDraftStateCWProxy {
     ProxyProfile? existingProfile,
     ProxyProfileLoadError? loadError,
     String name,
-    SingboxProxyProfileType type,
+    InvalidType type,
     Map<String, String> values,
     String? dnsOverrideJson,
     String customConfigJson,
@@ -85,7 +85,7 @@ class _$ProxyProfileDraftStateCWProxyImpl
   ProxyProfileDraftState name(String name) => call(name: name);
 
   @override
-  ProxyProfileDraftState type(SingboxProxyProfileType type) => call(type: type);
+  ProxyProfileDraftState type(InvalidType type) => call(type: type);
 
   @override
   ProxyProfileDraftState values(Map<String, String> values) =>
@@ -164,10 +164,10 @@ class _$ProxyProfileDraftStateCWProxyImpl
           ? _value.name
           // ignore: cast_nullable_to_non_nullable
           : name as String,
-      type: type == const $CopyWithPlaceholder() || type == null
+      type: type == const $CopyWithPlaceholder()
           ? _value.type
           // ignore: cast_nullable_to_non_nullable
-          : type as SingboxProxyProfileType,
+          : type as InvalidType,
       values: values == const $CopyWithPlaceholder() || values == null
           ? _value.values
           // ignore: cast_nullable_to_non_nullable

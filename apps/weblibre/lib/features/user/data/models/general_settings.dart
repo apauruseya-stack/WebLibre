@@ -349,6 +349,12 @@ enum DeleteBrowsingDataType {
   downloads,
 }
 
+enum TextScaleMode { system, app, capped }
+
+enum HighContrastMode { system, on, off }
+
+enum ReduceMotionMode { system, on, off }
+
 /// How far the built-in cookie banner handler may go.
 ///
 /// Every mode is on-device and rule-driven. None of them ever clicks an
@@ -707,6 +713,33 @@ class GeneralSettings with FastEquatable {
   /// control, hide the overlay otherwise, and never accept on the user's behalf.
   final CookieBannerHandling cookieBannerHandling;
 
+  /// Accessibility: how the app text scale is resolved.
+  final TextScaleMode textScaleMode;
+
+  /// Accessibility: app-side text scale multiplier (0.5-2.0).
+  final double textScaleFactor;
+
+  /// Accessibility: cap applied to the system scale in [TextScaleMode.capped].
+  final double maxSystemScale;
+
+  /// Accessibility: force bold text regardless of the system setting.
+  final bool boldText;
+
+  /// Accessibility: high-contrast theme resolution.
+  final HighContrastMode highContrastMode;
+
+  /// Accessibility: Material 3 tonal contrast (0.0-1.0).
+  final double contrastLevel;
+
+  /// Accessibility: reduce-motion resolution.
+  final ReduceMotionMode reduceMotionMode;
+
+  /// Accessibility: use 56 dp minimum touch targets instead of 48 dp.
+  final bool largeTouchTargets;
+
+  /// Accessibility: show a visible focus ring.
+  final bool showFocusRing;
+
   /// Browser-wide default desktop mode. When true, newly opened tabs request
   /// the desktop version of sites by default. The per-tab desktop-mode toggle
   /// still overrides this for an individual tab. Defaults to false.
@@ -832,6 +865,15 @@ class GeneralSettings with FastEquatable {
     required this.pureBlack,
     required this.hideStatusBar,
     required this.cookieBannerHandling,
+    required this.textScaleMode,
+    required this.textScaleFactor,
+    required this.maxSystemScale,
+    required this.boldText,
+    required this.highContrastMode,
+    required this.contrastLevel,
+    required this.reduceMotionMode,
+    required this.largeTouchTargets,
+    required this.showFocusRing,
     required this.globalDesktopMode,
     required this.desktopModeSites,
     required this.unmountGeckoViewOffRoute,
@@ -937,6 +979,15 @@ class GeneralSettings with FastEquatable {
     bool? pureBlack,
     bool? hideStatusBar,
     CookieBannerHandling? cookieBannerHandling,
+    TextScaleMode? textScaleMode,
+    double? textScaleFactor,
+    double? maxSystemScale,
+    bool? boldText,
+    HighContrastMode? highContrastMode,
+    double? contrastLevel,
+    ReduceMotionMode? reduceMotionMode,
+    bool? largeTouchTargets,
+    bool? showFocusRing,
     bool? globalDesktopMode,
     List<String>? desktopModeSites,
     bool? unmountGeckoViewOffRoute,
@@ -1074,6 +1125,15 @@ class GeneralSettings with FastEquatable {
        hideStatusBar = hideStatusBar ?? false,
        cookieBannerHandling =
            cookieBannerHandling ?? CookieBannerHandling.rejectOrHide,
+       textScaleMode = textScaleMode ?? TextScaleMode.system,
+       textScaleFactor = (textScaleFactor ?? 1.0).clamp(0.5, 2.0),
+       maxSystemScale = (maxSystemScale ?? 1.5).clamp(1.0, 2.0),
+       boldText = boldText ?? false,
+       highContrastMode = highContrastMode ?? HighContrastMode.system,
+       contrastLevel = (contrastLevel ?? 0.0).clamp(0.0, 1.0),
+       reduceMotionMode = reduceMotionMode ?? ReduceMotionMode.system,
+       largeTouchTargets = largeTouchTargets ?? false,
+       showFocusRing = showFocusRing ?? true,
        globalDesktopMode = globalDesktopMode ?? false,
        desktopModeSites = desktopModeSites ?? const [],
        unmountGeckoViewOffRoute = unmountGeckoViewOffRoute ?? false;
