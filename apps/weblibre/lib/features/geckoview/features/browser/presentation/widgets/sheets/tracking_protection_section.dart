@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -131,6 +132,7 @@ class _TrackingProtectionTile extends ConsumerWidget {
     bool enabled,
   ) async {
     try {
+      await HapticFeedback.selectionClick();
       if (enabled) {
         // Remove exception to enable ETP
         await ref
