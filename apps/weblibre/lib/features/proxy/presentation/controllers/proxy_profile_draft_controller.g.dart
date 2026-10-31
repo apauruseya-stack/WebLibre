@@ -1,4 +1,4 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
+﻿// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'proxy_profile_draft_controller.dart';
 
@@ -15,7 +15,7 @@ abstract class _$ProxyProfileDraftStateCWProxy {
 
   ProxyProfileDraftState name(String name);
 
-  ProxyProfileDraftState type(InvalidType type);
+  ProxyProfileDraftState type(SingboxProxyProfileType type);
 
   ProxyProfileDraftState values(Map<String, String> values);
 
@@ -48,7 +48,7 @@ abstract class _$ProxyProfileDraftStateCWProxy {
     ProxyProfile? existingProfile,
     ProxyProfileLoadError? loadError,
     String name,
-    InvalidType type,
+    SingboxProxyProfileType type,
     Map<String, String> values,
     String? dnsOverrideJson,
     String customConfigJson,
@@ -85,7 +85,7 @@ class _$ProxyProfileDraftStateCWProxyImpl
   ProxyProfileDraftState name(String name) => call(name: name);
 
   @override
-  ProxyProfileDraftState type(InvalidType type) => call(type: type);
+  ProxyProfileDraftState type(SingboxProxyProfileType type) => call(type: type);
 
   @override
   ProxyProfileDraftState values(Map<String, String> values) =>
@@ -167,7 +167,7 @@ class _$ProxyProfileDraftStateCWProxyImpl
       type: type == const $CopyWithPlaceholder()
           ? _value.type
           // ignore: cast_nullable_to_non_nullable
-          : type as InvalidType,
+          : type as SingboxProxyProfileType,
       values: values == const $CopyWithPlaceholder() || values == null
           ? _value.values
           // ignore: cast_nullable_to_non_nullable

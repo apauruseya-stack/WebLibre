@@ -42,8 +42,7 @@ class HomeWallpaperBackdrop extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final tabBarPosition = ref.watch(effectiveTabBarPositionProvider);
 
-    // Kick off the online-wallpaper fetch (Bing daily image) and rebuild once
-    // it lands, so the home surface picks up the cached file.
+    // Kick off the online-wallpaper fetch and rebuild once it lands.
     ref.watch(onlineWallpaperRefresherProvider);
 
     return WallpaperBackdrop(

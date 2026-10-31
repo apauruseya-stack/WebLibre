@@ -46,11 +46,12 @@ File onlineWallpaperCacheFile() {
   return File('${dir.path}/home_wallpaper_online.jpg');
 }
 
-/// Fetches a fresh online wallpaper (Bing daily image) when the cache is
-/// missing or older than a day, then invalidates [resolvedHomeWallpaperProvider]
+/// Fetches a fresh online wallpaper (Bing/Wikimedia/NASA) when the cache is
+/// missing or older than an hour, then invalidates [resolvedHomeWallpaperProvider]
 /// so the home surface picks it up.
-@Riverpod(keepAlive: true)
-Future<void> onlineWallpaperRefresher(Ref ref) async {
+///
+/// Plain [FutureProvider] (no codegen) so it does not require `build_runner`.
+final onlineWallpaperRefresherProvider = FutureProvider<void>((ref) async {
   final cache = onlineWallpaperCacheFile();
   final isStale = !cache.existsSync() ||
       DateTime.now().difference(await cache.lastModified()) >
@@ -63,7 +64,8 @@ Future<void> onlineWallpaperRefresher(Ref ref) async {
   if (result != null) {
     ref.invalidate(resolvedHomeWallpaperProvider);
   }
-}
+});
+
 
 /// The wallpaper to draw behind the home surface right now, or null when there
 /// is none.
