@@ -17,8 +17,29 @@
   }
   window.__weblibreCookieBanner = true;
 
-  if (!/^https?:$/.test(location.protocol) || window.top !== window) {
+  if (!/^https?:$/.test(location.protocol)) {
     return;
+  }
+
+  // In an iframe, only act when it is same-origin with the top page, or when
+  // a known CMP global is present (API-based). Cross-origin iframes without
+  // an API are never touched.
+  if (window.top !== window) {
+    let sameOrigin = false;
+    try {
+      sameOrigin = window.top.location.origin === window.location.origin;
+    } catch (error) {
+      sameOrigin = false;
+    }
+    const hasCmpApi =
+      typeof window.Cookiebot !== 'undefined' ||
+      typeof window.OneTrust !== 'undefined' ||
+      typeof window.Didomi !== 'undefined' ||
+      typeof window.UC_UI !== 'undefined' ||
+      typeof window.__tcfapi === 'function';
+    if (!sameOrigin && !hasCmpApi) {
+      return;
+    }
   }
 
   const MAX_CLICKS = 3;

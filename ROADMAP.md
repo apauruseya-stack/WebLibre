@@ -399,10 +399,10 @@ CREATE TABLE cookie_banner_event (
 
 #### A4 - Coverage and hardening (2 weeks)
 
-- [ ] CMP iframe handling where same-origin or API-based.
-- [ ] Confidence tuning from local stats (failed actions per rule).
-- [ ] Rule contribution workflow documented in the repo (JSON only, no code).
-- [ ] Fuzz tests for the rule parser and the text matcher.
+- [x] CMP iframe handling where same-origin or API-based.
+- [x] Confidence tuning from local stats (failed actions per rule).
+- [x] Rule contribution workflow documented in the repo (JSON only, no code).
+- [x] Fuzz tests for the rule parser and the text matcher.
 
 **Acceptance:** >= 85% handled on the corpus; no crash in 1,000 randomized pages; rule pack loads in < 50 ms.
 
