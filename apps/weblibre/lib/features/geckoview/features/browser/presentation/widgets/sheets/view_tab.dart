@@ -30,6 +30,7 @@ import 'package:weblibre/features/geckoview/features/browser/presentation/widget
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/desktop_mode_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/gesture_exclusion_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/permissions_section.dart';
+import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/privacy_xray_badge.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/privacy_xray_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/routing_section.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/tracking_protection_section.dart';
@@ -107,7 +108,13 @@ class ViewTabSheetWidget extends HookConsumerWidget {
                         tabType: initialTabState.tabMode.toTabType(),
                       ).push(context);
                     },
-                    child: WebsiteTitleTile(initialTabState),
+                    child: Row(
+                      children: [
+                        Expanded(child: WebsiteTitleTile(initialTabState)),
+                        PrivacyXRayBadge(tabId: initialTabState.id),
+                        const SizedBox(width: 8),
+                      ],
+                    ),
                   ),
                 ),
                 CertificateTile(onClose: onClose),
