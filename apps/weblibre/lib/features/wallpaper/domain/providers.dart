@@ -17,6 +17,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import 'dart:io';
+
 import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:weblibre/core/filesystem.dart';
@@ -27,6 +29,7 @@ import 'package:weblibre/features/geckoview/features/tabs/domain/repositories/co
 import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/features/wallpaper/domain/entities/home_wallpaper.dart';
+import 'package:weblibre/features/wallpaper/domain/services/online_wallpaper.dart';
 import 'package:weblibre/features/wallpaper/domain/services/wallpaper_store.dart';
 
 part 'providers.g.dart';
@@ -34,6 +37,32 @@ part 'providers.g.dart';
 @Riverpod(keepAlive: true)
 WallpaperStore wallpaperStore(Ref ref) {
   return WallpaperStore(profileDir: () => filesystem.selectedProfileDir);
+}
+
+/// Where a fetched online wallpaper is cached. Lives in the selected profile
+/// dir so it travels with backups and is cleaned up on profile deletion.
+File onlineWallpaperCacheFile() {
+  final dir = Directory(filesystem.selectedProfileDir);
+  return File('${dir.path}/home_wallpaper_online.jpg');
+}
+
+/// Fetches a fresh online wallpaper (Bing daily image) when the cache is
+/// missing or older than a day, then invalidates [resolvedHomeWallpaperProvider]
+/// so the home surface picks it up.
+@Riverpod(keepAlive: true)
+Future<void> onlineWallpaperRefresher(Ref ref) async {
+  final cache = onlineWallpaperCacheFile();
+  final isStale = !cache.existsSync() ||
+      DateTime.now().difference(await cache.lastModified()) >
+          const Duration(hours: 20);
+
+  if (!isStale) return;
+
+  final service = OnlineWallpaperService();
+  final result = await service.fetch(cache);
+  if (result != null) {
+    ref.invalidate(resolvedHomeWallpaperProvider);
+  }
 }
 
 /// The wallpaper to draw behind the home surface right now, or null when there
@@ -113,12 +142,29 @@ HomeWallpaper? resolveHomeWallpaper({
     );
   }
 
-  final profileFile = settings.homeWallpaperFile;
-  if (profileFile == null) return null;
+  // Pure Black (OLED) mode keeps the home surface true black, so any wallpaper
+  // — local or online — is suppressed to save power.
+  if (settings.pureBlack) return null;
 
-  return HomeWallpaper(
-    file: store.resolve(profileFile),
-    blur: settings.homeWallpaperBlur,
-    dim: settings.homeWallpaperDim,
-  );
+  final profileFile = settings.homeWallpaperFile;
+  if (profileFile != null) {
+    return HomeWallpaper(
+      file: store.resolve(profileFile),
+      blur: settings.homeWallpaperBlur,
+      dim: settings.homeWallpaperDim,
+    );
+  }
+
+  // Fall back to a cached online wallpaper (Bing daily image) so the home
+  // surface always has something to show, even when the user never picked one.
+  final cached = onlineWallpaperCacheFile();
+  if (cached.existsSync()) {
+    return HomeWallpaper(
+      file: cached,
+      blur: settings.homeWallpaperBlur,
+      dim: settings.homeWallpaperDim,
+    );
+  }
+
+  return null;
 }
