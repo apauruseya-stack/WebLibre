@@ -54,7 +54,7 @@ Future<void> onlineWallpaperRefresher(Ref ref) async {
   final cache = onlineWallpaperCacheFile();
   final isStale = !cache.existsSync() ||
       DateTime.now().difference(await cache.lastModified()) >
-          const Duration(hours: 20);
+          const Duration(hours: 1);
 
   if (!isStale) return;
 

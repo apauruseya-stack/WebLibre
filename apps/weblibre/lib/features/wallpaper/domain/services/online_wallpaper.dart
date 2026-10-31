@@ -57,12 +57,16 @@ class OnlineWallpaperService {
   }
 
   Future<String?> _resolveUrl() async {
-    // Try every free source TablissNG uses, in order, until one yields an image.
-    for (final resolver in <Future<String?> Function()>[
+    // Rotate through the free sources TablissNG uses so the wallpaper changes
+    // instead of always coming from the same provider. The order is shuffled
+    // per fetch, with each source still acting as a fallback for the others.
+    final resolvers = <Future<String?> Function()>[
       _resolveBing,
       _resolveWikimedia,
       _resolveNasa,
-    ]) {
+    ]..shuffle();
+
+    for (final resolver in resolvers) {
       try {
         final url = await resolver();
         if (url != null && url.isNotEmpty) return url;
