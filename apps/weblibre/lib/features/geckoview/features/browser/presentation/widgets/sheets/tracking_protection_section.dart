@@ -29,6 +29,9 @@ import 'package:weblibre/features/geckoview/features/browser/domain/providers/bl
 import 'package:weblibre/features/geckoview/features/browser/domain/repositories/tracking_protection.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/utils/blocked_trackers_l10n.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/sheets/tracking_protection_provider.dart';
+import 'package:weblibre/features/user/data/models/general_settings.dart';
+import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
+import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
 import 'package:weblibre/l10n/generated/app_localizations.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 
@@ -263,16 +266,35 @@ class _CookieBannerStatusRow extends ConsumerWidget {
       _ => Icons.error_outline,
     };
 
-    return ListTile(
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: 16.0,
-        vertical: 4,
-      ),
-      leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
-      title: Text(title),
-      subtitle: event.ruleId == null
-          ? null
-          : Text(l10n.browser_cookieBannerRule(event.ruleId!)),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ListTile(
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16.0,
+            vertical: 4,
+          ),
+          leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
+          title: Text(title),
+          subtitle: event.ruleId == null
+              ? null
+              : Text(l10n.browser_cookieBannerRule(event.ruleId!)),
+          trailing: TextButton(
+            onPressed: () async {
+              final current = ref.read(generalSettingsWithDefaultsProvider);
+              final modes = Map<String, String>.from(current.cookieBannerSiteModes);
+              modes[host!] = 'ask';
+              await ref
+                  .read(saveGeneralSettingsControllerProvider.notifier)
+                  .save((s) => s.copyWith.cookieBannerSiteModes(modes));
+              if (context.mounted) {
+                await ref.read(tabSessionProvider(tabId: tabId).notifier).reload();
+              }
+            },
+            child: const Text('Undo'),
+          ),
+        ),
+      ],
     );
   }
 }

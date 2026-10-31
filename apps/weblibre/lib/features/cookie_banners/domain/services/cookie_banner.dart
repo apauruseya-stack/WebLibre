@@ -40,25 +40,23 @@ class CookieBannerReplicationService extends _$CookieBannerReplicationService {
   @override
   void build() {
     ref.listen(
-      generalSettingsWithDefaultsProvider.select(
-        (settings) => settings.cookieBannerHandling,
-      ),
+      generalSettingsWithDefaultsProvider,
       (previous, next) => _push(next),
       fireImmediately: true,
     );
   }
 
-  Future<void> _push(CookieBannerHandling handling) async {
+  Future<void> _push(GeneralSettings settings) async {
     try {
       await _service.setConfig(
         CookieBannerConfig(
-          mode: switch (handling) {
+          mode: switch (settings.cookieBannerHandling) {
             CookieBannerHandling.off => 'off',
             CookieBannerHandling.detect => 'detect',
             CookieBannerHandling.reject => 'reject',
             CookieBannerHandling.rejectOrHide => 'rejectOrHide',
           },
-          siteModes: const {},
+          siteModes: settings.cookieBannerSiteModes,
         ),
       );
     } catch (error, stackTrace) {

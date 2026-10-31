@@ -251,6 +251,10 @@ abstract class _$GeneralSettingsCWProxy {
     CookieBannerHandling cookieBannerHandling,
   );
 
+  GeneralSettings cookieBannerSiteModes(
+    Map<String, String> cookieBannerSiteModes,
+  );
+
   GeneralSettings textScaleMode(TextScaleMode textScaleMode);
 
   GeneralSettings textScaleFactor(double textScaleFactor);
@@ -383,6 +387,7 @@ abstract class _$GeneralSettingsCWProxy {
     bool pureBlack,
     bool hideStatusBar,
     CookieBannerHandling cookieBannerHandling,
+    Map<String, String> cookieBannerSiteModes,
     TextScaleMode textScaleMode,
     double textScaleFactor,
     double maxSystemScale,
@@ -837,6 +842,11 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
   ) => call(cookieBannerHandling: cookieBannerHandling);
 
   @override
+  GeneralSettings cookieBannerSiteModes(
+    Map<String, String> cookieBannerSiteModes,
+  ) => call(cookieBannerSiteModes: cookieBannerSiteModes);
+
+  @override
   GeneralSettings textScaleMode(TextScaleMode textScaleMode) =>
       call(textScaleMode: textScaleMode);
 
@@ -995,6 +1005,7 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? pureBlack = const $CopyWithPlaceholder(),
     Object? hideStatusBar = const $CopyWithPlaceholder(),
     Object? cookieBannerHandling = const $CopyWithPlaceholder(),
+    Object? cookieBannerSiteModes = const $CopyWithPlaceholder(),
     Object? textScaleMode = const $CopyWithPlaceholder(),
     Object? textScaleFactor = const $CopyWithPlaceholder(),
     Object? maxSystemScale = const $CopyWithPlaceholder(),
@@ -1583,6 +1594,12 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.cookieBannerHandling
           // ignore: cast_nullable_to_non_nullable
           : cookieBannerHandling as CookieBannerHandling,
+      cookieBannerSiteModes:
+          cookieBannerSiteModes == const $CopyWithPlaceholder() ||
+              cookieBannerSiteModes == null
+          ? _value.cookieBannerSiteModes
+          // ignore: cast_nullable_to_non_nullable
+          : cookieBannerSiteModes as Map<String, String>,
       textScaleMode:
           textScaleMode == const $CopyWithPlaceholder() || textScaleMode == null
           ? _value.textScaleMode
@@ -1865,6 +1882,10 @@ GeneralSettings _$GeneralSettingsFromJson(
     _$CookieBannerHandlingEnumMap,
     json['cookieBannerHandling'],
   ),
+  cookieBannerSiteModes:
+      (json['cookieBannerSiteModes'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
   textScaleMode: $enumDecodeNullable(
     _$TextScaleModeEnumMap,
     json['textScaleMode'],
@@ -2017,6 +2038,7 @@ Map<String, dynamic> _$GeneralSettingsToJson(
   'hideStatusBar': instance.hideStatusBar,
   'cookieBannerHandling':
       _$CookieBannerHandlingEnumMap[instance.cookieBannerHandling]!,
+  'cookieBannerSiteModes': instance.cookieBannerSiteModes,
   'textScaleMode': _$TextScaleModeEnumMap[instance.textScaleMode]!,
   'textScaleFactor': instance.textScaleFactor,
   'maxSystemScale': instance.maxSystemScale,

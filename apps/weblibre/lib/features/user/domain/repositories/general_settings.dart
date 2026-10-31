@@ -174,6 +174,7 @@ const generalSettingJsonKeys = <String>{
   'externalAppIntentPolicies',
   'appLinkRules',
   'appLinkContextOverrides',
+  'cookieBannerSiteModes',
   'desktopModeSites',
   'pinnedBangs',
 };
