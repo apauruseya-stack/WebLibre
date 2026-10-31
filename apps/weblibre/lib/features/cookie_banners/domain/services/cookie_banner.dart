@@ -116,24 +116,3 @@ class CookieBannerRuleStats extends _$CookieBannerRuleStats {
     return const {};
   }
 }
-  if (host == null || host.isEmpty) {
-    return null;
-  }
-
-  final statuses = ref.watch(cookieBannerStatusProvider);
-  final direct = statuses[host];
-  if (direct != null) {
-    return direct;
-  }
-
-  CookieBannerEventData? match;
-  var matchLength = 0;
-  for (final entry in statuses.entries) {
-    if (host.endsWith('.${entry.key}') && entry.key.length > matchLength) {
-      match = entry.value;
-      matchLength = entry.key.length;
-    }
-  }
-
-  return match;
-}
