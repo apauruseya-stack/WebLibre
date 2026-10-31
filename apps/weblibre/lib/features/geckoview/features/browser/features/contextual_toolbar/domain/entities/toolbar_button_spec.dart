@@ -218,6 +218,12 @@ const clearBrowsingDataToolbarButtonSpec = ToolbarButtonSpec(
   canBeFallbackTarget: false,
 );
 
+const privacyXRayToolbarButtonSpec = ToolbarButtonSpec(
+  id: ToolbarButtonId.privacyXRay,
+  defaultVisible: false,
+  canBeFallbackTarget: false,
+);
+
 const toolbarButtonSpecs = [
   backToolbarButtonSpec,
   forwardToolbarButtonSpec,
@@ -251,6 +257,7 @@ const toolbarButtonSpecs = [
   toggleGesturesToolbarButtonSpec,
   hideTabBarToolbarButtonSpec,
   clearBrowsingDataToolbarButtonSpec,
+  privacyXRayToolbarButtonSpec,
   quitToolbarButtonSpec,
 ];
 

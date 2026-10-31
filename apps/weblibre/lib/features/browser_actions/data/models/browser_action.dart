@@ -105,6 +105,7 @@ enum BrowserAction {
   printPage(MdiIcons.printer, BrowserActionCategory.page),
   copyLink(MdiIcons.contentCopy, BrowserActionCategory.page),
   siteSettings(MdiIcons.tuneVariant, BrowserActionCategory.page),
+  showPrivacyXRay(MdiIcons.shieldSearch, BrowserActionCategory.page),
   addToHomeScreen(Icons.add_to_home_screen, BrowserActionCategory.page),
   subscribeToPageFeed(MdiIcons.rssBox, BrowserActionCategory.page),
 

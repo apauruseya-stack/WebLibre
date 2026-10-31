@@ -432,6 +432,14 @@ class BrowserActionDispatcher extends _$BrowserActionDispatcher {
           ref
               .read(bottomSheetControllerProvider.notifier)
               .show(SiteSettingsSheet(tabState: tabState));
+      case BrowserAction.showPrivacyXRay:
+        // ignore: riverpod_lint/only_use_keep_alive_inside_keep_alive
+        final privacyTabState = ref.read(tabStateProvider(pageTabId));
+        if (privacyTabState != null) {
+          ref
+              .read(bottomSheetControllerProvider.notifier)
+              .show(SiteSettingsSheet(tabState: privacyTabState));
+        }
         }
       case BrowserAction.addToHomeScreen:
         // Checked against [pageTabId], not the selected tab: a swipe on a tab

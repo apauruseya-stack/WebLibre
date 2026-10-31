@@ -53,6 +53,7 @@ enum ToolbarButtonId {
   toggleGestures,
   hideTabBar,
   clearBrowsingData,
+  privacyXRay,
   quit;
 
   /// The [BrowserAction] that does what tapping this button does.
@@ -95,6 +96,7 @@ enum ToolbarButtonId {
     toggleGestures => BrowserAction.toggleGestures,
     hideTabBar => BrowserAction.toggleTabBar,
     clearBrowsingData => BrowserAction.clearBrowsingData,
+    privacyXRay => BrowserAction.showPrivacyXRay,
     quit => BrowserAction.quitBrowser,
   };
 }

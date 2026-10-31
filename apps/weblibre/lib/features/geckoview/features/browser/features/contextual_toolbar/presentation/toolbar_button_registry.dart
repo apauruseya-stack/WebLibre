@@ -26,6 +26,7 @@ import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/geckoview/domain/entities/states/readerable.dart';
+import 'package:weblibre/features/geckoview/domain/controllers/bottom_sheet.dart';
 import 'package:weblibre/features/geckoview/domain/providers.dart';
 import 'package:weblibre/features/geckoview/domain/providers/desktop_mode.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_detail_state.dart';
@@ -616,6 +617,35 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
         icon: const Icon(MdiIcons.fire),
       );
     },
+  ToolbarButtonDefinition(
+    spec: privacyXRayToolbarButtonSpec,
+    icon: MdiIcons.shieldSearch,
+    builder: (scope, context, ref) {
+      if (scope.isPreview) {
+        return ToolbarButton(
+          onTap: () {},
+          child: const Icon(MdiIcons.shieldSearch),
+        );
+      }
+      final tabId = scope.selectedTabId;
+      if (tabId == null) {
+        return ToolbarButton(
+          child: const Icon(MdiIcons.shieldSearch),
+        );
+      }
+      return PrivacyXRayBadge(
+        tabId: tabId,
+        onTap: () {
+          final tabState = ref.read(tabStateProvider(tabId));
+          if (tabState != null) {
+            ref.read(bottomSheetControllerProvider.notifier).show(
+              SiteSettingsSheet(tabState: tabState),
+            );
+          }
+        },
+      );
+    },
+  ),
   ),
   ToolbarButtonDefinition(
     spec: quitToolbarButtonSpec,

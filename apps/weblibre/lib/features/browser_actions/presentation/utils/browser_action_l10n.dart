@@ -107,6 +107,7 @@ extension BrowserActionL10n on BrowserAction {
         l10n.browserActions_moveTabToContainerTitle,
       BrowserAction.copyLink => l10n.browserActions_copyLinkTitle,
       BrowserAction.siteSettings => l10n.browserActions_siteSettingsTitle,
+      BrowserAction.showPrivacyXRay => 'Privacy X-Ray',
       BrowserAction.addToHomeScreen => l10n.browserActions_addToHomeScreenTitle,
       BrowserAction.subscribeToPageFeed =>
         l10n.browserActions_subscribeToPageFeedTitle,
@@ -231,6 +232,7 @@ extension BrowserActionL10n on BrowserAction {
         l10n.browserActions_moveTabToContainerDescription,
       BrowserAction.copyLink => l10n.browserActions_copyLinkDescription,
       BrowserAction.siteSettings => l10n.browserActions_siteSettingsDescription,
+      BrowserAction.showPrivacyXRay => 'Show blocked trackers for this page',
       BrowserAction.addToHomeScreen =>
         l10n.browserActions_addToHomeScreenDescription,
       BrowserAction.subscribeToPageFeed =>
@@ -282,6 +284,7 @@ extension BrowserActionL10n on BrowserAction {
         l10n.browserActions_toggleDesktopModeKeywords,
       BrowserAction.translatePage => l10n.browserActions_translatePageKeywords,
       BrowserAction.siteSettings => l10n.browserActions_siteSettingsKeywords,
+      BrowserAction.showPrivacyXRay => 'privacy x-ray blocked trackers',
       BrowserAction.addToHomeScreen =>
         l10n.browserActions_addToHomeScreenKeywords,
       BrowserAction.subscribeToPageFeed =>
