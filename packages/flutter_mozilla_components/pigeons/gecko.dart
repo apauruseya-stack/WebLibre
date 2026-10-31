@@ -2307,6 +2307,9 @@ class CookieBannerEventData {
 abstract class GeckoCookieBannerApi {
   @async
   void setConfig(CookieBannerConfig config);
+
+  @async
+  void setRules(String rulesJson);
 }
 
 @FlutterApi()

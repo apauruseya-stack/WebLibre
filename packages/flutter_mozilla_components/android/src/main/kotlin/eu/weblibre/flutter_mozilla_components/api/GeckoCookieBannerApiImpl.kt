@@ -14,4 +14,8 @@ class GeckoCookieBannerApiImpl : GeckoCookieBannerApi {
     override suspend fun setConfig(config: CookieBannerConfig) {
         CookieBannerFeature.setConfig(config)
     }
+
+    override suspend fun setRules(rulesJson: String) {
+        CookieBannerFeature.setRules(rulesJson)
+    }
 }

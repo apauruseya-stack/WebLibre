@@ -17,4 +17,6 @@ class GeckoCookieBannerService {
     : _api = api ?? GeckoCookieBannerApi();
 
   Future<void> setConfig(CookieBannerConfig config) => _api.setConfig(config);
+
+  Future<void> setRules(String rulesJson) => _api.setRules(rulesJson);
 }

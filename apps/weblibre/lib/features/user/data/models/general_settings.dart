@@ -724,6 +724,9 @@ class GeneralSettings with FastEquatable {
   /// Off by default. Updates are a static JSON file with no identifiers.
   final bool cookieBannerRuleUpdates;
 
+  /// URL to fetch updated rules from. Empty disables updates.
+  final String cookieBannerRuleUrl;
+
   /// Per-site overrides for the cookie banner handler: host -> mode.
   /// Stored as JSON. Empty by default.
   final Map<String, String> cookieBannerSiteModes;
@@ -885,6 +888,7 @@ class GeneralSettings with FastEquatable {
     required this.hideStatusBar,
     required this.cookieBannerHandling,
     required this.cookieBannerRuleUpdates,
+    required this.cookieBannerRuleUrl,
     required this.cookieBannerSiteModes,
     required this.textScaleMode,
     required this.textScaleFactor,
@@ -1005,6 +1009,7 @@ class GeneralSettings with FastEquatable {
     bool? hideStatusBar,
     CookieBannerHandling? cookieBannerHandling,
     bool? cookieBannerRuleUpdates,
+    String? cookieBannerRuleUrl,
     Map<String, String>? cookieBannerSiteModes,
     TextScaleMode? textScaleMode,
     double? textScaleFactor,
@@ -1157,6 +1162,7 @@ class GeneralSettings with FastEquatable {
        cookieBannerHandling =
            cookieBannerHandling ?? CookieBannerHandling.rejectOrHide,
        cookieBannerRuleUpdates = cookieBannerRuleUpdates ?? false,
+       cookieBannerRuleUrl = cookieBannerRuleUrl ?? '',
        cookieBannerSiteModes = cookieBannerSiteModes ?? const {},
        textScaleMode = textScaleMode ?? TextScaleMode.system,
        textScaleFactor = (textScaleFactor ?? 1.0).clamp(0.5, 2.0),

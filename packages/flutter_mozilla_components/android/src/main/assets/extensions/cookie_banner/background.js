@@ -104,6 +104,28 @@ function connectNative() {
 
   port.onMessage.addListener(async (message) => {
     if (!message || message.type !== "config") {
+      // Allow the app to push a fresh rule pack. Cache it and push to tabs.
+      if (message && message.type === "rules" && typeof message.rules === "string") {
+        try {
+          const parsed = JSON.parse(message.rules);
+          if (parsed && Array.isArray(parsed.rules)) {
+            rules = parsed;
+            await browser.storage.local.set({ cookieBannerRules: parsed });
+            const tabs = await browser.tabs.query({});
+            for (const tab of tabs) {
+              if (!tab || typeof tab.id !== "number") continue;
+              try {
+                await browser.tabs.sendMessage(tab.id, {
+                  type: "cookieBanner:configChanged",
+                  config: await configFor(tab.url || ""),
+                });
+              } catch (error) {}
+            }
+          }
+        } catch (error) {
+          console.error("Cookie banner: invalid rule pack", error);
+        }
+      }
       return;
     }
 

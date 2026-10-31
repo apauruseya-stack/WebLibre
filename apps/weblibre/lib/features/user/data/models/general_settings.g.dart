@@ -261,6 +261,8 @@ abstract class _$GeneralSettingsCWProxy {
 
   GeneralSettings cookieBannerRuleUpdates(bool cookieBannerRuleUpdates);
 
+  GeneralSettings cookieBannerRuleUrl(String cookieBannerRuleUrl);
+
   GeneralSettings cookieBannerSiteModes(
     Map<String, String> cookieBannerSiteModes,
   );
@@ -402,6 +404,7 @@ abstract class _$GeneralSettingsCWProxy {
     bool hideStatusBar,
     CookieBannerHandling cookieBannerHandling,
     bool cookieBannerRuleUpdates,
+    String cookieBannerRuleUrl,
     Map<String, String> cookieBannerSiteModes,
     TextScaleMode textScaleMode,
     double textScaleFactor,
@@ -877,6 +880,10 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
       call(cookieBannerRuleUpdates: cookieBannerRuleUpdates);
 
   @override
+  GeneralSettings cookieBannerRuleUrl(String cookieBannerRuleUrl) =>
+      call(cookieBannerRuleUrl: cookieBannerRuleUrl);
+
+  @override
   GeneralSettings cookieBannerSiteModes(
     Map<String, String> cookieBannerSiteModes,
   ) => call(cookieBannerSiteModes: cookieBannerSiteModes);
@@ -1045,6 +1052,7 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? hideStatusBar = const $CopyWithPlaceholder(),
     Object? cookieBannerHandling = const $CopyWithPlaceholder(),
     Object? cookieBannerRuleUpdates = const $CopyWithPlaceholder(),
+    Object? cookieBannerRuleUrl = const $CopyWithPlaceholder(),
     Object? cookieBannerSiteModes = const $CopyWithPlaceholder(),
     Object? textScaleMode = const $CopyWithPlaceholder(),
     Object? textScaleFactor = const $CopyWithPlaceholder(),
@@ -1661,6 +1669,12 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.cookieBannerRuleUpdates
           // ignore: cast_nullable_to_non_nullable
           : cookieBannerRuleUpdates as bool,
+      cookieBannerRuleUrl:
+          cookieBannerRuleUrl == const $CopyWithPlaceholder() ||
+              cookieBannerRuleUrl == null
+          ? _value.cookieBannerRuleUrl
+          // ignore: cast_nullable_to_non_nullable
+          : cookieBannerRuleUrl as String,
       cookieBannerSiteModes:
           cookieBannerSiteModes == const $CopyWithPlaceholder() ||
               cookieBannerSiteModes == null
@@ -1954,6 +1968,7 @@ GeneralSettings _$GeneralSettingsFromJson(
     json['cookieBannerHandling'],
   ),
   cookieBannerRuleUpdates: json['cookieBannerRuleUpdates'] as bool?,
+  cookieBannerRuleUrl: json['cookieBannerRuleUrl'] as String?,
   cookieBannerSiteModes:
       (json['cookieBannerSiteModes'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
@@ -2115,6 +2130,7 @@ Map<String, dynamic> _$GeneralSettingsToJson(
   'cookieBannerHandling':
       _$CookieBannerHandlingEnumMap[instance.cookieBannerHandling]!,
   'cookieBannerRuleUpdates': instance.cookieBannerRuleUpdates,
+  'cookieBannerRuleUrl': instance.cookieBannerRuleUrl,
   'cookieBannerSiteModes': instance.cookieBannerSiteModes,
   'textScaleMode': _$TextScaleModeEnumMap[instance.textScaleMode]!,
   'textScaleFactor': instance.textScaleFactor,

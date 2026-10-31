@@ -11118,6 +11118,7 @@ interface GeckoCookieApi {
 /** Generated interface from Pigeon that represents a handler of messages from Flutter. */
 interface GeckoCookieBannerApi {
   suspend fun setConfig(config: CookieBannerConfig)
+  suspend fun setRules(rulesJson: String)
 
   companion object {
     /** The codec used by GeckoCookieBannerApi. */
@@ -11137,6 +11138,26 @@ interface GeckoCookieBannerApi {
             CoroutineScope(Dispatchers.Main).launch {
               val wrapped: List<Any?> = try {
                 api.setConfig(configArg)
+                listOf(null)
+              } catch (exception: Throwable) {
+                GeckoPigeonUtils.wrapError(exception)
+              }
+              reply.reply(wrapped)
+            }
+          }
+        } else {
+          channel.setMessageHandler(null)
+        }
+      }
+      run {
+        val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.flutter_mozilla_components.GeckoCookieBannerApi.setRules$separatedMessageChannelSuffix", codec)
+        if (api != null) {
+          channel.setMessageHandler { message, reply ->
+            val args = message as List<Any?>
+            val rulesJsonArg = args[0] as String
+            CoroutineScope(Dispatchers.Main).launch {
+              val wrapped: List<Any?> = try {
+                api.setRules(rulesJsonArg)
                 listOf(null)
               } catch (exception: Throwable) {
                 GeckoPigeonUtils.wrapError(exception)

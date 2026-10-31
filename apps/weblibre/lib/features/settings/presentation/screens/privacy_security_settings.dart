@@ -28,6 +28,7 @@ import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/providers/blocked_trackers.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/dialogs/delete_data.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/utils/blocked_trackers_l10n.dart';
+import 'package:weblibre/features/cookie_banners/domain/services/rule_updater.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/entities/intent_source_policy.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/services/package_label_resolver.dart';
 import 'package:weblibre/features/profile_import/presentation/screens/profile_import_screen.dart';
@@ -1330,10 +1331,26 @@ class _CookieBannersSection extends HookConsumerWidget {
             },
           ),
           TextButton.icon(
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Rules are up to date (bundled).')),
-              );
+            onPressed: () async {
+              final url = ref
+                  .read(generalSettingsWithDefaultsProvider)
+                  .cookieBannerRuleUrl;
+              if (url.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Set a rule update URL in advanced settings first.'),
+                  ),
+                );
+                return;
+              }
+              final ok = await CookieBannerRuleUpdater().checkAndUpdate(url);
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(ok ? 'Rules updated.' : 'Update failed or hash mismatch.'),
+                  ),
+                );
+              }
             },
             icon: const Icon(Icons.refresh),
             label: const Text('Check for rule updates'),

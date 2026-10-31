@@ -69,6 +69,22 @@ object CookieBannerFeature {
         pushConfig()
     }
 
+    fun setRules(rulesJson: String) {
+        val message = JSONObject().apply {
+            put("type", "rules")
+            put("rules", rulesJson)
+        }
+        runBlocking {
+            withContext(Dispatchers.Default) {
+                try {
+                    extensionController.sendBackgroundMessage(message)
+                } catch (error: Throwable) {
+                    logger.debug("Cookie banner rules not delivered yet", error)
+                }
+            }
+        }
+    }
+
     /**
      * Sends the current mode to the background page. Called again when the
      * background connects, which is the first moment a message can land.
