@@ -49,6 +49,14 @@ abstract class _$GeneralSettingsCWProxy {
 
   GeneralSettings enableLocalAiFeatures(bool enableLocalAiFeatures);
 
+  GeneralSettings aiSummarize(bool aiSummarize);
+
+  GeneralSettings aiTabCompare(bool aiTabCompare);
+
+  GeneralSettings aiSemanticSearch(bool aiSemanticSearch);
+
+  GeneralSettings aiFeedTriage(bool aiFeedTriage);
+
   GeneralSettings showContainerUi(bool showContainerUi);
 
   GeneralSettings showIsolatedTabUi(bool showIsolatedTabUi);
@@ -306,6 +314,10 @@ abstract class _$GeneralSettingsCWProxy {
     SearchSuggestionProviders defaultSearchSuggestionsProvider,
     bool createChildTabsOption,
     bool enableLocalAiFeatures,
+    bool aiSummarize,
+    bool aiTabCompare,
+    bool aiSemanticSearch,
+    bool aiFeedTriage,
     bool showContainerUi,
     bool showIsolatedTabUi,
     bool showSearchCloseButton,
@@ -483,6 +495,22 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
   @override
   GeneralSettings enableLocalAiFeatures(bool enableLocalAiFeatures) =>
       call(enableLocalAiFeatures: enableLocalAiFeatures);
+
+  @override
+  GeneralSettings aiSummarize(bool aiSummarize) =>
+      call(aiSummarize: aiSummarize);
+
+  @override
+  GeneralSettings aiTabCompare(bool aiTabCompare) =>
+      call(aiTabCompare: aiTabCompare);
+
+  @override
+  GeneralSettings aiSemanticSearch(bool aiSemanticSearch) =>
+      call(aiSemanticSearch: aiSemanticSearch);
+
+  @override
+  GeneralSettings aiFeedTriage(bool aiFeedTriage) =>
+      call(aiFeedTriage: aiFeedTriage);
 
   @override
   GeneralSettings showContainerUi(bool showContainerUi) =>
@@ -921,6 +949,10 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? defaultSearchSuggestionsProvider = const $CopyWithPlaceholder(),
     Object? createChildTabsOption = const $CopyWithPlaceholder(),
     Object? enableLocalAiFeatures = const $CopyWithPlaceholder(),
+    Object? aiSummarize = const $CopyWithPlaceholder(),
+    Object? aiTabCompare = const $CopyWithPlaceholder(),
+    Object? aiSemanticSearch = const $CopyWithPlaceholder(),
+    Object? aiFeedTriage = const $CopyWithPlaceholder(),
     Object? showContainerUi = const $CopyWithPlaceholder(),
     Object? showIsolatedTabUi = const $CopyWithPlaceholder(),
     Object? showSearchCloseButton = const $CopyWithPlaceholder(),
@@ -1120,6 +1152,27 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.enableLocalAiFeatures
           // ignore: cast_nullable_to_non_nullable
           : enableLocalAiFeatures as bool,
+      aiSummarize:
+          aiSummarize == const $CopyWithPlaceholder() || aiSummarize == null
+          ? _value.aiSummarize
+          // ignore: cast_nullable_to_non_nullable
+          : aiSummarize as bool,
+      aiTabCompare:
+          aiTabCompare == const $CopyWithPlaceholder() || aiTabCompare == null
+          ? _value.aiTabCompare
+          // ignore: cast_nullable_to_non_nullable
+          : aiTabCompare as bool,
+      aiSemanticSearch:
+          aiSemanticSearch == const $CopyWithPlaceholder() ||
+              aiSemanticSearch == null
+          ? _value.aiSemanticSearch
+          // ignore: cast_nullable_to_non_nullable
+          : aiSemanticSearch as bool,
+      aiFeedTriage:
+          aiFeedTriage == const $CopyWithPlaceholder() || aiFeedTriage == null
+          ? _value.aiFeedTriage
+          // ignore: cast_nullable_to_non_nullable
+          : aiFeedTriage as bool,
       showContainerUi:
           showContainerUi == const $CopyWithPlaceholder() ||
               showContainerUi == null
@@ -1715,6 +1768,10 @@ GeneralSettings _$GeneralSettingsFromJson(
   ),
   createChildTabsOption: json['createChildTabsOption'] as bool?,
   enableLocalAiFeatures: json['enableLocalAiFeatures'] as bool?,
+  aiSummarize: json['aiSummarize'] as bool?,
+  aiTabCompare: json['aiTabCompare'] as bool?,
+  aiSemanticSearch: json['aiSemanticSearch'] as bool?,
+  aiFeedTriage: json['aiFeedTriage'] as bool?,
   showContainerUi: json['showContainerUi'] as bool?,
   showIsolatedTabUi: json['showIsolatedTabUi'] as bool?,
   showSearchCloseButton: json['showSearchCloseButton'] as bool?,
@@ -1938,6 +1995,10 @@ Map<String, dynamic> _$GeneralSettingsToJson(
           .defaultSearchSuggestionsProvider]!,
   'createChildTabsOption': instance.createChildTabsOption,
   'enableLocalAiFeatures': instance.enableLocalAiFeatures,
+  'aiSummarize': instance.aiSummarize,
+  'aiTabCompare': instance.aiTabCompare,
+  'aiSemanticSearch': instance.aiSemanticSearch,
+  'aiFeedTriage': instance.aiFeedTriage,
   'showContainerUi': instance.showContainerUi,
   'showIsolatedTabUi': instance.showIsolatedTabUi,
   'showSearchCloseButton': instance.showSearchCloseButton,

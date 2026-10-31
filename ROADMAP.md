@@ -1197,6 +1197,8 @@ CREATE TABLE ai_interest (
 #### E0 - Foundations and model manager (3-4 weeks)
 
 - [ ] Generalize `GeckoInferenceRepository` into `AiRepository` without changing container-naming behavior (regression tests).
+- [ ] Model registry + Models screen + download/delete/verify + disk usage.
+- [x] Per-capability flags: `aiSummarize`, `aiTabCompare`, `aiSemanticSearch`, `aiFeedTriage`, all default off.
 - [ ] `AiTaskQueue`: single concurrency, priority, cancellation, timeouts, retry with backoff.
 - [ ] Model registry + Models screen + download/delete/verify + disk usage.
 - [ ] Per-capability flags: `aiSummarize`, `aiTabCompare`, `aiSemanticSearch`, `aiFeedTriage`, all default off.

@@ -442,6 +442,13 @@ class GeneralSettings with FastEquatable {
   final SearchSuggestionProviders defaultSearchSuggestionsProvider;
   final bool createChildTabsOption;
   final bool enableLocalAiFeatures;
+
+  /// Per-capability AI opt-in flags. All default off; [enableLocalAiFeatures]
+  /// remains the master switch.
+  final bool aiSummarize;
+  final bool aiTabCompare;
+  final bool aiSemanticSearch;
+  final bool aiFeedTriage;
   final bool showContainerUi;
   final bool showIsolatedTabUi;
 
@@ -788,6 +795,10 @@ class GeneralSettings with FastEquatable {
     required this.defaultSearchSuggestionsProvider,
     required this.createChildTabsOption,
     required this.enableLocalAiFeatures,
+    required this.aiSummarize,
+    required this.aiTabCompare,
+    required this.aiSemanticSearch,
+    required this.aiFeedTriage,
     required this.showContainerUi,
     required this.showIsolatedTabUi,
     required this.showSearchCloseButton,
@@ -903,6 +914,10 @@ class GeneralSettings with FastEquatable {
     SearchSuggestionProviders? defaultSearchSuggestionsProvider,
     bool? createChildTabsOption,
     bool? enableLocalAiFeatures,
+    bool? aiSummarize,
+    bool? aiTabCompare,
+    bool? aiSemanticSearch,
+    bool? aiFeedTriage,
     bool? showContainerUi,
     bool? showIsolatedTabUi,
     bool? showSearchCloseButton,
@@ -1014,6 +1029,10 @@ class GeneralSettings with FastEquatable {
            defaultSearchSuggestionsProvider ?? _fallbackAutocompleteProvider,
        createChildTabsOption = createChildTabsOption ?? false,
        enableLocalAiFeatures = enableLocalAiFeatures ?? true,
+       aiSummarize = aiSummarize ?? false,
+       aiTabCompare = aiTabCompare ?? false,
+       aiSemanticSearch = aiSemanticSearch ?? false,
+       aiFeedTriage = aiFeedTriage ?? false,
        showContainerUi = showContainerUi ?? true,
        showIsolatedTabUi = showIsolatedTabUi ?? true,
        showSearchCloseButton = showSearchCloseButton ?? false,

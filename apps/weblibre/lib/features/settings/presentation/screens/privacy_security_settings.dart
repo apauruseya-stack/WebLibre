@@ -34,6 +34,7 @@ import 'package:weblibre/features/profile_import/presentation/screens/profile_im
 import 'package:weblibre/features/protection_stats/presentation/screens/protection_report_screen.dart';
 import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
 import 'package:weblibre/features/settings/presentation/screens/accessibility_settings.dart';
+import 'package:weblibre/features/settings/presentation/screens/ai_settings.dart';
 import 'package:weblibre/features/settings/presentation/widgets/sections.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/models/engine_settings.dart';
@@ -114,6 +115,12 @@ List<SettingsSectionDefinition> privacySecuritySettingsSections(
           subtitle: 'Text scale, contrast, motion and touch targets',
           keywords: settingsKeywords('accessibility,a11y,contrast,motion'),
           child: const _AccessibilityTile(),
+        ),
+        SettingsEntryDefinition(
+          title: 'AI (on-device)',
+          subtitle: 'Local AI features and models',
+          keywords: settingsKeywords('ai,ml,summarize,models'),
+          child: const _AiSettingsTile(),
         ),
         SettingsEntryDefinition(
           title: l10n.settings_cookieBannersTitle,
@@ -1358,6 +1365,31 @@ class _ProtectionReportTile extends StatelessWidget {
         await Navigator.of(context).push(
           MaterialPageRoute<void>(
             builder: (_) => const ProtectionReportScreen(),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _AiSettingsTile extends StatelessWidget {
+  const _AiSettingsTile();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: const Text('AI (on-device)'),
+      subtitle: const Text('Local AI features and models'),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 8.0,
+        horizontal: 16.0,
+      ),
+      leading: const Icon(Icons.auto_awesome),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => const AiSettingsScreen(),
           ),
         );
       },
