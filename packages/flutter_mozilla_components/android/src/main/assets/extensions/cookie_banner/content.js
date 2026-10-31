@@ -264,6 +264,19 @@
   }
 
   function findRejectElement(rule, roots) {
+    // Site-specific overrides take precedence over the rule pack.
+    const host = location.hostname;
+    const custom = (config && config.customSelectors && config.customSelectors[host])
+      ? config.customSelectors[host]
+      : [];
+    for (const selector of custom) {
+      for (const element of queryAll(selector, roots)) {
+        if (isVisible(element)) {
+          return element;
+        }
+      }
+    }
+
     for (const action of rule.reject || []) {
       if (action.type !== "click" || !action.selector) {
         continue;
@@ -449,10 +462,12 @@
       return;
     }
 
-    const rules =
-      config.rules && Array.isArray(config.rules.rules)
-        ? config.rules.rules
-        : [];
+    const disabled = (config && Array.isArray(config.disabledRules))
+      ? config.disabledRules
+      : [];
+    const rules = (config.rules && Array.isArray(config.rules.rules))
+      ? config.rules.rules.filter((r) => !disabled.includes(r.id))
+      : [];
     if (rules.length === 0) {
       return;
     }
@@ -546,6 +561,11 @@
     config = {
       mode: next.mode || "rejectOrHide",
       rules: next.rules || null,
+      disabledRules: Array.isArray(next.disabledRules) ? next.disabledRules : [],
+      customSelectors:
+        next.customSelectors && typeof next.customSelectors === "object"
+          ? next.customSelectors
+          : {},
     };
     if (config.mode === "off") {
       stop();

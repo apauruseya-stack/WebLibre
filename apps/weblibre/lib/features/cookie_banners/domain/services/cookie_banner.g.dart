@@ -61,7 +61,7 @@ final class CookieBannerReplicationServiceProvider
 }
 
 String _$cookieBannerReplicationServiceHash() =>
-    r'28f61e9c564e210e572798741e9875727782e11c';
+    r'68b0526b115915ba46f55fd702e1ab3ac4a1699e';
 
 /// Pushes the cookie banner mode to the built-in extension whenever the
 /// setting changes.

@@ -727,6 +727,12 @@ class GeneralSettings with FastEquatable {
   /// URL to fetch updated rules from. Empty disables updates.
   final String cookieBannerRuleUrl;
 
+  /// Rule IDs the user has disabled (local override).
+  final List<String> cookieBannerDisabledRules;
+
+  /// Custom reject selectors per site (host -> list of CSS selectors).
+  final Map<String, List<String>> cookieBannerCustomSelectors;
+
   /// Per-site overrides for the cookie banner handler: host -> mode.
   /// Stored as JSON. Empty by default.
   final Map<String, String> cookieBannerSiteModes;
@@ -889,6 +895,8 @@ class GeneralSettings with FastEquatable {
     required this.cookieBannerHandling,
     required this.cookieBannerRuleUpdates,
     required this.cookieBannerRuleUrl,
+    required this.cookieBannerDisabledRules,
+    required this.cookieBannerCustomSelectors,
     required this.cookieBannerSiteModes,
     required this.textScaleMode,
     required this.textScaleFactor,
@@ -1010,6 +1018,8 @@ class GeneralSettings with FastEquatable {
     CookieBannerHandling? cookieBannerHandling,
     bool? cookieBannerRuleUpdates,
     String? cookieBannerRuleUrl,
+    List<String>? cookieBannerDisabledRules,
+    Map<String, List<String>>? cookieBannerCustomSelectors,
     Map<String, String>? cookieBannerSiteModes,
     TextScaleMode? textScaleMode,
     double? textScaleFactor,
@@ -1163,6 +1173,8 @@ class GeneralSettings with FastEquatable {
            cookieBannerHandling ?? CookieBannerHandling.rejectOrHide,
        cookieBannerRuleUpdates = cookieBannerRuleUpdates ?? false,
        cookieBannerRuleUrl = cookieBannerRuleUrl ?? '',
+       cookieBannerDisabledRules = cookieBannerDisabledRules ?? const [],
+       cookieBannerCustomSelectors = cookieBannerCustomSelectors ?? const {},
        cookieBannerSiteModes = cookieBannerSiteModes ?? const {},
        textScaleMode = textScaleMode ?? TextScaleMode.system,
        textScaleFactor = (textScaleFactor ?? 1.0).clamp(0.5, 2.0),

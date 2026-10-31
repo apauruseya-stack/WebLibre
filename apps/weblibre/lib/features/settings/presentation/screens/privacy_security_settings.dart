@@ -25,10 +25,11 @@ import 'package:intl/intl.dart' show DateFormat, NumberFormat;
 import 'package:nullability/nullability.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:weblibre/core/routing/routes.dart';
+import 'package:weblibre/features/cookie_banners/domain/services/rule_updater.dart';
+import 'package:weblibre/features/cookie_banners/presentation/screens/cookie_banner_rules.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/providers/blocked_trackers.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/dialogs/delete_data.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/utils/blocked_trackers_l10n.dart';
-import 'package:weblibre/features/cookie_banners/domain/services/rule_updater.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/entities/intent_source_policy.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/services/package_label_resolver.dart';
 import 'package:weblibre/features/profile_import/presentation/screens/profile_import_screen.dart';
@@ -1354,6 +1355,19 @@ class _CookieBannersSection extends HookConsumerWidget {
             },
             icon: const Icon(Icons.refresh),
             label: const Text('Check for rule updates'),
+          ),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: const Text('Edit rules & overrides'),
+            subtitle: const Text('Disable rules, add selectors per site, export/import'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const CookieBannerRuleEditorScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),

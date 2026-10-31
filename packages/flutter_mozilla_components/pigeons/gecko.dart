@@ -2277,8 +2277,15 @@ class ProxyLoadError {
 class CookieBannerConfig {
   final String mode;
   final Map<String, String> siteModes;
+  final List<String> disabledRules;
+  final Map<String, List<String>> customSelectors;
 
-  CookieBannerConfig({required this.mode, required this.siteModes});
+  CookieBannerConfig({
+    required this.mode,
+    required this.siteModes,
+    this.disabledRules = const [],
+    this.customSelectors = const {},
+  });
 }
 
 /// A decision the cookie banner handler made on a page.

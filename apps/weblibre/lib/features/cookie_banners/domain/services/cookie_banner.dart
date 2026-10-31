@@ -56,6 +56,8 @@ class CookieBannerReplicationService extends _$CookieBannerReplicationService {
             CookieBannerHandling.rejectOrHide => 'rejectOrHide',
           },
           siteModes: settings.cookieBannerSiteModes,
+          disabledRules: settings.cookieBannerDisabledRules,
+          customSelectors: settings.cookieBannerCustomSelectors,
         ),
       );
     } catch (error, stackTrace) {

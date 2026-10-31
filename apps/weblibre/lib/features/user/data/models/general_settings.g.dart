@@ -263,6 +263,14 @@ abstract class _$GeneralSettingsCWProxy {
 
   GeneralSettings cookieBannerRuleUrl(String cookieBannerRuleUrl);
 
+  GeneralSettings cookieBannerDisabledRules(
+    List<String> cookieBannerDisabledRules,
+  );
+
+  GeneralSettings cookieBannerCustomSelectors(
+    Map<String, List<String>> cookieBannerCustomSelectors,
+  );
+
   GeneralSettings cookieBannerSiteModes(
     Map<String, String> cookieBannerSiteModes,
   );
@@ -405,6 +413,8 @@ abstract class _$GeneralSettingsCWProxy {
     CookieBannerHandling cookieBannerHandling,
     bool cookieBannerRuleUpdates,
     String cookieBannerRuleUrl,
+    List<String> cookieBannerDisabledRules,
+    Map<String, List<String>> cookieBannerCustomSelectors,
     Map<String, String> cookieBannerSiteModes,
     TextScaleMode textScaleMode,
     double textScaleFactor,
@@ -884,6 +894,16 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
       call(cookieBannerRuleUrl: cookieBannerRuleUrl);
 
   @override
+  GeneralSettings cookieBannerDisabledRules(
+    List<String> cookieBannerDisabledRules,
+  ) => call(cookieBannerDisabledRules: cookieBannerDisabledRules);
+
+  @override
+  GeneralSettings cookieBannerCustomSelectors(
+    Map<String, List<String>> cookieBannerCustomSelectors,
+  ) => call(cookieBannerCustomSelectors: cookieBannerCustomSelectors);
+
+  @override
   GeneralSettings cookieBannerSiteModes(
     Map<String, String> cookieBannerSiteModes,
   ) => call(cookieBannerSiteModes: cookieBannerSiteModes);
@@ -1053,6 +1073,8 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? cookieBannerHandling = const $CopyWithPlaceholder(),
     Object? cookieBannerRuleUpdates = const $CopyWithPlaceholder(),
     Object? cookieBannerRuleUrl = const $CopyWithPlaceholder(),
+    Object? cookieBannerDisabledRules = const $CopyWithPlaceholder(),
+    Object? cookieBannerCustomSelectors = const $CopyWithPlaceholder(),
     Object? cookieBannerSiteModes = const $CopyWithPlaceholder(),
     Object? textScaleMode = const $CopyWithPlaceholder(),
     Object? textScaleFactor = const $CopyWithPlaceholder(),
@@ -1675,6 +1697,18 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
           ? _value.cookieBannerRuleUrl
           // ignore: cast_nullable_to_non_nullable
           : cookieBannerRuleUrl as String,
+      cookieBannerDisabledRules:
+          cookieBannerDisabledRules == const $CopyWithPlaceholder() ||
+              cookieBannerDisabledRules == null
+          ? _value.cookieBannerDisabledRules
+          // ignore: cast_nullable_to_non_nullable
+          : cookieBannerDisabledRules as List<String>,
+      cookieBannerCustomSelectors:
+          cookieBannerCustomSelectors == const $CopyWithPlaceholder() ||
+              cookieBannerCustomSelectors == null
+          ? _value.cookieBannerCustomSelectors
+          // ignore: cast_nullable_to_non_nullable
+          : cookieBannerCustomSelectors as Map<String, List<String>>,
       cookieBannerSiteModes:
           cookieBannerSiteModes == const $CopyWithPlaceholder() ||
               cookieBannerSiteModes == null
@@ -1969,6 +2003,15 @@ GeneralSettings _$GeneralSettingsFromJson(
   ),
   cookieBannerRuleUpdates: json['cookieBannerRuleUpdates'] as bool?,
   cookieBannerRuleUrl: json['cookieBannerRuleUrl'] as String?,
+  cookieBannerDisabledRules:
+      (json['cookieBannerDisabledRules'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+  cookieBannerCustomSelectors:
+      (json['cookieBannerCustomSelectors'] as Map<String, dynamic>?)?.map(
+        (k, e) =>
+            MapEntry(k, (e as List<dynamic>).map((e) => e as String).toList()),
+      ),
   cookieBannerSiteModes:
       (json['cookieBannerSiteModes'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
@@ -2131,6 +2174,8 @@ Map<String, dynamic> _$GeneralSettingsToJson(
       _$CookieBannerHandlingEnumMap[instance.cookieBannerHandling]!,
   'cookieBannerRuleUpdates': instance.cookieBannerRuleUpdates,
   'cookieBannerRuleUrl': instance.cookieBannerRuleUrl,
+  'cookieBannerDisabledRules': instance.cookieBannerDisabledRules,
+  'cookieBannerCustomSelectors': instance.cookieBannerCustomSelectors,
   'cookieBannerSiteModes': instance.cookieBannerSiteModes,
   'textScaleMode': _$TextScaleModeEnumMap[instance.textScaleMode]!,
   'textScaleFactor': instance.textScaleFactor,

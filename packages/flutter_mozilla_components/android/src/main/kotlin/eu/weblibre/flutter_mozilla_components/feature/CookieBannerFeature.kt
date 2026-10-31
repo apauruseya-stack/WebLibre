@@ -96,6 +96,12 @@ object CookieBannerFeature {
             put("type", "config")
             put("mode", current.mode)
             put("siteModes", JSONObject(current.siteModes as Map<*, *>))
+            put("disabledRules", org.json.JSONArray(current.disabledRules))
+            val cs = JSONObject()
+            for ((k, v) in current.customSelectors) {
+                cs.put(k, org.json.JSONArray(v))
+            }
+            put("customSelectors", cs)
         }
 
         runBlocking {

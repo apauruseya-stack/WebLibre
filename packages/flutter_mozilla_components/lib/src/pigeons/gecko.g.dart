@@ -5870,16 +5870,24 @@ class CookieBannerConfig {
   CookieBannerConfig({
     required this.mode,
     required this.siteModes,
+    required this.disabledRules,
+    required this.customSelectors,
   });
 
   String mode;
 
   Map<String, String> siteModes;
 
+  List<String> disabledRules;
+
+  Map<String, List<String>> customSelectors;
+
   List<Object?> _toList() {
     return <Object?>[
       mode,
       siteModes,
+      disabledRules,
+      customSelectors,
     ];
   }
 
@@ -5891,6 +5899,8 @@ class CookieBannerConfig {
     return CookieBannerConfig(
       mode: result[0]! as String,
       siteModes: (result[1]! as Map<Object?, Object?>).cast<String, String>(),
+      disabledRules: (result[2]! as List<Object?>).cast<String>(),
+      customSelectors: (result[3]! as Map<Object?, Object?>).cast<String, List<String>>(),
     );
   }
 
@@ -5903,7 +5913,7 @@ class CookieBannerConfig {
     if (identical(this, other)) {
       return true;
     }
-    return _deepEquals(mode, other.mode) && _deepEquals(siteModes, other.siteModes);
+    return _deepEquals(mode, other.mode) && _deepEquals(siteModes, other.siteModes) && _deepEquals(disabledRules, other.disabledRules) && _deepEquals(customSelectors, other.customSelectors);
   }
 
   @override
@@ -5912,7 +5922,7 @@ class CookieBannerConfig {
 
   @override
   String toString() {
-    return 'CookieBannerConfig(mode: $mode, siteModes: $siteModes)';
+    return 'CookieBannerConfig(mode: $mode, siteModes: $siteModes, disabledRules: $disabledRules, customSelectors: $customSelectors)';
   }
 }
 

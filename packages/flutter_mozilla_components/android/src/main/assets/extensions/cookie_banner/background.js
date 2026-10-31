@@ -89,6 +89,8 @@ async function configFor(url) {
   return {
     mode: resolveMode(url),
     rules: loadedRules,
+    disabledRules: config.disabledRules || [],
+    customSelectors: config.customSelectors || {},
   };
 }
 
@@ -134,6 +136,13 @@ function connectNative() {
       siteModes:
         message.siteModes && typeof message.siteModes === "object"
           ? message.siteModes
+          : {},
+      disabledRules: Array.isArray(message.disabledRules)
+        ? message.disabledRules
+        : [],
+      customSelectors:
+        message.customSelectors && typeof message.customSelectors === "object"
+          ? message.customSelectors
           : {},
     };
 

@@ -5466,20 +5466,26 @@ data class ProxyLoadError (
  */
 data class CookieBannerConfig (
   val mode: String,
-  val siteModes: Map<String, String>
+  val siteModes: Map<String, String>,
+  val disabledRules: List<String>,
+  val customSelectors: Map<String, List<String>>
 )
  {
   companion object {
     fun fromList(pigeonVar_list: List<Any?>): CookieBannerConfig {
       val mode = pigeonVar_list[0] as String
       val siteModes = pigeonVar_list[1] as Map<String, String>
-      return CookieBannerConfig(mode, siteModes)
+      val disabledRules = pigeonVar_list[2] as List<String>
+      val customSelectors = pigeonVar_list[3] as Map<String, List<String>>
+      return CookieBannerConfig(mode, siteModes, disabledRules, customSelectors)
     }
   }
   fun toList(): List<Any?> {
     return listOf(
       mode,
       siteModes,
+      disabledRules,
+      customSelectors,
     )
   }
   override fun equals(other: Any?): Boolean {
@@ -5490,17 +5496,19 @@ data class CookieBannerConfig (
       return true
     }
     val other = other as CookieBannerConfig
-    return GeckoPigeonUtils.deepEquals(this.mode, other.mode) && GeckoPigeonUtils.deepEquals(this.siteModes, other.siteModes)
+    return GeckoPigeonUtils.deepEquals(this.mode, other.mode) && GeckoPigeonUtils.deepEquals(this.siteModes, other.siteModes) && GeckoPigeonUtils.deepEquals(this.disabledRules, other.disabledRules) && GeckoPigeonUtils.deepEquals(this.customSelectors, other.customSelectors)
   }
 
   override fun hashCode(): Int {
     var result = javaClass.hashCode()
     result = 31 * result + GeckoPigeonUtils.deepHash(this.mode)
     result = 31 * result + GeckoPigeonUtils.deepHash(this.siteModes)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.disabledRules)
+    result = 31 * result + GeckoPigeonUtils.deepHash(this.customSelectors)
     return result
   }
   override fun toString(): String {
-    return "CookieBannerConfig(mode=$mode, siteModes=$siteModes)"
+    return "CookieBannerConfig(mode=$mode, siteModes=$siteModes, disabledRules=$disabledRules, customSelectors=$customSelectors)"
   }
 }
 
