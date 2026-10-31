@@ -34,8 +34,6 @@ class OnlineWallpaperService {
 
   static const _bingEndpoint =
       'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1';
-  static const _wikimediaEndpoint =
-      'https://en.wikipedia.org/api/rest_v1/feed/featured/2024/01/01';
 
   /// Downloads a fresh wallpaper into [target] and returns it, or null on
   /// failure. Prefers Bing's daily image; falls back to Wikimedia.
@@ -59,24 +57,56 @@ class OnlineWallpaperService {
   }
 
   Future<String?> _resolveUrl() async {
-    // Bing daily image (no API key).
-    try {
-      final response = await http.get(Uri.parse(_bingEndpoint));
-      if (response.statusCode == 200) {
-        final json = jsonDecode(response.body) as Map<String, dynamic>;
-        final images = json['images'] as List<dynamic>?;
-        final first = images?.first as Map<String, dynamic>?;
-        final urlPath = first?['url'] as String?;
-        if (urlPath != null && urlPath.isNotEmpty) {
-          return urlPath.startsWith('http')
-              ? urlPath
-              : 'https://www.bing.com$urlPath';
-        }
+    // Try every free source TablissNG uses, in order, until one yields an image.
+    for (final resolver in <Future<String?> Function()>[
+      _resolveBing,
+      _resolveWikimedia,
+      _resolveNasa,
+    ]) {
+      try {
+        final url = await resolver();
+        if (url != null && url.isNotEmpty) return url;
+      } catch (e, s) {
+        logger.w('Wallpaper source failed', error: e, stackTrace: s);
       }
-    } catch (e, s) {
-      logger.w('Bing wallpaper resolve failed', error: e, stackTrace: s);
     }
-
     return null;
+  }
+
+  Future<String?> _resolveBing() async {
+    final response = await http.get(Uri.parse(_bingEndpoint));
+    if (response.statusCode != 200) return null;
+    final json = jsonDecode(response.body) as Map<String, dynamic>;
+    final images = json['images'] as List<dynamic>?;
+    final first = images?.first as Map<String, dynamic>?;
+    final urlPath = first?['url'] as String?;
+    if (urlPath == null || urlPath.isEmpty) return null;
+    return urlPath.startsWith('http') ? urlPath : 'https://www.bing.com$urlPath';
+  }
+
+  Future<String?> _resolveWikimedia() async {
+    // Wikimedia's picture of the day (free, no API key).
+    final now = DateTime.now().toUtc();
+    final endpoint =
+        'https://en.wikipedia.org/api/rest_v1/feed/featured/'
+        '${now.year}/${now.month.toString().padLeft(2, '0')}/'
+        '${now.day.toString().padLeft(2, '0')}';
+    final response = await http.get(Uri.parse(endpoint));
+    if (response.statusCode != 200) return null;
+    final json = jsonDecode(response.body) as Map<String, dynamic>;
+    final image = json['image'] as Map<String, dynamic>?;
+    final source = image?['source'] as String?;
+    return (source != null && source.isNotEmpty) ? source : null;
+  }
+
+  Future<String?> _resolveNasa() async {
+    // NASA Astronomy Picture of the Day (free DEMO_KEY, rate-limited).
+    final response = await http.get(
+      Uri.parse('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'),
+    );
+    if (response.statusCode != 200) return null;
+    final json = jsonDecode(response.body) as Map<String, dynamic>;
+    final url = (json['hdurl'] ?? json['url']) as String?;
+    return (url != null && url.isNotEmpty) ? url : null;
   }
 }
