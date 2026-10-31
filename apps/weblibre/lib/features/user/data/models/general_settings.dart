@@ -1167,7 +1167,7 @@ class GeneralSettings with FastEquatable {
        historySuggestionsEnabled = historySuggestionsEnabled ?? true,
        privateSearchSuggestionsEnabled =
            privateSearchSuggestionsEnabled ?? false,
-       pureBlack = pureBlack ?? false,
+       pureBlack = pureBlack ?? true,
        hideStatusBar = hideStatusBar ?? false,
        cookieBannerHandling =
            cookieBannerHandling ?? CookieBannerHandling.rejectOrHide,
