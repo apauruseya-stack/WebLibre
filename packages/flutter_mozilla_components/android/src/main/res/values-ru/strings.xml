@@ -14,7 +14,7 @@
     <string name="weblibre_lock_wrong_password_retry">Неверный пароль. %1$s</string>
     <string name="weblibre_lock_too_many_attempts">Слишком много неудачных попыток. %1$s</string>
     <string name="weblibre_lock_check_failed">Не удалось проверить пароль. Повторите попытку.</string>
-    <string name="weblibre_lock_interrupted">Во время проверки вы вышли из WebLibre. Введите пароль ещё раз.</string>
+    <string name="weblibre_lock_interrupted">Во время проверки вы вышли из Cat Browser. Введите пароль ещё раз.</string>
     <plurals name="weblibre_lock_retry_seconds">
         <item quantity="one">Повторите попытку через %d секунду.</item>
         <item quantity="few">Повторите попытку через %d секунды.</item>

@@ -27,7 +27,7 @@ import org.robolectric.annotation.Config
 
 /**
  * The engine tells the interceptor whether a load targets a new window only through the 9-argument
- * overload (the WebLibre AC patch). Whether a link's in-browser answer opens a new tab or replaces
+ * overload (the Cat Browser AC patch). Whether a link's in-browser answer opens a new tab or replaces
  * the opener's page hangs on that flag reaching the app-link tail.
  */
 @RunWith(RobolectricTestRunner::class)

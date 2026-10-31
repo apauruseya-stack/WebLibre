@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -39,7 +39,7 @@ import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/l10n/generated/app_localizations.dart';
 
-/// Every gesture WebLibre knows, grouped by where it is made (issue #626):
+/// Every gesture Cat Browser knows, grouped by where it is made (issue #626):
 /// the swipes on the tab bar and on tabs, each rebindable, the fixed ones
 /// listed so none is undeclared, and the drawn stroke gestures on web pages
 /// with their own subpages.

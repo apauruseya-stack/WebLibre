@@ -72,7 +72,7 @@
             android:gravity="center"
             android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?attr/colorOnSurfaceVariant"
-            tools:text="“example.com” goes through a proxy that only WebLibre can start." />
+            tools:text="“example.com” goes through a proxy that only Cat Browser can start." />
 
         <!-- The step the start-up has actually reached, so a wait that is
            - working looks different from one that is stuck. A live region: it

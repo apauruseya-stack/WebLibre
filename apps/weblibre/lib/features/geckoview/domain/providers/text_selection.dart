@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -38,7 +38,7 @@ part 'text_selection.g.dart';
 /// grace window after the toolbar disappears and again after a selection drag
 /// ends, covering a quick re-grab of a handle.
 ///
-/// See https://github.com/FaFre/WebLibre/issues/578.
+/// See https://github.com/FaFre/Cat Browser/issues/578.
 @Riverpod(keepAlive: true)
 class TextSelectionActive extends _$TextSelectionActive {
   @override

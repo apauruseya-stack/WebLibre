@@ -389,7 +389,7 @@ class GeckoBrowserApiImpl : GeckoBrowserApi {
 
         // Set before GlobalComponents.setUp (which lazily builds the engine and
         // its history delegate) so Core can wrap the delegate to forward the
-        // visit's WebLibre container to Dart.
+        // visit's Cat Browser container to Dart.
         GlobalComponents.historyEvents =
             GeckoHistoryEvents(_flutterPluginBinding.binaryMessenger)
 

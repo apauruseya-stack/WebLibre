@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -123,7 +123,7 @@ abstract class IntentGatekeeperHostApi {
   String? resolvePackageLabel(String packageName);
 
   /// Returns the list of packages for which the user tapped "Always allow"
-  /// via a blocked-intent notification while WebLibre was not running.
+  /// via a blocked-intent notification while Cat Browser was not running.
   /// Callers must acknowledge persisted packages via
   /// [ackPendingAlwaysAllows] after Flutter settings were updated
   /// successfully.

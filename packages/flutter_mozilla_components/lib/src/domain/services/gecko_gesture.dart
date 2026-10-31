@@ -51,7 +51,7 @@ class GeckoGestureService extends GeckoGestureEvents {
   /// this on pointer-down and ignore the stream while it is set, rather than
   /// sampling it mid-drag: the engine tears the selection toolbar down for the
   /// duration of a handle drag, so it reads false exactly while one is in
-  /// progress. See https://github.com/FaFre/WebLibre/issues/578.
+  /// progress. See https://github.com/FaFre/Cat Browser/issues/578.
   ValueStream<bool> get textSelectionActive =>
       _textSelectionActiveSubject.stream;
 

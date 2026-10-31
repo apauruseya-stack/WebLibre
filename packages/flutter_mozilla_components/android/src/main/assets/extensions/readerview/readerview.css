@@ -2,11 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* WebLibre: this file overrides the upstream Mozilla Android Components reader
+/* Cat Browser: this file overrides the upstream Mozilla Android Components reader
  * view stylesheet (org.mozilla.components:feature-readerview). It is identical
  * to upstream except for the AMOLED / pure-black additions, which are gated on
  * the `amoled` body class. That class is toggled by readerview.js based on the
- * WebLibre "pure black" setting (see ReaderViewAppearanceFeature on the native
+ * Cat Browser "pure black" setting (see ReaderViewAppearanceFeature on the native
  * side). When upgrading mozilla-components, re-sync this file with upstream and
  * re-apply the AMOLED rules below. */
 
@@ -34,8 +34,8 @@
   color: #eeeeee;
 }
 
-/* WebLibre AMOLED / pure-black: only applies on top of the dark scheme when the
- * WebLibre "pure black" setting is enabled. */
+/* Cat Browser AMOLED / pure-black: only applies on top of the dark scheme when the
+ * Cat Browser "pure black" setting is enabled. */
 .mozac-readerview-body.dark.amoled {
   background-color: #000000;
 }

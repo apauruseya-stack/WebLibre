@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ import 'package:weblibre/presentation/utils/profile_copy_l10n.dart';
 /// Confirms deleting [profileName], including the restart it needs.
 ///
 /// The restart is not a detail to leave out. Deletion is journaled and runs in a
-/// process that has never opened the profile, so confirming here closes WebLibre
+/// process that has never opened the profile, so confirming here closes Cat Browser
 /// on the spot — and a browser that vanishes the instant you tap "Delete" reads
 /// as a crash, not as the thing you asked for.
 ///

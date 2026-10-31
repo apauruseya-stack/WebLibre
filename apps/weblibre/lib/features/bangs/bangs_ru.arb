@@ -34,7 +34,7 @@
   "bangs_flagUrlEncodePlaceholderSubtitle": "Кодировать поисковые запросы для URL-адреса. Некоторые сайты не работают с закодированными запросами — для них отключите этот параметр.",
   "bangs_flagUrlEncodeSpaceToPlusTitle": "Кодировать пробел как плюс",
   "bangs_flagUrlEncodeSpaceToPlusSubtitle": "Кодировать пробелы как + вместо %20. Некоторым сайтам нужен определённый формат.",
-  "bangs_tooltipOfficialSearch": "Официальный поиск WebLibre",
+  "bangs_tooltipOfficialSearch": "Официальный поиск Cat Browser",
   "bangs_tooltipCustomizeAsOwn": "Настроить как собственный бэнг",
   "bangs_tooltipUnpin": "Открепить от поисковых систем",
   "bangs_tooltipPin": "Закрепить среди поисковых систем",

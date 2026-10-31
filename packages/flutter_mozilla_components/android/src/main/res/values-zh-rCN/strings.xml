@@ -14,7 +14,7 @@
     <string name="weblibre_lock_wrong_password_retry">密码错误。%1$s</string>
     <string name="weblibre_lock_too_many_attempts">错误次数过多。%1$s</string>
     <string name="weblibre_lock_check_failed">无法检查密码。请重试。</string>
-    <string name="weblibre_lock_interrupted">检查期间离开了 WebLibre。请重新输入密码。</string>
+    <string name="weblibre_lock_interrupted">检查期间离开了 Cat Browser。请重新输入密码。</string>
     <plurals name="weblibre_lock_retry_seconds">
         <item quantity="other">请在 %d 秒后重试。</item>
     </plurals>

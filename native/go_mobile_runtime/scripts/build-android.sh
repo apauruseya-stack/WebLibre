@@ -35,7 +35,7 @@ usage() {
   cat <<'EOF'
 Usage: build-android.sh [options]
 
-Build the combined WebLibre gomobile Android AAR containing sing-box libbox and IPtProxy.
+Build the combined Cat Browser gomobile Android AAR containing sing-box libbox and IPtProxy.
 
 Options:
   --sing-box-source PATH      sing-box checkout (default: ../sing-box)

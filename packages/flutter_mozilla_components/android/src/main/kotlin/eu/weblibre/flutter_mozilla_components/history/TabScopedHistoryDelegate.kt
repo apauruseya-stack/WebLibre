@@ -17,15 +17,15 @@ import mozilla.components.concept.storage.PageVisit
  *
  * Android Components installs one delegate engine-wide, and by the time a visit
  * reaches it the session is gone — leaving only the visited URL to guess the
- * producing tab from. WebLibre instead binds one of these per session (see
+ * producing tab from. Cat Browser instead binds one of these per session (see
  * [eu.weblibre.flutter_mozilla_components.middleware.HistoryDelegateBindingMiddleware]),
- * so both things WebLibre needs are exact rather than inferred:
+ * so both things Cat Browser needs are exact rather than inferred:
  *
  *  - **Exclude from History**: [HistoryExclusions] is asked about *this* tab, so a
  *    container opted out of history recording never reaches Places — including
  *    containers without cookie isolation, which no contextId could distinguish.
  *  - **Container tagging**: the visit is reported to Dart with its real [tabId],
- *    which maps to a WebLibre container through the tab store.
+ *    which maps to a Cat Browser container through the tab store.
  *
  * Everything else delegates to [wrapped] (Places), which stays the source of
  * truth for the visit itself: url, title, visit type and time.

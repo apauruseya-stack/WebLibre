@@ -194,9 +194,9 @@
   "@addons_removeConfirmTitle": {
     "description": "Title of the confirmation dialog before uninstalling an extension."
   },
-  "addons_removeConfirmContent": "Remove {name} from WebLibre?",
+  "addons_removeConfirmContent": "Remove {name} from Cat Browser?",
   "@addons_removeConfirmContent": {
-    "description": "Body of that dialog. name is the extension's name; WebLibre is the app name.",
+    "description": "Body of that dialog. name is the extension's name; Cat Browser is the app name.",
     "placeholders": { "name": { "type": "String" } }
   },
 
@@ -221,7 +221,7 @@
   "@addons_switchEnabledTitle": {
     "description": "Switch on the extension details screen that turns the extension on or off."
   },
-  "addons_switchEnabledSubtitleAllow": "Allow this extension to run in WebLibre.",
+  "addons_switchEnabledSubtitleAllow": "Allow this extension to run in Cat Browser.",
   "@addons_switchEnabledSubtitleAllow": {
     "description": "Line under the enabled switch."
   },
@@ -264,9 +264,9 @@
   },
   "addons_menuFilterListsTitle": "Filter Lists & Hardenings",
   "@addons_menuFilterListsTitle": {
-    "description": "Row shown only for the uBlock Origin extension: manage its filter lists and WebLibre's extra hardening lists."
+    "description": "Row shown only for the uBlock Origin extension: manage its filter lists and Cat Browser's extra hardening lists."
   },
-  "addons_menuFilterListsSubtitle": "Manage filter lists and apply WebLibre hardenings",
+  "addons_menuFilterListsSubtitle": "Manage filter lists and apply Cat Browser hardenings",
   "@addons_menuFilterListsSubtitle": {
     "description": "Line under \"Filter Lists & Hardenings\"."
   },
@@ -502,9 +502,9 @@
   "@addons_statusSoftBlockedDisabled": {
     "description": "Warning on a disabled extension that Mozilla marked as risky (\"soft-blocked\"); it can still be turned on."
   },
-  "addons_statusUnsupported": "This extension is installed, but WebLibre does not currently support it.",
+  "addons_statusUnsupported": "This extension is installed, but Cat Browser does not currently support it.",
   "@addons_statusUnsupported": {
-    "description": "Warning on an installed extension this app cannot run. WebLibre is the app name."
+    "description": "Warning on an installed extension this app cannot run. Cat Browser is the app name."
   },
 
   "addons_permissionBookmarks": "Read and modify bookmarks",

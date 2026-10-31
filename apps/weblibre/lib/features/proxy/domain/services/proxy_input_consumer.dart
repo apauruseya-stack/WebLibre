@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -303,7 +303,7 @@ class ProxyInputConsumer extends _$ProxyInputConsumer {
       return ProxyInputImported(created);
     } on FormatException catch (error, stackTrace) {
       logger.e(
-        'Failed to decode WebLibre proxy share URI',
+        'Failed to decode Cat Browser proxy share URI',
         error: error,
         stackTrace: stackTrace,
       );

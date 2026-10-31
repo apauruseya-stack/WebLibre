@@ -5,7 +5,7 @@
   "onboarding_actionRestore": "Restaurar",
   "onboarding_restoreTargetUnreadable": "No se pudo leer este perfil, así que no se puede restaurar nada en él.",
   "onboarding_welcomeBackTitle": "¡Te damos la bienvenida de nuevo!",
-  "onboarding_welcomeReadyTitle": "WebLibre está listo",
+  "onboarding_welcomeReadyTitle": "Cat Browser está listo",
   "onboarding_chooseExperience": "Elige cómo quieres empezar:",
   "onboarding_modeExpressTitle": "Inicio rápido",
   "onboarding_modeExpressSubtitle": "Usa los valores recomendados y empieza a navegar.",
@@ -24,7 +24,7 @@
   "onboarding_aiOnDeviceTitle": "IA en el dispositivo",
   "onboarding_aiOnDeviceSubtitle": "Funciones locales en el dispositivo, como sugerencias de temas de contenedores y de pestañas",
   "onboarding_aiWarningTitle": "Ten en cuenta",
-  "onboarding_aiWarningPoint1": "WebLibre usa un modelo de IA local para analizar los títulos de tus pestañas abiertas y sugerir en qué contenedores agruparlas y qué nombre darles. Todo el procesamiento se realiza íntegramente en tu dispositivo.",
+  "onboarding_aiWarningPoint1": "Cat Browser usa un modelo de IA local para analizar los títulos de tus pestañas abiertas y sugerir en qué contenedores agruparlas y qué nombre darles. Todo el procesamiento se realiza íntegramente en tu dispositivo.",
   "onboarding_aiWarningPoint2": "Las mejoras de IA funcionan íntegramente dentro del navegador y mantienen todos los datos en tu dispositivo. El procesamiento local de IA respeta tu privacidad y ofrece sugerencias más rápidas de grupos y nombres de contenedores. Puedes controlar este comportamiento en cualquier momento en Ajustes.",
   "onboarding_aiWarningPoint3": "La IA puede equivocarse a veces, así que revisa los nombres de grupo y las pestañas sugeridas.",
   "onboarding_searchTitle": "Búsqueda",
@@ -37,7 +37,7 @@
   "onboarding_permissionsNotificationsTitle": "Notificaciones",
   "onboarding_permissionsNotificationsSubtitle": "Necesario para avisarte de las descargas",
   "onboarding_permissionsDefaultBrowserTitle": "Navegador predeterminado",
-  "onboarding_permissionsDefaultBrowserSubtitle": "Establecer WebLibre como navegador predeterminado",
+  "onboarding_permissionsDefaultBrowserSubtitle": "Establecer Cat Browser como navegador predeterminado",
   "onboarding_privacyTitle": "Privacidad y refuerzo",
   "onboarding_privacyBrowserLanguagesTitle": "Idiomas del navegador",
   "onboarding_privacyBrowserLanguagesSubtitle": "Configurar las preferencias de idioma que se muestran a los sitios web",
@@ -58,8 +58,8 @@
   "onboarding_blockAllLocalNetworkSubtitle": "Pedir permiso antes de que cualquier sitio web acceda a dispositivos de tu red doméstica, no solo los rastreadores conocidos",
   "onboarding_toolbarLayoutTitle": "Barra de herramientas y diseño",
   "onboarding_ublockTitle": "uBlock Origin",
-  "onboarding_ublockDescription": "uBlock Origin (uBO) es un **bloqueador de contenido de amplio espectro** eficiente en CPU y memoria creado por **Raymond Hill**, disponible como extensión del navegador para WebLibre.\n\nDe forma predeterminada, bloquea anuncios, rastreadores, criptomineros, ventanas emergentes, molestos anti-bloqueadores, sitios de malware y más mediante las **listas de filtros EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist y uBO**.\n\nHay muchas otras listas disponibles para bloquear contenido adicional.",
+  "onboarding_ublockDescription": "uBlock Origin (uBO) es un **bloqueador de contenido de amplio espectro** eficiente en CPU y memoria creado por **Raymond Hill**, disponible como extensión del navegador para Cat Browser.\n\nDe forma predeterminada, bloquea anuncios, rastreadores, criptomineros, ventanas emergentes, molestos anti-bloqueadores, sitios de malware y más mediante las **listas de filtros EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist y uBO**.\n\nHay muchas otras listas disponibles para bloquear contenido adicional.",
   "onboarding_ublockInstallTitle": "Instalar la extensión uBlock Origin",
   "onboarding_ublockApplyDefaultsTitle": "Aplicar valores optimizados",
-  "onboarding_ublockApplyDefaultsSubtitle": "Activar las listas de filtros de refuerzo de WebLibre."
+  "onboarding_ublockApplyDefaultsSubtitle": "Activar las listas de filtros de refuerzo de Cat Browser."
 }

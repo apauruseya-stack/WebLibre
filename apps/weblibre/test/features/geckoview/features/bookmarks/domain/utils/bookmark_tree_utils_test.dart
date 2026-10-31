@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -77,7 +77,7 @@ void main() {
     test('should keep built-in roots pinned ahead of the rest at root', () {
       final children = <BookmarkItem>[
         entry('z', 'Zulu'),
-        folder(BookmarkRoot.mobile.id, 'WebLibre'),
+        folder(BookmarkRoot.mobile.id, 'Cat Browser'),
         entry('a', 'Alpha'),
         folder(BookmarkRoot.menu.id, 'Menu'),
       ];

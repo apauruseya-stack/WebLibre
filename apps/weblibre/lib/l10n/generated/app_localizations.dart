@@ -226,10 +226,10 @@ abstract class AppLocalizations {
   /// **'tabs, history, bookmarks, settings and saved site logins'**
   String get profileCopy_dataDescription;
 
-  /// List fragment inserted into sentences about profile backups. Names the sensitive account data that backups include. Lowercase, no final period. WebLibre is the app name.
+  /// List fragment inserted into sentences about profile backups. Names the sensitive account data that backups include. Lowercase, no final period. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre account sign-in, sync setup and proxy details'**
+  /// **'Cat Browser account sign-in, sync setup and proxy details'**
   String get profileCopy_secretDataDescription;
 
   /// Standalone sentence appended to warnings before deleting or overwriting a browser profile.
@@ -247,37 +247,37 @@ abstract class AppLocalizations {
   /// Standalone sentence in profile backup, restore and delete screens: the app has to restart to carry out the operation. Always followed by further sentences.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre must restart to do this.'**
+  /// **'Cat Browser must restart to do this.'**
   String get profileCopy_restartsToWork;
 
   /// Standalone sentence in the backup restore flow: after restarting, the app asks for the backup file password.
   ///
   /// In en, this message translates to:
-  /// **'After restarting, WebLibre asks for the backup file password.'**
+  /// **'After restarting, Cat Browser asks for the backup file password.'**
   String get profileCopy_asksPasswordAfterRestart;
 
   /// Standalone instruction appended to startup error messages that can only be cleared by fully closing and reopening the app.
   ///
   /// In en, this message translates to:
-  /// **'Close WebLibre and open it again.'**
+  /// **'Close Cat Browser and open it again.'**
   String get profileCopy_reopenToContinue;
 
   /// Standalone sentence in the warning before restoring a backup over an existing profile: account sign-ins are taken from the backup, not kept from the replaced profile.
   ///
   /// In en, this message translates to:
-  /// **'The restored profile uses the WebLibre account from the backup.'**
+  /// **'The restored profile uses the Cat Browser account from the backup.'**
   String get profileCopy_signedInFromBackup;
 
   /// Standalone sentence that follows the note that a restored profile uses the account from the backup. "These" refers to the account sign-in and credentials; backups from older app versions have none, so the current ones are kept.
   ///
   /// In en, this message translates to:
-  /// **'A backup made by an older version of WebLibre carries none of these, and the profile keeps the ones it has now.'**
+  /// **'A backup made by an older version of Cat Browser carries none of these, and the profile keeps the ones it has now.'**
   String get profileCopy_olderBackupKeepsCredentials;
 
   /// Error message when a profile backup, restore or delete needs an app restart that the system refused to schedule. nothingChanged is the sentence "Nothing has been changed."
   ///
   /// In en, this message translates to:
-  /// **'WebLibre could not schedule the restart required for this operation. {nothingChanged}'**
+  /// **'Cat Browser could not schedule the restart required for this operation. {nothingChanged}'**
   String profileCopy_restartCouldNotBeScheduled(String nothingChanged);
 
   /// Standalone sentence in profile backup and restore screens: home-screen shortcuts that open a profile stop working after a restore and must be added to the home screen again.
@@ -382,13 +382,13 @@ abstract class AppLocalizations {
   /// **'GitHub'**
   String get about_githubTitle;
 
-  /// Title of the settings screen for the WebLibre Account (the app's own optional online account for the supporter subscription, search credits and encrypted settings sync). WebLibre is the app name.
+  /// Title of the settings screen for the Cat Browser Account (the app's own optional online account for the supporter subscription, search credits and encrypted settings sync). Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre Account'**
+  /// **'Cat Browser Account'**
   String get account_screenTitle;
 
-  /// Placeholder of the search field on the WebLibre Account screen.
+  /// Placeholder of the search field on the Cat Browser Account screen.
   ///
   /// In en, this message translates to:
   /// **'Search account settings'**
@@ -400,19 +400,19 @@ abstract class AppLocalizations {
   /// **'Failed to load account'**
   String get account_loadFailed;
 
-  /// Section heading on the WebLibre Account screen for sign-in status.
+  /// Section heading on the Cat Browser Account screen for sign-in status.
   ///
   /// In en, this message translates to:
   /// **'Account'**
   String get account_sectionAccount;
 
-  /// Section heading on the WebLibre Account screen for the supporter subscription.
+  /// Section heading on the Cat Browser Account screen for the supporter subscription.
   ///
   /// In en, this message translates to:
   /// **'Subscription'**
   String get account_sectionSubscription;
 
-  /// Section heading on the WebLibre Account screen for prepaid search credits.
+  /// Section heading on the Cat Browser Account screen for prepaid search credits.
   ///
   /// In en, this message translates to:
   /// **'Search Credits'**
@@ -436,10 +436,10 @@ abstract class AppLocalizations {
   /// **'Encrypted Sync'**
   String get account_sectionEncryptedSync;
 
-  /// Row that starts signing in to the WebLibre Account; also the title of the account section while signed out.
+  /// Row that starts signing in to the Cat Browser Account; also the title of the account section while signed out.
   ///
   /// In en, this message translates to:
-  /// **'Sign in to WebLibre Account'**
+  /// **'Sign in to Cat Browser Account'**
   String get account_signInTitle;
 
   /// Comma-separated search terms for this setting. Not displayed; include synonyms users might type.
@@ -631,13 +631,13 @@ abstract class AppLocalizations {
   /// Body of the leftover sign-in card. name is the account's email or name, or "a previous sign-in".
   ///
   /// In en, this message translates to:
-  /// **'WebLibre kept a sign-in for {name} from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so WebLibre will not guess.'**
+  /// **'Cat Browser kept a sign-in for {name} from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so Cat Browser will not guess.'**
   String account_adoptBodyUsable(String name);
 
   /// Body of the card when the leftover sign-in is damaged and can only be removed.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.'**
+  /// **'Cat Browser kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.'**
   String get account_adoptBodyUnusable;
 
   /// Error on the leftover sign-in card when using or removing it failed.
@@ -706,10 +706,10 @@ abstract class AppLocalizations {
   /// **'Signing in...'**
   String get account_signingInEllipsis;
 
-  /// Instruction under the sign-in progress: finish signing in on the web page opened in WebLibre.
+  /// Instruction under the sign-in progress: finish signing in on the web page opened in Cat Browser.
   ///
   /// In en, this message translates to:
-  /// **'Complete sign-in in WebLibre'**
+  /// **'Complete sign-in in Cat Browser'**
   String get account_completeSignInInApp;
 
   /// Tooltip of the sign-out button on the signed-in account row.
@@ -724,10 +724,10 @@ abstract class AppLocalizations {
   /// **'Sign out?'**
   String get account_signOutConfirmTitle;
 
-  /// Body of the sign-out confirmation dialog. "WebLibre Account" is the account's name.
+  /// Body of the sign-out confirmation dialog. "Cat Browser Account" is the account's name.
   ///
   /// In en, this message translates to:
-  /// **'Are you sure you want to sign out of your WebLibre Account?'**
+  /// **'Are you sure you want to sign out of your Cat Browser Account?'**
   String get account_signOutConfirmContent;
 
   /// Row, and dialog title, for resetting the encryption key used for sync; the account password must be entered again.
@@ -871,22 +871,22 @@ abstract class AppLocalizations {
   /// Heading of the home screen banner inviting users to become supporters.
   ///
   /// In en, this message translates to:
-  /// **'Support WebLibre'**
+  /// **'Support Cat Browser'**
   String get account_bannerTitle;
 
-  /// Body of the supporter banner on the home screen. The text between <learnMore>…</learnMore> becomes a tappable link to more information; keep the tag pair and translate the text inside it. WebLibre is the app name.
+  /// Body of the supporter banner on the home screen. The text between <learnMore>…</learnMore> becomes a tappable link to more information; keep the tag pair and translate the text inside it. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Supporter is an optional subscription that funds WebLibre\'s development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.'**
+  /// **'Supporter is an optional subscription that funds Cat Browser\'s development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.'**
   String get account_bannerBody;
 
   /// Bullet heading in the supporter banner naming the search feature. Product name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre Search'**
+  /// **'Cat Browser Search'**
   String get account_featureSearchLabel;
 
-  /// Bullet text in the supporter banner describing WebLibre Search. Tor is a product name.
+  /// Bullet text in the supporter banner describing Cat Browser Search. Tor is a product name.
   ///
   /// In en, this message translates to:
   /// **'A private, ad-free search built into the browser. It blends results from several independent sources, offers tunable search modes, can route over Tor, and lets you preview pages safely — while keeping your searches unlinkable to your account by design.'**
@@ -901,7 +901,7 @@ abstract class AppLocalizations {
   /// Bullet text in the supporter banner describing encrypted settings sync.
   ///
   /// In en, this message translates to:
-  /// **'Store and restore your WebLibre settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.'**
+  /// **'Store and restore your Cat Browser settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.'**
   String get account_featureSyncDescription;
 
   /// Button in the supporter banner that opens the account screen to subscribe.
@@ -964,13 +964,13 @@ abstract class AppLocalizations {
   /// **'Failed to load snapshots: {error}'**
   String account_failedLoadSnapshots(String error);
 
-  /// Confirmation after uploading a snapshot. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.
+  /// Confirmation after uploading a snapshot. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.
   ///
   /// In en, this message translates to:
   /// **'{kind, select, weblibreSettings{Settings stored} geckoUserJs{Gecko Prefs stored} other{Snapshot stored}}'**
   String account_syncKindStored(String kind);
 
-  /// Heading of a list of stored snapshots. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences (Gecko is the engine's name). Translate each case; keep the case names unchanged.
+  /// Heading of a list of stored snapshots. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences (Gecko is the engine's name). Translate each case; keep the case names unchanged.
   ///
   /// In en, this message translates to:
   /// **'{kind, select, weblibreSettings{Settings Snapshots} geckoUserJs{Gecko Prefs Snapshots} other{Snapshots}}'**
@@ -982,7 +982,7 @@ abstract class AppLocalizations {
   /// **'Store Current'**
   String get account_storeCurrentTitle;
 
-  /// Line under "Store Current". kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.
+  /// Line under "Store Current". kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.
   ///
   /// In en, this message translates to:
   /// **'{kind, select, weblibreSettings{Encrypt and upload the current settings} geckoUserJs{Encrypt and upload the current Gecko prefs} other{Encrypt and upload the current data}}'**
@@ -1000,7 +1000,7 @@ abstract class AppLocalizations {
   /// **'Failed to store: {error}'**
   String account_failedToStore(String error);
 
-  /// Confirmation after restoring a snapshot. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.
+  /// Confirmation after restoring a snapshot. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.
   ///
   /// In en, this message translates to:
   /// **'{kind, select, weblibreSettings{Settings restored} geckoUserJs{Gecko Prefs restored} other{Snapshot restored}}'**
@@ -1462,10 +1462,10 @@ abstract class AppLocalizations {
   /// **'Remove extension?'**
   String get addons_removeConfirmTitle;
 
-  /// Body of that dialog. name is the extension's name; WebLibre is the app name.
+  /// Body of that dialog. name is the extension's name; Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Remove {name} from WebLibre?'**
+  /// **'Remove {name} from Cat Browser?'**
   String addons_removeConfirmContent(String name);
 
   /// Line under the automatic updates switch when automatic extension updates are turned off app-wide.
@@ -1501,7 +1501,7 @@ abstract class AppLocalizations {
   /// Line under the enabled switch.
   ///
   /// In en, this message translates to:
-  /// **'Allow this extension to run in WebLibre.'**
+  /// **'Allow this extension to run in Cat Browser.'**
   String get addons_switchEnabledSubtitleAllow;
 
   /// Line under the enabled switch when it cannot be turned on for safety reasons.
@@ -1558,7 +1558,7 @@ abstract class AppLocalizations {
   /// **'Open the extension options page'**
   String get addons_menuExtensionSettingsSubtitleInline;
 
-  /// Row shown only for the uBlock Origin extension: manage its filter lists and WebLibre's extra hardening lists.
+  /// Row shown only for the uBlock Origin extension: manage its filter lists and Cat Browser's extra hardening lists.
   ///
   /// In en, this message translates to:
   /// **'Filter Lists & Hardenings'**
@@ -1567,7 +1567,7 @@ abstract class AppLocalizations {
   /// Line under "Filter Lists & Hardenings".
   ///
   /// In en, this message translates to:
-  /// **'Manage filter lists and apply WebLibre hardenings'**
+  /// **'Manage filter lists and apply Cat Browser hardenings'**
   String get addons_menuFilterListsSubtitle;
 
   /// Heading of the list of permissions, and row opening that list, on the extension screens.
@@ -1876,10 +1876,10 @@ abstract class AppLocalizations {
   /// **'This extension is soft-blocked, but it can still be re-enabled.'**
   String get addons_statusSoftBlockedDisabled;
 
-  /// Warning on an installed extension this app cannot run. WebLibre is the app name.
+  /// Warning on an installed extension this app cannot run. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'This extension is installed, but WebLibre does not currently support it.'**
+  /// **'This extension is installed, but Cat Browser does not currently support it.'**
   String get addons_statusUnsupported;
 
   /// Plain-language description of the "bookmarks" extension permission, shown in permission lists. Mirrors Firefox's wording; reuse its translation if available.
@@ -2074,10 +2074,10 @@ abstract class AppLocalizations {
   /// **'Open in another app?'**
   String get appLinks_dialogTitleGeneric;
 
-  /// Body of the dialog asking whether to open a link in an installed app. WebLibre is the app name.
+  /// Body of the dialog asking whether to open a link in an installed app. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'This link is handled by an app outside WebLibre.'**
+  /// **'This link is handled by an app outside Cat Browser.'**
   String get appLinks_dialogBody;
 
   /// Checkbox label in the open-in-app dialog. scope is a website domain (e.g. example.com) or an Android app package name; the choice is remembered for it.
@@ -2086,7 +2086,7 @@ abstract class AppLocalizations {
   /// **'Remember my choice for {scope}'**
   String appLinks_dialogRememberFor(String scope);
 
-  /// Warning in the open-in-app prompt when WebLibre applies extra protection to this link (for example its connection rules or privacy settings): the other app connects on its own and does not follow them.
+  /// Warning in the open-in-app prompt when Cat Browser applies extra protection to this link (for example its connection rules or privacy settings): the other app connects on its own and does not follow them.
   ///
   /// In en, this message translates to:
   /// **'This link is protected here. The app opens its own connection, outside the rules this tab follows.'**
@@ -2386,10 +2386,10 @@ abstract class AppLocalizations {
   /// **'Encode spaces as + instead of %20. Some sites require one format or the other.'**
   String get bangs_flagUrlEncodeSpaceToPlusSubtitle;
 
-  /// Tooltip of the crown icon marking a bang provided by WebLibre itself.
+  /// Tooltip of the crown icon marking a bang provided by Cat Browser itself.
   ///
   /// In en, this message translates to:
-  /// **'Official WebLibre search'**
+  /// **'Official Cat Browser search'**
   String get bangs_tooltipOfficialSearch;
 
   /// Tooltip of the button that makes an editable personal copy of a built-in bang.
@@ -3262,10 +3262,10 @@ abstract class AppLocalizations {
   /// **'Minimize'**
   String get browserActions_moveToBackgroundTitle;
 
-  /// Explanation under that browser action's name in the action lists: it sends the app to the background, like pressing the Home button. WebLibre is the app name.
+  /// Explanation under that browser action's name in the action lists: it sends the app to the background, like pressing the Home button. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Send WebLibre to the background'**
+  /// **'Send Cat Browser to the background'**
   String get browserActions_moveToBackgroundDescription;
 
   /// Name of the browser action that closes all tabs and exits the app, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and as the name of the toolbar button that does the same. Keep it short.
@@ -3274,10 +3274,10 @@ abstract class AppLocalizations {
   /// **'Quit'**
   String get browserActions_quitBrowserTitle;
 
-  /// Explanation under that browser action's name in the action lists: it closes all tabs and exits the app. WebLibre is the app name.
+  /// Explanation under that browser action's name in the action lists: it closes all tabs and exits the app. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Close all tabs and quit WebLibre'**
+  /// **'Close all tabs and quit Cat Browser'**
   String get browserActions_quitBrowserDescription;
 
   /// Heading of a group of browser actions that create something new (a container, a bookmark folder, a profile, ...) in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions.
@@ -3442,16 +3442,16 @@ abstract class AppLocalizations {
   /// **'View the app\'s error logs'**
   String get browserActions_showErrorLogsDescription;
 
-  /// Name of the browser action that opens the About screen. WebLibre is the app name, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short.
+  /// Name of the browser action that opens the About screen. Cat Browser is the app name, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short.
   ///
   /// In en, this message translates to:
   /// **'About'**
   String get browserActions_showAboutTitle;
 
-  /// Explanation under that browser action's name in the action lists: it opens the About screen. WebLibre is the app name.
+  /// Explanation under that browser action's name in the action lists: it opens the About screen. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'About WebLibre'**
+  /// **'About Cat Browser'**
   String get browserActions_showAboutDescription;
 
   /// Name of the browser action that starts creating a new container (a separate browsing identity), shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short.
@@ -7774,7 +7774,7 @@ abstract class AppLocalizations {
   /// **'Cancel download'**
   String get history_downloadActionCancel;
 
-  /// Title of the sheet shown when a link is shared to or opened in WebLibre, offering ways to open it (new tab, custom tab, app) and to clean it.
+  /// Title of the sheet shown when a link is shared to or opened in Cat Browser, offering ways to open it (new tab, custom tab, app) and to clean it.
   ///
   /// In en, this message translates to:
   /// **'Open link'**
@@ -10129,13 +10129,13 @@ abstract class AppLocalizations {
   /// **'Number of strokes to draw before suggestions appear'**
   String get gestures_indexSuggestAfterSubtitle;
 
-  /// Title of the dialog shown when another app asks WebLibre to open a link, letting the user allow or block that app.
+  /// Title of the dialog shown when another app asks Cat Browser to open a link, letting the user allow or block that app.
   ///
   /// In en, this message translates to:
-  /// **'Open link in WebLibre?'**
+  /// **'Open link in Cat Browser?'**
   String get intentGatekeeper_dialogTitle;
 
-  /// Body of the dialog shown when another app asks WebLibre to open a link. appName is the requesting app; browserName is the app name, WebLibre. Both placeholders are rendered in bold.
+  /// Body of the dialog shown when another app asks Cat Browser to open a link. appName is the requesting app; browserName is the app name, Cat Browser. Both placeholders are rendered in bold.
   ///
   /// In en, this message translates to:
   /// **'{appName} is trying to open a link in {browserName}.'**
@@ -10336,16 +10336,16 @@ abstract class AppLocalizations {
   /// **'This profile could not be read, so nothing can be restored into it.'**
   String get onboarding_restoreTargetUnreadable;
 
-  /// Heading of the first-run welcome page when the user has used WebLibre before (e.g. after a major update).
+  /// Heading of the first-run welcome page when the user has used Cat Browser before (e.g. after a major update).
   ///
   /// In en, this message translates to:
   /// **'Welcome back!'**
   String get onboarding_welcomeBackTitle;
 
-  /// Heading of the first-run welcome page for a new user. WebLibre is the app name.
+  /// Heading of the first-run welcome page for a new user. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre is ready'**
+  /// **'Cat Browser is ready'**
   String get onboarding_welcomeReadyTitle;
 
   /// Label above the choice between quick start, custom setup and restoring a backup on the first-run welcome page.
@@ -10459,7 +10459,7 @@ abstract class AppLocalizations {
   /// Bullet point in the AI notice box.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.'**
+  /// **'Cat Browser uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.'**
   String get onboarding_aiWarningPoint1;
 
   /// Bullet point in the AI notice box.
@@ -10528,16 +10528,16 @@ abstract class AppLocalizations {
   /// **'Required to notify you about downloads'**
   String get onboarding_permissionsNotificationsSubtitle;
 
-  /// Switch that makes WebLibre the device's default browser.
+  /// Switch that makes Cat Browser the device's default browser.
   ///
   /// In en, this message translates to:
   /// **'Default Browser'**
   String get onboarding_permissionsDefaultBrowserTitle;
 
-  /// Explanation under the default browser switch. WebLibre is the app name.
+  /// Explanation under the default browser switch. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Set WebLibre as your default browser'**
+  /// **'Set Cat Browser as your default browser'**
   String get onboarding_permissionsDefaultBrowserSubtitle;
 
   /// Heading of the first-run setup page for privacy and security settings. "Hardening" means stricter security settings.
@@ -10663,7 +10663,7 @@ abstract class AppLocalizations {
   /// Description of the uBlock Origin extension on its setup page. Uses Markdown: keep the ** markers around bold text. Names of people, products and filter lists stay unchanged.
   ///
   /// In en, this message translates to:
-  /// **'uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for WebLibre.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe\'s Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.'**
+  /// **'uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for Cat Browser.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe\'s Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.'**
   String get onboarding_ublockDescription;
 
   /// Switch that installs the uBlock Origin browser extension. Product name; do not translate.
@@ -10672,16 +10672,16 @@ abstract class AppLocalizations {
   /// **'Install uBlock Origin Extension'**
   String get onboarding_ublockInstallTitle;
 
-  /// Switch, available once uBlock Origin is being installed: apply WebLibre's recommended uBlock Origin settings.
+  /// Switch, available once uBlock Origin is being installed: apply Cat Browser's recommended uBlock Origin settings.
   ///
   /// In en, this message translates to:
   /// **'Apply optimized defaults'**
   String get onboarding_ublockApplyDefaultsTitle;
 
-  /// Explanation under "Apply optimized defaults": turns on WebLibre's own stricter filter lists in uBlock Origin.
+  /// Explanation under "Apply optimized defaults": turns on Cat Browser's own stricter filter lists in uBlock Origin.
   ///
   /// In en, this message translates to:
-  /// **'Enable WebLibre hardening filter lists.'**
+  /// **'Enable Cat Browser hardening filter lists.'**
   String get onboarding_ublockApplyDefaultsSubtitle;
 
   /// Button next to the current log level on the proxy logs screen; opens the log level sheet.
@@ -10804,10 +10804,10 @@ abstract class AppLocalizations {
   /// **'Autostart'**
   String get proxy_autostartLabel;
 
-  /// Tooltip of the autostart chip. WebLibre is the app name.
+  /// Tooltip of the autostart chip. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Starts with WebLibre'**
+  /// **'Starts with Cat Browser'**
   String get proxy_autostartTooltip;
 
   /// Tooltip of the chip showing the public IP address websites see when using this proxy. ip is that address.
@@ -11014,10 +11014,10 @@ abstract class AppLocalizations {
   /// **'Tip: Use the add menu on the previous screen to import from a file, paste a share link, or scan a QR code.'**
   String get proxy_addMenuTip;
 
-  /// Legal trademark notice. brand is "WireGuard®"; Jason A. Donenfeld is a person's name; WebLibre is the app name. Keep the legal meaning exact.
+  /// Legal trademark notice. brand is "WireGuard®"; Jason A. Donenfeld is a person's name; Cat Browser is the app name. Keep the legal meaning exact.
   ///
   /// In en, this message translates to:
-  /// **'{brand} is a registered trademark of Jason A. Donenfeld; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.'**
+  /// **'{brand} is a registered trademark of Jason A. Donenfeld; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.'**
   String proxy_wireGuardTrademarkDisclaimer(String brand);
 
   /// Import option for a WireGuard configuration file. brand is "WireGuard®".
@@ -11056,10 +11056,10 @@ abstract class AppLocalizations {
   /// **'Start Automatically'**
   String get proxy_startAutomaticallyTitle;
 
-  /// Explanation under that switch. WebLibre is the app name.
+  /// Explanation under that switch. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Connect this profile when WebLibre starts, so tabs using it are ready without a prompt'**
+  /// **'Connect this profile when Cat Browser starts, so tabs using it are ready without a prompt'**
   String get proxy_startAutomaticallySubtitle;
 
   /// Explanation of the DNS override section. brand is "WireGuard®". DoH means DNS over HTTPS.
@@ -11389,7 +11389,7 @@ abstract class AppLocalizations {
   /// Error when an imported sing-box config contains only entries that are not proxies (direct, block, DNS and the like).
   ///
   /// In en, this message translates to:
-  /// **'This sing-box config has no proxy WebLibre can import.'**
+  /// **'This sing-box config has no proxy Cat Browser can import.'**
   String get proxy_importNoImportableProxy;
 
   /// Error when an imported sing-box outbound lacks its type field. "type" is the sing-box key, untranslated.
@@ -11407,13 +11407,13 @@ abstract class AppLocalizations {
   /// Error when an imported sing-box outbound dials through another outbound of the same config (its "detour"). tag is that outbound's tag from the config, untranslated. Explains why it is not imported without the chain: the server would see the device's real IP address.
   ///
   /// In en, this message translates to:
-  /// **'This proxy connects through \"{tag}\", another outbound of its config. WebLibre cannot chain proxies, and connecting to it directly would show it your IP address.'**
+  /// **'This proxy connects through \"{tag}\", another outbound of its config. Cat Browser cannot chain proxies, and connecting to it directly would show it your IP address.'**
   String proxy_importDetourThroughOtherOutbound(String tag);
 
   /// Error when a single sing-box outbound is imported on its own and dials through another outbound (its "detour") that is not part of what was imported. tag is that outbound's tag, untranslated. Asks for the whole config instead, since only that says whether the detour is safe to drop.
   ///
   /// In en, this message translates to:
-  /// **'This proxy connects through \"{tag}\", which is defined elsewhere in its config. Import the whole config so WebLibre can check what \"{tag}\" does.'**
+  /// **'This proxy connects through \"{tag}\", which is defined elsewhere in its config. Import the whole config so Cat Browser can check what \"{tag}\" does.'**
   String proxy_importUnresolvedDetour(String tag);
 
   /// Error when an imported sing-box WireGuard endpoint lists no peer to connect to. brand is "WireGuard", untranslated.
@@ -12536,7 +12536,7 @@ abstract class AppLocalizations {
   /// **'Token issuance failed: {error}'**
   String searchCredits_issuanceFailed(String error);
 
-  /// Error line when downloading search tokens failed because the account session expired; the user must sign in to their WebLibre account again.
+  /// Error line when downloading search tokens failed because the account session expired; the user must sign in to their Cat Browser account again.
   ///
   /// In en, this message translates to:
   /// **'Please sign in again to request tokens.'**
@@ -12722,16 +12722,16 @@ abstract class AppLocalizations {
   /// **'Clear ML downloads?'**
   String get settings_mlDownloadsClearDialogTitle;
 
-  /// Body of that dialog. ONNX is a technical name; WebLibre is the app name.
+  /// Body of that dialog. ONNX is a technical name; Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart WebLibre before retrying ML features.'**
+  /// **'This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart Cat Browser before retrying ML features.'**
   String get settings_mlDownloadsClearDialogContent;
 
-  /// Confirmation after deleting downloaded AI model files. WebLibre is the app name.
+  /// Confirmation after deleting downloaded AI model files. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'ML downloads cleared. Restart WebLibre before retrying.'**
+  /// **'ML downloads cleared. Restart Cat Browser before retrying.'**
   String get settings_mlDownloadsClearedMessage;
 
   /// Error message when deleting AI model files failed. error is technical error text, usually English.
@@ -12992,10 +12992,10 @@ abstract class AppLocalizations {
   /// **'intents'**
   String get settings_externalLinkHandlingKeywords;
 
-  /// Explanation under that setting. WebLibre is the app name.
+  /// Explanation under that setting. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Choose how external links open in WebLibre'**
+  /// **'Choose how external links open in Cat Browser'**
   String get settings_externalLinkHandlingSubtitle;
 
   /// Option: ask each time how to open the link.
@@ -14462,7 +14462,7 @@ abstract class AppLocalizations {
   /// **'Appearance, downloads, and browser defaults.'**
   String get settings_generalSubtitle;
 
-  /// Row showing whether WebLibre is the device's default browser, with a button to change it.
+  /// Row showing whether Cat Browser is the device's default browser, with a button to change it.
   ///
   /// In en, this message translates to:
   /// **'Default Browser'**
@@ -14474,25 +14474,25 @@ abstract class AppLocalizations {
   /// **'system browser'**
   String get settings_defaultBrowserTileKeywords;
 
-  /// Line under that row when WebLibre is the default browser.
+  /// Line under that row when Cat Browser is the default browser.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre is your default browser'**
+  /// **'Cat Browser is your default browser'**
   String get settings_defaultBrowserTileSubtitleSet;
 
   /// Line under that row when it is not.
   ///
   /// In en, this message translates to:
-  /// **'Set WebLibre as your default browser'**
+  /// **'Set Cat Browser as your default browser'**
   String get settings_defaultBrowserTileSubtitleNotSet;
 
-  /// Label of the disabled button when WebLibre is already the default browser. Keep it short.
+  /// Label of the disabled button when Cat Browser is already the default browser. Keep it short.
   ///
   /// In en, this message translates to:
   /// **'Default'**
   String get settings_defaultBrowserButtonDefault;
 
-  /// Button that asks Android to make WebLibre the default browser. Keep it short.
+  /// Button that asks Android to make Cat Browser the default browser. Keep it short.
   ///
   /// In en, this message translates to:
   /// **'Set'**
@@ -14666,7 +14666,7 @@ abstract class AppLocalizations {
   /// **'System default'**
   String get settings_appLanguageSystemDefault;
 
-  /// Line under the "System default" app language option. language is the name of the language the device settings currently select, written in that language itself, e.g. "English" or "Deutsch". Differs from the device language when WebLibre is not translated into it.
+  /// Line under the "System default" app language option. language is the name of the language the device settings currently select, written in that language itself, e.g. "English" or "Deutsch". Differs from the device language when Cat Browser is not translated into it.
   ///
   /// In en, this message translates to:
   /// **'Currently: {language}'**
@@ -14675,7 +14675,7 @@ abstract class AppLocalizations {
   /// Note above the app language list. Explains that the translations are still new and that the app stays in English until the user picks a language. "System default" is the option label settings_appLanguageSystemDefault; keep it identical to your translation of that label.
   ///
   /// In en, this message translates to:
-  /// **'Translations are new and may be incomplete or inaccurate, so WebLibre uses English until you choose another language. Pick \"System default\" to follow your device\'s language.'**
+  /// **'Translations are new and may be incomplete or inaccurate, so Cat Browser uses English until you choose another language. Pick \"System default\" to follow your device\'s language.'**
   String get settings_appLanguageTranslationsNote;
 
   /// Setting for the screen refresh rate the app requests.
@@ -14750,7 +14750,7 @@ abstract class AppLocalizations {
   /// **'Use the system Downloads folder'**
   String get settings_downloadFolderResetTooltip;
 
-  /// Switch: hand downloads to another app instead of downloading in WebLibre.
+  /// Switch: hand downloads to another app instead of downloading in Cat Browser.
   ///
   /// In en, this message translates to:
   /// **'Use external download manager'**
@@ -14800,13 +14800,13 @@ abstract class AppLocalizations {
     String packageName,
   );
 
-  /// Line under that row when no app is remembered and the external download manager switch is off, so WebLibre downloads everything itself and no chooser appears.
+  /// Line under that row when no app is remembered and the external download manager switch is off, so Cat Browser downloads everything itself and no chooser appears.
   ///
   /// In en, this message translates to:
   /// **'Not set — only used with an external download manager'**
   String get settings_preferredDownloadManagerSubtitleExternalOff;
 
-  /// Line under that row when an app is remembered but the external download manager switch is off, so WebLibre downloads everything itself. appName is the remembered app's name, or its Android package id when it is no longer installed.
+  /// Line under that row when an app is remembered but the external download manager switch is off, so Cat Browser downloads everything itself. appName is the remembered app's name, or its Android package id when it is no longer installed.
   ///
   /// In en, this message translates to:
   /// **'{appName} — not used while the external download manager is off'**
@@ -14833,7 +14833,7 @@ abstract class AppLocalizations {
   /// Summary of the default browser setting, shown as a settings search result.
   ///
   /// In en, this message translates to:
-  /// **'Set WebLibre as your default browser'**
+  /// **'Set Cat Browser as your default browser'**
   String get settings_indexDefaultBrowserSubtitle;
 
   /// Section heading on the general settings screen for appearance settings.
@@ -14848,7 +14848,7 @@ abstract class AppLocalizations {
   /// **'Choose system, light, or dark mode'**
   String get settings_indexThemeSubtitle;
 
-  /// Title of the app language setting (the language of WebLibre's own interface).
+  /// Title of the app language setting (the language of Cat Browser's own interface).
   ///
   /// In en, this message translates to:
   /// **'App Language'**
@@ -14863,7 +14863,7 @@ abstract class AppLocalizations {
   /// Summary of the app language setting.
   ///
   /// In en, this message translates to:
-  /// **'Choose the language WebLibre\'s own interface uses'**
+  /// **'Choose the language Cat Browser\'s own interface uses'**
   String get settings_indexAppLanguageSubtitle;
 
   /// Summary of the refresh rate setting, shown as a settings search result.
@@ -15595,16 +15595,16 @@ abstract class AppLocalizations {
   /// Explanation under "Delete Browsing Data Automatically".
   ///
   /// In en, this message translates to:
-  /// **'Delete selected browsing data when you quit or every time WebLibre starts'**
+  /// **'Delete selected browsing data when you quit or every time Cat Browser starts'**
   String get settings_autoDeleteBrowsingDataSubtitle;
 
   /// Replaces the explanation under "Delete Browsing Data Automatically" while "Also Delete on Start" is off: the data is deleted only when the user taps Quit.
   ///
   /// In en, this message translates to:
-  /// **'Delete selected browsing data when you quit WebLibre'**
+  /// **'Delete selected browsing data when you quit Cat Browser'**
   String get settings_autoDeleteBrowsingDataQuitOnlySubtitle;
 
-  /// Switch under "Delete Browsing Data Automatically", shown while it is on. On (the default), the chosen data is also deleted every time WebLibre starts; off, only when the user taps Quit.
+  /// Switch under "Delete Browsing Data Automatically", shown while it is on. On (the default), the chosen data is also deleted every time Cat Browser starts; off, only when the user taps Quit.
   ///
   /// In en, this message translates to:
   /// **'Also Delete on Start'**
@@ -15613,7 +15613,7 @@ abstract class AppLocalizations {
   /// Explanation under "Also Delete on Start". "Quit" is the Quit button / menu entry. Android may end an app it has kept in the background at any time.
   ///
   /// In en, this message translates to:
-  /// **'Covers sessions that ended without Quit, such as WebLibre being swiped away or closed by Android in the background. When off, their data stays until you next quit.'**
+  /// **'Covers sessions that ended without Quit, such as Cat Browser being swiped away or closed by Android in the background. When off, their data stays until you next quit.'**
   String get settings_autoDeleteOnStartSubtitle;
 
   /// Switch: show a confirmation dialog when the user taps Quit. The dialog's "Don't ask again" checkbox turns this off.
@@ -15631,7 +15631,7 @@ abstract class AppLocalizations {
   /// Explanation under "Confirm Before Quitting". "Quit" is the Quit button / menu entry.
   ///
   /// In en, this message translates to:
-  /// **'Ask before Quit closes WebLibre. Long press Quit to skip the question.'**
+  /// **'Ask before Quit closes Cat Browser. Long press Quit to skip the question.'**
   String get settings_confirmBeforeQuitSubtitle;
 
   /// Placeholder of the search field on the exceptions list.
@@ -16012,10 +16012,10 @@ abstract class AppLocalizations {
   /// **'ublock, filters'**
   String get settings_uBlockFilterListsTileKeywords;
 
-  /// Explanation under that row. WebLibre is the app name.
+  /// Explanation under that row. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Manage filter lists and apply WebLibre hardenings'**
+  /// **'Manage filter lists and apply Cat Browser hardenings'**
   String get settings_uBlockFilterListsTileSubtitle;
 
   /// Settings section for the built-in consent banner handler.
@@ -16186,7 +16186,7 @@ abstract class AppLocalizations {
   /// **'Enable mozAddonManager API exposure for web content and extension pages. Requires an app restart.'**
   String get settings_extensionsWebApiSubtitle;
 
-  /// Heading of the settings that control which other apps may open links in WebLibre.
+  /// Heading of the settings that control which other apps may open links in Cat Browser.
   ///
   /// In en, this message translates to:
   /// **'App-Opening Protection'**
@@ -16204,10 +16204,10 @@ abstract class AppLocalizations {
   /// **'intent gatekeeper, external apps'**
   String get settings_blockAppsOpeningBrowserKeywords;
 
-  /// Explanation under that switch. WebLibre is the app name.
+  /// Explanation under that switch. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Ask before opening links that other apps send to WebLibre.'**
+  /// **'Ask before opening links that other apps send to Cat Browser.'**
   String get settings_blockAppsOpeningBrowserSubtitle;
 
   /// Heading above the list of apps with a remembered allow/block choice.
@@ -16438,10 +16438,10 @@ abstract class AppLocalizations {
   /// **'Could not copy the export: {error}'**
   String settings_transferCopyFailed(String error);
 
-  /// Error when the export contains no settings this app version understands. WebLibre is the app name.
+  /// Error when the export contains no settings this app version understands. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'This export holds nothing this version of WebLibre can apply.'**
+  /// **'This export holds nothing this version of Cat Browser can apply.'**
   String get settings_transferImportNothingApplicable;
 
   /// Confirmation after importing settings.
@@ -16480,7 +16480,7 @@ abstract class AppLocalizations {
   /// **'Could not read the clipboard: {error}'**
   String settings_transferReadClipboardFailed(String error);
 
-  /// Name of the export section holding WebLibre's own settings, shown as a checkbox on the export screen and in the import dialog.
+  /// Name of the export section holding Cat Browser's own settings, shown as a checkbox on the export screen and in the import dialog.
   ///
   /// In en, this message translates to:
   /// **'App settings'**
@@ -16510,10 +16510,10 @@ abstract class AppLocalizations {
   /// **'This is not a JSON file.'**
   String get settings_importErrorNotJson;
 
-  /// Error when importing settings: the JSON is not a WebLibre settings export. WebLibre is the app name.
+  /// Error when importing settings: the JSON is not a Cat Browser settings export. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'This is not a WebLibre settings export.'**
+  /// **'This is not a Cat Browser settings export.'**
   String get settings_importErrorNotSettingsExport;
 
   /// Error when importing settings: the file lacks its format version number.
@@ -16525,7 +16525,7 @@ abstract class AppLocalizations {
   /// Error when importing settings from a newer app version. version is the file's format number; supported is the highest this app reads.
   ///
   /// In en, this message translates to:
-  /// **'This export was written by a newer version of WebLibre (format {version}, this version reads up to {supported}). Update the app and try again.'**
+  /// **'This export was written by a newer version of Cat Browser (format {version}, this version reads up to {supported}). Update the app and try again.'**
   String settings_importErrorNewerFormatVersion(int version, int supported);
 
   /// Error when importing settings: the file holds no sections.
@@ -16549,13 +16549,13 @@ abstract class AppLocalizations {
   /// Error when importing engine preferences: one line of the section is not in the expected format. section is the name of an export section as shown in the export and import lists (such as "App settings"), or the raw key a file used for a section this version does not know. line is that line from the file, possibly shortened.
   ///
   /// In en, this message translates to:
-  /// **'The \"{section}\" section has a line WebLibre cannot read: \"{line}\". Importing it would reset preferences rather than restore them.'**
+  /// **'The \"{section}\" section has a line Cat Browser cannot read: \"{line}\". Importing it would reset preferences rather than restore them.'**
   String settings_importErrorUnreadablePrefsLine(String section, String line);
 
-  /// Error when importing engine preferences: the section lacks the marker WebLibre writes. section is the name of an export section as shown in the export and import lists (such as "App settings"), or the raw key a file used for a section this version does not know.
+  /// Error when importing engine preferences: the section lacks the marker Cat Browser writes. section is the name of an export section as shown in the export and import lists (such as "App settings"), or the raw key a file used for a section this version does not know.
   ///
   /// In en, this message translates to:
-  /// **'The \"{section}\" section is not a WebLibre preferences snapshot.'**
+  /// **'The \"{section}\" section is not a Cat Browser preferences snapshot.'**
   String settings_importErrorNotPrefsSnapshot(String section);
 
   /// Error when importing engine preferences: the section lacks its schema version. section is the name of an export section as shown in the export and import lists (such as "App settings"), or the raw key a file used for a section this version does not know.
@@ -16567,13 +16567,13 @@ abstract class AppLocalizations {
   /// Error when importing engine preferences: one preference would be lost on import. section is the name of an export section as shown in the export and import lists (such as "App settings"), or the raw key a file used for a section this version does not know. pref is the preference name.
   ///
   /// In en, this message translates to:
-  /// **'The \"{section}\" section holds a preference WebLibre could not read back: \"{pref}\".'**
+  /// **'The \"{section}\" section holds a preference Cat Browser could not read back: \"{pref}\".'**
   String settings_importErrorUnreadablePref(String section, String pref);
 
   /// Error when importing settings: one section comes from a newer app version. section is the name of an export section as shown in the export and import lists (such as "App settings"), or the raw key a file used for a section this version does not know. version is its schema number; supported is the highest this app reads.
   ///
   /// In en, this message translates to:
-  /// **'The \"{section}\" section was written by a newer version of WebLibre (schema {version}, this version reads up to {supported}). Update the app and try again.'**
+  /// **'The \"{section}\" section was written by a newer version of Cat Browser (schema {version}, this version reads up to {supported}). Update the app and try again.'**
   String settings_importErrorNewerSectionSchema(
     String section,
     int version,
@@ -17328,7 +17328,7 @@ abstract class AppLocalizations {
   /// **'Search lists, groups, and external URLs'**
   String get settings_ublockListsSearchHint;
 
-  /// Section heading for whether WebLibre manages uBlock Origin's lists.
+  /// Section heading for whether Cat Browser manages uBlock Origin's lists.
   ///
   /// In en, this message translates to:
   /// **'Management'**
@@ -17370,10 +17370,10 @@ abstract class AppLocalizations {
   /// **'This will restore uBlock Origin to its default filter list configuration and remove any external lists you added.'**
   String get settings_ublockResetDialogMessage;
 
-  /// Title of the confirmation dialog before enabling WebLibre's recommended extra filter lists. WebLibre is the app name.
+  /// Title of the confirmation dialog before enabling Cat Browser's recommended extra filter lists. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Apply WebLibre Hardenings?'**
+  /// **'Apply Cat Browser Hardenings?'**
   String get settings_ublockApplyHardeningsDialogTitle;
 
   /// Body of that dialog.
@@ -17406,10 +17406,10 @@ abstract class AppLocalizations {
   /// **'Restore uBlock Origin\'s default filter list configuration.'**
   String get settings_ublockQuickResetSubtitle;
 
-  /// Row that enables WebLibre's recommended extra filter lists (asks for confirmation).
+  /// Row that enables Cat Browser's recommended extra filter lists (asks for confirmation).
   ///
   /// In en, this message translates to:
-  /// **'Apply WebLibre Hardenings'**
+  /// **'Apply Cat Browser Hardenings'**
   String get settings_ublockQuickApplyHardeningsTitle;
 
   /// Explanation under that row.
@@ -17418,16 +17418,16 @@ abstract class AppLocalizations {
   /// **'Enable a curated set of additional filter lists.'**
   String get settings_ublockQuickApplyHardeningsSubtitle;
 
-  /// Switch: let WebLibre control which filter lists uBlock Origin uses.
+  /// Switch: let Cat Browser control which filter lists uBlock Origin uses.
   ///
   /// In en, this message translates to:
-  /// **'Manage with WebLibre'**
+  /// **'Manage with Cat Browser'**
   String get settings_ublockManageTitle;
 
   /// Explanation under that switch.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre controls uBlock Origin\'s enabled filter lists at the next browser start.'**
+  /// **'Cat Browser controls uBlock Origin\'s enabled filter lists at the next browser start.'**
   String get settings_ublockManageSubtitle;
 
   /// Note shown while management is off. uBO is short for uBlock Origin; "My filters" is uBlock Origin's name for the user's own rules.
@@ -17469,7 +17469,7 @@ abstract class AppLocalizations {
   /// Explanation above the external filter lists.
   ///
   /// In en, this message translates to:
-  /// **'Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in WebLibre.'**
+  /// **'Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in Cat Browser.'**
   String get settings_ublockExternalListsHint;
 
   /// Shown when no external filter list is added.
@@ -17784,10 +17784,10 @@ abstract class AppLocalizations {
   /// **'Install and manage extension sources'**
   String get settings_categoryExtensionsSubtitle;
 
-  /// Category on the main settings screen for the app's own account. WebLibre is the app name.
+  /// Category on the main settings screen for the app's own account. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre Account'**
+  /// **'Cat Browser Account'**
   String get settings_categoryAccountTitle;
 
   /// Comma-separated search terms for this setting. Not displayed; include synonyms users might type.
@@ -17976,10 +17976,10 @@ abstract class AppLocalizations {
   /// **'App-Opening Protection'**
   String get settings_privacySectionAppOpeningProtectionTitle;
 
-  /// Summary of the app-opening protection setting, shown as a settings search result. WebLibre is the app name.
+  /// Summary of the app-opening protection setting, shown as a settings search result. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Control which apps may launch WebLibre directly'**
+  /// **'Control which apps may launch Cat Browser directly'**
   String get settings_indexAppOpeningProtectionSubtitle;
 
   /// Section heading on the privacy & security screen.
@@ -18798,10 +18798,10 @@ abstract class AppLocalizations {
   /// **'Page Content'**
   String get settings_previewPageContent;
 
-  /// Title of the sample page shown in the toolbar preview. WebLibre is the app name.
+  /// Title of the sample page shown in the toolbar preview. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre Preview'**
+  /// **'Cat Browser Preview'**
   String get settings_previewPageTitle;
 
   /// Title of a sample regular tab in the toolbar preview.
@@ -18888,10 +18888,10 @@ abstract class AppLocalizations {
   /// **'The sections you pick replace what this profile has now. Anything you leave unchecked stays as it is.'**
   String get settings_importSettingsDescription;
 
-  /// Note in the import dialog when the export contains sections from a newer app version. count is the number of those sections; sections is their keys as written in the file, quoted and comma-separated (they have no translatable name). WebLibre is the app name.
+  /// Note in the import dialog when the export contains sections from a newer app version. count is the number of those sections; sections is their keys as written in the file, quoted and comma-separated (they have no translatable name). Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'{count, plural, =1{1 section in this file ({sections}) can\'t be read by this version of WebLibre and will be skipped.} other{{count} sections in this file ({sections}) can\'t be read by this version of WebLibre and will be skipped.}}'**
+  /// **'{count, plural, =1{1 section in this file ({sections}) can\'t be read by this version of Cat Browser and will be skipped.} other{{count} sections in this file ({sections}) can\'t be read by this version of Cat Browser and will be skipped.}}'**
   String settings_unreadableSections(int count, String sections);
 
   /// Label in front of when the export file was created.
@@ -19944,16 +19944,16 @@ abstract class AppLocalizations {
   /// **'autostart, launch, startup, boot'**
   String get tor_startAutomaticallyKeywords;
 
-  /// Short explanation of the Tor auto-start switch, shown as a settings search result. brand is "Tor™"; WebLibre is the app name.
+  /// Short explanation of the Tor auto-start switch, shown as a settings search result. brand is "Tor™"; Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Connect the {brand} service when WebLibre starts'**
+  /// **'Connect the {brand} service when Cat Browser starts'**
   String tor_startAutomaticallySectionSubtitle(String brand);
 
-  /// Explanation under the Tor auto-start switch: tabs that must use Tor can load right away without asking to start it. brand is "Tor™"; WebLibre is the app name.
+  /// Explanation under the Tor auto-start switch: tabs that must use Tor can load right away without asking to start it. brand is "Tor™"; Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Connect the {brand} service when WebLibre starts, so tabs using it are ready without a prompt'**
+  /// **'Connect the {brand} service when Cat Browser starts, so tabs using it are ready without a prompt'**
   String tor_startAutomaticallySubtitle(String brand);
 
   /// Row that switches Tor to new routes through the network, so new connections appear to come from a different place. "New Identity" is Tor's own term.
@@ -20136,10 +20136,10 @@ abstract class AppLocalizations {
   /// **'legal'**
   String get tor_trademarkKeywords;
 
-  /// Legal trademark notice. brand is "Tor™". "The Tor Project" is an organization name; WebLibre is the app name. Keep the legal meaning exact.
+  /// Legal trademark notice. brand is "Tor™". "The Tor Project" is an organization name; Cat Browser is the app name. Keep the legal meaning exact.
   ///
   /// In en, this message translates to:
-  /// **'{brand} is a trademark of The Tor Project; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, the Tor Project.'**
+  /// **'{brand} is a trademark of The Tor Project; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, the Tor Project.'**
   String tor_trademarkDisclaimer(String brand);
 
   /// Subtitle of the Tor settings screen listing what it configures. "Onion routing" is how Tor works; bridges are hidden entry points; pluggable transports disguise the traffic.
@@ -20220,10 +20220,10 @@ abstract class AppLocalizations {
   /// **'Restarting to take the backup'**
   String get user_restartingToTakeBackup;
 
-  /// Row on the backup screen explaining that the app restarts to take the backup. WebLibre is the app name.
+  /// Row on the backup screen explaining that the app restarts to take the backup. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre restarts to do this'**
+  /// **'Cat Browser restarts to do this'**
   String get user_backupRestartsTitle;
 
   /// Explanation under that row. restartClosesCurrentProfile is a full sentence saying the restart also closes the profile currently in use.
@@ -20241,7 +20241,7 @@ abstract class AppLocalizations {
   /// Explanation under that row.
   ///
   /// In en, this message translates to:
-  /// **'After restarting, WebLibre asks for the backup file password.'**
+  /// **'After restarting, Cat Browser asks for the backup file password.'**
   String get user_setPasswordNextSubtitle;
 
   /// Switch on the backup screen: check the finished backup file by test-reading it.
@@ -20265,16 +20265,16 @@ abstract class AppLocalizations {
   /// Explanation under that row. shortcutsNeedPinningAgain is a full sentence about re-adding home-screen shortcuts after restoring.
   ///
   /// In en, this message translates to:
-  /// **'Cache files and other data WebLibre can rebuild are not saved. {shortcutsNeedPinningAgain}'**
+  /// **'Cache files and other data Cat Browser can rebuild are not saved. {shortcutsNeedPinningAgain}'**
   String user_tempDataSkippedSubtitle(String shortcutsNeedPinningAgain);
 
-  /// Row on the backup screen: WebLibre account sign-in data is included in the backup file.
+  /// Row on the backup screen: Cat Browser account sign-in data is included in the backup file.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre account data is included'**
+  /// **'Cat Browser account data is included'**
   String get user_accountDataIncludedTitle;
 
-  /// Explanation under that row. profileSecretDataDescription is a lowercase list such as "WebLibre account sign-in, sync setup and proxy details".
+  /// Explanation under that row. profileSecretDataDescription is a lowercase list such as "Cat Browser account sign-in, sync setup and proxy details".
   ///
   /// In en, this message translates to:
   /// **'The backup file includes this profile’s {profileSecretDataDescription}. Replacing a profile restores them; creating a new profile does not. Use a strong password.'**
@@ -20283,7 +20283,7 @@ abstract class AppLocalizations {
   /// Progress text while the app closes to take a backup.
   ///
   /// In en, this message translates to:
-  /// **'Closing WebLibre to take the backup…'**
+  /// **'Closing Cat Browser to take the backup…'**
   String get user_closingToTakeBackup;
 
   /// Button that starts a profile backup (asks for confirmation).
@@ -20421,7 +20421,7 @@ abstract class AppLocalizations {
   /// Explanation under the "No lock" option.
   ///
   /// In en, this message translates to:
-  /// **'Anyone using WebLibre on this device can open this profile'**
+  /// **'Anyone using Cat Browser on this device can open this profile'**
   String get user_lockMethodNoneSubtitle;
 
   /// Lock method option: Android's own prompt (fingerprint, face, or the device PIN, pattern or password) opens the profile.
@@ -20436,7 +20436,7 @@ abstract class AppLocalizations {
   /// **'Fingerprint, face or the device PIN. Anyone who can unlock this device can open this profile.'**
   String get user_lockMethodDeviceSubtitle;
 
-  /// Lock method option: a password set in WebLibre, only for this profile, opens it.
+  /// Lock method option: a password set in Cat Browser, only for this profile, opens it.
   ///
   /// In en, this message translates to:
   /// **'Profile password'**
@@ -20463,7 +20463,7 @@ abstract class AppLocalizations {
   /// Explanation under that warning. Says honestly that the password only guards the app, the files on the device are not encrypted.
   ///
   /// In en, this message translates to:
-  /// **'Without it, this profile can\'t be opened, backed up or deleted. The password locks WebLibre; it does not encrypt the profile\'s data.'**
+  /// **'Without it, this profile can\'t be opened, backed up or deleted. The password locks Cat Browser; it does not encrypt the profile\'s data.'**
   String get user_profilePasswordUnrecoverableSubtitle;
 
   /// Title of the dialog for choosing a new profile password.
@@ -20505,7 +20505,7 @@ abstract class AppLocalizations {
   /// Error under the profile password field when the password was right but the user left the app while it was being checked, so it did not take effect and has to be entered again.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre was closed or switched away from during the check. Enter the password again.'**
+  /// **'Cat Browser was closed or switched away from during the check. Enter the password again.'**
   String get user_profilePasswordInterrupted;
 
   /// Error in the set-password dialog when the new profile password could not be prepared. Nothing was saved.
@@ -20592,10 +20592,10 @@ abstract class AppLocalizations {
   /// **'Lock in background'**
   String get user_lockInBackgroundTitle;
 
-  /// Explanation under "Lock in background". WebLibre is the app name.
+  /// Explanation under "Lock in background". Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'As soon as WebLibre leaves the screen'**
+  /// **'As soon as Cat Browser leaves the screen'**
   String get user_lockInBackgroundSubtitle;
 
   /// Auto-lock option: lock after a period without use.
@@ -20616,10 +20616,10 @@ abstract class AppLocalizations {
   /// **'Lock on startup only'**
   String get user_lockOnStartupTitle;
 
-  /// Explanation under "Lock on startup only". WebLibre is the app name.
+  /// Explanation under "Lock on startup only". Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Unlock once at startup, then stay unlocked until WebLibre is fully closed'**
+  /// **'Unlock once at startup, then stay unlocked until Cat Browser is fully closed'**
   String get user_lockOnStartupSubtitle;
 
   /// Row for choosing how long before the profile locks.
@@ -20742,10 +20742,10 @@ abstract class AppLocalizations {
   /// **'Restart and overwrite one profile with this backup'**
   String get user_replaceExistingProfileSubtitle;
 
-  /// Note when restoring as a new profile: WebLibre account sign-in is not carried over.
+  /// Note when restoring as a new profile: Cat Browser account sign-in is not carried over.
   ///
   /// In en, this message translates to:
-  /// **'A new profile starts without WebLibre sign-in'**
+  /// **'A new profile starts without Cat Browser sign-in'**
   String get user_newProfileNoSignInTitle;
 
   /// Explanation under that note.
@@ -20829,10 +20829,10 @@ abstract class AppLocalizations {
   /// **'The name comes from the backup. {shortcutsNeedPinningAgain}'**
   String user_profileWillBeCalledSubtitle(String shortcutsNeedPinningAgain);
 
-  /// Note when replacing a profile: WebLibre account sign-in data from the backup is restored.
+  /// Note when replacing a profile: Cat Browser account sign-in data from the backup is restored.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre account data is restored'**
+  /// **'Cat Browser account data is restored'**
   String get user_accountDataRestoredTitle;
 
   /// Explanation under that note. profileSecretDataDescription is a lowercase list; signedInFromBackup and olderBackupKeepsCredentials are full sentences.
@@ -20885,10 +20885,10 @@ abstract class AppLocalizations {
   /// **'Restoring backup…'**
   String get user_restoringBackupProgress;
 
-  /// Progress text while the app closes to replace a profile with a backup. WebLibre is the app name.
+  /// Progress text while the app closes to replace a profile with a backup. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Closing WebLibre to restore…'**
+  /// **'Closing Cat Browser to restore…'**
   String get user_closingToRestoreProgress;
 
   /// Button that starts restoring the backup.
@@ -20903,10 +20903,10 @@ abstract class AppLocalizations {
   /// **'Switch to \"{profileName}\"?'**
   String user_switchToProfileTitle(String profileName);
 
-  /// Body of that dialog. profileName is the target profile; WebLibre is the app name.
+  /// Body of that dialog. profileName is the target profile; Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre closes and reopens as \"{profileName}\".'**
+  /// **'Cat Browser closes and reopens as \"{profileName}\".'**
   String user_switchClosesReopensAs(String profileName);
 
   /// Bulleted list in the switch dialog. Keep the "•" bullets and line break (\n).
@@ -21014,7 +21014,7 @@ abstract class AppLocalizations {
   /// Same as user_quitBrowserDontAskAgainSavesQuit, for when "Delete Browsing Data Automatically" also deletes on every start: the ticked data is added to it and deleted on every quit and every start from now on.
   ///
   /// In en, this message translates to:
-  /// **'The data ticked above will be deleted on every quit and every time WebLibre starts. You can change both in settings.'**
+  /// **'The data ticked above will be deleted on every quit and every time Cat Browser starts. You can change both in settings.'**
   String get user_quitBrowserDontAskAgainSavesQuitAndStart;
 
   /// Expandable row in the quit confirmation dialog. Expanded, it lists the browsing data types as checkboxes; the ticked ones are deleted on this quit.
@@ -21566,7 +21566,7 @@ abstract class AppLocalizations {
   /// **'Website notifications delivered through UnifiedPush'**
   String get webPush_screenSubtitle;
 
-  /// Title of the setting for the UnifiedPush distributor: a separate app (such as ntfy) that receives push messages from the internet and passes them to WebLibre. UnifiedPush is a product name.
+  /// Title of the setting for the UnifiedPush distributor: a separate app (such as ntfy) that receives push messages from the internet and passes them to Cat Browser. UnifiedPush is a product name.
   ///
   /// In en, this message translates to:
   /// **'UnifiedPush Distributor'**
@@ -21716,7 +21716,7 @@ abstract class AppLocalizations {
   /// **'Could not disable web push: {error}'**
   String webPush_couldNotDisableWebPush(String error);
 
-  /// Title of the setting showing whether WebLibre has the Android permission to show notifications.
+  /// Title of the setting showing whether Cat Browser has the Android permission to show notifications.
   ///
   /// In en, this message translates to:
   /// **'Notification Permission'**
@@ -22406,10 +22406,10 @@ abstract class AppLocalizations {
   /// **'Unfinished profile work'**
   String get startup_haltMaintenanceTitle;
 
-  /// Body of that startup screen. WebLibre is the app name.
+  /// Body of that startup screen. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'A backup, restore or deletion from an earlier run did not finish. WebLibre must finish it before any profile can open.'**
+  /// **'A backup, restore or deletion from an earlier run did not finish. Cat Browser must finish it before any profile can open.'**
   String get startup_haltMaintenanceBody;
 
   /// Heading of the startup screen shown when the app cannot choose a profile yet and must restart.
@@ -22418,10 +22418,10 @@ abstract class AppLocalizations {
   /// **'Startup is not ready'**
   String get startup_haltUnavailableTitle;
 
-  /// Body of that startup screen. reopenToContinue is the sentence "Close WebLibre and open it again."
+  /// Body of that startup screen. reopenToContinue is the sentence "Close Cat Browser and open it again."
   ///
   /// In en, this message translates to:
-  /// **'WebLibre needs to restart before it can choose a profile. {reopenToContinue}'**
+  /// **'Cat Browser needs to restart before it can choose a profile. {reopenToContinue}'**
   String startup_haltUnavailableBody(String reopenToContinue);
 
   /// Heading of the startup screen shown when the chosen profile is still being used by a background task.
@@ -22433,7 +22433,7 @@ abstract class AppLocalizations {
   /// Body of that startup screen.
   ///
   /// In en, this message translates to:
-  /// **'Another WebLibre task is still using this profile. Try again in a moment.'**
+  /// **'Another Cat Browser task is still using this profile. Try again in a moment.'**
   String get startup_haltProfileAccessBusyBody;
 
   /// Heading of the startup screen shown when no browser profile can be opened or created.
@@ -22445,7 +22445,7 @@ abstract class AppLocalizations {
   /// Body of that startup screen: probably a storage problem.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre could not read an existing profile or create a new one. Storage may be full or unavailable.'**
+  /// **'Cat Browser could not read an existing profile or create a new one. Storage may be full or unavailable.'**
   String get startup_haltNoProfileBody;
 
   /// Heading of the startup screen shown when the app cannot safely decide which profile to open.
@@ -22454,10 +22454,10 @@ abstract class AppLocalizations {
   /// **'Cannot tell which profile to open'**
   String get startup_haltArbitrationFailedTitle;
 
-  /// Body of that startup screen. reopenToContinue is the sentence "Close WebLibre and open it again."
+  /// Body of that startup screen. reopenToContinue is the sentence "Close Cat Browser and open it again."
   ///
   /// In en, this message translates to:
-  /// **'WebLibre will not guess which profile to use. {reopenToContinue}'**
+  /// **'Cat Browser will not guess which profile to use. {reopenToContinue}'**
   String startup_haltArbitrationFailedBody(String reopenToContinue);
 
   /// Button on a startup problem screen that retries opening a profile.
@@ -22472,10 +22472,10 @@ abstract class AppLocalizations {
   /// **'Trying again…'**
   String get startup_tryingAgain;
 
-  /// Button on a startup problem screen that closes the app. WebLibre is the app name.
+  /// Button on a startup problem screen that closes the app. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Close WebLibre'**
+  /// **'Close Cat Browser'**
   String get startup_closeWebLibre;
 
   /// Expandable section on a startup problem screen showing technical error details.
@@ -22499,7 +22499,7 @@ abstract class AppLocalizations {
   /// Reason shown when a pending profile task cannot be run: a newer app version created it.
   ///
   /// In en, this message translates to:
-  /// **'This task was created by a newer version of WebLibre and cannot run here.'**
+  /// **'This task was created by a newer version of Cat Browser and cannot run here.'**
   String get startup_maintenanceNotRunnableUnsupported;
 
   /// Reason shown when a pending profile backup cannot be run: the folder to save it to is unknown.
@@ -22517,13 +22517,13 @@ abstract class AppLocalizations {
   /// Reason shown when a pending restore cannot be run from the startup maintenance screen.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre cannot restore from this startup screen.'**
+  /// **'Cat Browser cannot restore from this startup screen.'**
   String get startup_maintenanceNotRunnableRestoreHere;
 
   /// Reason shown when a pending profile deletion cannot be run from the startup maintenance screen.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre cannot delete a profile from this startup screen.'**
+  /// **'Cat Browser cannot delete a profile from this startup screen.'**
   String get startup_maintenanceNotRunnableDeleteHere;
 
   /// Result message after the app completed a profile restore that had been interrupted.
@@ -22556,10 +22556,10 @@ abstract class AppLocalizations {
   /// **'It did not finish.'**
   String get startup_maintenanceTaskDidNotFinish;
 
-  /// Error message when the profile task had to stop because another part of the app took over the profile. nothingChanged is "Nothing has been changed."; reopenToContinue is "Close WebLibre and open it again."
+  /// Error message when the profile task had to stop because another part of the app took over the profile. nothingChanged is "Nothing has been changed."; reopenToContinue is "Close Cat Browser and open it again."
   ///
   /// In en, this message translates to:
-  /// **'WebLibre can no longer safely work on this profile. {nothingChanged} {reopenToContinue}'**
+  /// **'Cat Browser can no longer safely work on this profile. {nothingChanged} {reopenToContinue}'**
   String startup_maintenanceLeaseLost(
     String nothingChanged,
     String reopenToContinue,
@@ -22580,7 +22580,7 @@ abstract class AppLocalizations {
   /// Result message after discarding that record, when saved profile data of unknown ownership was kept on the device.
   ///
   /// In en, this message translates to:
-  /// **'The interrupted record was discarded. WebLibre could not tell which profile the saved data belonged to, so it kept the saved data on the device rather than removing it.'**
+  /// **'The interrupted record was discarded. Cat Browser could not tell which profile the saved data belonged to, so it kept the saved data on the device rather than removing it.'**
   String get startup_maintenanceEvidenceDiscardedKept;
 
   /// Error message when the entered password does not open the backup file. nothingChanged is "Nothing has been changed."
@@ -22604,7 +22604,7 @@ abstract class AppLocalizations {
   /// Error message when the backup file comes from a newer app version. nothingChanged is "Nothing has been changed."
   ///
   /// In en, this message translates to:
-  /// **'This backup file was created by a newer version of WebLibre and cannot be read here. {nothingChanged}'**
+  /// **'This backup file was created by a newer version of Cat Browser and cannot be read here. {nothingChanged}'**
   String startup_maintenanceUnsupportedArchiveVersion(String nothingChanged);
 
   /// Error message when the device lacks space for a profile task. required and free are formatted sizes such as "1.2 GB"; nothingChanged is "Nothing has been changed."
@@ -22692,10 +22692,10 @@ abstract class AppLocalizations {
   /// **'Profile maintenance'**
   String get startup_maintenanceHeadline;
 
-  /// Line under the maintenance heading while a task is pending. WebLibre is the app name.
+  /// Line under the maintenance heading while a task is pending. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'This task must finish before any profile can open. WebLibre keeps the profile closed while it works.'**
+  /// **'This task must finish before any profile can open. Cat Browser keeps the profile closed while it works.'**
   String get startup_maintenanceMustFinish;
 
   /// Line under the maintenance heading when all pending tasks are done.
@@ -22707,7 +22707,7 @@ abstract class AppLocalizations {
   /// Line under the maintenance heading when interrupted work was found but its record is unreadable.
   ///
   /// In en, this message translates to:
-  /// **'WebLibre found interrupted profile work, but cannot read its record.'**
+  /// **'Cat Browser found interrupted profile work, but cannot read its record.'**
   String get startup_maintenanceCannotReadRecord;
 
   /// Label of the password field for encrypting a new backup file or opening one to restore.
@@ -22764,22 +22764,22 @@ abstract class AppLocalizations {
   /// **'Discard the record and continue'**
   String get startup_maintenanceDiscardAndContinueNoTasks;
 
-  /// Secondary button after a failed profile task: leave the maintenance screen and open the browser anyway. WebLibre is the app name.
+  /// Secondary button after a failed profile task: leave the maintenance screen and open the browser anyway. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Open WebLibre'**
+  /// **'Open Cat Browser'**
   String get startup_maintenanceOpenWebLibreRetry;
 
-  /// Button after all profile tasks are done: continue into the browser. WebLibre is the app name.
+  /// Button after all profile tasks are done: continue into the browser. Cat Browser is the app name.
   ///
   /// In en, this message translates to:
-  /// **'Open WebLibre'**
+  /// **'Open Cat Browser'**
   String get startup_maintenanceOpenWebLibre;
 
   /// Note under the progress text while a profile task runs.
   ///
   /// In en, this message translates to:
-  /// **'This can take several minutes. Keep WebLibre open.'**
+  /// **'This can take several minutes. Keep Cat Browser open.'**
   String get startup_maintenanceTakesSeveralMinutes;
 
   /// Heading above the list of profile tasks queued after the current one.
@@ -22809,7 +22809,7 @@ abstract class AppLocalizations {
   /// Note on an interrupted task whose record cannot be read.
   ///
   /// In en, this message translates to:
-  /// **'This was interrupted after it started, and WebLibre cannot read what it was doing. It cannot be run again until that record is dealt with.'**
+  /// **'This was interrupted after it started, and Cat Browser cannot read what it was doing. It cannot be run again until that record is dealt with.'**
   String get startup_maintenanceInterruptedUnreadable;
 
   /// Title of the confirmation dialog before discarding the record of an interrupted profile task.
@@ -22821,7 +22821,7 @@ abstract class AppLocalizations {
   /// Body of that dialog explaining what happens to data saved during an interrupted profile replacement. Keep the blank line (\n\n).
   ///
   /// In en, this message translates to:
-  /// **'WebLibre cannot read what a backup, restore or deletion was doing when it stopped. Discarding the record lets the browser open again, but a profile that was being replaced may need to be checked afterward.\n\nIf the profile is missing, WebLibre restores the data it saved before replacing it. If the profile is present, WebLibre removes that saved data. If WebLibre cannot tell which profile the saved data belongs to, it keeps the data rather than removing it.'**
+  /// **'Cat Browser cannot read what a backup, restore or deletion was doing when it stopped. Discarding the record lets the browser open again, but a profile that was being replaced may need to be checked afterward.\n\nIf the profile is missing, Cat Browser restores the data it saved before replacing it. If the profile is present, Cat Browser removes that saved data. If Cat Browser cannot tell which profile the saved data belongs to, it keeps the data rather than removing it.'**
   String get startup_maintenanceDiscardDialogContent;
 
   /// Confirm button of that dialog.
@@ -22854,7 +22854,7 @@ abstract class AppLocalizations {
   /// **'Back up \"{profileName}\"'**
   String startup_maintenanceBackupDescribe(String profileName);
 
-  /// Explanation under a pending backup task. secretDataDescription is a lowercase list such as "WebLibre account sign-in, sync setup and proxy details".
+  /// Explanation under a pending backup task. secretDataDescription is a lowercase list such as "Cat Browser account sign-in, sync setup and proxy details".
   ///
   /// In en, this message translates to:
   /// **'Writes an encrypted backup file of this profile, including its {secretDataDescription}.'**
@@ -23000,7 +23000,7 @@ abstract class AppLocalizations {
   /// Explanation under that task: it cannot run here.
   ///
   /// In en, this message translates to:
-  /// **'This restore was created by a newer version of WebLibre and cannot run here.'**
+  /// **'This restore was created by a newer version of Cat Browser and cannot run here.'**
   String get startup_maintenanceRestoreCloneConsequence;
 
   /// Progress text while a backup is restored as a new profile. profileName is the profile's name.
@@ -23042,7 +23042,7 @@ abstract class AppLocalizations {
   /// Explanation under a task of an unknown kind: it was created by a newer app version.
   ///
   /// In en, this message translates to:
-  /// **'This task was created by a newer version of WebLibre and cannot run.'**
+  /// **'This task was created by a newer version of Cat Browser and cannot run.'**
   String get startup_maintenanceUnknownConsequence;
 
   /// Progress text while a task of an unknown kind runs.

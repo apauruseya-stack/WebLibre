@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -194,7 +194,7 @@ class BrowserBottomAppBar extends ConsumerWidget {
     // slide animation's RepaintBoundary): when its height is not a whole number
     // of physical pixels, its edge shifts by up to half a pixel against the
     // strip, and the page showed through the seam as a hairline
-    // (https://github.com/FaFre/WebLibre/issues/685). Painted, the edge falls
+    // (https://github.com/FaFre/Cat Browser/issues/685). Painted, the edge falls
     // on the window's bottom instead, over a strip of the same color. Where the
     // navigation bar lies outside Flutter there is no strip to match, and the
     // padding stays clear.
@@ -457,7 +457,7 @@ class BrowserTabBar extends HookConsumerWidget {
   /// not a whole number of pixels — any dragged one — it was drawn up to half a
   /// pixel off its place, leaving a sliver of the page at the window's edge and
   /// a seam against the page beside it (the same mechanism as
-  /// https://github.com/FaFre/WebLibre/issues/685).
+  /// https://github.com/FaFre/Cat Browser/issues/685).
   ///
   /// Rounded up rather than to the nearest pixel, and never below [width], so
   /// a panel at [minExpandedRailWidth] stays a panel ([isWideRailWidth]). The

@@ -245,16 +245,16 @@ class ExternalAppResolver(
                 resolvedActivityName = defaultInfo?.activityInfo?.name
                 resolvedInfo = defaultInfo
             }
-            // A page must not relaunch WebLibre through the app-link path: an `intent:` URL whose
-            // default handler is WebLibre itself keeps the load in-browser rather than hunting for
+            // A page must not relaunch Cat Browser through the app-link path: an `intent:` URL whose
+            // default handler is Cat Browser itself keeps the load in-browser rather than hunting for
             // some other app to hand it to.
             //
             // Engine-supported schemes are deliberately excluded from that shortcut. Holding the
             // browser role is the ordinary state for this app, and `resolveDefaultActivity` then
-            // answers "WebLibre" for every http(s) link — so short-circuiting here would hide every
-            // http app link (youtube, reddit) on exactly the devices where WebLibre is the default,
+            // answers "Cat Browser" for every http(s) link — so short-circuiting here would hide every
+            // http app link (youtube, reddit) on exactly the devices where Cat Browser is the default,
             // while a *different* default browser fell through and surfaced them. The candidate
-            // search below already filters WebLibre out along with every other browser.
+            // search below already filters Cat Browser out along with every other browser.
             !engineSupported && defaultPackage == packages.selfPackageName -> {
                 resolvedPackage = null
             }
@@ -350,7 +350,7 @@ class ExternalAppResolver(
     private fun safeParseUri(url: String): Intent? {
         val intent = safeParseRawUri(url, Intent.URI_INTENT_SCHEME) ?: return null
         return if (intent.`package` == packages.selfPackageName) {
-            // Ignore intents that would relaunch WebLibre.
+            // Ignore intents that would relaunch Cat Browser.
             null
         } else {
             intent
@@ -382,7 +382,7 @@ class ExternalAppResolver(
 
         // Preserve an explicit `intent:...;package=` target: it is a package-id constraint (not a
         // component, which could point at a non-exported activity), so resolution/launch targets the
-        // app the link actually names instead of some other handler or WebLibre itself. `safeParseUri`
+        // app the link actually names instead of some other handler or Cat Browser itself. `safeParseUri`
         // already rejected a self-package target. This mirrors AC's createBrowsableIntents.
         source.`package`?.let { pkg ->
             if (pkg != packages.selfPackageName) sanitized.`package` = pkg

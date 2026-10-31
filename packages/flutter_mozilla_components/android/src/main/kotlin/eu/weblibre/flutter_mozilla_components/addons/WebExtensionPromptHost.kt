@@ -35,7 +35,7 @@ import mozilla.components.support.base.log.logger.Logger
  * never showed a tab therefore had no consumer at all, and every install hung
  * until the user opened one — at which point the retained prompt was re-emitted
  * and the dialog finally appeared. See
- * https://github.com/FaFre/WebLibre/issues/557 for the attach mechanics.
+ * https://github.com/FaFre/Cat Browser/issues/557 for the attach mechanics.
  *
  * An activity is the right owner instead: it is what the dialog needs, it exists
  * whether or not a tab was ever shown, and it covers `ExternalAppBrowserActivity`

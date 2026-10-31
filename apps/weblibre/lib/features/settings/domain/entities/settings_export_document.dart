@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@ import 'package:weblibre/features/account/domain/utils/user_js_parser.dart';
 import 'package:weblibre/features/account/domain/utils/user_js_serializer.dart';
 import 'package:weblibre/utils/uri_input_parser.dart';
 
-/// Marks a file as a WebLibre settings export.
+/// Marks a file as a Cat Browser settings export.
 ///
 /// Checked before anything else on import: the alternative is decoding a
 /// stranger's JSON far enough to notice it has no settings in it, and then
@@ -183,11 +183,11 @@ class SettingsExportFormatException implements Exception {
     return switch (kind) {
       SettingsExportFormatErrorKind.notJson => 'This is not a JSON file.',
       SettingsExportFormatErrorKind.notSettingsExport =>
-        'This is not a WebLibre settings export.',
+        'This is not a Cat Browser settings export.',
       SettingsExportFormatErrorKind.missingFormatVersion =>
         'The export does not say which format version it is.',
       SettingsExportFormatErrorKind.newerFormatVersion =>
-        'This export was written by a newer version of WebLibre '
+        'This export was written by a newer version of Cat Browser '
             '(format $version, this build reads up to $supportedVersion). '
             'Update the app and try again.',
       SettingsExportFormatErrorKind.noSettings =>
@@ -197,17 +197,17 @@ class SettingsExportFormatException implements Exception {
       SettingsExportFormatErrorKind.malformedField =>
         'The export\'s "$field" is malformed.',
       SettingsExportFormatErrorKind.unreadablePrefsLine =>
-        'The $section section has a line WebLibre cannot read: "$line". '
+        'The $section section has a line Cat Browser cannot read: "$line". '
             'Importing it would reset preferences rather than restore them.',
       SettingsExportFormatErrorKind.notPrefsSnapshot =>
-        'The $section section is not a WebLibre preferences snapshot.',
+        'The $section section is not a Cat Browser preferences snapshot.',
       SettingsExportFormatErrorKind.missingSchemaVersion =>
         'The $section section does not say which schema version it is.',
       SettingsExportFormatErrorKind.unreadablePref =>
-        'The $section section holds a preference WebLibre could not read '
+        'The $section section holds a preference Cat Browser could not read '
             'back: "$pref".',
       SettingsExportFormatErrorKind.newerSectionSchema =>
-        'The $section section was written by a newer version of WebLibre '
+        'The $section section was written by a newer version of Cat Browser '
             '(schema $version, this build reads up to $supportedVersion).',
     };
   }
@@ -807,9 +807,9 @@ bool _scrubsTo(String local, String imported) {
   return scrubbed.paths.isNotEmpty && scrubbed.value == imported;
 }
 
-/// The first line of every snapshot WebLibre writes, and the thing that makes
+/// The first line of every snapshot Cat Browser writes, and the thing that makes
 /// one recognisable as such.
-const geckoPrefsSnapshotMarker = '// WebLibre Gecko prefs snapshot';
+const geckoPrefsSnapshotMarker = '// Cat Browser Gecko prefs snapshot';
 
 /// Reads a Gecko preferences document, refusing anything that is not one.
 ///
@@ -821,7 +821,7 @@ const geckoPrefsSnapshotMarker = '// WebLibre Gecko prefs snapshot';
 /// preferences, it clears them, and a body of prose imports as "reset
 /// everything". Neither is a thing a person asked for.
 ///
-/// So every line has to be one WebLibre itself would have written: the marker,
+/// So every line has to be one Cat Browser itself would have written: the marker,
 /// a comment, or a well-formed statement. An empty snapshot still passes —
 /// exported from a profile with nothing set, replacing with it is a legitimate
 /// thing to ask for — but an empty *parse* of a non-empty file does not.

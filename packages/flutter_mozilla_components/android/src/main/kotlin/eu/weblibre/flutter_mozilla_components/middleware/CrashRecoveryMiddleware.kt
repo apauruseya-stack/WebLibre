@@ -30,7 +30,7 @@ import mozilla.components.support.base.log.logger.Logger
  * restore the tab is not merely stale — it is a blank rectangle for the rest of
  * the process' life, and nothing in the UI says why.
  *
- * Fenix answers this with a crash page the user has to dismiss. WebLibre
+ * Fenix answers this with a crash page the user has to dismiss. Cat Browser
  * restores silently: a reloaded tab is a better answer than an empty one, and
  * the reload is what the user would ask for anyway.
  *

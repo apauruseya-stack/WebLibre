@@ -302,7 +302,7 @@ object GlobalComponents {
     var gestureEvents: GeckoGestureEvents? = null
 
     // Native -> Dart history visit notifications, consumed by Core's history
-    // delegate to forward the visit's WebLibre container. Null on the headless
+    // delegate to forward the visit's Cat Browser container. Null on the headless
     // path (no Flutter engine); the delegate still hard-excludes persisted
     // container contextIds but skips Dart relation emits.
     var historyEvents: GeckoHistoryEvents? = null

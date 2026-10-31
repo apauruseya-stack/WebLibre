@@ -3,7 +3,7 @@
 
   "openLinkTools_openLinkTitle": "Open link",
   "@openLinkTools_openLinkTitle": {
-    "description": "Title of the sheet shown when a link is shared to or opened in WebLibre, offering ways to open it (new tab, custom tab, app) and to clean it."
+    "description": "Title of the sheet shown when a link is shared to or opened in Cat Browser, offering ways to open it (new tab, custom tab, app) and to clean it."
   },
   "openLinkTools_urlCleanedMessage": "URL cleaned",
   "@openLinkTools_urlCleanedMessage": {

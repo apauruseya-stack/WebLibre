@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2025 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify

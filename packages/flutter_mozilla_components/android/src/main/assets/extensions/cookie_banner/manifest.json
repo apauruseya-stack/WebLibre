@@ -5,7 +5,7 @@
       "id": "cookie-banner@weblibre.eu"
     }
   },
-  "name": "WebLibre cookie banner handler",
+  "name": "Cat Browser cookie banner handler",
   "version": "1.0",
   "description": "Rejects non-essential cookie consent where a reject control exists. Never accepts on the user's behalf.",
   "background": {

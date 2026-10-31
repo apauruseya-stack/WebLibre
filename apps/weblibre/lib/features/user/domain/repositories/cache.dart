@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -47,7 +47,7 @@ class CacheRepository extends _$CacheRepository {
   /// can afford to hold a reactive query against it — that was one live SQLite
   /// watch per visible row, opened and torn down on every scroll pass, for a
   /// table that changes only when a favicon is actually fetched. See
-  /// https://github.com/FaFre/WebLibre/issues/599.
+  /// https://github.com/FaFre/Cat Browser/issues/599.
   ///
   /// Every write passes through this repository, so the write side announces
   /// the change and readers re-read, which inverts the cost onto the side that

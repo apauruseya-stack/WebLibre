@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -43,7 +43,7 @@ void main() {
   group('buildFrequentBangDisplayList', () {
     test('keeps selected bang first and default bang trailing', () {
       final selectedBang = _bang('ddg', 'DuckDuckGo');
-      final defaultBang = _bang('wl', 'WebLibre Search');
+      final defaultBang = _bang('wl', 'Cat Browser Search');
       final frequentBangs = [defaultBang, _bang('g', 'Google')];
 
       final result = buildFrequentBangDisplayList(
@@ -56,7 +56,7 @@ void main() {
     });
 
     test('does not duplicate the same bang when default is selected', () {
-      final defaultBang = _bang('wl', 'WebLibre Search');
+      final defaultBang = _bang('wl', 'Cat Browser Search');
       final frequentBangs = [defaultBang, _bang('g', 'Google')];
 
       final result = buildFrequentBangDisplayList(
@@ -92,7 +92,7 @@ void main() {
 
     test('keeps the selection and default anchors intact', () {
       final selectedBang = _bang('ddg', 'DuckDuckGo');
-      final defaultBang = _bang('wl', 'WebLibre Search');
+      final defaultBang = _bang('wl', 'Cat Browser Search');
 
       final result = buildFrequentBangDisplayList(
         frequentBangs: [_bang('g', 'Google')],
@@ -117,7 +117,7 @@ void main() {
   group('BangChipStrip delete affordance', () {
     test('belongs to the selected bang alone', () {
       final selectedBang = _bang('ddg', 'DuckDuckGo');
-      final otherBang = _bang('wl', 'WebLibre Search');
+      final otherBang = _bang('wl', 'Cat Browser Search');
 
       expect(isSelectedBangChip(selectedBang, selectedBang), isTrue);
       expect(isSelectedBangChip(otherBang, selectedBang), isFalse);
@@ -141,7 +141,7 @@ void main() {
     });
 
     test('the default search bang stays anchored in quick select', () {
-      final defaultBang = _bang('wl', 'WebLibre Search', frequency: 7);
+      final defaultBang = _bang('wl', 'Cat Browser Search', frequency: 7);
 
       expect(
         canResetBangFrequency(bang: defaultBang, defaultBang: defaultBang),
@@ -153,7 +153,7 @@ void main() {
       expect(
         canResetBangFrequency(
           bang: _bang('g', 'Google', frequency: 3),
-          defaultBang: _bang('wl', 'WebLibre Search', frequency: 7),
+          defaultBang: _bang('wl', 'Cat Browser Search', frequency: 7),
         ),
         isTrue,
       );

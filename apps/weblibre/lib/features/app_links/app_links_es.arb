@@ -7,7 +7,7 @@
   "appLinks_bannerOpenApp": "Abrir aplicación",
   "appLinks_dialogTitleNamed": "¿Abrir en {appName}?",
   "appLinks_dialogTitleGeneric": "¿Abrir en otra aplicación?",
-  "appLinks_dialogBody": "Este enlace lo gestiona una aplicación ajena a WebLibre.",
+  "appLinks_dialogBody": "Este enlace lo gestiona una aplicación ajena a Cat Browser.",
   "appLinks_dialogRememberFor": "Recordar mi elección para {scope}",
   "appLinks_warningProtectedContext": "Este enlace está protegido aquí. La aplicación abre su propia conexión, fuera de las reglas que sigue esta pestaña.",
   "appLinks_warningPrivateTab": "Esta es una pestaña privada. La aplicación guarda su propio historial y su estado de inicio de sesión.",

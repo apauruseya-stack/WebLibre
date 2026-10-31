@@ -24,7 +24,7 @@ import mozilla.components.concept.engine.request.RequestInterceptor
 import mozilla.components.support.base.log.logger.Logger
 
 /**
- * The WebLibre-owned §2.4 interception tail (APP_LINKS_OWN_IMPLEMENTATION_PLAN.md Phase 5). Replaces
+ * The Cat Browser-owned §2.4 interception tail (APP_LINKS_OWN_IMPLEMENTATION_PLAN.md Phase 5). Replaces
  * Mozilla AC's `AppLinksInterceptor` + `AppLinksFeature` + `AppLinksCancelRetryMiddleware` on the
  * synchronous `RequestInterceptor.onLoadRequest` path.
  *

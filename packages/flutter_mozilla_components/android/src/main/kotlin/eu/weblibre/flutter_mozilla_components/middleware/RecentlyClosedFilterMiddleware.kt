@@ -27,13 +27,13 @@ internal fun isIsolatedContextId(contextId: String?): Boolean =
     contextId?.startsWith(ISOLATED_CONTEXT_ID_PREFIX) == true
 
 /**
- * Keeps out of the recently closed list what WebLibre must not bring back.
+ * Keeps out of the recently closed list what Cat Browser must not bring back.
  * [RecentlyClosedMiddleware] already leaves out private tabs. This also drops:
  *
  * - isolated tabs. Closing the last tab of an isolation context deletes the
  *   context's data, so a restored one would come back in an empty jar.
  * - tabs of a container excluded from history. The list is history.
- * - tabs WebLibre removed itself, named in [discard] before the removal: the
+ * - tabs Cat Browser removed itself, named in [discard] before the removal: the
  *   previous session's tabs deleted at startup, tabs recreated in another
  *   container, the tabs of a deleted container. Also tabs whose undo is still
  *   pending when the history is deleted, which would land on the cleared list.

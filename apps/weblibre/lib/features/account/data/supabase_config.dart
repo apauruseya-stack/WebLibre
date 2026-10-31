@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-// Supabase project configuration for the WebLibre native app.
+// Supabase project configuration for the Cat Browser native app.
 //
 // All three values are overridable at build time via `--dart-define` so
 // developer / staging / production builds can point at distinct Supabase

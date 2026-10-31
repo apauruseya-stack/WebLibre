@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -37,7 +37,7 @@ const val MAX_PENDING_INTENTS = 16
  * the ordering, readiness and bound can be tested without an Android runtime.
  * [pending] may outlive a gate to carry the backlog across engine replacement;
  * readiness always belongs to this gate's isolate. A shared queue requires a
- * single engine consumer and platform-thread access, as in WebLibre's coordinator.
+ * single engine consumer and platform-thread access, as in Cat Browser's coordinator.
  */
 class IntentDeliveryGate(
     private val maxPending: Int = MAX_PENDING_INTENTS,

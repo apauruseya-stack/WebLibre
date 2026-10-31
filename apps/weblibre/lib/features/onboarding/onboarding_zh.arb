@@ -5,7 +5,7 @@
   "onboarding_actionRestore": "恢复",
   "onboarding_restoreTargetUnreadable": "无法读取此配置文件，因此无法向其中恢复任何内容。",
   "onboarding_welcomeBackTitle": "欢迎回来！",
-  "onboarding_welcomeReadyTitle": "WebLibre 已准备就绪",
+  "onboarding_welcomeReadyTitle": "Cat Browser 已准备就绪",
   "onboarding_chooseExperience": "选择你的初始设置方式：",
   "onboarding_modeExpressTitle": "快速开始",
   "onboarding_modeExpressSubtitle": "使用推荐的默认设置，直接开始浏览。",
@@ -24,7 +24,7 @@
   "onboarding_aiOnDeviceTitle": "设备端 AI",
   "onboarding_aiOnDeviceSubtitle": "在本地设备上运行的功能，包括容器主题和标签页建议",
   "onboarding_aiWarningTitle": "注意事项",
-  "onboarding_aiWarningPoint1": "WebLibre 使用本地 AI 模型分析你打开的标签页标题，建议将标签页归入哪些容器以及如何为这些容器命名。所有处理完全在你的设备上进行。",
+  "onboarding_aiWarningPoint1": "Cat Browser 使用本地 AI 模型分析你打开的标签页标题，建议将标签页归入哪些容器以及如何为这些容器命名。所有处理完全在你的设备上进行。",
   "onboarding_aiWarningPoint2": "AI 增强功能完全在浏览器内运行，所有数据都保留在你的设备上。本地 AI 处理尊重你的隐私，并能更快地提供容器分组和名称建议。你可以随时在设置中控制此行为。",
   "onboarding_aiWarningPoint3": "AI 有时会出错，请检查建议的分组名称和所选标签页。",
   "onboarding_searchTitle": "搜索",
@@ -37,7 +37,7 @@
   "onboarding_permissionsNotificationsTitle": "通知",
   "onboarding_permissionsNotificationsSubtitle": "用于向你发送下载相关的通知",
   "onboarding_permissionsDefaultBrowserTitle": "默认浏览器",
-  "onboarding_permissionsDefaultBrowserSubtitle": "将 WebLibre 设为默认浏览器",
+  "onboarding_permissionsDefaultBrowserSubtitle": "将 Cat Browser 设为默认浏览器",
   "onboarding_privacyTitle": "隐私与加固",
   "onboarding_privacyBrowserLanguagesTitle": "浏览器语言",
   "onboarding_privacyBrowserLanguagesSubtitle": "配置向网站公开的语言偏好",
@@ -58,8 +58,8 @@
   "onboarding_blockAllLocalNetworkSubtitle": "任何网站访问你家庭网络中的设备前都需征得许可，而不仅限于已知跟踪器",
   "onboarding_toolbarLayoutTitle": "工具栏与布局",
   "onboarding_ublockTitle": "uBlock Origin",
-  "onboarding_ublockDescription": "uBlock Origin（uBO）是由 **Raymond Hill** 开发的一款 CPU 和内存占用都很低的 **广谱内容拦截器**，可作为浏览器扩展在 WebLibre 中使用。\n\n默认情况下，它使用 **EasyList、EasyPrivacy、Peter Lowe's Blocklist、Online Malicious URL Blocklist 和 uBO 过滤规则列表** 拦截广告、跟踪器、挖矿脚本、弹出窗口、烦人的反拦截脚本、恶意网站等。\n\n还有许多其他列表可用于拦截更多内容。",
+  "onboarding_ublockDescription": "uBlock Origin（uBO）是由 **Raymond Hill** 开发的一款 CPU 和内存占用都很低的 **广谱内容拦截器**，可作为浏览器扩展在 Cat Browser 中使用。\n\n默认情况下，它使用 **EasyList、EasyPrivacy、Peter Lowe's Blocklist、Online Malicious URL Blocklist 和 uBO 过滤规则列表** 拦截广告、跟踪器、挖矿脚本、弹出窗口、烦人的反拦截脚本、恶意网站等。\n\n还有许多其他列表可用于拦截更多内容。",
   "onboarding_ublockInstallTitle": "安装 uBlock Origin 扩展",
   "onboarding_ublockApplyDefaultsTitle": "应用优化的默认设置",
-  "onboarding_ublockApplyDefaultsSubtitle": "启用 WebLibre 加固过滤规则列表。"
+  "onboarding_ublockApplyDefaultsSubtitle": "启用 Cat Browser 加固过滤规则列表。"
 }

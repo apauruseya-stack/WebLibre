@@ -61,23 +61,23 @@ android {
     productFlavors {
         stable {
             dimension "track"
-            manifestPlaceholders = [appName: "WebLibre", enableImpeller: "false"]
+            manifestPlaceholders = [appName: "Cat Browser", enableImpeller: "false"]
         }
         stableImpeller {
             dimension "track"
-            manifestPlaceholders = [appName: "WebLibre (Impeller)", enableImpeller: "true"]
+            manifestPlaceholders = [appName: "Cat Browser (Impeller)", enableImpeller: "true"]
         }
         alpha {
             dimension "track"
             applicationIdSuffix ".alpha"
             versionNameSuffix "-alpha"
-            manifestPlaceholders = [appName: "WebLibre Alpha", enableImpeller: "false"]
+            manifestPlaceholders = [appName: "Cat Browser Alpha", enableImpeller: "false"]
         }
         alphaImpeller {
             dimension "track"
             applicationIdSuffix ".alpha"
             versionNameSuffix "-alpha"
-            manifestPlaceholders = [appName: "WebLibre Alpha (Impeller)", enableImpeller: "true"]
+            manifestPlaceholders = [appName: "Cat Browser Alpha (Impeller)", enableImpeller: "true"]
         }
     }
 

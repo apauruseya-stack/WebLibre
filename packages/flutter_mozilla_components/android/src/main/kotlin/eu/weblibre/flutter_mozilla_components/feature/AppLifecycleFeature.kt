@@ -42,7 +42,7 @@ import mozilla.components.support.base.log.logger.Logger
  * matter, and one call covers however many process switches happened while the
  * tab was in the foreground.
  *
- * See https://github.com/FaFre/WebLibre/issues/495.
+ * See https://github.com/FaFre/Cat Browser/issues/495.
  */
 object AppLifecycleFeature : DefaultLifecycleObserver {
     private val logger = Logger("AppLifecycleFeature")

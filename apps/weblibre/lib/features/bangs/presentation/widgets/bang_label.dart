@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ import 'package:weblibre/features/bangs/data/models/bang.dart';
 import 'package:weblibre/features/bangs/data/models/bang_group.dart';
 
 /// Renders a bang's website name, appending an amber crown for the official
-/// WebLibre bang ([BangGroup.weblibre]) so it stands out as first-party.
+/// Cat Browser bang ([BangGroup.weblibre]) so it stands out as first-party.
 class BangLabel extends StatelessWidget {
   final Bang bang;
 

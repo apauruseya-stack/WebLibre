@@ -11,7 +11,7 @@ GeckoView 150.0.1
 
 **Privacy & Security**
 
-- **Intent Gatekeeper** — When another app tries to open a link, WebLibre can now ask whether to allow or block it. Manage per-app permissions and respond from notifications without opening the browser.
+- **Intent Gatekeeper** — When another app tries to open a link, Cat Browser can now ask whether to allow or block it. Manage per-app permissions and respond from notifications without opening the browser.
 - **Screenshot Protection** — New privacy setting to block screenshots and screen recordings of the browser. Find it under Settings > Privacy & Security.
 - **Permission Shield Indicators** — The shield icon on your tab now uses colors to show your privacy status: green means enhanced protection, yellow means you've loosened settings for this site, and it's hidden when everything is at default.
 - **Third-Party Redirect Blocking** — Enabled by default to protect you from malicious redirects.
@@ -43,7 +43,7 @@ GeckoView 150.0.1
 
 - **Export Page as Image** — Save any webpage as a PNG image to your device.
 - **Copy Images from Image Menu** — Long-press any image to copy it directly to your clipboard.
-- **Smarter Text Sharing** — When sharing text or URLs into WebLibre from other apps, they now properly route through containers and custom tabs.
+- **Smarter Text Sharing** — When sharing text or URLs into Cat Browser from other apps, they now properly route through containers and custom tabs.
 
 **Search & Navigation**
 

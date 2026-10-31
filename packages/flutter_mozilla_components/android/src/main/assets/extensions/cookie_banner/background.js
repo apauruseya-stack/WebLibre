@@ -1,5 +1,5 @@
 /*
- * WebLibre cookie banner handler - background page.
+ * Cat Browser cookie banner handler - background page.
  *
  * Owns the rule pack and the native port. Content scripts ask this page for the
  * configuration of their own host; the native side only ever sends the mode and

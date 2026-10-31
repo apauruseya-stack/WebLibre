@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -133,7 +133,7 @@ class TrackerStatisticsSummary with FastEquatable {
 }
 
 /// Sums [statistics] the way Fenix's protections dashboard does, adding
-/// cryptominers and redirect trackers, which WebLibre blocks too.
+/// cryptominers and redirect trackers, which Cat Browser blocks too.
 ///
 /// Cookies the cookie policy blocked without them being known trackers
 /// ([TrackingStatisticsType.otherCookies]) are left out: they are not trackers,

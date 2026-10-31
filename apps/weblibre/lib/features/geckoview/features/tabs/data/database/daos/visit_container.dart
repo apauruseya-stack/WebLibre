@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import 'package:weblibre/features/geckoview/features/tabs/data/database/definiti
 /// Data access for the visit → container relation (`visit_container`).
 ///
 /// Mozilla Places owns the browsing history itself; this table only records
-/// which WebLibre container each contained visit belonged to. Reads are joined
+/// which Cat Browser container each contained visit belonged to. Reads are joined
 /// back to Places `VisitInfo`s in the domain layer on
 /// (url_canonical, nearest visit_time).
 @DriftAccessor()

@@ -34,7 +34,7 @@
   "bangs_flagUrlEncodePlaceholderSubtitle": "Enkode istilah pencarian untuk URL. Beberapa situs tidak berfungsi dengan istilah yang dienkode, jadi nonaktifkan opsi ini untuk situs tersebut.",
   "bangs_flagUrlEncodeSpaceToPlusTitle": "Enkode Spasi sebagai Plus",
   "bangs_flagUrlEncodeSpaceToPlusSubtitle": "Enkode spasi sebagai + alih-alih %20. Beberapa situs mewajibkan salah satu format.",
-  "bangs_tooltipOfficialSearch": "Pencarian resmi WebLibre",
+  "bangs_tooltipOfficialSearch": "Pencarian resmi Cat Browser",
   "bangs_tooltipCustomizeAsOwn": "Sesuaikan sebagai bang Anda sendiri",
   "bangs_tooltipUnpin": "Lepas sematan dari penyedia pencarian",
   "bangs_tooltipPin": "Sematkan ke penyedia pencarian",

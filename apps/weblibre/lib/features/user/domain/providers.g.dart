@@ -63,7 +63,7 @@ String _$iconCacheSizeMegabytesHash() =>
 /// Riverpod subscribe while the provider is being built; readers treat "no
 /// value yet" as "nothing has changed since I started looking".
 ///
-/// See https://github.com/FaFre/WebLibre/issues/599.
+/// See https://github.com/FaFre/Cat Browser/issues/599.
 
 @ProviderFor(iconCacheRevision)
 final iconCacheRevisionProvider = IconCacheRevisionFamily._();
@@ -88,7 +88,7 @@ final iconCacheRevisionProvider = IconCacheRevisionFamily._();
 /// Riverpod subscribe while the provider is being built; readers treat "no
 /// value yet" as "nothing has changed since I started looking".
 ///
-/// See https://github.com/FaFre/WebLibre/issues/599.
+/// See https://github.com/FaFre/Cat Browser/issues/599.
 
 final class IconCacheRevisionProvider
     extends $FunctionalProvider<AsyncValue<int>, int, Stream<int>>
@@ -113,7 +113,7 @@ final class IconCacheRevisionProvider
   /// Riverpod subscribe while the provider is being built; readers treat "no
   /// value yet" as "nothing has changed since I started looking".
   ///
-  /// See https://github.com/FaFre/WebLibre/issues/599.
+  /// See https://github.com/FaFre/Cat Browser/issues/599.
   IconCacheRevisionProvider._({
     required IconCacheRevisionFamily super.from,
     required String super.argument,
@@ -179,7 +179,7 @@ String _$iconCacheRevisionHash() => r'4fcad249668b71f087c3f65e19c8bbd739b8f68f';
 /// Riverpod subscribe while the provider is being built; readers treat "no
 /// value yet" as "nothing has changed since I started looking".
 ///
-/// See https://github.com/FaFre/WebLibre/issues/599.
+/// See https://github.com/FaFre/Cat Browser/issues/599.
 
 final class IconCacheRevisionFamily extends $Family
     with $FunctionalFamilyOverride<Stream<int>, String> {
@@ -212,7 +212,7 @@ final class IconCacheRevisionFamily extends $Family
   /// Riverpod subscribe while the provider is being built; readers treat "no
   /// value yet" as "nothing has changed since I started looking".
   ///
-  /// See https://github.com/FaFre/WebLibre/issues/599.
+  /// See https://github.com/FaFre/Cat Browser/issues/599.
 
   IconCacheRevisionProvider call(String origin) =>
       IconCacheRevisionProvider._(argument: origin, from: this);

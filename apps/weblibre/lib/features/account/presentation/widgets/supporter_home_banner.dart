@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ import 'package:weblibre/l10n/generated/app_localizations.dart';
 import 'package:weblibre/presentation/utils/localized_spans.dart';
 
 /// Promotional banner shown above the quote card on the browser home page,
-/// inviting non-subscribers to become a WebLibre Supporter.
+/// inviting non-subscribers to become a Cat Browser Supporter.
 ///
 /// It hides itself when the user already has an active subscription or has
 /// dismissed it. Includes its own bottom spacing so the host layout doesn't

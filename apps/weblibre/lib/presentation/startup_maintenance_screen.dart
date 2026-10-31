@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -98,7 +98,7 @@ class StartupMaintenanceScreen extends HookWidget {
     ///
     /// A failure takes the task out of `activeTasks`, which is right — a
     /// mistyped archive password must not hold the browser shut — but it also
-    /// left the screen with nothing but "Open WebLibre". Retrying then meant
+    /// left the screen with nothing but "Open Cat Browser". Retrying then meant
     /// booting, walking to Users → Backups, and going through the whole restart
     /// again for one wrong character. `failed → queued` is a legal transition,
     /// so the queue can simply take it back.

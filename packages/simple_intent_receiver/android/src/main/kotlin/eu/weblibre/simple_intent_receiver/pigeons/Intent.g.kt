@@ -435,7 +435,7 @@ interface IntentGatekeeperHostApi {
   fun resolvePackageLabel(packageName: String): String?
   /**
    * Returns the list of packages for which the user tapped "Always allow"
-   * via a blocked-intent notification while WebLibre was not running.
+   * via a blocked-intent notification while Cat Browser was not running.
    * Callers must acknowledge persisted packages via
    * [ackPendingAlwaysAllows] after Flutter settings were updated
    * successfully.

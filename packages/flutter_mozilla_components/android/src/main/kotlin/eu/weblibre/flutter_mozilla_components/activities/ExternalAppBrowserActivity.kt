@@ -227,8 +227,8 @@ open class ExternalAppBrowserActivity : AppCompatActivity(), ProfileLockedWindow
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Match the window chrome (status/nav bar + pre-paint background) to the
-        // user's WebLibre color scheme rather than just the system mode, so a
-        // cold-started Custom Tab / PWA doesn't flash dark when WebLibre is light.
+        // user's Cat Browser color scheme rather than just the system mode, so a
+        // cold-started Custom Tab / PWA doesn't flash dark when Cat Browser is light.
         // Set before super.onCreate so the correct mode is applied without a recreate.
         delegate.localNightMode = ColorSchemePreference.nightMode(this)
 

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ class HistoryFilterOptions with FastEquatable {
   final Set<VisitType> visitTypes;
 
   /// When non-null, restrict the timeline to visits that belonged to this
-  /// WebLibre container (resolved via the visit→container relation). Null shows
+  /// Cat Browser container (resolved via the visit→container relation). Null shows
   /// all visits, each still annotated with its own container tag.
   final String? containerId;
 

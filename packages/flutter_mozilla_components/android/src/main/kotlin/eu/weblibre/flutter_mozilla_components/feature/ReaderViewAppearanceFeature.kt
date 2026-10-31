@@ -18,7 +18,7 @@ import mozilla.components.support.webextensions.BuiltInWebExtensionController
 import org.json.JSONObject
 
 /**
- * Bridges WebLibre's "pure black" setting into Mozilla's reader view extension so
+ * Bridges Cat Browser's "pure black" setting into Mozilla's reader view extension so
  * the dark color scheme can be rendered as pure black (AMOLED).
  *
  * Flutter remains the source of truth for the setting (see

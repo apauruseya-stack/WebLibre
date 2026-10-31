@@ -20,11 +20,11 @@
 
   "onboarding_welcomeBackTitle": "Welcome back!",
   "@onboarding_welcomeBackTitle": {
-    "description": "Heading of the first-run welcome page when the user has used WebLibre before (e.g. after a major update)."
+    "description": "Heading of the first-run welcome page when the user has used Cat Browser before (e.g. after a major update)."
   },
-  "onboarding_welcomeReadyTitle": "WebLibre is ready",
+  "onboarding_welcomeReadyTitle": "Cat Browser is ready",
   "@onboarding_welcomeReadyTitle": {
-    "description": "Heading of the first-run welcome page for a new user. WebLibre is the app name."
+    "description": "Heading of the first-run welcome page for a new user. Cat Browser is the app name."
   },
   "onboarding_chooseExperience": "Choose your onboarding experience:",
   "@onboarding_chooseExperience": {
@@ -99,7 +99,7 @@
   "@onboarding_aiWarningTitle": {
     "description": "Heading of the notice box listing things to know about the AI features."
   },
-  "onboarding_aiWarningPoint1": "WebLibre uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.",
+  "onboarding_aiWarningPoint1": "Cat Browser uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.",
   "@onboarding_aiWarningPoint1": {
     "description": "Bullet point in the AI notice box."
   },
@@ -152,11 +152,11 @@
   },
   "onboarding_permissionsDefaultBrowserTitle": "Default Browser",
   "@onboarding_permissionsDefaultBrowserTitle": {
-    "description": "Switch that makes WebLibre the device's default browser."
+    "description": "Switch that makes Cat Browser the device's default browser."
   },
-  "onboarding_permissionsDefaultBrowserSubtitle": "Set WebLibre as your default browser",
+  "onboarding_permissionsDefaultBrowserSubtitle": "Set Cat Browser as your default browser",
   "@onboarding_permissionsDefaultBrowserSubtitle": {
-    "description": "Explanation under the default browser switch. WebLibre is the app name."
+    "description": "Explanation under the default browser switch. Cat Browser is the app name."
   },
 
   "onboarding_privacyTitle": "Privacy & Hardening",
@@ -245,7 +245,7 @@
   "@onboarding_ublockTitle": {
     "description": "Heading of the first-run setup page offering the uBlock Origin ad blocker. Product name; do not translate."
   },
-  "onboarding_ublockDescription": "uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for WebLibre.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.",
+  "onboarding_ublockDescription": "uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for Cat Browser.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.",
   "@onboarding_ublockDescription": {
     "description": "Description of the uBlock Origin extension on its setup page. Uses Markdown: keep the ** markers around bold text. Names of people, products and filter lists stay unchanged."
   },
@@ -255,10 +255,10 @@
   },
   "onboarding_ublockApplyDefaultsTitle": "Apply optimized defaults",
   "@onboarding_ublockApplyDefaultsTitle": {
-    "description": "Switch, available once uBlock Origin is being installed: apply WebLibre's recommended uBlock Origin settings."
+    "description": "Switch, available once uBlock Origin is being installed: apply Cat Browser's recommended uBlock Origin settings."
   },
-  "onboarding_ublockApplyDefaultsSubtitle": "Enable WebLibre hardening filter lists.",
+  "onboarding_ublockApplyDefaultsSubtitle": "Enable Cat Browser hardening filter lists.",
   "@onboarding_ublockApplyDefaultsSubtitle": {
-    "description": "Explanation under \"Apply optimized defaults\": turns on WebLibre's own stricter filter lists in uBlock Origin."
+    "description": "Explanation under \"Apply optimized defaults\": turns on Cat Browser's own stricter filter lists in uBlock Origin."
   }
 }

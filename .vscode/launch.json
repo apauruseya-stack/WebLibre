@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "WebLibre",
+            "name": "Cat Browser",
             "cwd": "apps/weblibre",
             "request": "launch",
             "type": "dart",
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "name": "WebLibre (profile mode)",
+            "name": "Cat Browser (profile mode)",
             "cwd": "apps/weblibre",
             "request": "launch",
             "type": "dart",
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "name": "WebLibre (release mode)",
+            "name": "Cat Browser (release mode)",
             "cwd": "apps/weblibre",
             "request": "launch",
             "type": "dart",

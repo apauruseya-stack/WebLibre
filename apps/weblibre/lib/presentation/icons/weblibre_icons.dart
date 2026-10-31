@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 import 'package:flutter/widgets.dart';
 
 abstract class WebLibreIcons {
-  static const String _fontFamily = 'WebLibre';
+  static const String _fontFamily = 'Cat Browser';
 
   static const IconData privateTab = IconData(0xEA01, fontFamily: _fontFamily);
   static const IconData tabOptions = IconData(0xEA02, fontFamily: _fontFamily);

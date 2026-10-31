@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -32,7 +32,7 @@ KeyChord _ctrlAlt(LogicalKeyboardKey key) =>
 KeyChord _plain(LogicalKeyboardKey key, {bool shift = false}) =>
     KeyChord.of(key, shift: shift);
 
-/// Firefox desktop's key bindings for the actions WebLibre has.
+/// Firefox desktop's key bindings for the actions Cat Browser has.
 ///
 /// Taken from the Windows/Linux variant of mozilla-central's
 /// `browser/base/content/browser-sets.inc.xhtml` (keys in
@@ -112,7 +112,7 @@ final Map<BrowserAction, List<KeyChord>> defaultKeyboardShortcuts = {
     _ctrl(LogicalKeyboardKey.keyG, shift: true),
     _plain(LogicalKeyboardKey.f3, shift: true),
   ],
-  // Firefox zooms the page on these; the closest WebLibre has is text size.
+  // Firefox zooms the page on these; the closest Cat Browser has is text size.
   BrowserAction.increaseFontSize: [
     _ctrl(LogicalKeyboardKey.equal),
     _ctrl(LogicalKeyboardKey.equal, shift: true),

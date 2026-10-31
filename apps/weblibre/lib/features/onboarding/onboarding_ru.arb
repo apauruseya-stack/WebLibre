@@ -5,7 +5,7 @@
   "onboarding_actionRestore": "Восстановить",
   "onboarding_restoreTargetUnreadable": "Не удалось прочитать этот профиль, поэтому восстановить в него ничего нельзя.",
   "onboarding_welcomeBackTitle": "С возвращением!",
-  "onboarding_welcomeReadyTitle": "WebLibre готов к работе",
+  "onboarding_welcomeReadyTitle": "Cat Browser готов к работе",
   "onboarding_chooseExperience": "Выберите вариант начальной настройки:",
   "onboarding_modeExpressTitle": "Быстрый старт",
   "onboarding_modeExpressSubtitle": "Использовать рекомендуемые настройки и начать работу.",
@@ -24,7 +24,7 @@
   "onboarding_aiOnDeviceTitle": "ИИ на устройстве",
   "onboarding_aiOnDeviceSubtitle": "Локальные функции на устройстве, включая темы контейнеров и предложения вкладок",
   "onboarding_aiWarningTitle": "Что нужно учитывать",
-  "onboarding_aiWarningPoint1": "WebLibre использует локальную модель ИИ, чтобы анализировать заголовки открытых вкладок и предлагать, в какие контейнеры их сгруппировать и как эти контейнеры назвать. Вся обработка выполняется только на вашем устройстве.",
+  "onboarding_aiWarningPoint1": "Cat Browser использует локальную модель ИИ, чтобы анализировать заголовки открытых вкладок и предлагать, в какие контейнеры их сгруппировать и как эти контейнеры назвать. Вся обработка выполняется только на вашем устройстве.",
   "onboarding_aiWarningPoint2": "Функции ИИ работают полностью внутри браузера, и все данные остаются на устройстве. Локальная обработка сохраняет вашу конфиденциальность и ускоряет подбор групп контейнеров и их названий. Это поведение можно изменить в любой момент в настройках.",
   "onboarding_aiWarningPoint3": "ИИ может ошибаться, поэтому проверяйте предложенные названия групп и выбор вкладок.",
   "onboarding_searchTitle": "Поиск",
@@ -37,7 +37,7 @@
   "onboarding_permissionsNotificationsTitle": "Уведомления",
   "onboarding_permissionsNotificationsSubtitle": "Нужны для уведомлений о загрузках",
   "onboarding_permissionsDefaultBrowserTitle": "Браузер по умолчанию",
-  "onboarding_permissionsDefaultBrowserSubtitle": "Сделать WebLibre браузером по умолчанию",
+  "onboarding_permissionsDefaultBrowserSubtitle": "Сделать Cat Browser браузером по умолчанию",
   "onboarding_privacyTitle": "Приватность и усиление защиты",
   "onboarding_privacyBrowserLanguagesTitle": "Языки браузера",
   "onboarding_privacyBrowserLanguagesSubtitle": "Настроить языковые предпочтения, сообщаемые сайтам",
@@ -58,8 +58,8 @@
   "onboarding_blockAllLocalNetworkSubtitle": "Запрашивать разрешение, прежде чем любой сайт, а не только известные трекеры, обратится к устройствам в домашней сети",
   "onboarding_toolbarLayoutTitle": "Панель инструментов и макет",
   "onboarding_ublockTitle": "uBlock Origin",
-  "onboarding_ublockDescription": "uBlock Origin (uBO) — экономный в отношении процессора и памяти **блокировщик контента широкого спектра** от **Raymond Hill**, доступный как расширение для WebLibre.\n\nПо умолчанию он блокирует рекламу, трекеры, майнеры, всплывающие окна, назойливые анти-блокировщики, вредоносные сайты и многое другое с помощью списков **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist и фильтров uBO**.\n\nДоступно множество других списков для блокировки дополнительного контента.",
+  "onboarding_ublockDescription": "uBlock Origin (uBO) — экономный в отношении процессора и памяти **блокировщик контента широкого спектра** от **Raymond Hill**, доступный как расширение для Cat Browser.\n\nПо умолчанию он блокирует рекламу, трекеры, майнеры, всплывающие окна, назойливые анти-блокировщики, вредоносные сайты и многое другое с помощью списков **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist и фильтров uBO**.\n\nДоступно множество других списков для блокировки дополнительного контента.",
   "onboarding_ublockInstallTitle": "Установить расширение uBlock Origin",
   "onboarding_ublockApplyDefaultsTitle": "Применить оптимизированные настройки",
-  "onboarding_ublockApplyDefaultsSubtitle": "Включить списки фильтров WebLibre для усиления защиты."
+  "onboarding_ublockApplyDefaultsSubtitle": "Включить списки фильтров Cat Browser для усиления защиты."
 }

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ import androidx.preference.PreferenceManager
 import java.util.Locale
 
 /**
- * The language of the app's own UI, mirrored for WebLibre's native windows.
+ * The language of the app's own UI, mirrored for Cat Browser's native windows.
  *
  * Flutter picks its UI language itself (`GeneralSettings.appLocale`), so the
  * native windows used to follow the system language instead: with German

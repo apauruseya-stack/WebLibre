@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -40,7 +40,7 @@ class AccountCallback {
   final String? state;
 }
 
-/// Parses [data] as a WebLibre account callback URI. Returns `null` if it
+/// Parses [data] as a Cat Browser account callback URI. Returns `null` if it
 /// isn't one (any other intent) or if the `code` query parameter is
 /// missing/empty. Callers can check `!= null` instead of running two
 /// passes (used-to-be `isAccountCallbackUri` then `extractHandoffCode`).

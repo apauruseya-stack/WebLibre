@@ -42,10 +42,10 @@ class AppRequestInterceptor internal constructor(
 
     private val components by lazy(componentsProvider)
 
-    // The WebLibre-owned §2.4 app-links tail.
+    // The Cat Browser-owned §2.4 app-links tail.
     private val webLibreAppLinks by lazy(appLinksProvider)
 
-    // GeckoEngineSession calls the 9-arg overload (WebLibre AC patch); this one only
+    // GeckoEngineSession calls the 9-arg overload (Cat Browser AC patch); this one only
     // serves callers that don't know the target.
     override fun onLoadRequest(
         engineSession: EngineSession,
@@ -169,7 +169,7 @@ class AppRequestInterceptor internal constructor(
             return it
         }
 
-        // App-links tail: the WebLibre-owned §2.4 implementation. Structural guards above
+        // App-links tail: the Cat Browser-owned §2.4 implementation. Structural guards above
         // (PWA/TWA, sandbox, weblibre://, FxA) already answered.
         return webLibreAppLinks.onLoadRequest(
             engineSession,

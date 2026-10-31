@@ -263,7 +263,7 @@ class Core(
      */
     val orderedRecentlyClosedStorage = OrderedRecentlyClosedStorage(recentlyClosedTabsStorage)
 
-    /** Held so tabs WebLibre removes itself can be kept off the list. */
+    /** Held so tabs Cat Browser removes itself can be kept off the list. */
     val recentlyClosedFilterMiddleware = RecentlyClosedFilterMiddleware()
 
     @OptIn(FlowPreview::class)
@@ -273,7 +273,7 @@ class Core(
                 // Must run before any engine middleware so we can rewrite
                 // sandbox new-tab URLs before Gecko issues a request.
                 SandboxCaptureMiddleware,
-                // WebLibre-owned app-link pending-request invalidation + suppression clearing.
+                // Cat Browser-owned app-link pending-request invalidation + suppression clearing.
                 AppLinkNavigationMiddleware(
                     PendingAppLinkStores.forProfile(
                         components.profileApplicationContext.relativePath,

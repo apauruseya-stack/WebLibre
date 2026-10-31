@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@ const searchBackendOrigin = String.fromEnvironment(
 );
 
 /// Origin used when the user opts to route search through Tor. Should be
-/// the WebLibre search service's onion address so the Tor circuit
+/// the Cat Browser search service's onion address so the Tor circuit
 /// terminates inside the Tor network instead of exiting back to the
 /// clearnet. Falls back to the clearnet origin when no onion address is
 /// configured at build time.

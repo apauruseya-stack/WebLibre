@@ -33,7 +33,7 @@ object ColorSchemePreference {
 
     /**
      * Fallback used before Flutter has written a value (e.g. the very first
-     * Custom Tab / PWA launch). Must match WebLibre's default app theme
+     * Custom Tab / PWA launch). Must match Cat Browser's default app theme
      * (`ThemeMode.dark`, general_settings.dart) so a direct launch doesn't briefly
      * disagree with the app's default.
      */
@@ -66,8 +66,8 @@ object ColorSchemePreference {
     /**
      * Maps the persisted scheme to an [AppCompatDelegate] night mode so native
      * activities (Custom Tab / PWA) render their window chrome in the mode the user
-     * selected in WebLibre, instead of always following the system. This avoids the
-     * window flashing dark before the page paints when WebLibre is forced to light.
+     * selected in Cat Browser, instead of always following the system. This avoids the
+     * window flashing dark before the page paints when Cat Browser is forced to light.
      */
     fun nightMode(context: Context): Int =
         when (read(context)) {

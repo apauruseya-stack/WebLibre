@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -152,7 +152,7 @@ final class UnsupportedArchiveVersion extends MaintenanceFailure {
 
   @override
   String get message =>
-      'This backup file was created by a newer version of WebLibre and cannot be '
+      'This backup file was created by a newer version of Cat Browser and cannot be '
       'read here. $_nothingChanged';
 }
 
@@ -331,16 +331,16 @@ final class TaskNotRunnable extends MaintenanceFailure {
   @override
   String get message => switch (reason) {
     TaskNotRunnableReason.unsupportedAction =>
-      'This task was created by a newer version of WebLibre and cannot run '
+      'This task was created by a newer version of Cat Browser and cannot run '
           'here.',
     TaskNotRunnableReason.backupDestinationMissing =>
       'This backup has no destination folder recorded.',
     TaskNotRunnableReason.restoreSourceMissing =>
       'This restore has no backup file recorded.',
     TaskNotRunnableReason.restoreUnavailableHere =>
-      'WebLibre cannot restore from this startup screen.',
+      'Cat Browser cannot restore from this startup screen.',
     TaskNotRunnableReason.deleteUnavailableHere =>
-      'WebLibre cannot delete a profile from this startup screen.',
+      'Cat Browser cannot delete a profile from this startup screen.',
   };
 }
 
@@ -359,7 +359,7 @@ final class RestartNotScheduledFailure extends MaintenanceFailure {
 
   @override
   String get message =>
-      'WebLibre could not schedule the restart this needs. $_nothingChanged';
+      'Cat Browser could not schedule the restart this needs. $_nothingChanged';
 }
 
 /// The failure recorded on a [MaintenanceTask], rebuilt from what survives a

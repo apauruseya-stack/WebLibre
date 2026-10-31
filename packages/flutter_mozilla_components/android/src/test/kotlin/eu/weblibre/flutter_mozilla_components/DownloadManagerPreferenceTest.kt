@@ -216,9 +216,9 @@ class DownloadManagerPreferenceTest {
     }
 
     @Test
-    fun `remembering WebLibre takes the first-party path`() {
-        // Not forwarding is what reaches WebLibre's own confirmation; selecting
-        // WebLibre in the chooser would start the download without one.
+    fun `remembering Cat Browser takes the first-party path`() {
+        // Not forwarding is what reaches Cat Browser's own confirmation; selecting
+        // Cat Browser in the chooser would start the download without one.
         assertFalse(
             DownloadManagerPreference.shouldForwardToThirdParties(
                 context,

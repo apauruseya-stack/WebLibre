@@ -1,6 +1,6 @@
 {
   "@@locale": "es",
-  "intentGatekeeper_dialogTitle": "¿Abrir el enlace en WebLibre?",
+  "intentGatekeeper_dialogTitle": "¿Abrir el enlace en Cat Browser?",
   "intentGatekeeper_appIsTryingToOpenLink": "{appName} intenta abrir un enlace en {browserName}.",
   "intentGatekeeper_alwaysAllow": "Permitir siempre",
   "intentGatekeeper_allowOnce": "Permitir una vez",

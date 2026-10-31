@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -58,7 +58,7 @@ enum ProxyImportFailureKind {
   wireguardInvalidEndpoint,
 
   /// An outbound that dials through another outbound of its config — a
-  /// chain WebLibre cannot run. [ProxyImportFailure.detail] is that
+  /// chain Cat Browser cannot run. [ProxyImportFailure.detail] is that
   /// outbound's tag.
   detourThroughOtherOutbound,
 

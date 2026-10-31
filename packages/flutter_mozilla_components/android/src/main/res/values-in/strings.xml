@@ -14,7 +14,7 @@
     <string name="weblibre_lock_wrong_password_retry">Kata sandi salah. %1$s</string>
     <string name="weblibre_lock_too_many_attempts">Terlalu banyak percobaan yang salah. %1$s</string>
     <string name="weblibre_lock_check_failed">Kata sandi tidak dapat diperiksa. Coba lagi.</string>
-    <string name="weblibre_lock_interrupted">WebLibre ditinggalkan saat pemeriksaan. Masukkan kata sandi lagi.</string>
+    <string name="weblibre_lock_interrupted">Cat Browser ditinggalkan saat pemeriksaan. Masukkan kata sandi lagi.</string>
     <plurals name="weblibre_lock_retry_seconds">
         <item quantity="other">Coba lagi dalam %d detik.</item>
     </plurals>

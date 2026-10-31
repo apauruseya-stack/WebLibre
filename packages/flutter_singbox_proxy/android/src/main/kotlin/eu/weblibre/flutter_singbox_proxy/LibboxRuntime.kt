@@ -265,7 +265,7 @@ open class LibboxRuntime(
                 "usePlatformAutoDetectInterfaceControl",
                 "useProcFS" -> false
                 "localDNSTransport" -> createLocalDnsTransport()
-                "openTun" -> throw UnsupportedOperationException("TUN is not supported by WebLibre proxy routing")
+                "openTun" -> throw UnsupportedOperationException("TUN is not supported by Cat Browser proxy routing")
                 "readWIFIState" -> Class.forName(WIFI_STATE_CLASS)
                     .getConstructor(String::class.java, String::class.java)
                     .newInstance("", "")

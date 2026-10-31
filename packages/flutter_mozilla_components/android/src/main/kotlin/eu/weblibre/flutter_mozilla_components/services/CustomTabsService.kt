@@ -18,7 +18,7 @@ import mozilla.components.support.base.log.logger.Logger
 /**
  * Custom Tabs entry point for other apps.
  *
- * Every request arrives on a binder thread from a process WebLibre does not
+ * Every request arrives on a binder thread from a process Cat Browser does not
  * control, and any of them can be the first thing that touches this process. That
  * makes it one of the paths that can ask for components while the profile is
  * still being selected, or while maintenance owns the process — and there,
@@ -26,7 +26,7 @@ import mozilla.components.support.base.log.logger.Logger
  *
  * Refusal is therefore a returned `false`, never a thrown exception. A throw here
  * crosses the binder as a dead-service error, which the client app reports as
- * WebLibre crashing; `false` is the documented way to say "not now", and clients
+ * Cat Browser crashing; `false` is the documented way to say "not now", and clients
  * already handle it by opening the URL normally.
  */
 class CustomTabsService : AbstractCustomTabsService() {

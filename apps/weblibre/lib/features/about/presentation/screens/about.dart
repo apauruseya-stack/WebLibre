@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -88,7 +88,7 @@ class AboutDialogScreen extends HookConsumerWidget {
             await ref
                 .read(tabRepositoryProvider.notifier)
                 .addTab(
-                  url: Uri.https('github.com').replace(path: 'FaFre/WebLibre'),
+                  url: Uri.https('github.com').replace(path: 'FaFre/Cat Browser'),
                   tabMode: TabMode.regular,
                   selectTab: true,
                 );
@@ -126,7 +126,7 @@ class AboutDialogScreen extends HookConsumerWidget {
             await ref
                 .read(tabRepositoryProvider.notifier)
                 .addTab(
-                  url: Uri.https('github.com').replace(path: 'FaFre/WebLibre'),
+                  url: Uri.https('github.com').replace(path: 'FaFre/Cat Browser'),
                   tabMode: TabMode.regular,
                   selectTab: true,
                 );

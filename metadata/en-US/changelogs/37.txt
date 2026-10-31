@@ -4,7 +4,7 @@ GeckoView 148.0.2
 
 - **Progressive Web App (PWA) Support** - Install compatible websites directly to your home screen as standalone apps. PWAs open in their own window with their own icon, and remember which profile and container they belong to.
 
-- **Custom Tabs Integration** - Other Android apps can now open links in WebLibre using a lightweight browser overlay. Includes a close button to instantly return to the calling app, with support for private browsing mode.
+- **Custom Tabs Integration** - Other Android apps can now open links in Cat Browser using a lightweight browser overlay. Includes a close button to instantly return to the calling app, with support for private browsing mode.
 
 - **Built-in Page Translation** - Translate any webpage into your preferred language - locally on your device. The browser automatically detects the page language and offers translation options.
 

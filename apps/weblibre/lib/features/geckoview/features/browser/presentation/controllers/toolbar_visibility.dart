@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -49,7 +49,7 @@ class ToolbarVisibilityController extends _$ToolbarVisibilityController {
     // on `browser.sessionstore.interval` (10 s), so it lands up to ten seconds
     // after the navigation — by then the user is reading and has scrolled the
     // bar away, and showing it again reads as the bar popping up mid-scroll
-    // (https://github.com/FaFre/WebLibre/issues/653). Loading start above
+    // (https://github.com/FaFre/Cat Browser/issues/653). Loading start above
     // already covers navigations, as it does in Fenix.
 
     // Force-show when GeckoView requests toolbar expansion

@@ -10,7 +10,7 @@
   },
   "webPush_distributorTileTitle": "UnifiedPush Distributor",
   "@webPush_distributorTileTitle": {
-    "description": "Title of the setting for the UnifiedPush distributor: a separate app (such as ntfy) that receives push messages from the internet and passes them to WebLibre. UnifiedPush is a product name."
+    "description": "Title of the setting for the UnifiedPush distributor: a separate app (such as ntfy) that receives push messages from the internet and passes them to Cat Browser. UnifiedPush is a product name."
   },
   "webPush_distributorTileKeywords": "notifications, push, unifiedpush, ntfy",
   "@webPush_distributorTileKeywords": {
@@ -130,7 +130,7 @@
   },
   "webPush_notificationPermissionTitle": "Notification Permission",
   "@webPush_notificationPermissionTitle": {
-    "description": "Title of the setting showing whether WebLibre has the Android permission to show notifications."
+    "description": "Title of the setting showing whether Cat Browser has the Android permission to show notifications."
   },
   "webPush_notificationPermissionKeywords": "notifications, permission",
   "@webPush_notificationPermissionKeywords": {

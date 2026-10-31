@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -42,7 +42,7 @@ const _landingWindow = Duration(milliseconds: 200);
 /// accepted, the fingers lift a moment later, and the velocity tracker turns
 /// that jitter into a fling — a list scrolls, or a tab is swiped away, from
 /// what the user did as a three-finger *tap* (the system screenshot gesture on
-/// many devices). See https://github.com/FaFre/WebLibre/issues/458.
+/// many devices). See https://github.com/FaFre/Cat Browser/issues/458.
 ///
 /// Cancelling the pointers as the third one lands gets in ahead of that: the
 /// recognizers give the pointers up before the summed slop is reached, so the

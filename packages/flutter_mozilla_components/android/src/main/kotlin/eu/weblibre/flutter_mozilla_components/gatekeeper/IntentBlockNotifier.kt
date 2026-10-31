@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  */
 package eu.weblibre.flutter_mozilla_components.gatekeeper
@@ -25,7 +25,7 @@ import eu.weblibre.flutter_mozilla_components.R
 object IntentBlockNotifier {
     private const val CHANNEL_ID = "intent_gatekeeper_channel_v2"
     private const val CHANNEL_NAME = "Blocked app launches"
-    private const val CHANNEL_DESC = "Shown when another app is prevented from opening WebLibre, with options to allow."
+    private const val CHANNEL_DESC = "Shown when another app is prevented from opening Cat Browser, with options to allow."
 
     private const val TIMEOUT_MS = 8_000L
 
@@ -39,10 +39,10 @@ object IntentBlockNotifier {
         val builder = NotificationCompat.Builder(appCtx, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle("Blocked app launch")
-            .setContentText("Prevented $label from opening WebLibre.")
+            .setContentText("Prevented $label from opening Cat Browser.")
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText("Prevented $label from opening WebLibre.")
+                    .bigText("Prevented $label from opening Cat Browser.")
             )
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setSilent(true)

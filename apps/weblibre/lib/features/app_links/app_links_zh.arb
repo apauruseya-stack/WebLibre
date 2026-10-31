@@ -7,7 +7,7 @@
   "appLinks_bannerOpenApp": "打开应用",
   "appLinks_dialogTitleNamed": "在 {appName} 中打开？",
   "appLinks_dialogTitleGeneric": "在其他应用中打开？",
-  "appLinks_dialogBody": "此链接由 WebLibre 以外的应用处理。",
+  "appLinks_dialogBody": "此链接由 Cat Browser 以外的应用处理。",
   "appLinks_dialogRememberFor": "对 {scope} 记住我的选择",
   "appLinks_warningProtectedContext": "此链接在此处受到保护。该应用会建立自己的连接，不受此标签页所遵循的规则约束。",
   "appLinks_warningPrivateTab": "这是隐私标签页。该应用会保留自己的历史记录和登录状态。",

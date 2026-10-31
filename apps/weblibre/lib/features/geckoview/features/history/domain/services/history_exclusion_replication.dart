@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -32,14 +32,14 @@ part 'history_exclusion_replication.g.dart';
 /// Keyed on tabs rather than Gecko contextIds: a container without cookie
 /// isolation shares the default context with every other uncontained tab, so a
 /// contextId cannot tell its sessions apart — the tab always can.
-/// [knownTabIds] is what lets native distinguish "WebLibre says this tab is not
-/// excluded" from "WebLibre hasn't seen this tab yet" (a `window.open` child),
+/// [knownTabIds] is what lets native distinguish "Cat Browser says this tab is not
+/// excluded" from "Cat Browser hasn't seen this tab yet" (a `window.open` child),
 /// where it falls back to inheriting the opener's exclusion.
 class HistoryExclusionSnapshot with FastEquatable {
   /// Tabs whose container has exclude-from-history enabled.
   final List<String> excludedTabIds;
 
-  /// Every tab WebLibre holds a row for, excluded or not.
+  /// Every tab Cat Browser holds a row for, excluded or not.
   final List<String> knownTabIds;
 
   /// Gecko contextual identities of excluded containers. Only cookie-isolated
@@ -49,7 +49,7 @@ class HistoryExclusionSnapshot with FastEquatable {
 
   /// The same projection as a tab → container map, for [VisitContainerRecorder],
   /// which has to resolve a tab the instant a visit is reported. Absent key = a
-  /// tab WebLibre holds no row for; present with a null value = uncontained.
+  /// tab Cat Browser holds no row for; present with a null value = uncontained.
   ///
   /// Carried here rather than in a provider of its own so the underlying join is
   /// watched once. It participates in equality, so a tab moving between two
@@ -147,7 +147,7 @@ Stream<HistoryExclusionSnapshot> watchHistoryExclusionSnapshot(Ref ref) {
   }).distinct();
 }
 
-/// Keeps native's exclude-from-history snapshot in sync with WebLibre's
+/// Keeps native's exclude-from-history snapshot in sync with Cat Browser's
 /// containers and tabs. Activated eagerly at startup (and pushed once more
 /// before engine init) so an excluded container never leaks a restored tab's
 /// visit to Places.

@@ -69,7 +69,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get profileCopy_dataDescription => '标签页、历史记录、书签、设置和已保存的网站登录信息';
 
   @override
-  String get profileCopy_secretDataDescription => 'WebLibre 账户登录信息、同步设置和代理详情';
+  String get profileCopy_secretDataDescription => 'Cat Browser 账户登录信息、同步设置和代理详情';
 
   @override
   String get profileCopy_cannotBeUndone => '此操作无法撤销。';
@@ -78,25 +78,25 @@ class AppLocalizationsZh extends AppLocalizations {
   String get profileCopy_nothingChanged => '未做任何更改。';
 
   @override
-  String get profileCopy_restartsToWork => 'WebLibre 必须重启才能执行此操作。';
+  String get profileCopy_restartsToWork => 'Cat Browser 必须重启才能执行此操作。';
 
   @override
   String get profileCopy_asksPasswordAfterRestart =>
-      '重启后，WebLibre 会要求输入备份文件的密码。';
+      '重启后，Cat Browser 会要求输入备份文件的密码。';
 
   @override
-  String get profileCopy_reopenToContinue => '请关闭 WebLibre 后重新打开。';
+  String get profileCopy_reopenToContinue => '请关闭 Cat Browser 后重新打开。';
 
   @override
-  String get profileCopy_signedInFromBackup => '恢复后的配置文件将使用备份中的 WebLibre 账户。';
+  String get profileCopy_signedInFromBackup => '恢复后的配置文件将使用备份中的 Cat Browser 账户。';
 
   @override
   String get profileCopy_olderBackupKeepsCredentials =>
-      '由旧版 WebLibre 创建的备份不包含这些信息，此时配置文件会保留其现有的登录信息。';
+      '由旧版 Cat Browser 创建的备份不包含这些信息，此时配置文件会保留其现有的登录信息。';
 
   @override
   String profileCopy_restartCouldNotBeScheduled(String nothingChanged) {
-    return 'WebLibre 无法安排此操作所需的重启。$nothingChanged';
+    return 'Cat Browser 无法安排此操作所需的重启。$nothingChanged';
   }
 
   @override
@@ -168,7 +168,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get about_githubTitle => 'GitHub';
 
   @override
-  String get account_screenTitle => 'WebLibre 账户';
+  String get account_screenTitle => 'Cat Browser 账户';
 
   @override
   String get account_searchHint => '搜索账户设置';
@@ -195,7 +195,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get account_sectionEncryptedSync => '加密同步';
 
   @override
-  String get account_signInTitle => '登录 WebLibre 账户';
+  String get account_signInTitle => '登录 Cat Browser 账户';
 
   @override
   String get account_signInKeywords => '登录,账户,账号,身份验证';
@@ -292,12 +292,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String account_adoptBodyUsable(String name) {
-    return 'WebLibre 保留了 $name 的登录信息，它来自各配置文件拥有独立账户之前。它并非来自备份，此设备上也没有任何记录表明它属于哪个配置文件，因此 WebLibre 不会进行猜测。';
+    return 'Cat Browser 保留了 $name 的登录信息，它来自各配置文件拥有独立账户之前。它并非来自备份，此设备上也没有任何记录表明它属于哪个配置文件，因此 Cat Browser 不会进行猜测。';
   }
 
   @override
   String get account_adoptBodyUnusable =>
-      'WebLibre 保留了各配置文件拥有独立账户之前的登录信息，但已保存的数据已损坏，无法用于登录。唯一的办法是重新登录；移除它即可清除此消息。';
+      'Cat Browser 保留了各配置文件拥有独立账户之前的登录信息，但已保存的数据已损坏，无法用于登录。唯一的办法是重新登录；移除它即可清除此消息。';
 
   @override
   String get account_adoptRetryError => '操作未成功。请检查网络连接后重试。';
@@ -337,7 +337,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get account_signingInEllipsis => '正在登录…';
 
   @override
-  String get account_completeSignInInApp => '请在 WebLibre 中完成登录';
+  String get account_completeSignInInApp => '请在 Cat Browser 中完成登录';
 
   @override
   String get account_tooltipSignOut => '退出登录';
@@ -346,7 +346,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get account_signOutConfirmTitle => '退出登录？';
 
   @override
-  String get account_signOutConfirmContent => '确定要退出你的 WebLibre 账户吗？';
+  String get account_signOutConfirmContent => '确定要退出你的 Cat Browser 账户吗？';
 
   @override
   String get account_resetSyncKeyTitle => '重置同步密钥';
@@ -423,14 +423,14 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get account_bannerTitle => '支持 WebLibre';
+  String get account_bannerTitle => '支持 Cat Browser';
 
   @override
   String get account_bannerBody =>
-      '支持者是一项可选订阅，用于资助 WebLibre 的开发，并提供需要托管服务才能运行的功能。浏览器本身及其隐私功能无需订阅。<learnMore>了解详情</learnMore>。';
+      '支持者是一项可选订阅，用于资助 Cat Browser 的开发，并提供需要托管服务才能运行的功能。浏览器本身及其隐私功能无需订阅。<learnMore>了解详情</learnMore>。';
 
   @override
-  String get account_featureSearchLabel => 'WebLibre 搜索';
+  String get account_featureSearchLabel => 'Cat Browser 搜索';
 
   @override
   String get account_featureSearchDescription =>
@@ -441,7 +441,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get account_featureSyncDescription =>
-      '在不同配置文件和设备之间存储和恢复你的 WebLibre 设置与首选项。所有内容在上传前都会在你的设备上加密，只有你能读取。';
+      '在不同配置文件和设备之间存储和恢复你的 Cat Browser 设置与首选项。所有内容在上传前都会在你的设备上加密，只有你能读取。';
 
   @override
   String get account_becomeSupporter => '成为支持者';
@@ -775,7 +775,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String addons_removeConfirmContent(String name) {
-    return '要从 WebLibre 中移除 $name 吗？';
+    return '要从 Cat Browser 中移除 $name 吗？';
   }
 
   @override
@@ -794,7 +794,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get addons_switchEnabledTitle => '已启用';
 
   @override
-  String get addons_switchEnabledSubtitleAllow => '允许此扩展在 WebLibre 中运行。';
+  String get addons_switchEnabledSubtitleAllow => '允许此扩展在 Cat Browser 中运行。';
 
   @override
   String get addons_switchEnabledSubtitleCannot => '无法安全地启用此扩展。';
@@ -827,7 +827,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get addons_menuFilterListsTitle => '过滤规则列表与加固';
 
   @override
-  String get addons_menuFilterListsSubtitle => '管理过滤规则列表并应用 WebLibre 加固';
+  String get addons_menuFilterListsSubtitle => '管理过滤规则列表并应用 Cat Browser 加固';
 
   @override
   String get addons_permissionsTitle => '权限';
@@ -1015,7 +1015,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get addons_statusSoftBlockedDisabled => '此扩展已被软屏蔽，但仍可重新启用。';
 
   @override
-  String get addons_statusUnsupported => '此扩展已安装，但 WebLibre 目前不支持它。';
+  String get addons_statusUnsupported => '此扩展已安装，但 Cat Browser 目前不支持它。';
 
   @override
   String get addons_permissionBookmarks => '读取和修改书签';
@@ -1122,7 +1122,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get appLinks_dialogTitleGeneric => '在其他应用中打开？';
 
   @override
-  String get appLinks_dialogBody => '此链接由 WebLibre 以外的应用处理。';
+  String get appLinks_dialogBody => '此链接由 Cat Browser 以外的应用处理。';
 
   @override
   String appLinks_dialogRememberFor(String scope) {
@@ -1293,7 +1293,7 @@ class AppLocalizationsZh extends AppLocalizations {
       '将空格编码为 + 而非 %20。部分网站要求使用其中一种格式。';
 
   @override
-  String get bangs_tooltipOfficialSearch => 'WebLibre 官方搜索';
+  String get bangs_tooltipOfficialSearch => 'Cat Browser 官方搜索';
 
   @override
   String get bangs_tooltipCustomizeAsOwn => '自定义为你自己的 Bang';
@@ -1737,13 +1737,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get browserActions_moveToBackgroundTitle => '最小化';
 
   @override
-  String get browserActions_moveToBackgroundDescription => '将 WebLibre 转到后台';
+  String get browserActions_moveToBackgroundDescription => '将 Cat Browser 转到后台';
 
   @override
   String get browserActions_quitBrowserTitle => '退出';
 
   @override
-  String get browserActions_quitBrowserDescription => '关闭所有标签页并退出 WebLibre';
+  String get browserActions_quitBrowserDescription => '关闭所有标签页并退出 Cat Browser';
 
   @override
   String get browserActions_categoryCreate => '新建';
@@ -1831,7 +1831,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get browserActions_showAboutTitle => '关于';
 
   @override
-  String get browserActions_showAboutDescription => '关于 WebLibre';
+  String get browserActions_showAboutDescription => '关于 Cat Browser';
 
   @override
   String get browserActions_newContainerTitle => '新建容器';
@@ -5537,7 +5537,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gestures_indexSuggestAfterSubtitle => '显示建议前需要绘制的笔画数';
 
   @override
-  String get intentGatekeeper_dialogTitle => '在 WebLibre 中打开链接？';
+  String get intentGatekeeper_dialogTitle => '在 Cat Browser 中打开链接？';
 
   @override
   String intentGatekeeper_appIsTryingToOpenLink(
@@ -5655,7 +5655,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get onboarding_welcomeBackTitle => '欢迎回来！';
 
   @override
-  String get onboarding_welcomeReadyTitle => 'WebLibre 已准备就绪';
+  String get onboarding_welcomeReadyTitle => 'Cat Browser 已准备就绪';
 
   @override
   String get onboarding_chooseExperience => '选择你的初始设置方式：';
@@ -5716,7 +5716,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get onboarding_aiWarningPoint1 =>
-      'WebLibre 使用本地 AI 模型分析你打开的标签页标题，建议将标签页归入哪些容器以及如何为这些容器命名。所有处理完全在你的设备上进行。';
+      'Cat Browser 使用本地 AI 模型分析你打开的标签页标题，建议将标签页归入哪些容器以及如何为这些容器命名。所有处理完全在你的设备上进行。';
 
   @override
   String get onboarding_aiWarningPoint2 =>
@@ -5757,7 +5757,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get onboarding_permissionsDefaultBrowserSubtitle =>
-      '将 WebLibre 设为默认浏览器';
+      '将 Cat Browser 设为默认浏览器';
 
   @override
   String get onboarding_privacyTitle => '隐私与加固';
@@ -5833,7 +5833,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get onboarding_ublockDescription =>
-      'uBlock Origin（uBO）是由 **Raymond Hill** 开发的一款 CPU 和内存占用都很低的 **广谱内容拦截器**，可作为浏览器扩展在 WebLibre 中使用。\n\n默认情况下，它使用 **EasyList、EasyPrivacy、Peter Lowe\'s Blocklist、Online Malicious URL Blocklist 和 uBO 过滤规则列表** 拦截广告、跟踪器、挖矿脚本、弹出窗口、烦人的反拦截脚本、恶意网站等。\n\n还有许多其他列表可用于拦截更多内容。';
+      'uBlock Origin（uBO）是由 **Raymond Hill** 开发的一款 CPU 和内存占用都很低的 **广谱内容拦截器**，可作为浏览器扩展在 Cat Browser 中使用。\n\n默认情况下，它使用 **EasyList、EasyPrivacy、Peter Lowe\'s Blocklist、Online Malicious URL Blocklist 和 uBO 过滤规则列表** 拦截广告、跟踪器、挖矿脚本、弹出窗口、烦人的反拦截脚本、恶意网站等。\n\n还有许多其他列表可用于拦截更多内容。';
 
   @override
   String get onboarding_ublockInstallTitle => '安装 uBlock Origin 扩展';
@@ -5842,7 +5842,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get onboarding_ublockApplyDefaultsTitle => '应用优化的默认设置';
 
   @override
-  String get onboarding_ublockApplyDefaultsSubtitle => '启用 WebLibre 加固过滤规则列表。';
+  String get onboarding_ublockApplyDefaultsSubtitle => '启用 Cat Browser 加固过滤规则列表。';
 
   @override
   String get proxy_actionChange => '更改';
@@ -5914,7 +5914,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get proxy_autostartLabel => '自启动';
 
   @override
-  String get proxy_autostartTooltip => '随 WebLibre 启动';
+  String get proxy_autostartTooltip => '随 Cat Browser 启动';
 
   @override
   String proxy_egressIpTooltip(String ip) {
@@ -6055,7 +6055,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String proxy_wireGuardTrademarkDisclaimer(String brand) {
-    return '$brand 是 Jason A. Donenfeld 的注册商标，保留所有权利。WebLibre 未获得 Jason A. Donenfeld 的认可或赞助，也与其无任何关联。';
+    return '$brand 是 Jason A. Donenfeld 的注册商标，保留所有权利。Cat Browser 未获得 Jason A. Donenfeld 的认可或赞助，也与其无任何关联。';
   }
 
   @override
@@ -6080,7 +6080,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get proxy_startAutomaticallySubtitle =>
-      'WebLibre 启动时连接此配置，使用它的标签页无需提示即可就绪';
+      'Cat Browser 启动时连接此配置，使用它的标签页无需提示即可就绪';
 
   @override
   String proxy_dnsOverrideExplanation(String brand) {
@@ -6292,7 +6292,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get proxy_importNoImportableProxy =>
-      '此 sing-box 配置中没有 WebLibre 可导入的代理。';
+      '此 sing-box 配置中没有 Cat Browser 可导入的代理。';
 
   @override
   String get proxy_importMissingType => '该 sing-box 出站缺少“type”。';
@@ -6304,12 +6304,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String proxy_importDetourThroughOtherOutbound(String tag) {
-    return '此代理通过其配置中的另一个出站“$tag”进行连接。WebLibre 无法串联代理，而直接连接会向该服务器暴露你的 IP 地址。';
+    return '此代理通过其配置中的另一个出站“$tag”进行连接。Cat Browser 无法串联代理，而直接连接会向该服务器暴露你的 IP 地址。';
   }
 
   @override
   String proxy_importUnresolvedDetour(String tag) {
-    return '此代理通过“$tag”进行连接，而它定义在配置的其他位置。请导入完整配置，以便 WebLibre 检查“$tag”的作用。';
+    return '此代理通过“$tag”进行连接，而它定义在配置的其他位置。请导入完整配置，以便 Cat Browser 检查“$tag”的作用。';
   }
 
   @override
@@ -7101,10 +7101,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_mlDownloadsClearDialogContent =>
-      '这将清除此配置文件已下载的 AI 模型和 ONNX 运行时文件，需要时会重新下载。重试机器学习功能前请重启 WebLibre。';
+      '这将清除此配置文件已下载的 AI 模型和 ONNX 运行时文件，需要时会重新下载。重试机器学习功能前请重启 Cat Browser。';
 
   @override
-  String get settings_mlDownloadsClearedMessage => '机器学习下载已清除。重试前请重启 WebLibre。';
+  String get settings_mlDownloadsClearedMessage => '机器学习下载已清除。重试前请重启 Cat Browser。';
 
   @override
   String settings_mlDownloadsClearFailedMessage(String error) {
@@ -7239,7 +7239,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_externalLinkHandlingKeywords => 'intent,外部链接';
 
   @override
-  String get settings_externalLinkHandlingSubtitle => '选择外部链接在 WebLibre 中的打开方式';
+  String get settings_externalLinkHandlingSubtitle => '选择外部链接在 Cat Browser 中的打开方式';
 
   @override
   String get settings_promptOptionLabel => '询问';
@@ -8023,10 +8023,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_defaultBrowserTileKeywords => '系统浏览器';
 
   @override
-  String get settings_defaultBrowserTileSubtitleSet => 'WebLibre 是你的默认浏览器';
+  String get settings_defaultBrowserTileSubtitleSet => 'Cat Browser 是你的默认浏览器';
 
   @override
-  String get settings_defaultBrowserTileSubtitleNotSet => '将 WebLibre 设为默认浏览器';
+  String get settings_defaultBrowserTileSubtitleNotSet => '将 Cat Browser 设为默认浏览器';
 
   @override
   String get settings_defaultBrowserButtonDefault => '默认';
@@ -8130,7 +8130,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_appLanguageTranslationsNote =>
-      '翻译刚刚推出，可能不完整或不准确，因此在你选择其他语言之前，WebLibre 将使用英语。选择“系统默认”即可跟随设备语言。';
+      '翻译刚刚推出，可能不完整或不准确，因此在你选择其他语言之前，Cat Browser 将使用英语。选择“系统默认”即可跟随设备语言。';
 
   @override
   String get settings_refreshRateTitle => '刷新率';
@@ -8224,7 +8224,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_defaultBrowserSectionKeywords => '浏览器默认设置';
 
   @override
-  String get settings_indexDefaultBrowserSubtitle => '将 WebLibre 设为默认浏览器';
+  String get settings_indexDefaultBrowserSubtitle => '将 Cat Browser 设为默认浏览器';
 
   @override
   String get settings_appearanceSectionTitle => '外观';
@@ -8239,7 +8239,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_indexAppLanguageKeywords => '语言,翻译,界面语言,locale';
 
   @override
-  String get settings_indexAppLanguageSubtitle => '选择 WebLibre 自身界面使用的语言';
+  String get settings_indexAppLanguageSubtitle => '选择 Cat Browser 自身界面使用的语言';
 
   @override
   String get settings_indexRefreshRateSubtitle => '请求高或低的屏幕刷新率（Android）';
@@ -8626,18 +8626,18 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_autoDeleteBrowsingDataSubtitle =>
-      '在退出时或每次启动 WebLibre 时删除所选的浏览数据';
+      '在退出时或每次启动 Cat Browser 时删除所选的浏览数据';
 
   @override
   String get settings_autoDeleteBrowsingDataQuitOnlySubtitle =>
-      '在退出 WebLibre 时删除所选的浏览数据';
+      '在退出 Cat Browser 时删除所选的浏览数据';
 
   @override
   String get settings_autoDeleteOnStartTitle => '启动时也删除';
 
   @override
   String get settings_autoDeleteOnStartSubtitle =>
-      '适用于未通过“退出”结束的会话，例如 WebLibre 被划掉或被 Android 在后台关闭。关闭此项后，这类会话的数据会保留到下次退出。';
+      '适用于未通过“退出”结束的会话，例如 Cat Browser 被划掉或被 Android 在后台关闭。关闭此项后，这类会话的数据会保留到下次退出。';
 
   @override
   String get settings_confirmBeforeQuitTitle => '退出前确认';
@@ -8648,7 +8648,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_confirmBeforeQuitSubtitle =>
-      '在“退出”关闭 WebLibre 前询问。长按“退出”可跳过询问。';
+      '在“退出”关闭 Cat Browser 前询问。长按“退出”可跳过询问。';
 
   @override
   String get settings_trackingProtectionExceptionsSearchHint => '搜索例外网址';
@@ -8854,7 +8854,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_uBlockFilterListsTileSubtitle =>
-      '管理过滤规则列表并应用 WebLibre 加固';
+      '管理过滤规则列表并应用 Cat Browser 加固';
 
   @override
   String get settings_cookieBannersTitle => 'Cookie banners';
@@ -8965,7 +8965,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_blockAppsOpeningBrowserSubtitle =>
-      '打开其他应用发送给 WebLibre 的链接前先询问。';
+      '打开其他应用发送给 Cat Browser 的链接前先询问。';
 
   @override
   String get settings_managedAppsSectionHeader => '已管理的应用';
@@ -9094,7 +9094,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_transferImportNothingApplicable =>
-      '此导出中没有此版本 WebLibre 可以应用的内容。';
+      '此导出中没有此版本 Cat Browser 可以应用的内容。';
 
   @override
   String get settings_transferImportedSuccess => '设置已导入';
@@ -9138,14 +9138,14 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_importErrorNotJson => '这不是 JSON 文件。';
 
   @override
-  String get settings_importErrorNotSettingsExport => '这不是 WebLibre 设置导出文件。';
+  String get settings_importErrorNotSettingsExport => '这不是 Cat Browser 设置导出文件。';
 
   @override
   String get settings_importErrorMissingFormatVersion => '导出文件未注明其格式版本。';
 
   @override
   String settings_importErrorNewerFormatVersion(int version, int supported) {
-    return '此导出文件由较新版本的 WebLibre 生成（格式 $version，此版本最高只能读取 $supported）。请更新应用后重试。';
+    return '此导出文件由较新版本的 Cat Browser 生成（格式 $version，此版本最高只能读取 $supported）。请更新应用后重试。';
   }
 
   @override
@@ -9163,12 +9163,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String settings_importErrorUnreadablePrefsLine(String section, String line) {
-    return '“$section”部分中有一行 WebLibre 无法读取：“$line”。导入它会重置首选项，而不是恢复它们。';
+    return '“$section”部分中有一行 Cat Browser 无法读取：“$line”。导入它会重置首选项，而不是恢复它们。';
   }
 
   @override
   String settings_importErrorNotPrefsSnapshot(String section) {
-    return '“$section”部分不是 WebLibre 首选项快照。';
+    return '“$section”部分不是 Cat Browser 首选项快照。';
   }
 
   @override
@@ -9178,7 +9178,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String settings_importErrorUnreadablePref(String section, String pref) {
-    return '“$section”部分包含一项 WebLibre 无法回读的首选项：“$pref”。';
+    return '“$section”部分包含一项 Cat Browser 无法回读的首选项：“$pref”。';
   }
 
   @override
@@ -9187,7 +9187,7 @@ class AppLocalizationsZh extends AppLocalizations {
     int version,
     int supported,
   ) {
-    return '“$section”部分由较新版本的 WebLibre 生成（架构 $version，此版本最高只能读取 $supported）。请更新应用后重试。';
+    return '“$section”部分由较新版本的 Cat Browser 生成（架构 $version，此版本最高只能读取 $supported）。请更新应用后重试。';
   }
 
   @override
@@ -9612,7 +9612,7 @@ class AppLocalizationsZh extends AppLocalizations {
       '这将把 uBlock Origin 恢复为默认的过滤规则列表配置，并移除你添加的所有外部列表。';
 
   @override
-  String get settings_ublockApplyHardeningsDialogTitle => '应用 WebLibre 加固？';
+  String get settings_ublockApplyHardeningsDialogTitle => '应用 Cat Browser 加固？';
 
   @override
   String get settings_ublockApplyHardeningsDialogMessage =>
@@ -9635,17 +9635,17 @@ class AppLocalizationsZh extends AppLocalizations {
       '恢复 uBlock Origin 的默认过滤规则列表配置。';
 
   @override
-  String get settings_ublockQuickApplyHardeningsTitle => '应用 WebLibre 加固';
+  String get settings_ublockQuickApplyHardeningsTitle => '应用 Cat Browser 加固';
 
   @override
   String get settings_ublockQuickApplyHardeningsSubtitle => '启用一组精选的额外过滤规则列表。';
 
   @override
-  String get settings_ublockManageTitle => '由 WebLibre 管理';
+  String get settings_ublockManageTitle => '由 Cat Browser 管理';
 
   @override
   String get settings_ublockManageSubtitle =>
-      'WebLibre 会在下次浏览器启动时控制 uBlock Origin 启用的过滤规则列表。';
+      'Cat Browser 会在下次浏览器启动时控制 uBlock Origin 启用的过滤规则列表。';
 
   @override
   String get settings_ublockManageHint => '启用管理后将以 uBO 的常用基础列表为起点，并保留“我的过滤规则”。';
@@ -9667,7 +9667,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_ublockExternalListsHint =>
-      '原始网址会作为外部列表转发给 uBlock Origin。描述仅在 WebLibre 中显示。';
+      '原始网址会作为外部列表转发给 uBlock Origin。描述仅在 Cat Browser 中显示。';
 
   @override
   String get settings_ublockNoExternalLists => '未配置外部列表。';
@@ -9832,7 +9832,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_categoryExtensionsSubtitle => '安装和管理扩展来源';
 
   @override
-  String get settings_categoryAccountTitle => 'WebLibre 账户';
+  String get settings_categoryAccountTitle => 'Cat Browser 账户';
 
   @override
   String get settings_categoryAccountKeywords => '账户,账号,订阅';
@@ -9930,7 +9930,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settings_indexAppOpeningProtectionSubtitle =>
-      '控制哪些应用可以直接启动 WebLibre';
+      '控制哪些应用可以直接启动 Cat Browser';
 
   @override
   String get settings_privacySectionDataManagementTitle => '数据管理';
@@ -10366,7 +10366,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_previewPageContent => '页面内容';
 
   @override
-  String get settings_previewPageTitle => 'WebLibre 预览';
+  String get settings_previewPageTitle => 'Cat Browser 预览';
 
   @override
   String get settings_previewTabNews => '新闻';
@@ -10416,7 +10416,7 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '此文件中有 $count 个部分（$sections）无法被此版本的 WebLibre 读取，将被跳过。',
+      other: '此文件中有 $count 个部分（$sections）无法被此版本的 Cat Browser 读取，将被跳过。',
     );
     return '$_temp0';
   }
@@ -11026,12 +11026,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String tor_startAutomaticallySectionSubtitle(String brand) {
-    return 'WebLibre 启动时连接 $brand 服务';
+    return 'Cat Browser 启动时连接 $brand 服务';
   }
 
   @override
   String tor_startAutomaticallySubtitle(String brand) {
-    return 'WebLibre 启动时连接 $brand 服务，使用它的标签页无需提示即可就绪';
+    return 'Cat Browser 启动时连接 $brand 服务，使用它的标签页无需提示即可就绪';
   }
 
   @override
@@ -11134,7 +11134,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String tor_trademarkDisclaimer(String brand) {
-    return '$brand 是 The Tor Project 的商标，保留所有权利。WebLibre 未获得 Tor Project 的认可或赞助，也与其无任何关联。';
+    return '$brand 是 The Tor Project 的商标，保留所有权利。Cat Browser 未获得 Tor Project 的认可或赞助，也与其无任何关联。';
   }
 
   @override
@@ -11181,7 +11181,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_restartingToTakeBackup => '正在重启以创建备份';
 
   @override
-  String get user_backupRestartsTitle => 'WebLibre 会重启来执行此操作';
+  String get user_backupRestartsTitle => 'Cat Browser 会重启来执行此操作';
 
   @override
   String user_backupRestartsSubtitle(String restartClosesCurrentProfile) {
@@ -11192,7 +11192,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_setPasswordNextTitle => '接下来设置密码';
 
   @override
-  String get user_setPasswordNextSubtitle => '重启后，WebLibre 会要求输入备份文件的密码。';
+  String get user_setPasswordNextSubtitle => '重启后，Cat Browser 会要求输入备份文件的密码。';
 
   @override
   String get user_verifyBackupIntegrityTitle => '验证备份完整性';
@@ -11205,11 +11205,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String user_tempDataSkippedSubtitle(String shortcutsNeedPinningAgain) {
-    return '不会保存缓存文件及其他 WebLibre 可以重建的数据。$shortcutsNeedPinningAgain';
+    return '不会保存缓存文件及其他 Cat Browser 可以重建的数据。$shortcutsNeedPinningAgain';
   }
 
   @override
-  String get user_accountDataIncludedTitle => '包含 WebLibre 账户数据';
+  String get user_accountDataIncludedTitle => '包含 Cat Browser 账户数据';
 
   @override
   String user_accountDataIncludedSubtitle(String profileSecretDataDescription) {
@@ -11217,7 +11217,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get user_closingToTakeBackup => '正在关闭 WebLibre 以创建备份…';
+  String get user_closingToTakeBackup => '正在关闭 Cat Browser 以创建备份…';
 
   @override
   String get user_actionBackup => '备份';
@@ -11289,7 +11289,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_lockMethodNoneTitle => '不锁定';
 
   @override
-  String get user_lockMethodNoneSubtitle => '在此设备上使用 WebLibre 的任何人都能打开此配置文件';
+  String get user_lockMethodNoneSubtitle => '在此设备上使用 Cat Browser 的任何人都能打开此配置文件';
 
   @override
   String get user_lockMethodDeviceTitle => '设备锁';
@@ -11312,7 +11312,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get user_profilePasswordUnrecoverableSubtitle =>
-      '没有密码，就无法打开、备份或删除此配置文件。此密码只锁定 WebLibre，不会加密配置文件的数据。';
+      '没有密码，就无法打开、备份或删除此配置文件。此密码只锁定 Cat Browser，不会加密配置文件的数据。';
 
   @override
   String get user_setProfilePasswordTitle => '设置配置文件密码';
@@ -11334,7 +11334,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_profilePasswordCheckFailed => '无法检查密码。请重试。';
 
   @override
-  String get user_profilePasswordInterrupted => '检查期间离开了 WebLibre。请重新输入密码。';
+  String get user_profilePasswordInterrupted => '检查期间离开了 Cat Browser。请重新输入密码。';
 
   @override
   String get user_profilePasswordSaveFailed => '无法设置密码。请重试。';
@@ -11405,7 +11405,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_lockInBackgroundTitle => '进入后台时锁定';
 
   @override
-  String get user_lockInBackgroundSubtitle => 'WebLibre 离开屏幕后立即锁定';
+  String get user_lockInBackgroundSubtitle => 'Cat Browser 离开屏幕后立即锁定';
 
   @override
   String get user_lockAfterTimeoutTitle => '超时后锁定';
@@ -11417,7 +11417,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_lockOnStartupTitle => '仅在启动时锁定';
 
   @override
-  String get user_lockOnStartupSubtitle => '启动时解锁一次，之后保持解锁状态，直到 WebLibre 完全关闭';
+  String get user_lockOnStartupSubtitle => '启动时解锁一次，之后保持解锁状态，直到 Cat Browser 完全关闭';
 
   @override
   String get user_timeoutFieldTitle => '超时时间';
@@ -11482,7 +11482,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_replaceExistingProfileSubtitle => '重启并用此备份覆盖一个配置文件';
 
   @override
-  String get user_newProfileNoSignInTitle => '新配置文件不包含 WebLibre 登录信息';
+  String get user_newProfileNoSignInTitle => '新配置文件不包含 Cat Browser 登录信息';
 
   @override
   String get user_newProfileNoSignInSubtitle =>
@@ -11549,7 +11549,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get user_accountDataRestoredTitle => 'WebLibre 账户数据将被恢复';
+  String get user_accountDataRestoredTitle => 'Cat Browser 账户数据将被恢复';
 
   @override
   String user_accountDataRestoredSubtitle(
@@ -11587,7 +11587,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_restoringBackupProgress => '正在恢复备份…';
 
   @override
-  String get user_closingToRestoreProgress => '正在关闭 WebLibre 以进行恢复…';
+  String get user_closingToRestoreProgress => '正在关闭 Cat Browser 以进行恢复…';
 
   @override
   String get user_actionRestore => '恢复';
@@ -11599,7 +11599,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String user_switchClosesReopensAs(String profileName) {
-    return 'WebLibre 将关闭，并以“$profileName”重新打开。';
+    return 'Cat Browser 将关闭，并以“$profileName”重新打开。';
   }
 
   @override
@@ -11658,7 +11658,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get user_quitBrowserDontAskAgainSavesQuitAndStart =>
-      '上方勾选的数据将在每次退出时以及每次启动 WebLibre 时删除。你可以在设置中更改这两项。';
+      '上方勾选的数据将在每次退出时以及每次启动 Cat Browser 时删除。你可以在设置中更改这两项。';
 
   @override
   String get user_quitBrowserDeleteDataTitle => '删除浏览数据';
@@ -12485,14 +12485,14 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_haltMaintenanceBody =>
-      '之前运行时的备份、恢复或删除操作未完成。WebLibre 必须先完成它，才能打开任何配置文件。';
+      '之前运行时的备份、恢复或删除操作未完成。Cat Browser 必须先完成它，才能打开任何配置文件。';
 
   @override
   String get startup_haltUnavailableTitle => '启动尚未就绪';
 
   @override
   String startup_haltUnavailableBody(String reopenToContinue) {
-    return 'WebLibre 需要重启后才能选择配置文件。$reopenToContinue';
+    return 'Cat Browser 需要重启后才能选择配置文件。$reopenToContinue';
   }
 
   @override
@@ -12500,21 +12500,21 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_haltProfileAccessBusyBody =>
-      '另一个 WebLibre 任务仍在使用此配置文件。请稍后重试。';
+      '另一个 Cat Browser 任务仍在使用此配置文件。请稍后重试。';
 
   @override
   String get startup_haltNoProfileTitle => '没有可用的配置文件';
 
   @override
   String get startup_haltNoProfileBody =>
-      'WebLibre 无法读取现有配置文件，也无法创建新的配置文件。存储空间可能已满或不可用。';
+      'Cat Browser 无法读取现有配置文件，也无法创建新的配置文件。存储空间可能已满或不可用。';
 
   @override
   String get startup_haltArbitrationFailedTitle => '无法确定要打开哪个配置文件';
 
   @override
   String startup_haltArbitrationFailedBody(String reopenToContinue) {
-    return 'WebLibre 不会猜测要使用哪个配置文件。$reopenToContinue';
+    return 'Cat Browser 不会猜测要使用哪个配置文件。$reopenToContinue';
   }
 
   @override
@@ -12524,7 +12524,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get startup_tryingAgain => '正在重试…';
 
   @override
-  String get startup_closeWebLibre => '关闭 WebLibre';
+  String get startup_closeWebLibre => '关闭 Cat Browser';
 
   @override
   String get startup_technicalDetails => '技术详情';
@@ -12537,7 +12537,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceNotRunnableUnsupported =>
-      '此任务由较新版本的 WebLibre 创建，无法在此运行。';
+      '此任务由较新版本的 Cat Browser 创建，无法在此运行。';
 
   @override
   String get startup_maintenanceNotRunnableNoDestination => '此备份没有记录目标文件夹。';
@@ -12547,11 +12547,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceNotRunnableRestoreHere =>
-      'WebLibre 无法在此启动界面中执行恢复。';
+      'Cat Browser 无法在此启动界面中执行恢复。';
 
   @override
   String get startup_maintenanceNotRunnableDeleteHere =>
-      'WebLibre 无法在此启动界面中删除配置文件。';
+      'Cat Browser 无法在此启动界面中删除配置文件。';
 
   @override
   String get startup_maintenanceRecoveredRestore => '已完成一次中断的恢复。';
@@ -12575,7 +12575,7 @@ class AppLocalizationsZh extends AppLocalizations {
     String nothingChanged,
     String reopenToContinue,
   ) {
-    return 'WebLibre 已无法安全地处理此配置文件。$nothingChanged$reopenToContinue';
+    return 'Cat Browser 已无法安全地处理此配置文件。$nothingChanged$reopenToContinue';
   }
 
   @override
@@ -12588,7 +12588,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceEvidenceDiscardedKept =>
-      '已舍弃中断记录。WebLibre 无法确定已保存的数据属于哪个配置文件，因此将其保留在设备上，而不是删除。';
+      '已舍弃中断记录。Cat Browser 无法确定已保存的数据属于哪个配置文件，因此将其保留在设备上，而不是删除。';
 
   @override
   String startup_maintenanceWrongPassword(String nothingChanged) {
@@ -12607,7 +12607,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String startup_maintenanceUnsupportedArchiveVersion(String nothingChanged) {
-    return '此备份文件由较新版本的 WebLibre 创建，无法在此读取。$nothingChanged';
+    return '此备份文件由较新版本的 Cat Browser 创建，无法在此读取。$nothingChanged';
   }
 
   @override
@@ -12668,14 +12668,14 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceMustFinish =>
-      '此任务必须完成后才能打开任何配置文件。在任务进行期间，WebLibre 会保持配置文件关闭。';
+      '此任务必须完成后才能打开任何配置文件。在任务进行期间，Cat Browser 会保持配置文件关闭。';
 
   @override
   String get startup_maintenanceNothingLeft => '没有需要完成的操作了。';
 
   @override
   String get startup_maintenanceCannotReadRecord =>
-      'WebLibre 发现了中断的配置文件操作，但无法读取其记录。';
+      'Cat Browser 发现了中断的配置文件操作，但无法读取其记录。';
 
   @override
   String get startup_maintenancePasswordLabel => '备份文件密码';
@@ -12708,14 +12708,14 @@ class AppLocalizationsZh extends AppLocalizations {
   String get startup_maintenanceDiscardAndContinueNoTasks => '舍弃记录并继续';
 
   @override
-  String get startup_maintenanceOpenWebLibreRetry => '打开 WebLibre';
+  String get startup_maintenanceOpenWebLibreRetry => '打开 Cat Browser';
 
   @override
-  String get startup_maintenanceOpenWebLibre => '打开 WebLibre';
+  String get startup_maintenanceOpenWebLibre => '打开 Cat Browser';
 
   @override
   String get startup_maintenanceTakesSeveralMinutes =>
-      '这可能需要几分钟。请保持 WebLibre 打开。';
+      '这可能需要几分钟。请保持 Cat Browser 打开。';
 
   @override
   String get startup_maintenanceThenAfterThisOne => '接下来';
@@ -12733,14 +12733,14 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceInterruptedUnreadable =>
-      '此操作在开始后被中断，且 WebLibre 无法读取它当时正在执行的内容。在处理该记录之前，无法再次运行。';
+      '此操作在开始后被中断，且 Cat Browser 无法读取它当时正在执行的内容。在处理该记录之前，无法再次运行。';
 
   @override
   String get startup_maintenanceDiscardDialogTitle => '舍弃中断记录？';
 
   @override
   String get startup_maintenanceDiscardDialogContent =>
-      'WebLibre 无法读取备份、恢复或删除操作停止时正在执行的内容。舍弃该记录后浏览器即可再次打开，但之后可能需要检查被替换的配置文件。\n\n如果配置文件缺失，WebLibre 会恢复替换前保存的数据。如果配置文件存在，WebLibre 会删除这些已保存的数据。如果 WebLibre 无法确定已保存的数据属于哪个配置文件，则会保留数据而不是删除。';
+      'Cat Browser 无法读取备份、恢复或删除操作停止时正在执行的内容。舍弃该记录后浏览器即可再次打开，但之后可能需要检查被替换的配置文件。\n\n如果配置文件缺失，Cat Browser 会恢复替换前保存的数据。如果配置文件存在，Cat Browser 会删除这些已保存的数据。如果 Cat Browser 无法确定已保存的数据属于哪个配置文件，则会保留数据而不是删除。';
 
   @override
   String get startup_maintenanceDiscardIt => '舍弃';
@@ -12864,7 +12864,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceRestoreCloneConsequence =>
-      '此恢复由较新版本的 WebLibre 创建，无法在此运行。';
+      '此恢复由较新版本的 Cat Browser 创建，无法在此运行。';
 
   @override
   String startup_maintenanceRestoreCloneActivity(String profileName) {
@@ -12892,7 +12892,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get startup_maintenanceUnknownConsequence =>
-      '此任务由较新版本的 WebLibre 创建，无法运行。';
+      '此任务由较新版本的 Cat Browser 创建，无法运行。';
 
   @override
   String get startup_maintenanceUnknownActivity => '正在处理…';

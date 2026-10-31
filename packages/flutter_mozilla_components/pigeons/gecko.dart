@@ -1619,7 +1619,7 @@ abstract class GeckoEngineSettingsApi {
   void setGlobalDesktopMode(bool enable, bool applyToExistingTabs);
 
   /// Sets whether the reader view dark color scheme should be rendered as pure
-  /// black (AMOLED). Mirrors WebLibre's "pure black" theme setting into
+  /// black (AMOLED). Mirrors Cat Browser's "pure black" theme setting into
   /// Mozilla's reader view extension. Persisted in SharedPreferences so a
   /// cold-started reader view resolves the right value before Flutter runs.
   void setReaderViewPureBlack(bool enabled);
@@ -1630,7 +1630,7 @@ abstract class GeckoEngineSettingsApi {
   /// made per tab rather than guessed from the visited URL.
   ///
   /// [excludedTabIds] are the tabs whose container has exclude-from-history on.
-  /// [knownTabIds] is every tab WebLibre has a row for: a tab outside this set is
+  /// [knownTabIds] is every tab Cat Browser has a row for: a tab outside this set is
   /// one Dart hasn't seen yet (e.g. a `window.open` child), for which native
   /// falls back to inheriting the opener's exclusion. [excludedContextIds] are
   /// the Gecko contextual identities of excluded containers, used as a
@@ -1771,7 +1771,7 @@ abstract class GeckoRecentlyClosedTabsApi {
   void removeAllRecentlyClosedTabs();
 
   /// Keeps the tabs [ids] off the list when they are removed next, for tabs
-  /// WebLibre closes itself rather than the user. Call it before the removal.
+  /// Cat Browser closes itself rather than the user. Call it before the removal.
   void keepOffRecentlyClosed(List<String> ids);
 }
 
@@ -2605,16 +2605,16 @@ enum ClearDataType {
 }
 
 /// Native -> Dart history visit notifications. Fired from the tab-scoped history
-/// delegate on each recorded Mozilla Places visit so WebLibre can persist the one
+/// delegate on each recorded Mozilla Places visit so Cat Browser can persist the one
 /// thing Places can't store: which container the visit belonged to. The visit
 /// itself (title, visit type, exact time) stays owned by Places.
 @FlutterApi()
 abstract class GeckoHistoryEvents {
   /// [tabId] is the session that produced the visit — the engine session's own
   /// history delegate reports it, so it is exact rather than inferred. Dart maps
-  /// the tab to its WebLibre container and writes the visit→container relation,
+  /// the tab to its Cat Browser container and writes the visit→container relation,
   /// keyed on ([url], [visitTime]) to join back to the Places visit. A tab
-  /// WebLibre has no row for (custom tab, not yet synced) simply stays untagged.
+  /// Cat Browser has no row for (custom tab, not yet synced) simply stays untagged.
   @asyncCallback
   void onVisitRecorded(String url, int visitTime, String tabId);
 }
@@ -3624,7 +3624,7 @@ class AppLinkResolutionResult {
 
 /// API for detecting and launching external applications that can handle URLs.
 ///
-/// WebLibre-owned resolution/launch surface (replaces the Mozilla AC use-case
+/// Cat Browser-owned resolution/launch surface (replaces the Mozilla AC use-case
 /// wrappers). Policy lives in Dart; this surface owns PackageManager resolution
 /// and Intent launch.
 @HostApi()
@@ -4017,7 +4017,7 @@ abstract class GeckoGestureEvents {
   /// dragging one produces an ordinary touch stream that the toolbar auto-hide
   /// accumulator would otherwise read as a swipe. Consumers latch this flag on
   /// pointer-down and ignore the stream for its duration. See
-  /// https://github.com/FaFre/WebLibre/issues/578.
+  /// https://github.com/FaFre/Cat Browser/issues/578.
   ///
   /// [sequence] Event sequence number for ordering.
   /// [active] Whether a text selection is currently on screen.

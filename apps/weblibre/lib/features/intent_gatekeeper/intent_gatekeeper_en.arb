@@ -1,13 +1,13 @@
 {
   "@@locale": "en",
 
-  "intentGatekeeper_dialogTitle": "Open link in WebLibre?",
+  "intentGatekeeper_dialogTitle": "Open link in Cat Browser?",
   "@intentGatekeeper_dialogTitle": {
-    "description": "Title of the dialog shown when another app asks WebLibre to open a link, letting the user allow or block that app."
+    "description": "Title of the dialog shown when another app asks Cat Browser to open a link, letting the user allow or block that app."
   },
   "intentGatekeeper_appIsTryingToOpenLink": "{appName} is trying to open a link in {browserName}.",
   "@intentGatekeeper_appIsTryingToOpenLink": {
-    "description": "Body of the dialog shown when another app asks WebLibre to open a link. appName is the requesting app; browserName is the app name, WebLibre. Both placeholders are rendered in bold.",
+    "description": "Body of the dialog shown when another app asks Cat Browser to open a link. appName is the requesting app; browserName is the app name, Cat Browser. Both placeholders are rendered in bold.",
     "placeholders": {
       "appName": { "type": "String" },
       "browserName": { "type": "String" }

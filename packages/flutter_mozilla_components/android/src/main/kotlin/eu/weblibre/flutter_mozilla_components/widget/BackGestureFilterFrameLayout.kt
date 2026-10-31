@@ -74,7 +74,7 @@ class BackGestureFilterFrameLayout(
      * selection action mode down *during* a handle drag, so
      * [TextSelectionTracker.isActive] goes false a few frames in. Touch-down is
      * the only moment it reliably reports the truth. See
-     * https://github.com/FaFre/WebLibre/issues/578.
+     * https://github.com/FaFre/Cat Browser/issues/578.
      */
     private var gestureSuppressedBySelection = false
 

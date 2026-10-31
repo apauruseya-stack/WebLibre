@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@ import 'package:weblibre/features/user/data/models/general_settings.dart';
 /// Where in the app a [BuiltInGesture] is made.
 enum BuiltInGestureSurface { tabBar, tabView }
 
-/// The swipes WebLibre recognizes outside web content, each bound to a
+/// The swipes Cat Browser recognizes outside web content, each bound to a
 /// [BrowserAction] the user can change or switch off (issue #626).
 ///
 /// Persisted by [name] in `GestureSettings.builtInOverrides`: renaming a value

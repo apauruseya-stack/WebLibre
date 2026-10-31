@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -78,7 +78,7 @@ class IntentGatekeeperDialog extends HookConsumerWidget {
                   ),
                   spans: [
                     TextSpan(text: displayName, style: bold),
-                    TextSpan(text: 'WebLibre', style: bold),
+                    TextSpan(text: 'Cat Browser', style: bold),
                   ],
                 ),
               ),

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -382,7 +382,7 @@ class StartupHaltScreen extends StatelessWidget {
 
               // The screen used to state the situation and stop there, including
               // where it said "try again in a moment" with nothing to press and
-              // "close and reopen WebLibre" to a user holding an app that offers
+              // "close and reopen Cat Browser" to a user holding an app that offers
               // no way to close itself.
               if (_retryable && onRetry != null)
                 FilledButton.icon(

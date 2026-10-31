@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
  */
 /// Parses Firefox-compatible `user.js` text into a map of pref name to value.
 ///
-/// Accepts the Firefox `user.js` subset used by WebLibre:
+/// Accepts the Firefox `user.js` subset used by Cat Browser:
 /// - blank lines and whitespace
 /// - `//`, `#`, and `/* ... */` comments
 /// - `user_pref("name", value);`

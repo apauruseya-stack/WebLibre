@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:weblibre/l10n/generated/app_localizations.dart';
 
-/// Marks a connection that comes up on its own when WebLibre starts.
+/// Marks a connection that comes up on its own when Cat Browser starts.
 class AutostartChip extends StatelessWidget {
   const AutostartChip({super.key});
 

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -111,7 +111,7 @@ const _deadProxyPrefs = <String, Object>{
 /// Written rather than reset, because Gecko's own defaults are not what this
 /// profile wants: `network.proxy.type` defaults to 5 (inherit Android's system
 /// proxy), and leaving DNS resolution local would undo the hardening the
-/// armed state relies on. Setting them keeps WebLibre in charge of proxying in
+/// armed state relies on. Setting them keeps Cat Browser in charge of proxying in
 /// both states instead of handing it back to the system on the way down.
 const _directProxyPrefs = <String, Object>{
   ..._proxyBypassProtection,

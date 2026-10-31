@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -113,7 +113,7 @@ void main() {
           isA<SettingsExportFormatException>().having(
             (error) => error.message,
             'message',
-            contains('not a WebLibre settings export'),
+            contains('not a Cat Browser settings export'),
           ),
         ),
       );
@@ -922,8 +922,8 @@ void main() {
   });
 }
 
-/// The two comment lines every WebLibre prefs snapshot opens with, and the only
+/// The two comment lines every Cat Browser prefs snapshot opens with, and the only
 /// thing separating one from a file that is not a snapshot at all.
 const _snapshotHeader =
-    '// WebLibre Gecko prefs snapshot\n'
+    '// Cat Browser Gecko prefs snapshot\n'
     '// schema_version=1\n';

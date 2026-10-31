@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,12 +24,12 @@ import 'package:weblibre/utils/input_classification.dart';
 void main() {
   group('classifyAddressBarInput', () {
     test('searches free text containing whitespace', () {
-      final result = classifyAddressBarInput('WebLibre README.md');
+      final result = classifyAddressBarInput('Cat Browser README.md');
 
       expect(result, isA<SearchInputClassification>());
       final search = result as SearchInputClassification;
       expect(search.reason, SearchReason.containsWhitespace);
-      expect(search.query, 'WebLibre README.md');
+      expect(search.query, 'Cat Browser README.md');
     });
 
     test('navigates schemeless domain', () {
@@ -277,7 +277,7 @@ void main() {
     });
 
     test('treats plain sentence as non-url', () {
-      final uri = parseSharedIntentUrl('This is WebLibre README.md');
+      final uri = parseSharedIntentUrl('This is Cat Browser README.md');
 
       expect(uri, isNull);
     });

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -43,7 +43,7 @@ String serializeUserJs({
   String? exportedAt,
 }) {
   final buffer = StringBuffer();
-  buffer.writeln('// WebLibre Gecko prefs snapshot');
+  buffer.writeln('// Cat Browser Gecko prefs snapshot');
   buffer.writeln('// schema_version=$schemaVersion');
   buffer.writeln(
     '// exported_at=${exportedAt ?? DateTime.now().toUtc().toIso8601String()}',

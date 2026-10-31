@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -632,7 +632,7 @@ class GeneralSettings with FastEquatable {
   final bool blockExternalAppsEnabled;
   final Map<String, IntentSourcePolicy> externalAppIntentPolicies;
 
-  /// Whether external Custom Tab intents (and URLs shared into WebLibre) open
+  /// Whether external Custom Tab intents (and URLs shared into Cat Browser) open
   /// in a lightweight custom-tab activity. When false, they open as normal
   /// tabs in the main browser instead. Read natively by `IntentReceiverActivity`
   /// via the intent gatekeeper prefs bridge. Defaults to true.

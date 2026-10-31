@@ -1,6 +1,6 @@
 GeckoView 155.0
 
-This release brings together eleven updates since the last stable version. It gives you more control over when links open in other apps, adds website notifications without needing Google, makes bookmarks and the home screen far more customizable, and improves how WebLibre connects through Tor and proxies.
+This release brings together eleven updates since the last stable version. It gives you more control over when links open in other apps, adds website notifications without needing Google, makes bookmarks and the home screen far more customizable, and improves how Cat Browser connects through Tor and proxies.
 
 ## Highlights
 
@@ -16,7 +16,7 @@ This release brings together eleven updates since the last stable version. It gi
 
 ## App Links (New)
 
-The web is full of links that could open in another app — a YouTube link opening the YouTube app, for example. WebLibre now lets you decide what happens when a page tries to do that.
+The web is full of links that could open in another app — a YouTube link opening the YouTube app, for example. Cat Browser now lets you decide what happens when a page tries to do that.
 
 - **Three modes** under Settings > Browsing > Open Links in Apps: **Ask before opening** (default), **Always**, and **Never**.
 - **Remember your choice for a site** — tap "Remember for this site" in a prompt, and revisit or undo any saved choices later from a "Remembered site rules" list.
@@ -26,13 +26,13 @@ The web is full of links that could open in another app — a YouTube link openi
 - **Closing a prompt without choosing now genuinely does nothing** — it won't be treated as "No", and it won't be remembered as a permanent choice, like it sometimes was before.
 - **New setting: Wait for your answer** — turn this on if you'd rather the page not start loading until after you've answered the prompt (normally it keeps loading behind the scenes while you decide).
 - **"Sign in with" flows now work properly** — many sites let you sign in by bouncing you to another app and back (like "Sign in with Google"). This now works correctly even if you've set links to Never open other apps. A new **Allow login app callbacks** setting (on by default) lets you turn this back off.
-- **Extra care for your privacy** — while browsing privately, through Tor or a proxy, or in a strict container, WebLibre never opens another app on its own — you're always asked, and it won't offer to remember your answer, so an anonymous session can't be linked back to you through another app. A few sensitive link types (like ones for payment apps, or links embedded in a page's own code) always require an explicit tap from you and can never open an app silently, and a remembered choice will never open a different app than the one you originally picked.
-- This is different from the existing **Intent Gatekeeper** setting, which controls whether *other* apps are allowed to send links *into* WebLibre.
+- **Extra care for your privacy** — while browsing privately, through Tor or a proxy, or in a strict container, Cat Browser never opens another app on its own — you're always asked, and it won't offer to remember your answer, so an anonymous session can't be linked back to you through another app. A few sensitive link types (like ones for payment apps, or links embedded in a page's own code) always require an explicit tap from you and can never open an app silently, and a remembered choice will never open a different app than the one you originally picked.
+- This is different from the existing **Intent Gatekeeper** setting, which controls whether *other* apps are allowed to send links *into* Cat Browser.
 - Fixed some pages endlessly reloading themselves when they tried (and failed) to open an app you don't have installed.
 
 ## Website Notifications (New)
 
-Websites can now send you notifications — even when WebLibre isn't open — without going through Google.
+Websites can now send you notifications — even when Cat Browser isn't open — without going through Google.
 
 - Moved out of Experimental into its own **Notifications** settings screen.
 - Built on **UnifiedPush**, an open, Google-independent alternative to Firebase Cloud Messaging. Instead of routing through Google, you choose a delivery app you trust (such as ntfy, which you can even self-host) the first time you turn this on.
@@ -44,7 +44,7 @@ Websites can now send you notifications — even when WebLibre isn't open — wi
 
 ## Bookmarks
 
-- **Folders open instantly**, even with a huge bookmark collection — WebLibre no longer tries to load your entire bookmark tree at once.
+- **Folders open instantly**, even with a huge bookmark collection — Cat Browser no longer tries to load your entire bookmark tree at once.
 - **Importing a large bookmarks file no longer freezes the app** — you'll see a progress screen while it works in the background, and it finishes much faster than before.
 - **Safer imports** — an empty or broken bookmarks file can no longer accidentally wipe out your existing bookmarks. Re-importing a Firefox export also rebuilds your Toolbar, Menu, and Unfiled folders more faithfully.
 - **More ways to organize your list** — sort by title, web address, or date; show folders only; hide empty built-in folders; collapse everything with one tap. Your choices are remembered.
@@ -63,17 +63,17 @@ Websites can now send you notifications — even when WebLibre isn't open — wi
 
 ## Clearer Connections (Proxy & Tor)
 
-WebLibre's proxy support is built on **sing-box**, the same open-source proxy engine it has used since the last release, supporting protocols like Shadowsocks, VMess, VLESS, Trojan, and WireGuard.
+Cat Browser's proxy support is built on **sing-box**, the same open-source proxy engine it has used since the last release, supporting protocols like Shadowsocks, VMess, VLESS, Trojan, and WireGuard.
 
 - **Redesigned Connections screen** — each tab now shows exactly how it's connecting ("This tab: Tor", "This tab: Direct connection", or "Blocked — start your connection first", with a one-tap button to start it). One screen lets you choose the connection for regular tabs, private tabs, an isolated tab, or a whole container.
 - Each saved connection now shows what's using it, and ones nothing is using are hidden to keep the list tidy.
-- **Start Automatically** — flag any proxy or Tor connection to start as soon as you open WebLibre, so it's ready before you need it.
+- **Start Automatically** — flag any proxy or Tor connection to start as soon as you open Cat Browser, so it's ready before you need it.
 - Isolated tabs can now use their own connection, separate from their container.
-- **Stronger privacy by default** — WebLibre never sends your traffic over an unprotected connection by mistake. If a tab is supposed to use a proxy that isn't running, its traffic (and related background activity like search suggestions or site icons) is blocked rather than silently sent unprotected.
+- **Stronger privacy by default** — Cat Browser never sends your traffic over an unprotected connection by mistake. If a tab is supposed to use a proxy that isn't running, its traffic (and related background activity like search suggestions or site icons) is blocked rather than silently sent unprotected.
 - Fixed proxies occasionally failing to start with a "connection already in use" type error.
-- **More reliable when opening links from other apps** — a proxied link opened via a Custom Tab, a home-screen shortcut, or an installed web app now works correctly the first time, even if WebLibre wasn't already running; before, this could sometimes load nothing at all.
+- **More reliable when opening links from other apps** — a proxied link opened via a Custom Tab, a home-screen shortcut, or an installed web app now works correctly the first time, even if Cat Browser wasn't already running; before, this could sometimes load nothing at all.
 - These same proxied launches now show a clear "Connecting privately…" message while your connection starts, with options to try again, open normally, or cancel — instead of failing silently or opening unprotected.
-- Websites you visit are now kept more strongly separated from each other for better privacy, and WebLibre uses a little less memory while sitting idle.
+- Websites you visit are now kept more strongly separated from each other for better privacy, and Cat Browser uses a little less memory while sitting idle.
 - **New Proxy Logs screen** for troubleshooting — filter by severity, copy or share what you're viewing, and adjust how much detail is logged.
 - Importing WireGuard connections is easier and comes tuned with mobile-friendly defaults.
 
@@ -85,7 +85,7 @@ WebLibre's proxy support is built on **sing-box**, the same open-source proxy en
 
 - **"Exclude from History" now works for every container**, not just ones with their own separate cookies.
 - Turning on "Exclude from History" also removes that container's pages from your on-device search results.
-- Excluding a container's history is now more reliable, including for pop-ups and tabs opened from links — and if WebLibre is ever unsure, it plays it safe and doesn't record a visit.
+- Excluding a container's history is now more reliable, including for pop-ups and tabs opened from links — and if Cat Browser is ever unsure, it plays it safe and doesn't record a visit.
 - **You can now restore a removed tracking parameter** from a cleaned-up link, if there's one you actually want to keep (like a referral code).
 - The tracking indicator now clearly shows whether a link is fully cleaned, partially cleaned, or untouched, and no longer gets stuck showing the wrong status.
 
@@ -129,8 +129,8 @@ Bangs are shortcuts like `!g` that jump straight to a specific search engine.
 - Backing up or restoring a profile now closes and reopens the app to do it safely, with clear messages explaining what's happening at each step.
 - **New: a one-tap "Back up this profile" shortcut**, right in Settings.
 - Backing up is simpler — temporary files are always skipped automatically, and you no longer have to re-enter your password to confirm.
-- Before backing up, restoring, or deleting a profile, WebLibre now clearly explains that the app needs to restart, and what that means for any open private tabs.
-- Fixed restoring an older backup sometimes permanently signing you out of your Firefox Sync account if your session had expired — WebLibre now keeps your account and sync setup intact and simply asks you to sign back in.
+- Before backing up, restoring, or deleting a profile, Cat Browser now clearly explains that the app needs to restart, and what that means for any open private tabs.
+- Fixed restoring an older backup sometimes permanently signing you out of your Firefox Sync account if your session had expired — Cat Browser now keeps your account and sync setup intact and simply asks you to sign back in.
 
 ## Firefox Account Sync
 
@@ -140,9 +140,9 @@ Bookmark, history, and tab sync uses a **Firefox Account** (the same account sys
 - Fixed the "syncing…" indicator getting stuck or flickering.
 - Renaming a device now updates everywhere immediately, without needing to restart the app.
 
-## WebLibre Account
+## Cat Browser Account
 
-Separate from Firefox Sync, your **WebLibre Account** covers things like Supporter status and app-level sign-in.
+Separate from Firefox Sync, your **Cat Browser Account** covers things like Supporter status and app-level sign-in.
 
 - Fixed a rare case where a successful sign-in could be lost after restarting the app.
 - Revoked or expired sessions are now handled differently from manually signing out, so you don't lose recovery access unexpectedly.
@@ -153,7 +153,7 @@ Separate from Firefox Sync, your **WebLibre Account** covers things like Support
 
 - Tabs are less likely to reload from scratch after you've been away from the app for a while.
 - If a web page itself crashes, its tab now reloads automatically instead of getting stuck on a blank white screen.
-- Links and shares from other apps now reliably open in WebLibre — previously, tapping a link right as WebLibre was starting up could silently do nothing.
+- Links and shares from other apps now reliably open in Cat Browser — previously, tapping a link right as Cat Browser was starting up could silently do nothing.
 - Fixed the previous page briefly flashing on screen when leaving the browser for another screen, like Settings.
 - Fixed a rare crash when closing an add-on's settings while it was still loading.
 

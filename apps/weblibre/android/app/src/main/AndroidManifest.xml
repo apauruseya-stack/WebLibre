@@ -78,8 +78,8 @@
 
         <!-- Merged in by org.mozilla.components:feature-pwa and removed here.
              It is exported, so any app can start it, and it opens ManifestStorage
-             — a profile-scoped Room database — before WebLibre has decided which
-             profile this process belongs to. WebLibre never targets it: its own
+             — a profile-scoped Room database — before Cat Browser has decided which
+             profile this process belongs to. Cat Browser never targets it: its own
              PWA shortcuts point at IntentReceiverActivity, which validates the
              launch token and arbitrates the profile before touching storage. -->
         <activity
@@ -93,17 +93,17 @@
              outside every profile. That is the one thing §8.4 says must never
              happen: a registration visible from the raw application context wakes
              the connector's own MessagingReceiverImpl, which can acknowledge
-             messages WebLibre deliberately left unacknowledged.
+             messages Cat Browser deliberately left unacknowledged.
 
              It is worse than a one-off, because DBStore.get memoizes the first
              context it is given for the whole process — so a single link would
              repoint every later connector read in that process at the global
              database.
 
-             Nothing in WebLibre starts it: distributors are chosen from
+             Nothing in Cat Browser starts it: distributors are chosen from
              UnifiedPush.getDistributors() and bound with saveDistributor(), which
              run under a ProfileContext. What is given up is the connector's
-             modern "link activity" auto-selection flow, which WebLibre has never
+             modern "link activity" auto-selection flow, which Cat Browser has never
              used. -->
         <activity
             android:name="org.unifiedpush.android.connector.internal.LinkActivity"
@@ -155,7 +155,7 @@
                 <action android:name="es.antonborri.home_widget.action.LAUNCH" />
             </intent-filter>
 
-            <!-- WebLibre Account auth callback deep link -->
+            <!-- Cat Browser Account auth callback deep link -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

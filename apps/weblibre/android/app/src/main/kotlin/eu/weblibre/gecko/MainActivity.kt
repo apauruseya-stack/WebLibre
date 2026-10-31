@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2025 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -396,7 +396,7 @@ class MainActivity : FlutterFragmentActivity(), IntentReceiverHost {
      * (`BasicSelectionActionDelegate` → `Activity.startActionMode`). Reporting
      * it is what lets the touch pipeline tell a selection-handle drag apart
      * from a swipe. See [TextSelectionTracker] and
-     * https://github.com/FaFre/WebLibre/issues/578.
+     * https://github.com/FaFre/Cat Browser/issues/578.
      */
     override fun onActionModeStarted(mode: ActionMode?) {
         super.onActionModeStarted(mode)

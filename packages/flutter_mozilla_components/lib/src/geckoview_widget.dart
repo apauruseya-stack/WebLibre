@@ -24,7 +24,7 @@ class GeckoView extends StatefulWidget {
   /// offstage. Every attach attempt is therefore driven by this stream rather
   /// than by a single burst of retries after creation, which would otherwise
   /// expire while the container is still unreachable and never run again.
-  /// See https://github.com/FaFre/WebLibre/issues/557.
+  /// See https://github.com/FaFre/Cat Browser/issues/557.
   final Stream<bool> viewReadyEvents;
 
   /// Whether an ancestor is currently painting this view.

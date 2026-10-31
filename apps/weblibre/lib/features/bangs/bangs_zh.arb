@@ -34,7 +34,7 @@
   "bangs_flagUrlEncodePlaceholderSubtitle": "对搜索词进行 URL 编码。部分网站不支持编码后的搜索词，对于这些网站请关闭此选项。",
   "bangs_flagUrlEncodeSpaceToPlusTitle": "将空格编码为加号",
   "bangs_flagUrlEncodeSpaceToPlusSubtitle": "将空格编码为 + 而非 %20。部分网站要求使用其中一种格式。",
-  "bangs_tooltipOfficialSearch": "WebLibre 官方搜索",
+  "bangs_tooltipOfficialSearch": "Cat Browser 官方搜索",
   "bangs_tooltipCustomizeAsOwn": "自定义为你自己的 Bang",
   "bangs_tooltipUnpin": "从搜索提供商中取消固定",
   "bangs_tooltipPin": "固定到搜索提供商",

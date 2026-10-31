@@ -14,7 +14,7 @@
     <string name="weblibre_lock_wrong_password_retry">Falsches Passwort. %1$s</string>
     <string name="weblibre_lock_too_many_attempts">Zu viele Fehlversuche. %1$s</string>
     <string name="weblibre_lock_check_failed">Das Passwort konnte nicht geprüft werden. Bitte erneut versuchen.</string>
-    <string name="weblibre_lock_interrupted">WebLibre wurde während der Prüfung verlassen. Bitte das Passwort erneut eingeben.</string>
+    <string name="weblibre_lock_interrupted">Cat Browser wurde während der Prüfung verlassen. Bitte das Passwort erneut eingeben.</string>
     <plurals name="weblibre_lock_retry_seconds">
         <item quantity="one">In %d Sekunde erneut versuchen.</item>
         <item quantity="other">In %d Sekunden erneut versuchen.</item>

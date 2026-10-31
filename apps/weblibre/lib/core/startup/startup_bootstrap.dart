@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -172,7 +172,7 @@ Future<StartupPhase> resolveStartupPhase({
     case false:
       return const StartupHalted(
         kind: StartupHaltKind.profileAccessBusy,
-        reason: 'Another part of WebLibre is using this profile',
+        reason: 'Another part of Cat Browser is using this profile',
       );
     case true:
       break;

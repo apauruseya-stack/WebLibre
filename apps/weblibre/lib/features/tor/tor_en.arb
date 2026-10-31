@@ -63,14 +63,14 @@
   "@tor_startAutomaticallyKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "tor_startAutomaticallySectionSubtitle": "Connect the {brand} service when WebLibre starts",
+  "tor_startAutomaticallySectionSubtitle": "Connect the {brand} service when Cat Browser starts",
   "@tor_startAutomaticallySectionSubtitle": {
-    "description": "Short explanation of the Tor auto-start switch, shown as a settings search result. brand is \"Tor™\"; WebLibre is the app name.",
+    "description": "Short explanation of the Tor auto-start switch, shown as a settings search result. brand is \"Tor™\"; Cat Browser is the app name.",
     "placeholders": { "brand": { "type": "String" } }
   },
-  "tor_startAutomaticallySubtitle": "Connect the {brand} service when WebLibre starts, so tabs using it are ready without a prompt",
+  "tor_startAutomaticallySubtitle": "Connect the {brand} service when Cat Browser starts, so tabs using it are ready without a prompt",
   "@tor_startAutomaticallySubtitle": {
-    "description": "Explanation under the Tor auto-start switch: tabs that must use Tor can load right away without asking to start it. brand is \"Tor™\"; WebLibre is the app name.",
+    "description": "Explanation under the Tor auto-start switch: tabs that must use Tor can load right away without asking to start it. brand is \"Tor™\"; Cat Browser is the app name.",
     "placeholders": { "brand": { "type": "String" } }
   },
 
@@ -202,9 +202,9 @@
   "@tor_trademarkKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "tor_trademarkDisclaimer": "{brand} is a trademark of The Tor Project; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, the Tor Project.",
+  "tor_trademarkDisclaimer": "{brand} is a trademark of The Tor Project; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, the Tor Project.",
   "@tor_trademarkDisclaimer": {
-    "description": "Legal trademark notice. brand is \"Tor™\". \"The Tor Project\" is an organization name; WebLibre is the app name. Keep the legal meaning exact.",
+    "description": "Legal trademark notice. brand is \"Tor™\". \"The Tor Project\" is an organization name; Cat Browser is the app name. Keep the legal meaning exact.",
     "placeholders": { "brand": { "type": "String" } }
   },
 

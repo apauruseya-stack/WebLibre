@@ -195,7 +195,7 @@ object EngineProvider {
             CookieBannerFeature.install(it, stateEvents)
 
             // Installs Mozilla's reader view extension early and wires the
-            // WebLibre "pure black" (AMOLED) appearance bridge into it.
+            // Cat Browser "pure black" (AMOLED) appearance bridge into it.
             ReaderViewAppearanceFeature.install(
                 it,
                 PreferenceManager.getDefaultSharedPreferences(context),

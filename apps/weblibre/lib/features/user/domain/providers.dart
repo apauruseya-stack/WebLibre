@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -62,7 +62,7 @@ Stream<double> iconCacheSizeMegabytes(Ref ref) {
 /// Riverpod subscribe while the provider is being built; readers treat "no
 /// value yet" as "nothing has changed since I started looking".
 ///
-/// See https://github.com/FaFre/WebLibre/issues/599.
+/// See https://github.com/FaFre/Cat Browser/issues/599.
 @Riverpod()
 Stream<int> iconCacheRevision(Ref ref, String origin) {
   final repository = ref.watch(cacheRepositoryProvider.notifier);

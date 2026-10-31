@@ -93,9 +93,9 @@
   "@proxy_autostartLabel": {
     "description": "Small chip on a proxy that starts automatically with the app. Keep it short."
   },
-  "proxy_autostartTooltip": "Starts with WebLibre",
+  "proxy_autostartTooltip": "Starts with Cat Browser",
   "@proxy_autostartTooltip": {
-    "description": "Tooltip of the autostart chip. WebLibre is the app name."
+    "description": "Tooltip of the autostart chip. Cat Browser is the app name."
   },
   "proxy_egressIpTooltip": "Egress IP {ip}",
   "@proxy_egressIpTooltip": {
@@ -306,9 +306,9 @@
   "@proxy_addMenuTip": {
     "description": "Tip at the bottom of the new-profile editor pointing to other ways to add a profile."
   },
-  "proxy_wireGuardTrademarkDisclaimer": "{brand} is a registered trademark of Jason A. Donenfeld; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.",
+  "proxy_wireGuardTrademarkDisclaimer": "{brand} is a registered trademark of Jason A. Donenfeld; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.",
   "@proxy_wireGuardTrademarkDisclaimer": {
-    "description": "Legal trademark notice. brand is \"WireGuard®\"; Jason A. Donenfeld is a person's name; WebLibre is the app name. Keep the legal meaning exact.",
+    "description": "Legal trademark notice. brand is \"WireGuard®\"; Jason A. Donenfeld is a person's name; Cat Browser is the app name. Keep the legal meaning exact.",
     "placeholders": {
       "brand": {
         "type": "String"
@@ -344,9 +344,9 @@
   "@proxy_startAutomaticallyTitle": {
     "description": "Switch in the proxy editor: connect this proxy when the app starts."
   },
-  "proxy_startAutomaticallySubtitle": "Connect this profile when WebLibre starts, so tabs using it are ready without a prompt",
+  "proxy_startAutomaticallySubtitle": "Connect this profile when Cat Browser starts, so tabs using it are ready without a prompt",
   "@proxy_startAutomaticallySubtitle": {
-    "description": "Explanation under that switch. WebLibre is the app name."
+    "description": "Explanation under that switch. Cat Browser is the app name."
   },
   "proxy_dnsOverrideExplanation": "Resolve names through a DNS server reachable over this connection (e.g., an internal DoH server behind a corporate {brand} tunnel). Leave this off to use automatic DNS handling.",
   "@proxy_dnsOverrideExplanation": {
@@ -599,7 +599,7 @@
     "description": "Error when a sing-box config key that must hold a list holds something else. key is the sing-box config key (\"outbounds\" or \"endpoints\"), untranslated.",
     "placeholders": { "key": { "type": "String" } }
   },
-  "proxy_importNoImportableProxy": "This sing-box config has no proxy WebLibre can import.",
+  "proxy_importNoImportableProxy": "This sing-box config has no proxy Cat Browser can import.",
   "@proxy_importNoImportableProxy": {
     "description": "Error when an imported sing-box config contains only entries that are not proxies (direct, block, DNS and the like)."
   },
@@ -612,12 +612,12 @@
     "description": "Error when an imported sing-box outbound is of a type the proxy editor has no form for. type is the sing-box outbound type, untranslated. \"Custom Outbound JSON\" names the profile type for raw JSON in the editor.",
     "placeholders": { "type": { "type": "String" } }
   },
-  "proxy_importDetourThroughOtherOutbound": "This proxy connects through \"{tag}\", another outbound of its config. WebLibre cannot chain proxies, and connecting to it directly would show it your IP address.",
+  "proxy_importDetourThroughOtherOutbound": "This proxy connects through \"{tag}\", another outbound of its config. Cat Browser cannot chain proxies, and connecting to it directly would show it your IP address.",
   "@proxy_importDetourThroughOtherOutbound": {
     "description": "Error when an imported sing-box outbound dials through another outbound of the same config (its \"detour\"). tag is that outbound's tag from the config, untranslated. Explains why it is not imported without the chain: the server would see the device's real IP address.",
     "placeholders": { "tag": { "type": "String" } }
   },
-  "proxy_importUnresolvedDetour": "This proxy connects through \"{tag}\", which is defined elsewhere in its config. Import the whole config so WebLibre can check what \"{tag}\" does.",
+  "proxy_importUnresolvedDetour": "This proxy connects through \"{tag}\", which is defined elsewhere in its config. Import the whole config so Cat Browser can check what \"{tag}\" does.",
   "@proxy_importUnresolvedDetour": {
     "description": "Error when a single sing-box outbound is imported on its own and dials through another outbound (its \"detour\") that is not part of what was imported. tag is that outbound's tag, untranslated. Asks for the whole config instead, since only that says whether the detour is safe to drop.",
     "placeholders": { "tag": { "type": "String" } }

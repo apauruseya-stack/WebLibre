@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -575,7 +575,7 @@ class _ThemeSection extends HookConsumerWidget {
   }
 }
 
-/// Picks the language WebLibre's own UI renders in, distinct from the
+/// Picks the language Cat Browser's own UI renders in, distinct from the
 /// "Browser Languages" setting under Privacy & Security (which is the
 /// Accept-Language list exposed to websites, not the app's own interface).
 ///
@@ -652,7 +652,7 @@ class _AppLanguageSection extends HookConsumerWidget {
                   value: null,
                   title: Text(l10n.settings_appLanguageSystemDefault),
                   // Says which language "system" lands on, since a device
-                  // language WebLibre does not ship falls back to another.
+                  // language Cat Browser does not ship falls back to another.
                   subtitle: _LanguageName(
                     systemAppLocale,
                     builder: (name) =>
@@ -809,8 +809,8 @@ class _DownloadDirectoryTile extends HookConsumerWidget {
     final directoryUri = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.downloadDirectoryUri),
     );
-    // With WebLibre remembered as the download manager, the chooser is skipped
-    // and WebLibre downloads the file itself, into this folder.
+    // With Cat Browser remembered as the download manager, the chooser is skipped
+    // and Cat Browser downloads the file itself, into this folder.
     final useExternalDownloadManager =
         ref.watch(
           generalSettingsWithDefaultsProvider.select(
@@ -942,7 +942,7 @@ class PreferredDownloadManagerTile extends HookConsumerWidget {
     final l10n = AppLocalizations.of(context);
 
     final subtitle = switch (choice) {
-      // With the switch off WebLibre downloads everything itself and no
+      // With the switch off Cat Browser downloads everything itself and no
       // chooser ever shows, so neither "ask" nor an external app is true.
       null when !useExternalDownloadManager =>
         l10n.settings_preferredDownloadManagerSubtitleExternalOff,

@@ -1,4 +1,4 @@
-// WebLibre sandbox capture subresource firewall.
+// Cat Browser sandbox capture subresource firewall.
 //
 // Cancels any request issued from a document served by the local capture
 // server (http://127.0.0.1:*/captures/* or /loader*) unless the request

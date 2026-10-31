@@ -1,14 +1,14 @@
 <p align="center">
-  <img width="250" src="apps/weblibre/assets/icon/icon.png" alt="WebLibre logo">
+  <img width="250" src="apps/weblibre/assets/icon/icon.png" alt="Cat Browser logo">
 </p>
 
-# WebLibre
+# Cat Browser
 
 <p align="center"><strong>A privacy-focused Android browser with powerful browsing separation, local-first tools, and deep customization.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/FaFre/WebLibre/releases">
-    <img alt="Latest GitHub release" src="https://img.shields.io/github/v/release/FaFre/WebLibre">
+  <a href="https://github.com/FaFre/Cat Browser/releases">
+    <img alt="Latest GitHub release" src="https://img.shields.io/github/v/release/FaFre/Cat Browser">
   </a>
   <a href="https://f-droid.org/en/packages/eu.weblibre.gecko/">
     <img alt="F-Droid version" src="https://img.shields.io/f-droid/v/eu.weblibre.gecko">
@@ -24,39 +24,39 @@
   </a>
 </p>
 
-WebLibre is an independent browser for Android devices, built on [Mozilla's Gecko engine](https://wiki.mozilla.org/Gecko) and [Mozilla Android Components](https://mozac.org/). It combines strong privacy defaults with containers, isolated tabs, built-in Tor and proxy routing, Firefox-compatible extensions, on-device search, and flexible tab management.
+Cat Browser is an independent browser for Android devices, built on [Mozilla's Gecko engine](https://wiki.mozilla.org/Gecko) and [Mozilla Android Components](https://mozac.org/). It combines strong privacy defaults with containers, isolated tabs, built-in Tor and proxy routing, Firefox-compatible extensions, on-device search, and flexible tab management.
 
-WebLibre is not a Firefox fork. It is its own browser experience, designed for people who want familiar everyday browsing without giving up control over how sites, identities, and network connections are separated.
+Cat Browser is not a Firefox fork. It is its own browser experience, designed for people who want familiar everyday browsing without giving up control over how sites, identities, and network connections are separated.
 
-**Coming from Firefox for Android, Fennec, or IronFox?** Websites and extensions behave the same because WebLibre uses the same Gecko engine. On top of that, WebLibre adds features that Firefox and its hardened forks do not offer: isolated tabs, containers with per-container cookie isolation and Tor/proxy routing, a built-in multi-protocol proxy client, tree-style tab management, and on-device local search across tabs, history, and feeds.
+**Coming from Firefox for Android, Fennec, or IronFox?** Websites and extensions behave the same because Cat Browser uses the same Gecko engine. On top of that, Cat Browser adds features that Firefox and its hardened forks do not offer: isolated tabs, containers with per-container cookie isolation and Tor/proxy routing, a built-in multi-protocol proxy client, tree-style tab management, and on-device local search across tabs, history, and feeds.
 
 > [!IMPORTANT]
-> **Early Access** - WebLibre is under active development. Many people already use it every day, but features and settings can change. Some updates may cause problems or change how features work.
+> **Early Access** - Cat Browser is under active development. Many people already use it every day, but features and settings can change. Some updates may cause problems or change how features work.
 
-## Install WebLibre
+## Install Cat Browser
 
-WebLibre requires Android 8.0 or newer. Android 13 or newer is recommended. On Android 12 and older, you may see visual problems.
+Cat Browser requires Android 8.0 or newer. Android 13 or newer is recommended. On Android 12 and older, you may see visual problems.
 
 <p align="center">
-  <a href="https://github.com/FaFre/WebLibre/releases">
-    <img height="90" alt="Get WebLibre from GitHub" src="https://docs.weblibre.eu/weblibre/_images/badges/github.png">
+  <a href="https://github.com/FaFre/Cat Browser/releases">
+    <img height="90" alt="Get Cat Browser from GitHub" src="https://docs.weblibre.eu/weblibre/_images/badges/github.png">
   </a>
   <a href="https://f-droid.org/en/packages/eu.weblibre.gecko/">
-    <img height="90" alt="Get WebLibre on F-Droid" src="https://docs.weblibre.eu/weblibre/_images/badges/fdroid.png">
+    <img height="90" alt="Get Cat Browser on F-Droid" src="https://docs.weblibre.eu/weblibre/_images/badges/fdroid.png">
   </a>
   <a href="https://play.google.com/store/apps/details?id=eu.weblibre.gecko">
-    <img height="90" alt="Get WebLibre on Google Play" src="https://docs.weblibre.eu/weblibre/_images/badges/google_play.png">
+    <img height="90" alt="Get Cat Browser on Google Play" src="https://docs.weblibre.eu/weblibre/_images/badges/google_play.png">
   </a>
 </p>
 
-- **[GitHub Releases](https://github.com/FaFre/WebLibre/releases)** - Direct downloads; [Obtainium](https://obtainium.imranr.dev/) can manage updates. Most current devices use the `arm64-v8a` APK; `armeabi-v7a` is for older 32-bit devices, and `x86_64` is for emulators, ChromeOS and x86 tablets.
+- **[GitHub Releases](https://github.com/FaFre/Cat Browser/releases)** - Direct downloads; [Obtainium](https://obtainium.imranr.dev/) can manage updates. Most current devices use the `arm64-v8a` APK; `armeabi-v7a` is for older 32-bit devices, and `x86_64` is for emulators, ChromeOS and x86 tablets.
 - **[Google Play](https://play.google.com/store/apps/details?id=eu.weblibre.gecko)** - Automatic updates through Google Play.
 - **[F-Droid](https://f-droid.org/en/packages/eu.weblibre.gecko/)** - F-Droid creates and signs its own builds. New versions may arrive considerably later than on GitHub or Google Play because of the complex build process and manual review by the F-Droid team.
 
 > [!WARNING]
 > You cannot switch directly between an F-Droid build and a GitHub or Google Play build because they use different signing keys - you must uninstall the current build first, which deletes your data.
 >
-> Before you uninstall, create an encrypted [profile backup](https://docs.weblibre.eu/weblibre/profiles.html#_back_up_a_profile). Use **Change Backup Directory** to save the backup outside WebLibre's app storage, then verify the backup.
+> Before you uninstall, create an encrypted [profile backup](https://docs.weblibre.eu/weblibre/profiles.html#_back_up_a_profile). Use **Change Backup Directory** to save the backup outside Cat Browser's app storage, then verify the backup.
 
 ### Verify your download
 
@@ -80,7 +80,7 @@ On first launch, choose the setup that fits you:
 
 - **Quick Start** applies the recommended defaults and installs uBlock Origin automatically.
 - **Custom Setup** lets you choose search, DNS over HTTPS, layout, hardening, on-device AI, and extension options.
-- **Restore from Backup** imports an existing encrypted WebLibre profile before setup.
+- **Restore from Backup** imports an existing encrypted Cat Browser profile before setup.
 
 After installation, these guides provide the fastest introduction:
 
@@ -89,11 +89,11 @@ After installation, these guides provide the fastest introduction:
 - **[Switching from Another Browser](https://docs.weblibre.eu/weblibre/migration.html)** - Move bookmarks and browsing habits in stages.
 - **[Common Workflows](https://docs.weblibre.eu/weblibre/workflows.html)** - Learn everyday tasks and power-user flows.
 
-## What Makes WebLibre Different
+## What Makes Cat Browser Different
 
 ### Privacy controls that you can tune
 
-New installations start with strict tracking protection. WebLibre also includes DNS over HTTPS, HTTPS-only protection, removal of tracking information from URLs, Global Privacy Control, fingerprinting defenses, site isolation, an Intent Gatekeeper for links opened by other apps, and optional screenshot protection.
+New installations start with strict tracking protection. Cat Browser also includes DNS over HTTPS, HTTPS-only protection, removal of tracking information from URLs, Global Privacy Control, fingerprinting defenses, site isolation, an Intent Gatekeeper for links opened by other apps, and optional screenshot protection.
 
 You can change each privacy setting. Stronger protection can break some websites, so you can add an exception for a site or use a less strict mode.
 
@@ -101,7 +101,7 @@ You can change each privacy setting. Stronger protection can break some websites
 
 ### Tabs, containers, and profiles
 
-- Open **Regular**, **Private**, or **Isolated** tabs. Each isolated tab has a separate session from every other tab. Unlike private tabs, isolated tabs remain open after you quit and reopen WebLibre.
+- Open **Regular**, **Private**, or **Isolated** tabs. Each isolated tab has a separate session from every other tab. Unlike private tabs, isolated tabs remain open after you quit and reopen Cat Browser.
 - Organize tabs in list, grid, or tree views, with parent-child relationships, stacking, filtering, pinning, bulk actions, and a quick switcher.
 - Use **Containers** for different activities and assign sites to them automatically.
 - Enable **Cookie Isolation** on a container to give it separate cookies, logins, and site data, then optionally add clear-on-exit rules or per-container Tor/proxy routing.
@@ -111,7 +111,7 @@ You can change each privacy setting. Stronger protection can break some websites
 
 ### Built-in Tor and proxy routing
 
-WebLibre includes Tor without requiring a separate Tor app. Route regular browsing, private tabs, or selected cookie-isolated containers through Tor, with bridge options such as obfs4 and Snowflake when needed.
+Cat Browser includes Tor without requiring a separate Tor app. Route regular browsing, private tabs, or selected cookie-isolated containers through Tor, with bridge options such as obfs4 and Snowflake when needed.
 
 The built-in proxy client supports SOCKS, HTTP, WireGuard, Shadowsocks, and [a dozen more protocols](https://docs.weblibre.eu/weblibre/proxy.html). Connections can be created manually or imported from subscriptions, QR codes, WireGuard files, and sing-box JSON.
 
@@ -119,7 +119,7 @@ The built-in proxy client supports SOCKS, HTTP, WireGuard, Shadowsocks, and [a d
 
 ### Firefox-compatible extensions
 
-Install uBlock Origin during onboarding, discover add-ons in WebLibre's in-app store, use a custom collection, or install a local `.xpi` file. Installed extensions can be updated, configured, and pinned to the toolbar from inside the browser.
+Install uBlock Origin during onboarding, discover add-ons in Cat Browser's in-app store, use a custom collection, or install a local `.xpi` file. Installed extensions can be updated, configured, and pinned to the toolbar from inside the browser.
 
 Not every desktop Firefox extension works well on Android. Add-ons that depend on desktop-only interfaces may be limited, and unsigned extensions should only be installed from sources you trust.
 
@@ -150,12 +150,12 @@ Full user documentation is available at **[docs.weblibre.eu](https://docs.weblib
 - **[Troubleshooting](https://docs.weblibre.eu/weblibre/troubleshooting.html)** - Fix common problems and learn what to include in a bug report.
 - **[Feedback Platform](https://feedback.weblibre.eu/)** - Suggest and vote on features.
 - **[Matrix Chat](https://matrix.to/#/#weblibre:unredacted.org)** - Ask questions and talk with the community.
-- **[GitHub Issues](https://github.com/FaFre/WebLibre/issues)** - Report reproducible bugs and follow development.
+- **[GitHub Issues](https://github.com/FaFre/Cat Browser/issues)** - Report reproducible bugs and follow development.
 - **[Roadmap](ROADMAP.md)** - Detailed implementation plans for cookie/banner handling, browser profile import, accessibility, local protection stats, and on-device AI.
 
 ## Support the Project
 
-- **[WebLibre Supporter](https://docs.weblibre.eu/weblibre/supporter-subscription.html)** - Fund development and get access to WebLibre Search and encrypted sync for WebLibre settings. The browser and its built-in privacy controls remain free.
+- **[Cat Browser Supporter](https://docs.weblibre.eu/weblibre/supporter-subscription.html)** - Fund development and get access to Cat Browser Search and encrypted sync for Cat Browser settings. The browser and its built-in privacy controls remain free.
 - **[GitHub Sponsors](https://github.com/sponsors/FaFre)** - Sponsor development through GitHub.
 - **[Liberapay](https://liberapay.com/FaFre/donate)** - Make a recurring donation.
 - **[Ko-fi](https://ko-fi.com/FaFre)** - Make a one-time donation.
@@ -182,4 +182,4 @@ ltc1q0dtutc9zgkvffevwsz7s87379puk37hwn4un94
 
 ## License
 
-WebLibre is free software licensed under the [GNU Affero General Public License v3.0](COPYING).
+Cat Browser is free software licensed under the [GNU Affero General Public License v3.0](COPYING).

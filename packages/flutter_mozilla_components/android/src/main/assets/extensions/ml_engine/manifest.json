@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "ml-engine",
   "version": "1.0",
-  "description": "WebLibre ML Engine",
+  "description": "Cat Browser ML Engine",
   "browser_specific_settings": {
     "gecko": {
       "id": "ml-engine@weblibre.eu"

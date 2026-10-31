@@ -73,7 +73,7 @@ class AppLinkLauncherChooserTest {
     @Test
     fun `an ambiguous launch goes through a chooser that excludes browsers`() {
         // Started implicitly, an unbound ACTION_VIEW on an http URL resolves like any web link and
-        // lands on the default browser — which for this app's users is usually WebLibre itself, so
+        // lands on the default browser — which for this app's users is usually Cat Browser itself, so
         // the link would reopen the browser it was trying to leave.
         val started = launchAndCapture(resolved(isAmbiguous = true, excluded = listOf(browser)))
 

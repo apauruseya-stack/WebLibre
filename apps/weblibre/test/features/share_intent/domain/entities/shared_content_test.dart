@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -37,7 +37,7 @@ void main() {
     });
 
     test('returns SharedText for plain sentence', () {
-      final parsed = SharedContent.parse('WebLibre README.md');
+      final parsed = SharedContent.parse('Cat Browser README.md');
 
       expect(parsed, isA<SharedText>());
     });

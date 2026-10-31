@@ -1,6 +1,6 @@
 GeckoView 158.0.2
 
-This release brings together ten alpha updates since v0.30.0. WebLibre adapts better to larger screens, adds customizable keyboard shortcuts and more flexible gestures, introduces five interface translations, and gives you more control over downloads, profile locks, and automatic browsing-data deletion. It also improves tab recovery, connection reliability, and everyday browsing.
+This release brings together ten alpha updates since v0.30.0. Cat Browser adapts better to larger screens, adds customizable keyboard shortcuts and more flexible gestures, introduces five interface translations, and gives you more control over downloads, profile locks, and automatic browsing-data deletion. It also improves tab recovery, connection reliability, and everyday browsing.
 
 ## Highlights
 
@@ -59,7 +59,7 @@ This release brings together ten alpha updates since v0.30.0. WebLibre adapts be
 ## Languages, Search & Suggestions
 
 - **Choose your app language** in Settings > General > App Language: German, Spanish, Indonesian, Russian, and Simplified Chinese join English. You can also choose System default; English remains the default until you change it.
-- Installed website apps, Custom Tabs, and the separate add-on popup window follow the language selected inside WebLibre.
+- Installed website apps, Custom Tabs, and the separate add-on popup window follow the language selected inside Cat Browser.
 - **Find browser actions from search**, alongside settings, feeds, containers, and profiles. Tap a result to use it; pressing Enter still searches for the text normally.
 - Address completion now includes **bookmarks and paths within bookmarked sites**.
 - **Control history-based suggestions** separately from your stored history. Turning them off does not delete your history.
@@ -95,11 +95,11 @@ This release brings together ten alpha updates since v0.30.0. WebLibre adapts be
 
 - **Lock each profile with its own password**, use Android's fingerprint/PIN protection, or leave it unlocked. A device fingerprint or PIN cannot unlock a password-protected profile.
 - Locked profiles require their own unlock method before they can be **backed up, deleted, or replaced by a backup**, including when managed from another profile. Changing a password or disabling its lock requires the current unlock method too.
-- After five incorrect password attempts, an increasing waiting period slows further attempts and remains in effect after restarting WebLibre.
+- After five incorrect password attempts, an increasing waiting period slows further attempts and remains in effect after restarting Cat Browser.
 - **Profile locks also protect installed website apps and Custom Tabs**, before their content is shown. Unlocking can be shared with the main browser when your auto-lock settings allow it, with fewer unnecessary relocks during brief interruptions.
 - Choose another profile from the lock screen when one exists, even with the startup profile picker disabled. Clearer errors explain missing Android screen-lock setup, authentication lockouts, and unavailable authentication; failed password checks return focus to the password field.
 - Restoring a backup as a new profile preserves the lock saved in that backup. Device-protected restores first check that authentication works on the current device. Backup reads from shared storage and recovery information for interrupted restores are more reliable.
-- **Important:** profile passwords protect access through WebLibre; they do **not** encrypt profile data on the device. Forgotten profile passwords cannot be recovered in the app. A backup file's encryption password is separate.
+- **Important:** profile passwords protect access through Cat Browser; they do **not** encrypt profile data on the device. Forgotten profile passwords cannot be recovered in the app. A backup file's encryption password is separate.
 
 ## Automatic Browsing-Data Deletion
 
@@ -109,13 +109,13 @@ This release brings together ten alpha updates since v0.30.0. WebLibre adapts be
 - **Choose whether Quit asks for confirmation**, using Don't ask again or Confirm Before Quitting. Choosing Don't ask again also remembers the cleanup categories selected in that dialog for future automatic Quit cleanup. Long-pressing Quit skips confirmation but still applies automatic cleanup.
 - **Interrupted cleanup is remembered and retried on a later start**, including one-time choices and unfinished Quit cleanup when routine startup deletion is disabled. Failure to clear one category no longer prevents the others from being attempted.
 - Tab cleanup targets the original session's tabs rather than new tabs opened afterward. Cleared tabs and download-list entries are less likely to return after a restart.
-- **Quit-only cleanup requires WebLibre's Quit action.** Swiping the app away or Android closing it does not run that cleanup. Leave Also Delete on Start enabled to cover those sessions on the next start.
+- **Quit-only cleanup requires Cat Browser's Quit action.** Swiping the app away or Android closing it does not run that cleanup. Leave Also Delete on Start enabled to cover those sessions on the next start.
 
 ## Proxy & Tor Connections
 
 - **Clearer connection health** — Tor and proxies can show Not responding when tests or repeated page failures indicate traffic is not getting through, rather than appearing healthy merely because they are switched on.
 - Connection startup shows steadier progress and running counts. Automatic startup failures distinguish retrying from couldn't start, identify the affected connection where possible, and explain errors more usefully. Response-time tests explain that they measure a complete web request, not the tunnel's ping time.
-- **One invalid connection is less likely to disrupt others.** Profiles are checked separately, usable ones can still start, and WebLibre attempts to restore running connections if adding another fails. Stopping or deleting one proxy no longer unexpectedly takes down the others.
+- **One invalid connection is less likely to disrupt others.** Profiles are checked separately, usable ones can still start, and Cat Browser attempts to restore running connections if adding another fails. Stopping or deleting one proxy no longer unexpectedly takes down the others.
 - Failed automatic starts are retried for a limited time, and **Stop All cancels pending retries**. Automatic startup no longer interferes with a connection just started for an incoming link.
 - Better recovery when switching between Wi-Fi and mobile data, and fixes for WireGuard stalls on some mobile networks or while another VPN is active.
 - Pages recovering after proxy startup wait for browser routing to catch up. Repeated failures no longer cause continuous automatic reloads, and recovery avoids replacing a page you have since navigated to.
@@ -130,9 +130,9 @@ This release brings together ten alpha updates since v0.30.0. WebLibre adapts be
 - **Duplicating a container tab preserves its container and connection**, and moving a tab out correctly leaves that container's session and connection. Website-opened tabs and pop-ups stay with the container of their opener, not whichever container happens to be selected.
 - A new **Isolation** section groups Cookie Isolation and its dependent settings. The container editor explains whether cookies are shared or separate, that this choice is fixed at creation, and why dependent settings may be locked.
 - Containers without cookie isolation now show that they follow browser-wide connection settings in the browser menu.
-- **Clearer App Link prompts** show the destination and link. Remembered choices stay tied to the app originally selected; if the available apps change, WebLibre asks again. The chooser avoids sending links back to WebLibre or another browser.
+- **Clearer App Link prompts** show the destination and link. Remembered choices stay tied to the app originally selected; if the available apps change, Cat Browser asks again. The chooser avoids sending links back to Cat Browser or another browser.
 - Protected, private, and wallet-related contexts cannot silently open another app. Fixed unwanted prompts when external apps are disabled or a request has already been declined, and improved sign-in callbacks and missing-app handling.
-- **New-tab requests stay in new tabs** when you choose to remain in WebLibre or an app cannot open the link. Alternative pages preserve the original tab's private-browsing status and separate cookies, and background fallbacks no longer steal focus.
+- **New-tab requests stay in new tabs** when you choose to remain in Cat Browser or an app cannot open the link. Alternative pages preserve the original tab's private-browsing status and separate cookies, and background fallbacks no longer steal focus.
 - Fixed an alternative web link from a sandboxed search page potentially bypassing its sandbox protections.
 
 ## Home Screen & Installed Websites

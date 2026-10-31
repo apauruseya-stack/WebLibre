@@ -100,13 +100,13 @@
   "@settings_mlDownloadsClearDialogTitle": {
     "description": "Title of the confirmation dialog before deleting downloaded AI model files."
   },
-  "settings_mlDownloadsClearDialogContent": "This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart WebLibre before retrying ML features.",
+  "settings_mlDownloadsClearDialogContent": "This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart Cat Browser before retrying ML features.",
   "@settings_mlDownloadsClearDialogContent": {
-    "description": "Body of that dialog. ONNX is a technical name; WebLibre is the app name."
+    "description": "Body of that dialog. ONNX is a technical name; Cat Browser is the app name."
   },
-  "settings_mlDownloadsClearedMessage": "ML downloads cleared. Restart WebLibre before retrying.",
+  "settings_mlDownloadsClearedMessage": "ML downloads cleared. Restart Cat Browser before retrying.",
   "@settings_mlDownloadsClearedMessage": {
-    "description": "Confirmation after deleting downloaded AI model files. WebLibre is the app name."
+    "description": "Confirmation after deleting downloaded AI model files. Cat Browser is the app name."
   },
   "settings_mlDownloadsClearFailedMessage": "Failed to clear ML downloads: {error}",
   "@settings_mlDownloadsClearFailedMessage": {
@@ -285,9 +285,9 @@
   "@settings_externalLinkHandlingKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_externalLinkHandlingSubtitle": "Choose how external links open in WebLibre",
+  "settings_externalLinkHandlingSubtitle": "Choose how external links open in Cat Browser",
   "@settings_externalLinkHandlingSubtitle": {
-    "description": "Explanation under that setting. WebLibre is the app name."
+    "description": "Explanation under that setting. Cat Browser is the app name."
   },
   "settings_promptOptionLabel": "Prompt",
   "@settings_promptOptionLabel": {
@@ -1300,27 +1300,27 @@
   },
   "settings_defaultBrowserTileTitle": "Default Browser",
   "@settings_defaultBrowserTileTitle": {
-    "description": "Row showing whether WebLibre is the device's default browser, with a button to change it."
+    "description": "Row showing whether Cat Browser is the device's default browser, with a button to change it."
   },
   "settings_defaultBrowserTileKeywords": "system browser",
   "@settings_defaultBrowserTileKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_defaultBrowserTileSubtitleSet": "WebLibre is your default browser",
+  "settings_defaultBrowserTileSubtitleSet": "Cat Browser is your default browser",
   "@settings_defaultBrowserTileSubtitleSet": {
-    "description": "Line under that row when WebLibre is the default browser."
+    "description": "Line under that row when Cat Browser is the default browser."
   },
-  "settings_defaultBrowserTileSubtitleNotSet": "Set WebLibre as your default browser",
+  "settings_defaultBrowserTileSubtitleNotSet": "Set Cat Browser as your default browser",
   "@settings_defaultBrowserTileSubtitleNotSet": {
     "description": "Line under that row when it is not."
   },
   "settings_defaultBrowserButtonDefault": "Default",
   "@settings_defaultBrowserButtonDefault": {
-    "description": "Label of the disabled button when WebLibre is already the default browser. Keep it short."
+    "description": "Label of the disabled button when Cat Browser is already the default browser. Keep it short."
   },
   "settings_defaultBrowserButtonSet": "Set",
   "@settings_defaultBrowserButtonSet": {
-    "description": "Button that asks Android to make WebLibre the default browser. Keep it short."
+    "description": "Button that asks Android to make Cat Browser the default browser. Keep it short."
   },
   "settings_backupProfileTitle": "Back up this profile",
   "@settings_backupProfileTitle": {
@@ -1441,14 +1441,14 @@
   },
   "settings_appLanguageCurrentlyLabel": "Currently: {language}",
   "@settings_appLanguageCurrentlyLabel": {
-    "description": "Line under the \"System default\" app language option. language is the name of the language the device settings currently select, written in that language itself, e.g. \"English\" or \"Deutsch\". Differs from the device language when WebLibre is not translated into it.",
+    "description": "Line under the \"System default\" app language option. language is the name of the language the device settings currently select, written in that language itself, e.g. \"English\" or \"Deutsch\". Differs from the device language when Cat Browser is not translated into it.",
     "placeholders": {
       "language": {
         "type": "String"
       }
     }
   },
-  "settings_appLanguageTranslationsNote": "Translations are new and may be incomplete or inaccurate, so WebLibre uses English until you choose another language. Pick \"System default\" to follow your device's language.",
+  "settings_appLanguageTranslationsNote": "Translations are new and may be incomplete or inaccurate, so Cat Browser uses English until you choose another language. Pick \"System default\" to follow your device's language.",
   "@settings_appLanguageTranslationsNote": {
     "description": "Note above the app language list. Explains that the translations are still new and that the app stays in English until the user picks a language. \"System default\" is the option label settings_appLanguageSystemDefault; keep it identical to your translation of that label."
   },
@@ -1507,7 +1507,7 @@
   },
   "settings_externalDownloadManagerTitle": "Use external download manager",
   "@settings_externalDownloadManagerTitle": {
-    "description": "Switch: hand downloads to another app instead of downloading in WebLibre."
+    "description": "Switch: hand downloads to another app instead of downloading in Cat Browser."
   },
   "settings_externalDownloadManagerKeywords": "downloads",
   "@settings_externalDownloadManagerKeywords": {
@@ -1549,11 +1549,11 @@
   },
   "settings_preferredDownloadManagerSubtitleExternalOff": "Not set — only used with an external download manager",
   "@settings_preferredDownloadManagerSubtitleExternalOff": {
-    "description": "Line under that row when no app is remembered and the external download manager switch is off, so WebLibre downloads everything itself and no chooser appears."
+    "description": "Line under that row when no app is remembered and the external download manager switch is off, so Cat Browser downloads everything itself and no chooser appears."
   },
   "settings_preferredDownloadManagerSubtitleInactive": "{appName} — not used while the external download manager is off",
   "@settings_preferredDownloadManagerSubtitleInactive": {
-    "description": "Line under that row when an app is remembered but the external download manager switch is off, so WebLibre downloads everything itself. appName is the remembered app's name, or its Android package id when it is no longer installed.",
+    "description": "Line under that row when an app is remembered but the external download manager switch is off, so Cat Browser downloads everything itself. appName is the remembered app's name, or its Android package id when it is no longer installed.",
     "placeholders": {
       "appName": {
         "type": "String"
@@ -1572,7 +1572,7 @@
   "@settings_defaultBrowserSectionKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_indexDefaultBrowserSubtitle": "Set WebLibre as your default browser",
+  "settings_indexDefaultBrowserSubtitle": "Set Cat Browser as your default browser",
   "@settings_indexDefaultBrowserSubtitle": {
     "description": "Summary of the default browser setting, shown as a settings search result."
   },
@@ -1586,13 +1586,13 @@
   },
   "settings_indexAppLanguageTitle": "App Language",
   "@settings_indexAppLanguageTitle": {
-    "description": "Title of the app language setting (the language of WebLibre's own interface)."
+    "description": "Title of the app language setting (the language of Cat Browser's own interface)."
   },
   "settings_indexAppLanguageKeywords": "locale, translation, ui language",
   "@settings_indexAppLanguageKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_indexAppLanguageSubtitle": "Choose the language WebLibre's own interface uses",
+  "settings_indexAppLanguageSubtitle": "Choose the language Cat Browser's own interface uses",
   "@settings_indexAppLanguageSubtitle": {
     "description": "Summary of the app language setting."
   },
@@ -2085,19 +2085,19 @@
   "@settings_autoDeleteBrowsingDataKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_autoDeleteBrowsingDataSubtitle": "Delete selected browsing data when you quit or every time WebLibre starts",
+  "settings_autoDeleteBrowsingDataSubtitle": "Delete selected browsing data when you quit or every time Cat Browser starts",
   "@settings_autoDeleteBrowsingDataSubtitle": {
     "description": "Explanation under \"Delete Browsing Data Automatically\"."
   },
-  "settings_autoDeleteBrowsingDataQuitOnlySubtitle": "Delete selected browsing data when you quit WebLibre",
+  "settings_autoDeleteBrowsingDataQuitOnlySubtitle": "Delete selected browsing data when you quit Cat Browser",
   "@settings_autoDeleteBrowsingDataQuitOnlySubtitle": {
     "description": "Replaces the explanation under \"Delete Browsing Data Automatically\" while \"Also Delete on Start\" is off: the data is deleted only when the user taps Quit."
   },
   "settings_autoDeleteOnStartTitle": "Also Delete on Start",
   "@settings_autoDeleteOnStartTitle": {
-    "description": "Switch under \"Delete Browsing Data Automatically\", shown while it is on. On (the default), the chosen data is also deleted every time WebLibre starts; off, only when the user taps Quit."
+    "description": "Switch under \"Delete Browsing Data Automatically\", shown while it is on. On (the default), the chosen data is also deleted every time Cat Browser starts; off, only when the user taps Quit."
   },
-  "settings_autoDeleteOnStartSubtitle": "Covers sessions that ended without Quit, such as WebLibre being swiped away or closed by Android in the background. When off, their data stays until you next quit.",
+  "settings_autoDeleteOnStartSubtitle": "Covers sessions that ended without Quit, such as Cat Browser being swiped away or closed by Android in the background. When off, their data stays until you next quit.",
   "@settings_autoDeleteOnStartSubtitle": {
     "description": "Explanation under \"Also Delete on Start\". \"Quit\" is the Quit button / menu entry. Android may end an app it has kept in the background at any time."
   },
@@ -2109,7 +2109,7 @@
   "@settings_confirmBeforeQuitKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_confirmBeforeQuitSubtitle": "Ask before Quit closes WebLibre. Long press Quit to skip the question.",
+  "settings_confirmBeforeQuitSubtitle": "Ask before Quit closes Cat Browser. Long press Quit to skip the question.",
   "@settings_confirmBeforeQuitSubtitle": {
     "description": "Explanation under \"Confirm Before Quitting\". \"Quit\" is the Quit button / menu entry."
   },
@@ -2375,9 +2375,9 @@
   "@settings_uBlockFilterListsTileKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_uBlockFilterListsTileSubtitle": "Manage filter lists and apply WebLibre hardenings",
+  "settings_uBlockFilterListsTileSubtitle": "Manage filter lists and apply Cat Browser hardenings",
   "@settings_uBlockFilterListsTileSubtitle": {
-    "description": "Explanation under that row. WebLibre is the app name."
+    "description": "Explanation under that row. Cat Browser is the app name."
   },
   "settings_fissionEnabledTitle": "Fission (Site Isolation)",
   "@settings_fissionEnabledTitle": {
@@ -2429,7 +2429,7 @@
   },
   "settings_appOpeningProtectionSectionHeader": "App-Opening Protection",
   "@settings_appOpeningProtectionSectionHeader": {
-    "description": "Heading of the settings that control which other apps may open links in WebLibre."
+    "description": "Heading of the settings that control which other apps may open links in Cat Browser."
   },
   "settings_blockAppsOpeningBrowserTitle": "Block apps from opening your browser",
   "@settings_blockAppsOpeningBrowserTitle": {
@@ -2439,9 +2439,9 @@
   "@settings_blockAppsOpeningBrowserKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_blockAppsOpeningBrowserSubtitle": "Ask before opening links that other apps send to WebLibre.",
+  "settings_blockAppsOpeningBrowserSubtitle": "Ask before opening links that other apps send to Cat Browser.",
   "@settings_blockAppsOpeningBrowserSubtitle": {
-    "description": "Explanation under that switch. WebLibre is the app name."
+    "description": "Explanation under that switch. Cat Browser is the app name."
   },
   "settings_managedAppsSectionHeader": "Managed apps",
   "@settings_managedAppsSectionHeader": {
@@ -2615,9 +2615,9 @@
       }
     }
   },
-  "settings_transferImportNothingApplicable": "This export holds nothing this version of WebLibre can apply.",
+  "settings_transferImportNothingApplicable": "This export holds nothing this version of Cat Browser can apply.",
   "@settings_transferImportNothingApplicable": {
-    "description": "Error when the export contains no settings this app version understands. WebLibre is the app name."
+    "description": "Error when the export contains no settings this app version understands. Cat Browser is the app name."
   },
   "settings_transferImportedSuccess": "Settings imported",
   "@settings_transferImportedSuccess": {
@@ -2660,7 +2660,7 @@
   },
   "settings_transferSectionAppSettingsTitle": "App settings",
   "@settings_transferSectionAppSettingsTitle": {
-    "description": "Name of the export section holding WebLibre's own settings, shown as a checkbox on the export screen and in the import dialog."
+    "description": "Name of the export section holding Cat Browser's own settings, shown as a checkbox on the export screen and in the import dialog."
   },
   "settings_transferSectionAppSettingsDescription": "Appearance, browsing, tabs, privacy, {torBrand} and web engine settings",
   "@settings_transferSectionAppSettingsDescription": {
@@ -2683,15 +2683,15 @@
   "@settings_importErrorNotJson": {
     "description": "Error when importing settings: the chosen file or clipboard text is not JSON at all."
   },
-  "settings_importErrorNotSettingsExport": "This is not a WebLibre settings export.",
+  "settings_importErrorNotSettingsExport": "This is not a Cat Browser settings export.",
   "@settings_importErrorNotSettingsExport": {
-    "description": "Error when importing settings: the JSON is not a WebLibre settings export. WebLibre is the app name."
+    "description": "Error when importing settings: the JSON is not a Cat Browser settings export. Cat Browser is the app name."
   },
   "settings_importErrorMissingFormatVersion": "The export does not say which format version it is.",
   "@settings_importErrorMissingFormatVersion": {
     "description": "Error when importing settings: the file lacks its format version number."
   },
-  "settings_importErrorNewerFormatVersion": "This export was written by a newer version of WebLibre (format {version}, this version reads up to {supported}). Update the app and try again.",
+  "settings_importErrorNewerFormatVersion": "This export was written by a newer version of Cat Browser (format {version}, this version reads up to {supported}). Update the app and try again.",
   "@settings_importErrorNewerFormatVersion": {
     "description": "Error when importing settings from a newer app version. version is the file's format number; supported is the highest this app reads.",
     "placeholders": {
@@ -2725,7 +2725,7 @@
       }
     }
   },
-  "settings_importErrorUnreadablePrefsLine": "The \"{section}\" section has a line WebLibre cannot read: \"{line}\". Importing it would reset preferences rather than restore them.",
+  "settings_importErrorUnreadablePrefsLine": "The \"{section}\" section has a line Cat Browser cannot read: \"{line}\". Importing it would reset preferences rather than restore them.",
   "@settings_importErrorUnreadablePrefsLine": {
     "description": "Error when importing engine preferences: one line of the section is not in the expected format. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know. line is that line from the file, possibly shortened.",
     "placeholders": {
@@ -2737,9 +2737,9 @@
       }
     }
   },
-  "settings_importErrorNotPrefsSnapshot": "The \"{section}\" section is not a WebLibre preferences snapshot.",
+  "settings_importErrorNotPrefsSnapshot": "The \"{section}\" section is not a Cat Browser preferences snapshot.",
   "@settings_importErrorNotPrefsSnapshot": {
-    "description": "Error when importing engine preferences: the section lacks the marker WebLibre writes. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know.",
+    "description": "Error when importing engine preferences: the section lacks the marker Cat Browser writes. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know.",
     "placeholders": {
       "section": {
         "type": "String"
@@ -2755,7 +2755,7 @@
       }
     }
   },
-  "settings_importErrorUnreadablePref": "The \"{section}\" section holds a preference WebLibre could not read back: \"{pref}\".",
+  "settings_importErrorUnreadablePref": "The \"{section}\" section holds a preference Cat Browser could not read back: \"{pref}\".",
   "@settings_importErrorUnreadablePref": {
     "description": "Error when importing engine preferences: one preference would be lost on import. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know. pref is the preference name.",
     "placeholders": {
@@ -2767,7 +2767,7 @@
       }
     }
   },
-  "settings_importErrorNewerSectionSchema": "The \"{section}\" section was written by a newer version of WebLibre (schema {version}, this version reads up to {supported}). Update the app and try again.",
+  "settings_importErrorNewerSectionSchema": "The \"{section}\" section was written by a newer version of Cat Browser (schema {version}, this version reads up to {supported}). Update the app and try again.",
   "@settings_importErrorNewerSectionSchema": {
     "description": "Error when importing settings: one section comes from a newer app version. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know. version is its schema number; supported is the highest this app reads.",
     "placeholders": {
@@ -3304,7 +3304,7 @@
   },
   "settings_ublockSectionManagement": "Management",
   "@settings_ublockSectionManagement": {
-    "description": "Section heading for whether WebLibre manages uBlock Origin's lists."
+    "description": "Section heading for whether Cat Browser manages uBlock Origin's lists."
   },
   "settings_ublockSectionQuickActions": "Quick Actions",
   "@settings_ublockSectionQuickActions": {
@@ -3330,9 +3330,9 @@
   "@settings_ublockResetDialogMessage": {
     "description": "Body of that dialog."
   },
-  "settings_ublockApplyHardeningsDialogTitle": "Apply WebLibre Hardenings?",
+  "settings_ublockApplyHardeningsDialogTitle": "Apply Cat Browser Hardenings?",
   "@settings_ublockApplyHardeningsDialogTitle": {
-    "description": "Title of the confirmation dialog before enabling WebLibre's recommended extra filter lists. WebLibre is the app name."
+    "description": "Title of the confirmation dialog before enabling Cat Browser's recommended extra filter lists. Cat Browser is the app name."
   },
   "settings_ublockApplyHardeningsDialogMessage": "This will enable a curated set of additional filter lists and add a legitimate URL shortener list as an external list.",
   "@settings_ublockApplyHardeningsDialogMessage": {
@@ -3359,19 +3359,19 @@
   "@settings_ublockQuickResetSubtitle": {
     "description": "Explanation under that row."
   },
-  "settings_ublockQuickApplyHardeningsTitle": "Apply WebLibre Hardenings",
+  "settings_ublockQuickApplyHardeningsTitle": "Apply Cat Browser Hardenings",
   "@settings_ublockQuickApplyHardeningsTitle": {
-    "description": "Row that enables WebLibre's recommended extra filter lists (asks for confirmation)."
+    "description": "Row that enables Cat Browser's recommended extra filter lists (asks for confirmation)."
   },
   "settings_ublockQuickApplyHardeningsSubtitle": "Enable a curated set of additional filter lists.",
   "@settings_ublockQuickApplyHardeningsSubtitle": {
     "description": "Explanation under that row."
   },
-  "settings_ublockManageTitle": "Manage with WebLibre",
+  "settings_ublockManageTitle": "Manage with Cat Browser",
   "@settings_ublockManageTitle": {
-    "description": "Switch: let WebLibre control which filter lists uBlock Origin uses."
+    "description": "Switch: let Cat Browser control which filter lists uBlock Origin uses."
   },
-  "settings_ublockManageSubtitle": "WebLibre controls uBlock Origin's enabled filter lists at the next browser start.",
+  "settings_ublockManageSubtitle": "Cat Browser controls uBlock Origin's enabled filter lists at the next browser start.",
   "@settings_ublockManageSubtitle": {
     "description": "Explanation under that switch."
   },
@@ -3399,7 +3399,7 @@
   "@settings_ublockVisitSupportTooltip": {
     "description": "Tooltip of the button that opens a filter list's support website."
   },
-  "settings_ublockExternalListsHint": "Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in WebLibre.",
+  "settings_ublockExternalListsHint": "Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in Cat Browser.",
   "@settings_ublockExternalListsHint": {
     "description": "Explanation above the external filter lists."
   },
@@ -3616,9 +3616,9 @@
   "@settings_categoryExtensionsSubtitle": {
     "description": "Summary under the \"Extensions\" category."
   },
-  "settings_categoryAccountTitle": "WebLibre Account",
+  "settings_categoryAccountTitle": "Cat Browser Account",
   "@settings_categoryAccountTitle": {
-    "description": "Category on the main settings screen for the app's own account. WebLibre is the app name."
+    "description": "Category on the main settings screen for the app's own account. Cat Browser is the app name."
   },
   "settings_categoryAccountKeywords": "account, subscription",
   "@settings_categoryAccountKeywords": {
@@ -3744,9 +3744,9 @@
   "@settings_privacySectionAppOpeningProtectionTitle": {
     "description": "Section heading on the privacy & security screen."
   },
-  "settings_indexAppOpeningProtectionSubtitle": "Control which apps may launch WebLibre directly",
+  "settings_indexAppOpeningProtectionSubtitle": "Control which apps may launch Cat Browser directly",
   "@settings_indexAppOpeningProtectionSubtitle": {
-    "description": "Summary of the app-opening protection setting, shown as a settings search result. WebLibre is the app name."
+    "description": "Summary of the app-opening protection setting, shown as a settings search result. Cat Browser is the app name."
   },
   "settings_privacySectionDataManagementTitle": "Data Management",
   "@settings_privacySectionDataManagementTitle": {
@@ -4310,9 +4310,9 @@
   "@settings_previewPageContent": {
     "description": "Placeholder text in the page area of the toolbar preview."
   },
-  "settings_previewPageTitle": "WebLibre Preview",
+  "settings_previewPageTitle": "Cat Browser Preview",
   "@settings_previewPageTitle": {
-    "description": "Title of the sample page shown in the toolbar preview. WebLibre is the app name."
+    "description": "Title of the sample page shown in the toolbar preview. Cat Browser is the app name."
   },
   "settings_previewTabNews": "News",
   "@settings_previewTabNews": {
@@ -4370,9 +4370,9 @@
   "@settings_importSettingsDescription": {
     "description": "Explanation at the top of that dialog."
   },
-  "settings_unreadableSections": "{count, plural, =1{1 section in this file ({sections}) can't be read by this version of WebLibre and will be skipped.} other{{count} sections in this file ({sections}) can't be read by this version of WebLibre and will be skipped.}}",
+  "settings_unreadableSections": "{count, plural, =1{1 section in this file ({sections}) can't be read by this version of Cat Browser and will be skipped.} other{{count} sections in this file ({sections}) can't be read by this version of Cat Browser and will be skipped.}}",
   "@settings_unreadableSections": {
-    "description": "Note in the import dialog when the export contains sections from a newer app version. count is the number of those sections; sections is their keys as written in the file, quoted and comma-separated (they have no translatable name). WebLibre is the app name.",
+    "description": "Note in the import dialog when the export contains sections from a newer app version. count is the number of those sections; sections is their keys as written in the file, quoted and comma-separated (they have no translatable name). Cat Browser is the app name.",
     "placeholders": {
       "count": {
         "type": "int"

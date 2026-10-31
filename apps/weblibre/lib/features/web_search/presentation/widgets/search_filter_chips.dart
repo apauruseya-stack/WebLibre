@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -155,7 +155,7 @@ class _MenuRow extends StatelessWidget {
 /// The device's own locale, which the search "device default" choices describe.
 ///
 /// Not `Localizations.localeOf`: that is the app's UI locale, which follows the
-/// in-app language override and is narrowed to the languages WebLibre ships.
+/// in-app language override and is narrowed to the languages Cat Browser ships.
 Locale _deviceLocale(BuildContext context) =>
     View.of(context).platformDispatcher.locale;
 

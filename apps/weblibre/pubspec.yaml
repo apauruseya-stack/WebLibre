@@ -151,9 +151,9 @@ flutter:
     - family: TorIcons
       fonts:
         - asset: assets/fonts/tor-icons.ttf
-    - family: WebLibre
+    - family: Cat Browser
       fonts:
-        - asset: assets/fonts/WebLibre.ttf
+        - asset: assets/fonts/Cat Browser.ttf
 
 flutter_launcher_icons:
   android: "launcher_icon"

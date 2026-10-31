@@ -1,6 +1,6 @@
 {
   "@@locale": "zh",
-  "intentGatekeeper_dialogTitle": "在 WebLibre 中打开链接？",
+  "intentGatekeeper_dialogTitle": "在 Cat Browser 中打开链接？",
   "intentGatekeeper_appIsTryingToOpenLink": "{appName} 正尝试在 {browserName} 中打开链接。",
   "intentGatekeeper_alwaysAllow": "始终允许",
   "intentGatekeeper_allowOnce": "允许一次",

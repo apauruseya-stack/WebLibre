@@ -122,13 +122,13 @@ class AppLinkLauncher(
     }
 
     /**
-     * Send an unbound intent through an explicit chooser that cannot offer WebLibre or any other
+     * Send an unbound intent through an explicit chooser that cannot offer Cat Browser or any other
      * browser, instead of letting `startActivity` resolve it implicitly.
      *
      * An ambiguous resolution deliberately leaves the component unbound so the user picks the app.
      * Handing that to `startActivity` does not ask anyone: for an http(s) target it resolves like
      * any ordinary web link and lands on the default browser — which, for this app's users, is
-     * usually WebLibre. The link would then reopen the browser it was trying to leave, and under
+     * usually Cat Browser. The link would then reopen the browser it was trying to leave, and under
      * `always` the original navigation is denied as well, because relaunching ourselves counts as a
      * successful launch. Filtering browsers out of the candidate list during discovery does not
      * prevent this; it never constrained the intent that is actually started.

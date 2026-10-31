@@ -34,7 +34,7 @@
   "bangs_flagUrlEncodePlaceholderSubtitle": "Suchbegriffe URL-kodieren. Manche Websites funktionieren nicht mit kodierten Begriffen – für diese Websites die Option deaktivieren.",
   "bangs_flagUrlEncodeSpaceToPlusTitle": "Leerzeichen als Plus kodieren",
   "bangs_flagUrlEncodeSpaceToPlusSubtitle": "Leerzeichen als + statt als %20 kodieren. Manche Websites erfordern das eine oder das andere Format.",
-  "bangs_tooltipOfficialSearch": "Offizielle WebLibre-Suche",
+  "bangs_tooltipOfficialSearch": "Offizielle Cat Browser-Suche",
   "bangs_tooltipCustomizeAsOwn": "Als eigenen Bang anpassen",
   "bangs_tooltipUnpin": "Von Suchanbietern lösen",
   "bangs_tooltipPin": "An Suchanbieter anheften",

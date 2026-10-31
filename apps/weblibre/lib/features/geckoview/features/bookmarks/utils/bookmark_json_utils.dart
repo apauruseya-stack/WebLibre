@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -356,7 +356,7 @@ class _BookmarkJsonParser {
 
   /// Reads a backup timestamp, which may be in either unit.
   ///
-  /// Firefox writes PRTime (microseconds), while WebLibre's own JSON export
+  /// Firefox writes PRTime (microseconds), while Cat Browser's own JSON export
   /// writes Places' native milliseconds. Any microsecond value for a date after
   /// ~1973 exceeds [_microsecondThreshold], whereas a millisecond value would
   /// have to be a date past the year 5138 to reach it.

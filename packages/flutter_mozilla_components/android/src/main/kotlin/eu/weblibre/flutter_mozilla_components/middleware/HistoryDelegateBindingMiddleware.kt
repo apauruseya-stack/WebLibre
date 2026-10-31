@@ -78,7 +78,7 @@ class HistoryDelegateBindingMiddleware(
             is TabListAction.RemoveAllTabsAction -> HistoryExclusions.forgetAll()
             // Only the tabs actually being removed, read before [next] applies the
             // action. Forgetting the whole set would drop the provisional mark of a
-            // surviving tab WebLibre has no row for yet — an excluded container's
+            // surviving tab Cat Browser has no row for yet — an excluded container's
             // `window.open` child — and its next visit would reach Places.
             is TabListAction.RemoveAllNormalTabsAction ->
                 store.state.normalTabs.forEach { HistoryExclusions.forget(it.id) }
@@ -111,7 +111,7 @@ class HistoryDelegateBindingMiddleware(
     }
 
     /**
-     * Carry the opener's exclusion over to a session WebLibre hasn't recorded yet.
+     * Carry the opener's exclusion over to a session Cat Browser hasn't recorded yet.
      * The child inherits the parent's container in Dart moments later; until that
      * snapshot arrives this is the only thing standing between an excluded
      * container's popup and Places. Provisional — see [HistoryExclusions].

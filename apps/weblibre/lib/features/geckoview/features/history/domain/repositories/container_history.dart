@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -359,7 +359,7 @@ class ContainerHistoryRepository extends _$ContainerHistoryRepository {
   void build() {}
 }
 
-/// Annotate Mozilla Places [visits] with the WebLibre container each belonged
+/// Annotate Mozilla Places [visits] with the Cat Browser container each belonged
 /// to (from the `visit_container` relation), matched by canonical URL and
 /// nearest visit time. Uncontained visits get an empty tag list. When
 /// [filterContainerId] is set, only visits resolving to that container are

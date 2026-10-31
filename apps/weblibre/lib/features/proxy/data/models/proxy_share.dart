@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -22,8 +22,8 @@ import 'dart:convert';
 import 'package:fast_equatable/fast_equatable.dart';
 import 'package:flutter_singbox_proxy/flutter_singbox_proxy.dart';
 
-/// Custom share-link scheme for round-tripping a WebLibre proxy profile
-/// (including any secret config) between WebLibre installs. NOT cross-app
+/// Custom share-link scheme for round-tripping a Cat Browser proxy profile
+/// (including any secret config) between Cat Browser installs. NOT cross-app
 /// compatible — for that use the standard ss://, vless://, etc. URIs imported
 /// from the editor (and exposed by future per-protocol exporters).
 const weblibreProxyShareScheme = 'weblibre-proxy';
@@ -87,7 +87,7 @@ ProxyShareEnvelope decodeProxyShareUri(String rawUri) {
   final trimmed = rawUri.trim();
   if (!trimmed.startsWith(_shareUriPrefix)) {
     throw const FormatException(
-      'Not a WebLibre proxy share URI (expected scheme $weblibreProxyShareScheme).',
+      'Not a Cat Browser proxy share URI (expected scheme $weblibreProxyShareScheme).',
     );
   }
   final payload = trimmed.substring(_shareUriPrefix.length);

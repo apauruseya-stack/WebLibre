@@ -56,7 +56,7 @@ private class NativeFragmentView(
      * [onFlutterViewAttached] is no signal for this: Flutter calls it while constructing the
      * platform view, so reporting readiness from there claims the container is usable long before
      * it is. The container's own attach state is the fact that matters, so it is what gets
-     * reported. See https://github.com/FaFre/WebLibre/issues/557.
+     * reported. See https://github.com/FaFre/Cat Browser/issues/557.
      */
     private val attachStateListener = object : View.OnAttachStateChangeListener {
         override fun onViewAttachedToWindow(v: View) {

@@ -7,7 +7,7 @@
   "appLinks_bannerOpenApp": "Buka aplikasi",
   "appLinks_dialogTitleNamed": "Buka di {appName}?",
   "appLinks_dialogTitleGeneric": "Buka di aplikasi lain?",
-  "appLinks_dialogBody": "Tautan ini ditangani oleh aplikasi di luar WebLibre.",
+  "appLinks_dialogBody": "Tautan ini ditangani oleh aplikasi di luar Cat Browser.",
   "appLinks_dialogRememberFor": "Ingat pilihan saya untuk {scope}",
   "appLinks_warningProtectedContext": "Tautan ini dilindungi di sini. Aplikasi akan membuka koneksinya sendiri, di luar aturan yang diikuti tab ini.",
   "appLinks_warningPrivateTab": "Ini adalah tab pribadi. Aplikasi menyimpan riwayat dan status masuknya sendiri.",

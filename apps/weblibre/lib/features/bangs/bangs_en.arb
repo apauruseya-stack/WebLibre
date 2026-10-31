@@ -148,9 +148,9 @@
     "description": "Explanation under \"URL Encode Space to Plus\". \"+\" and \"%20\" are literal characters and must stay unchanged."
   },
 
-  "bangs_tooltipOfficialSearch": "Official WebLibre search",
+  "bangs_tooltipOfficialSearch": "Official Cat Browser search",
   "@bangs_tooltipOfficialSearch": {
-    "description": "Tooltip of the crown icon marking a bang provided by WebLibre itself."
+    "description": "Tooltip of the crown icon marking a bang provided by Cat Browser itself."
   },
   "bangs_tooltipCustomizeAsOwn": "Customize as your own bang",
   "@bangs_tooltipCustomizeAsOwn": {

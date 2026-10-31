@@ -71,7 +71,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profileCopy_secretDataDescription =>
-      'WebLibre account sign-in, sync setup and proxy details';
+      'Cat Browser account sign-in, sync setup and proxy details';
 
   @override
   String get profileCopy_cannotBeUndone => 'This cannot be undone.';
@@ -80,27 +80,27 @@ class AppLocalizationsEn extends AppLocalizations {
   String get profileCopy_nothingChanged => 'Nothing has been changed.';
 
   @override
-  String get profileCopy_restartsToWork => 'WebLibre must restart to do this.';
+  String get profileCopy_restartsToWork => 'Cat Browser must restart to do this.';
 
   @override
   String get profileCopy_asksPasswordAfterRestart =>
-      'After restarting, WebLibre asks for the backup file password.';
+      'After restarting, Cat Browser asks for the backup file password.';
 
   @override
   String get profileCopy_reopenToContinue =>
-      'Close WebLibre and open it again.';
+      'Close Cat Browser and open it again.';
 
   @override
   String get profileCopy_signedInFromBackup =>
-      'The restored profile uses the WebLibre account from the backup.';
+      'The restored profile uses the Cat Browser account from the backup.';
 
   @override
   String get profileCopy_olderBackupKeepsCredentials =>
-      'A backup made by an older version of WebLibre carries none of these, and the profile keeps the ones it has now.';
+      'A backup made by an older version of Cat Browser carries none of these, and the profile keeps the ones it has now.';
 
   @override
   String profileCopy_restartCouldNotBeScheduled(String nothingChanged) {
-    return 'WebLibre could not schedule the restart required for this operation. $nothingChanged';
+    return 'Cat Browser could not schedule the restart required for this operation. $nothingChanged';
   }
 
   @override
@@ -176,7 +176,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get about_githubTitle => 'GitHub';
 
   @override
-  String get account_screenTitle => 'WebLibre Account';
+  String get account_screenTitle => 'Cat Browser Account';
 
   @override
   String get account_searchHint => 'Search account settings';
@@ -203,7 +203,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get account_sectionEncryptedSync => 'Encrypted Sync';
 
   @override
-  String get account_signInTitle => 'Sign in to WebLibre Account';
+  String get account_signInTitle => 'Sign in to Cat Browser Account';
 
   @override
   String get account_signInKeywords => 'sign in, account, authentication';
@@ -309,12 +309,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String account_adoptBodyUsable(String name) {
-    return 'WebLibre kept a sign-in for $name from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so WebLibre will not guess.';
+    return 'Cat Browser kept a sign-in for $name from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so Cat Browser will not guess.';
   }
 
   @override
   String get account_adoptBodyUnusable =>
-      'WebLibre kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.';
+      'Cat Browser kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.';
 
   @override
   String get account_adoptRetryError =>
@@ -356,7 +356,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get account_signingInEllipsis => 'Signing in...';
 
   @override
-  String get account_completeSignInInApp => 'Complete sign-in in WebLibre';
+  String get account_completeSignInInApp => 'Complete sign-in in Cat Browser';
 
   @override
   String get account_tooltipSignOut => 'Sign Out';
@@ -366,7 +366,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get account_signOutConfirmContent =>
-      'Are you sure you want to sign out of your WebLibre Account?';
+      'Are you sure you want to sign out of your Cat Browser Account?';
 
   @override
   String get account_resetSyncKeyTitle => 'Reset Sync Key';
@@ -448,14 +448,14 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get account_bannerTitle => 'Support WebLibre';
+  String get account_bannerTitle => 'Support Cat Browser';
 
   @override
   String get account_bannerBody =>
-      'Supporter is an optional subscription that funds WebLibre\'s development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.';
+      'Supporter is an optional subscription that funds Cat Browser\'s development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.';
 
   @override
-  String get account_featureSearchLabel => 'WebLibre Search';
+  String get account_featureSearchLabel => 'Cat Browser Search';
 
   @override
   String get account_featureSearchDescription =>
@@ -466,7 +466,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get account_featureSyncDescription =>
-      'Store and restore your WebLibre settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.';
+      'Store and restore your Cat Browser settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.';
 
   @override
   String get account_becomeSupporter => 'Become a Supporter';
@@ -815,7 +815,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String addons_removeConfirmContent(String name) {
-    return 'Remove $name from WebLibre?';
+    return 'Remove $name from Cat Browser?';
   }
 
   @override
@@ -839,7 +839,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addons_switchEnabledSubtitleAllow =>
-      'Allow this extension to run in WebLibre.';
+      'Allow this extension to run in Cat Browser.';
 
   @override
   String get addons_switchEnabledSubtitleCannot =>
@@ -878,7 +878,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addons_menuFilterListsSubtitle =>
-      'Manage filter lists and apply WebLibre hardenings';
+      'Manage filter lists and apply Cat Browser hardenings';
 
   @override
   String get addons_permissionsTitle => 'Permissions';
@@ -1077,7 +1077,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addons_statusUnsupported =>
-      'This extension is installed, but WebLibre does not currently support it.';
+      'This extension is installed, but Cat Browser does not currently support it.';
 
   @override
   String get addons_permissionBookmarks => 'Read and modify bookmarks';
@@ -1194,7 +1194,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appLinks_dialogBody =>
-      'This link is handled by an app outside WebLibre.';
+      'This link is handled by an app outside Cat Browser.';
 
   @override
   String appLinks_dialogRememberFor(String scope) {
@@ -1375,7 +1375,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Encode spaces as + instead of %20. Some sites require one format or the other.';
 
   @override
-  String get bangs_tooltipOfficialSearch => 'Official WebLibre search';
+  String get bangs_tooltipOfficialSearch => 'Official Cat Browser search';
 
   @override
   String get bangs_tooltipCustomizeAsOwn => 'Customize as your own bang';
@@ -1863,14 +1863,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get browserActions_moveToBackgroundDescription =>
-      'Send WebLibre to the background';
+      'Send Cat Browser to the background';
 
   @override
   String get browserActions_quitBrowserTitle => 'Quit';
 
   @override
   String get browserActions_quitBrowserDescription =>
-      'Close all tabs and quit WebLibre';
+      'Close all tabs and quit Cat Browser';
 
   @override
   String get browserActions_categoryCreate => 'Create';
@@ -1966,7 +1966,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get browserActions_showAboutTitle => 'About';
 
   @override
-  String get browserActions_showAboutDescription => 'About WebLibre';
+  String get browserActions_showAboutDescription => 'About Cat Browser';
 
   @override
   String get browserActions_newContainerTitle => 'New Container';
@@ -5886,7 +5886,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Number of strokes to draw before suggestions appear';
 
   @override
-  String get intentGatekeeper_dialogTitle => 'Open link in WebLibre?';
+  String get intentGatekeeper_dialogTitle => 'Open link in Cat Browser?';
 
   @override
   String intentGatekeeper_appIsTryingToOpenLink(
@@ -6011,7 +6011,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboarding_welcomeBackTitle => 'Welcome back!';
 
   @override
-  String get onboarding_welcomeReadyTitle => 'WebLibre is ready';
+  String get onboarding_welcomeReadyTitle => 'Cat Browser is ready';
 
   @override
   String get onboarding_chooseExperience =>
@@ -6078,7 +6078,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboarding_aiWarningPoint1 =>
-      'WebLibre uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.';
+      'Cat Browser uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.';
 
   @override
   String get onboarding_aiWarningPoint2 =>
@@ -6123,7 +6123,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboarding_permissionsDefaultBrowserSubtitle =>
-      'Set WebLibre as your default browser';
+      'Set Cat Browser as your default browser';
 
   @override
   String get onboarding_privacyTitle => 'Privacy & Hardening';
@@ -6207,7 +6207,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboarding_ublockDescription =>
-      'uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for WebLibre.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe\'s Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.';
+      'uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for Cat Browser.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe\'s Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.';
 
   @override
   String get onboarding_ublockInstallTitle => 'Install uBlock Origin Extension';
@@ -6217,7 +6217,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboarding_ublockApplyDefaultsSubtitle =>
-      'Enable WebLibre hardening filter lists.';
+      'Enable Cat Browser hardening filter lists.';
 
   @override
   String get proxy_actionChange => 'Change';
@@ -6290,7 +6290,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get proxy_autostartLabel => 'Autostart';
 
   @override
-  String get proxy_autostartTooltip => 'Starts with WebLibre';
+  String get proxy_autostartTooltip => 'Starts with Cat Browser';
 
   @override
   String proxy_egressIpTooltip(String ip) {
@@ -6434,7 +6434,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String proxy_wireGuardTrademarkDisclaimer(String brand) {
-    return '$brand is a registered trademark of Jason A. Donenfeld; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.';
+    return '$brand is a registered trademark of Jason A. Donenfeld; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.';
   }
 
   @override
@@ -6460,7 +6460,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get proxy_startAutomaticallySubtitle =>
-      'Connect this profile when WebLibre starts, so tabs using it are ready without a prompt';
+      'Connect this profile when Cat Browser starts, so tabs using it are ready without a prompt';
 
   @override
   String proxy_dnsOverrideExplanation(String brand) {
@@ -6681,7 +6681,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get proxy_importNoImportableProxy =>
-      'This sing-box config has no proxy WebLibre can import.';
+      'This sing-box config has no proxy Cat Browser can import.';
 
   @override
   String get proxy_importMissingType =>
@@ -6694,12 +6694,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String proxy_importDetourThroughOtherOutbound(String tag) {
-    return 'This proxy connects through \"$tag\", another outbound of its config. WebLibre cannot chain proxies, and connecting to it directly would show it your IP address.';
+    return 'This proxy connects through \"$tag\", another outbound of its config. Cat Browser cannot chain proxies, and connecting to it directly would show it your IP address.';
   }
 
   @override
   String proxy_importUnresolvedDetour(String tag) {
-    return 'This proxy connects through \"$tag\", which is defined elsewhere in its config. Import the whole config so WebLibre can check what \"$tag\" does.';
+    return 'This proxy connects through \"$tag\", which is defined elsewhere in its config. Import the whole config so Cat Browser can check what \"$tag\" does.';
   }
 
   @override
@@ -7540,11 +7540,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_mlDownloadsClearDialogContent =>
-      'This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart WebLibre before retrying ML features.';
+      'This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart Cat Browser before retrying ML features.';
 
   @override
   String get settings_mlDownloadsClearedMessage =>
-      'ML downloads cleared. Restart WebLibre before retrying.';
+      'ML downloads cleared. Restart Cat Browser before retrying.';
 
   @override
   String settings_mlDownloadsClearFailedMessage(String error) {
@@ -7689,7 +7689,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_externalLinkHandlingSubtitle =>
-      'Choose how external links open in WebLibre';
+      'Choose how external links open in Cat Browser';
 
   @override
   String get settings_promptOptionLabel => 'Prompt';
@@ -8567,11 +8567,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_defaultBrowserTileSubtitleSet =>
-      'WebLibre is your default browser';
+      'Cat Browser is your default browser';
 
   @override
   String get settings_defaultBrowserTileSubtitleNotSet =>
-      'Set WebLibre as your default browser';
+      'Set Cat Browser as your default browser';
 
   @override
   String get settings_defaultBrowserButtonDefault => 'Default';
@@ -8684,7 +8684,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_appLanguageTranslationsNote =>
-      'Translations are new and may be incomplete or inaccurate, so WebLibre uses English until you choose another language. Pick \"System default\" to follow your device\'s language.';
+      'Translations are new and may be incomplete or inaccurate, so Cat Browser uses English until you choose another language. Pick \"System default\" to follow your device\'s language.';
 
   @override
   String get settings_refreshRateTitle => 'Refresh Rate';
@@ -8786,7 +8786,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_indexDefaultBrowserSubtitle =>
-      'Set WebLibre as your default browser';
+      'Set Cat Browser as your default browser';
 
   @override
   String get settings_appearanceSectionTitle => 'Appearance';
@@ -8804,7 +8804,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_indexAppLanguageSubtitle =>
-      'Choose the language WebLibre\'s own interface uses';
+      'Choose the language Cat Browser\'s own interface uses';
 
   @override
   String get settings_indexRefreshRateSubtitle =>
@@ -9235,18 +9235,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_autoDeleteBrowsingDataSubtitle =>
-      'Delete selected browsing data when you quit or every time WebLibre starts';
+      'Delete selected browsing data when you quit or every time Cat Browser starts';
 
   @override
   String get settings_autoDeleteBrowsingDataQuitOnlySubtitle =>
-      'Delete selected browsing data when you quit WebLibre';
+      'Delete selected browsing data when you quit Cat Browser';
 
   @override
   String get settings_autoDeleteOnStartTitle => 'Also Delete on Start';
 
   @override
   String get settings_autoDeleteOnStartSubtitle =>
-      'Covers sessions that ended without Quit, such as WebLibre being swiped away or closed by Android in the background. When off, their data stays until you next quit.';
+      'Covers sessions that ended without Quit, such as Cat Browser being swiped away or closed by Android in the background. When off, their data stays until you next quit.';
 
   @override
   String get settings_confirmBeforeQuitTitle => 'Confirm Before Quitting';
@@ -9257,7 +9257,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_confirmBeforeQuitSubtitle =>
-      'Ask before Quit closes WebLibre. Long press Quit to skip the question.';
+      'Ask before Quit closes Cat Browser. Long press Quit to skip the question.';
 
   @override
   String get settings_trackingProtectionExceptionsSearchHint =>
@@ -9482,7 +9482,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_uBlockFilterListsTileSubtitle =>
-      'Manage filter lists and apply WebLibre hardenings';
+      'Manage filter lists and apply Cat Browser hardenings';
 
   @override
   String get settings_cookieBannersTitle => 'Cookie banners';
@@ -9597,7 +9597,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_blockAppsOpeningBrowserSubtitle =>
-      'Ask before opening links that other apps send to WebLibre.';
+      'Ask before opening links that other apps send to Cat Browser.';
 
   @override
   String get settings_managedAppsSectionHeader => 'Managed apps';
@@ -9736,7 +9736,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_transferImportNothingApplicable =>
-      'This export holds nothing this version of WebLibre can apply.';
+      'This export holds nothing this version of Cat Browser can apply.';
 
   @override
   String get settings_transferImportedSuccess => 'Settings imported';
@@ -9783,7 +9783,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_importErrorNotSettingsExport =>
-      'This is not a WebLibre settings export.';
+      'This is not a Cat Browser settings export.';
 
   @override
   String get settings_importErrorMissingFormatVersion =>
@@ -9791,7 +9791,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settings_importErrorNewerFormatVersion(int version, int supported) {
-    return 'This export was written by a newer version of WebLibre (format $version, this version reads up to $supported). Update the app and try again.';
+    return 'This export was written by a newer version of Cat Browser (format $version, this version reads up to $supported). Update the app and try again.';
   }
 
   @override
@@ -9810,12 +9810,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settings_importErrorUnreadablePrefsLine(String section, String line) {
-    return 'The \"$section\" section has a line WebLibre cannot read: \"$line\". Importing it would reset preferences rather than restore them.';
+    return 'The \"$section\" section has a line Cat Browser cannot read: \"$line\". Importing it would reset preferences rather than restore them.';
   }
 
   @override
   String settings_importErrorNotPrefsSnapshot(String section) {
-    return 'The \"$section\" section is not a WebLibre preferences snapshot.';
+    return 'The \"$section\" section is not a Cat Browser preferences snapshot.';
   }
 
   @override
@@ -9825,7 +9825,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settings_importErrorUnreadablePref(String section, String pref) {
-    return 'The \"$section\" section holds a preference WebLibre could not read back: \"$pref\".';
+    return 'The \"$section\" section holds a preference Cat Browser could not read back: \"$pref\".';
   }
 
   @override
@@ -9834,7 +9834,7 @@ class AppLocalizationsEn extends AppLocalizations {
     int version,
     int supported,
   ) {
-    return 'The \"$section\" section was written by a newer version of WebLibre (schema $version, this version reads up to $supported). Update the app and try again.';
+    return 'The \"$section\" section was written by a newer version of Cat Browser (schema $version, this version reads up to $supported). Update the app and try again.';
   }
 
   @override
@@ -10309,7 +10309,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_ublockApplyHardeningsDialogTitle =>
-      'Apply WebLibre Hardenings?';
+      'Apply Cat Browser Hardenings?';
 
   @override
   String get settings_ublockApplyHardeningsDialogMessage =>
@@ -10333,18 +10333,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_ublockQuickApplyHardeningsTitle =>
-      'Apply WebLibre Hardenings';
+      'Apply Cat Browser Hardenings';
 
   @override
   String get settings_ublockQuickApplyHardeningsSubtitle =>
       'Enable a curated set of additional filter lists.';
 
   @override
-  String get settings_ublockManageTitle => 'Manage with WebLibre';
+  String get settings_ublockManageTitle => 'Manage with Cat Browser';
 
   @override
   String get settings_ublockManageSubtitle =>
-      'WebLibre controls uBlock Origin\'s enabled filter lists at the next browser start.';
+      'Cat Browser controls uBlock Origin\'s enabled filter lists at the next browser start.';
 
   @override
   String get settings_ublockManageHint =>
@@ -10369,7 +10369,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_ublockExternalListsHint =>
-      'Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in WebLibre.';
+      'Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in Cat Browser.';
 
   @override
   String get settings_ublockNoExternalLists => 'No external lists configured.';
@@ -10551,7 +10551,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Install and manage extension sources';
 
   @override
-  String get settings_categoryAccountTitle => 'WebLibre Account';
+  String get settings_categoryAccountTitle => 'Cat Browser Account';
 
   @override
   String get settings_categoryAccountKeywords => 'account, subscription';
@@ -10668,7 +10668,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_indexAppOpeningProtectionSubtitle =>
-      'Control which apps may launch WebLibre directly';
+      'Control which apps may launch Cat Browser directly';
 
   @override
   String get settings_privacySectionDataManagementTitle => 'Data Management';
@@ -11146,7 +11146,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_previewPageContent => 'Page Content';
 
   @override
-  String get settings_previewPageTitle => 'WebLibre Preview';
+  String get settings_previewPageTitle => 'Cat Browser Preview';
 
   @override
   String get settings_previewTabNews => 'News';
@@ -11199,9 +11199,9 @@ class AppLocalizationsEn extends AppLocalizations {
       count,
       locale: localeName,
       other:
-          '$count sections in this file ($sections) can\'t be read by this version of WebLibre and will be skipped.',
+          '$count sections in this file ($sections) can\'t be read by this version of Cat Browser and will be skipped.',
       one:
-          '1 section in this file ($sections) can\'t be read by this version of WebLibre and will be skipped.',
+          '1 section in this file ($sections) can\'t be read by this version of Cat Browser and will be skipped.',
     );
     return '$_temp0';
   }
@@ -11859,12 +11859,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String tor_startAutomaticallySectionSubtitle(String brand) {
-    return 'Connect the $brand service when WebLibre starts';
+    return 'Connect the $brand service when Cat Browser starts';
   }
 
   @override
   String tor_startAutomaticallySubtitle(String brand) {
-    return 'Connect the $brand service when WebLibre starts, so tabs using it are ready without a prompt';
+    return 'Connect the $brand service when Cat Browser starts, so tabs using it are ready without a prompt';
   }
 
   @override
@@ -11974,7 +11974,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String tor_trademarkDisclaimer(String brand) {
-    return '$brand is a trademark of The Tor Project; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, the Tor Project.';
+    return '$brand is a trademark of The Tor Project; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, the Tor Project.';
   }
 
   @override
@@ -12023,7 +12023,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get user_restartingToTakeBackup => 'Restarting to take the backup';
 
   @override
-  String get user_backupRestartsTitle => 'WebLibre restarts to do this';
+  String get user_backupRestartsTitle => 'Cat Browser restarts to do this';
 
   @override
   String user_backupRestartsSubtitle(String restartClosesCurrentProfile) {
@@ -12035,7 +12035,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_setPasswordNextSubtitle =>
-      'After restarting, WebLibre asks for the backup file password.';
+      'After restarting, Cat Browser asks for the backup file password.';
 
   @override
   String get user_verifyBackupIntegrityTitle => 'Verify backup integrity';
@@ -12049,12 +12049,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String user_tempDataSkippedSubtitle(String shortcutsNeedPinningAgain) {
-    return 'Cache files and other data WebLibre can rebuild are not saved. $shortcutsNeedPinningAgain';
+    return 'Cache files and other data Cat Browser can rebuild are not saved. $shortcutsNeedPinningAgain';
   }
 
   @override
   String get user_accountDataIncludedTitle =>
-      'WebLibre account data is included';
+      'Cat Browser account data is included';
 
   @override
   String user_accountDataIncludedSubtitle(String profileSecretDataDescription) {
@@ -12062,7 +12062,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get user_closingToTakeBackup => 'Closing WebLibre to take the backup…';
+  String get user_closingToTakeBackup => 'Closing Cat Browser to take the backup…';
 
   @override
   String get user_actionBackup => 'Backup';
@@ -12140,7 +12140,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_lockMethodNoneSubtitle =>
-      'Anyone using WebLibre on this device can open this profile';
+      'Anyone using Cat Browser on this device can open this profile';
 
   @override
   String get user_lockMethodDeviceTitle => 'Device lock';
@@ -12165,7 +12165,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_profilePasswordUnrecoverableSubtitle =>
-      'Without it, this profile can\'t be opened, backed up or deleted. The password locks WebLibre; it does not encrypt the profile\'s data.';
+      'Without it, this profile can\'t be opened, backed up or deleted. The password locks Cat Browser; it does not encrypt the profile\'s data.';
 
   @override
   String get user_setProfilePasswordTitle => 'Set profile password';
@@ -12189,7 +12189,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_profilePasswordInterrupted =>
-      'WebLibre was closed or switched away from during the check. Enter the password again.';
+      'Cat Browser was closed or switched away from during the check. Enter the password again.';
 
   @override
   String get user_profilePasswordSaveFailed =>
@@ -12264,7 +12264,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_lockInBackgroundSubtitle =>
-      'As soon as WebLibre leaves the screen';
+      'As soon as Cat Browser leaves the screen';
 
   @override
   String get user_lockAfterTimeoutTitle => 'Lock after a timeout';
@@ -12277,7 +12277,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_lockOnStartupSubtitle =>
-      'Unlock once at startup, then stay unlocked until WebLibre is fully closed';
+      'Unlock once at startup, then stay unlocked until Cat Browser is fully closed';
 
   @override
   String get user_timeoutFieldTitle => 'Timeout';
@@ -12348,7 +12348,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_newProfileNoSignInTitle =>
-      'A new profile starts without WebLibre sign-in';
+      'A new profile starts without Cat Browser sign-in';
 
   @override
   String get user_newProfileNoSignInSubtitle =>
@@ -12419,7 +12419,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_accountDataRestoredTitle =>
-      'WebLibre account data is restored';
+      'Cat Browser account data is restored';
 
   @override
   String user_accountDataRestoredSubtitle(
@@ -12459,7 +12459,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get user_restoringBackupProgress => 'Restoring backup…';
 
   @override
-  String get user_closingToRestoreProgress => 'Closing WebLibre to restore…';
+  String get user_closingToRestoreProgress => 'Closing Cat Browser to restore…';
 
   @override
   String get user_actionRestore => 'Restore';
@@ -12471,7 +12471,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String user_switchClosesReopensAs(String profileName) {
-    return 'WebLibre closes and reopens as \"$profileName\".';
+    return 'Cat Browser closes and reopens as \"$profileName\".';
   }
 
   @override
@@ -12534,7 +12534,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get user_quitBrowserDontAskAgainSavesQuitAndStart =>
-      'The data ticked above will be deleted on every quit and every time WebLibre starts. You can change both in settings.';
+      'The data ticked above will be deleted on every quit and every time Cat Browser starts. You can change both in settings.';
 
   @override
   String get user_quitBrowserDeleteDataTitle => 'Delete browsing data';
@@ -13413,14 +13413,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_haltMaintenanceBody =>
-      'A backup, restore or deletion from an earlier run did not finish. WebLibre must finish it before any profile can open.';
+      'A backup, restore or deletion from an earlier run did not finish. Cat Browser must finish it before any profile can open.';
 
   @override
   String get startup_haltUnavailableTitle => 'Startup is not ready';
 
   @override
   String startup_haltUnavailableBody(String reopenToContinue) {
-    return 'WebLibre needs to restart before it can choose a profile. $reopenToContinue';
+    return 'Cat Browser needs to restart before it can choose a profile. $reopenToContinue';
   }
 
   @override
@@ -13428,14 +13428,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_haltProfileAccessBusyBody =>
-      'Another WebLibre task is still using this profile. Try again in a moment.';
+      'Another Cat Browser task is still using this profile. Try again in a moment.';
 
   @override
   String get startup_haltNoProfileTitle => 'No usable profile';
 
   @override
   String get startup_haltNoProfileBody =>
-      'WebLibre could not read an existing profile or create a new one. Storage may be full or unavailable.';
+      'Cat Browser could not read an existing profile or create a new one. Storage may be full or unavailable.';
 
   @override
   String get startup_haltArbitrationFailedTitle =>
@@ -13443,7 +13443,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String startup_haltArbitrationFailedBody(String reopenToContinue) {
-    return 'WebLibre will not guess which profile to use. $reopenToContinue';
+    return 'Cat Browser will not guess which profile to use. $reopenToContinue';
   }
 
   @override
@@ -13453,7 +13453,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get startup_tryingAgain => 'Trying again…';
 
   @override
-  String get startup_closeWebLibre => 'Close WebLibre';
+  String get startup_closeWebLibre => 'Close Cat Browser';
 
   @override
   String get startup_technicalDetails => 'Technical details';
@@ -13467,7 +13467,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceNotRunnableUnsupported =>
-      'This task was created by a newer version of WebLibre and cannot run here.';
+      'This task was created by a newer version of Cat Browser and cannot run here.';
 
   @override
   String get startup_maintenanceNotRunnableNoDestination =>
@@ -13479,11 +13479,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceNotRunnableRestoreHere =>
-      'WebLibre cannot restore from this startup screen.';
+      'Cat Browser cannot restore from this startup screen.';
 
   @override
   String get startup_maintenanceNotRunnableDeleteHere =>
-      'WebLibre cannot delete a profile from this startup screen.';
+      'Cat Browser cannot delete a profile from this startup screen.';
 
   @override
   String get startup_maintenanceRecoveredRestore =>
@@ -13509,7 +13509,7 @@ class AppLocalizationsEn extends AppLocalizations {
     String nothingChanged,
     String reopenToContinue,
   ) {
-    return 'WebLibre can no longer safely work on this profile. $nothingChanged $reopenToContinue';
+    return 'Cat Browser can no longer safely work on this profile. $nothingChanged $reopenToContinue';
   }
 
   @override
@@ -13523,7 +13523,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceEvidenceDiscardedKept =>
-      'The interrupted record was discarded. WebLibre could not tell which profile the saved data belonged to, so it kept the saved data on the device rather than removing it.';
+      'The interrupted record was discarded. Cat Browser could not tell which profile the saved data belonged to, so it kept the saved data on the device rather than removing it.';
 
   @override
   String startup_maintenanceWrongPassword(String nothingChanged) {
@@ -13542,7 +13542,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String startup_maintenanceUnsupportedArchiveVersion(String nothingChanged) {
-    return 'This backup file was created by a newer version of WebLibre and cannot be read here. $nothingChanged';
+    return 'This backup file was created by a newer version of Cat Browser and cannot be read here. $nothingChanged';
   }
 
   @override
@@ -13609,14 +13609,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceMustFinish =>
-      'This task must finish before any profile can open. WebLibre keeps the profile closed while it works.';
+      'This task must finish before any profile can open. Cat Browser keeps the profile closed while it works.';
 
   @override
   String get startup_maintenanceNothingLeft => 'Nothing is left to finish.';
 
   @override
   String get startup_maintenanceCannotReadRecord =>
-      'WebLibre found interrupted profile work, but cannot read its record.';
+      'Cat Browser found interrupted profile work, but cannot read its record.';
 
   @override
   String get startup_maintenancePasswordLabel => 'Backup file password';
@@ -13653,14 +13653,14 @@ class AppLocalizationsEn extends AppLocalizations {
       'Discard the record and continue';
 
   @override
-  String get startup_maintenanceOpenWebLibreRetry => 'Open WebLibre';
+  String get startup_maintenanceOpenWebLibreRetry => 'Open Cat Browser';
 
   @override
-  String get startup_maintenanceOpenWebLibre => 'Open WebLibre';
+  String get startup_maintenanceOpenWebLibre => 'Open Cat Browser';
 
   @override
   String get startup_maintenanceTakesSeveralMinutes =>
-      'This can take several minutes. Keep WebLibre open.';
+      'This can take several minutes. Keep Cat Browser open.';
 
   @override
   String get startup_maintenanceThenAfterThisOne => 'Then, after this one';
@@ -13678,7 +13678,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceInterruptedUnreadable =>
-      'This was interrupted after it started, and WebLibre cannot read what it was doing. It cannot be run again until that record is dealt with.';
+      'This was interrupted after it started, and Cat Browser cannot read what it was doing. It cannot be run again until that record is dealt with.';
 
   @override
   String get startup_maintenanceDiscardDialogTitle =>
@@ -13686,7 +13686,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceDiscardDialogContent =>
-      'WebLibre cannot read what a backup, restore or deletion was doing when it stopped. Discarding the record lets the browser open again, but a profile that was being replaced may need to be checked afterward.\n\nIf the profile is missing, WebLibre restores the data it saved before replacing it. If the profile is present, WebLibre removes that saved data. If WebLibre cannot tell which profile the saved data belongs to, it keeps the data rather than removing it.';
+      'Cat Browser cannot read what a backup, restore or deletion was doing when it stopped. Discarding the record lets the browser open again, but a profile that was being replaced may need to be checked afterward.\n\nIf the profile is missing, Cat Browser restores the data it saved before replacing it. If the profile is present, Cat Browser removes that saved data. If Cat Browser cannot tell which profile the saved data belongs to, it keeps the data rather than removing it.';
 
   @override
   String get startup_maintenanceDiscardIt => 'Discard it';
@@ -13810,7 +13810,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceRestoreCloneConsequence =>
-      'This restore was created by a newer version of WebLibre and cannot run here.';
+      'This restore was created by a newer version of Cat Browser and cannot run here.';
 
   @override
   String startup_maintenanceRestoreCloneActivity(String profileName) {
@@ -13838,7 +13838,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get startup_maintenanceUnknownConsequence =>
-      'This task was created by a newer version of WebLibre and cannot run.';
+      'This task was created by a newer version of Cat Browser and cannot run.';
 
   @override
   String get startup_maintenanceUnknownActivity => 'Working…';

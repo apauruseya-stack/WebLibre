@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -302,7 +302,7 @@ void main() {
       );
     });
 
-    test('should read millisecond timestamps from WebLibre exports', () {
+    test('should read millisecond timestamps from Cat Browser exports', () {
       final jsonData = {
         'children': [
           {

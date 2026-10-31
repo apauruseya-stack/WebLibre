@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -40,20 +40,20 @@ class _HistoryEventsReceiver extends GeckoHistoryEvents {
 
 /// Records the visit→container relation. Mozilla Places owns the visit itself;
 /// on each Places visit the tab's native history delegate forwards the id of the
-/// session that produced it, which this service maps to that tab's WebLibre
+/// session that produced it, which this service maps to that tab's Cat Browser
 /// container and persists as a `visit_container` row (keyed on the visit's
 /// canonical URL + time so the history UI can join it back to Places).
 ///
-/// Graceful absence: a visit from a tab with no container — or from one WebLibre
+/// Graceful absence: a visit from a tab with no container — or from one Cat Browser
 /// holds no row for even after [VisitContainerRecorder._resolveAttempts], e.g. a
 /// custom tab — writes no row and simply appears untagged. Activated eagerly at
 /// startup.
 @Riverpod(keepAlive: true)
 class VisitContainerRecorder extends _$VisitContainerRecorder {
-  /// A tab created by the engine (`window.open`) is persisted by WebLibre only
+  /// A tab created by the engine (`window.open`) is persisted by Cat Browser only
   /// after the fact, so its first visit can arrive before the row exists. Retry
   /// briefly rather than dropping the tag; a tab still absent after the whole
-  /// budget is one WebLibre does not track at all (a custom tab), and is not
+  /// budget is one Cat Browser does not track at all (a custom tab), and is not
   /// asked about again — see [_unresolvedTabIds].
   static const _resolveAttempts = 4;
   static const _resolveRetryDelay = Duration(milliseconds: 150);
@@ -120,7 +120,7 @@ class VisitContainerRecorder extends _$VisitContainerRecorder {
           ? tabContainerIds[tabId]
           : await awaitTabRow(tabId);
 
-      // Uncontained tab, or one WebLibre has no row for → nothing to tag.
+      // Uncontained tab, or one Cat Browser has no row for → nothing to tag.
       if (containerId == null) return;
       if (!ref.mounted) return;
 

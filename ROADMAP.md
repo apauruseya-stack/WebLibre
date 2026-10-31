@@ -1,6 +1,6 @@
-# WebLibre Roadmap - Protection, Migration, Accessibility, Transparency, On-Device AI
+# Cat Browser Roadmap - Protection, Migration, Accessibility, Transparency, On-Device AI
 
-> Living document for the `apauruseya-stack/WebLibre` fork.
+> Living document for the `apauruseya-stack/Cat Browser` fork.
 >
 > - **Last updated:** 2026-10-30
 > - **Scope:** `apps/weblibre` (Flutter/Dart) and `packages/flutter_mozilla_components` (Kotlin / GeckoView bridge)
@@ -74,7 +74,7 @@ These constraints are specific to this fork and shape every plan below.
 | Rust toolchain, `gomobile` AAR and the combined native lib are **not** available in the build environment. `lib/core/rust_lib.dart` is a no-op. | No new Rust dependencies. No feature may require the Rust runtime. |
 | Proxy/Tor transport was removed. `main.dart` no longer starts it; the Proxy settings category is hidden. | Do not build features that assume Tor/proxy exists. Keep nullable `network_mode` dimensions so an upstream sync can fill them later. |
 | Release APK is ~317 MB and a release build takes ~4 minutes. | No large model or rule pack is bundled in the APK. Everything heavy is downloaded on demand, after explicit consent. |
-| Upstream is `FaFre/WebLibre`; the fork merges `upstream/main` regularly. | Prefer additive modules. Record every upstream file touched. |
+| Upstream is `FaFre/Cat Browser`; the fork merges `upstream/main` regularly. | Prefer additive modules. Record every upstream file touched. |
 | GeckoView 158 build ships **no** `cookiebanners` service assets, and `ContentBlocking.Settings.Builder` has no cookie-banner method (verified by inspecting the AAR). | Cookie banner handling must be a WebExtension + native-messaging feature, not an engine setting. |
 | No login/password storage layer exists in the bridge today (no `Autocomplete.StorageDelegate` implementation, no `logins` API). | Password import is blocked until a login store is built. It is phased last. |
 | There is no telemetry, no crash reporting and no analytics in the app. | Stats must be computed locally from local sources and must never open a socket. This is testable. |
@@ -213,7 +213,7 @@ If a change needs more than ~30 lines in an upstream file, stop and look for an 
 
 ### Why
 
-Consent banners are the most common interruption on the web. uBlock Origin already hides many of them with cosmetic filters, but hiding is not rejecting: the consent state stays unset, sites re-show the wall, and some refuse to render content until a choice is made. Firefox desktop solves this with a cookie-banner service and remote rules; this GeckoView build does not ship that service, so WebLibre needs its own.
+Consent banners are the most common interruption on the web. uBlock Origin already hides many of them with cosmetic filters, but hiding is not rejecting: the consent state stays unset, sites re-show the wall, and some refuse to render content until a choice is made. Firefox desktop solves this with a cookie-banner service and remote rules; this GeckoView build does not ship that service, so Cat Browser needs its own.
 
 ### Goals
 
@@ -439,7 +439,7 @@ CREATE TABLE cookie_banner_event (
 
 ### Why
 
-Switching browsers is the moment a privacy browser wins or loses a user. WebLibre already imports bookmarks from HTML and Firefox JSON; everything else (history, passwords, open tabs, extension lists) is missing. The README explicitly targets Firefox/Fennec/IronFox users, so migration is a natural gap.
+Switching browsers is the moment a privacy browser wins or loses a user. Cat Browser already imports bookmarks from HTML and Firefox JSON; everything else (history, passwords, open tabs, extension lists) is missing. The README explicitly targets Firefox/Fennec/IronFox users, so migration is a natural gap.
 
 ### Goals
 
@@ -1022,7 +1022,7 @@ Layout:
 
 ### Why
 
-WebLibre already runs on-device ML for container naming: topic prediction and document embeddings, via Gecko's `EngineProcess` and `browser.experiments.ml`. Extending that to summarization, tab comparison, semantic local search and feed triage is a natural, differentiated feature - if it stays local, optional, and honest about its limits.
+Cat Browser already runs on-device ML for container naming: topic prediction and document embeddings, via Gecko's `EngineProcess` and `browser.experiments.ml`. Extending that to summarization, tab comparison, semantic local search and feed triage is a natural, differentiated feature - if it stays local, optional, and honest about its limits.
 
 ### Goals
 
@@ -1424,7 +1424,7 @@ A milestone is done only when all of these are true:
 ### Fork release notes template
 
 ```
-WebLibre <version>
+Cat Browser <version>
 
 New
 - ...

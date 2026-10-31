@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -113,13 +113,13 @@ void main() {
       tester,
       PreferredDownloadManager(
         packageName: 'eu.weblibre.gecko',
-        label: 'WebLibre',
+        label: 'Cat Browser',
         isThisApp: true,
       ),
     );
 
     expect(
-      find.text('WebLibre, with a confirmation before each download'),
+      find.text('Cat Browser, with a confirmation before each download'),
       findsOneWidget,
     );
   });
@@ -165,7 +165,7 @@ void main() {
   testWidgets('says the row is unused while external managers are off', (
     tester,
   ) async {
-    // A fresh profile: WebLibre downloads everything itself and no chooser
+    // A fresh profile: Cat Browser downloads everything itself and no chooser
     // shows, so "tick it next time" would be wrong.
     await _pump(tester, null, useExternalDownloadManager: false);
 

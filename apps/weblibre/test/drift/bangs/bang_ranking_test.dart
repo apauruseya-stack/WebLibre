@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -235,7 +235,7 @@ void main() {
     test('falls back to the group order without a user bang', () async {
       await db.bangDao.upsertBang(_bang('g', 'Google'));
       await db.bangDao.upsertBang(
-        _bang('g', 'WebLibre', group: BangGroup.weblibre),
+        _bang('g', 'Cat Browser', group: BangGroup.weblibre),
       );
 
       expect(await resolveGroup('g'), BangGroup.weblibre);

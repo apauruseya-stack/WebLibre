@@ -571,17 +571,17 @@
   "@browserActions_moveToBackgroundTitle": {
     "description": "Name of the browser action that sends the app to the background, like pressing the Home button, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and as the name of the toolbar button that does the same. Keep it short."
   },
-  "browserActions_moveToBackgroundDescription": "Send WebLibre to the background",
+  "browserActions_moveToBackgroundDescription": "Send Cat Browser to the background",
   "@browserActions_moveToBackgroundDescription": {
-    "description": "Explanation under that browser action's name in the action lists: it sends the app to the background, like pressing the Home button. WebLibre is the app name."
+    "description": "Explanation under that browser action's name in the action lists: it sends the app to the background, like pressing the Home button. Cat Browser is the app name."
   },
   "browserActions_quitBrowserTitle": "Quit",
   "@browserActions_quitBrowserTitle": {
     "description": "Name of the browser action that closes all tabs and exits the app, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and as the name of the toolbar button that does the same. Keep it short."
   },
-  "browserActions_quitBrowserDescription": "Close all tabs and quit WebLibre",
+  "browserActions_quitBrowserDescription": "Close all tabs and quit Cat Browser",
   "@browserActions_quitBrowserDescription": {
-    "description": "Explanation under that browser action's name in the action lists: it closes all tabs and exits the app. WebLibre is the app name."
+    "description": "Explanation under that browser action's name in the action lists: it closes all tabs and exits the app. Cat Browser is the app name."
   },
 
   "browserActions_categoryCreate": "Create",
@@ -694,11 +694,11 @@
   },
   "browserActions_showAboutTitle": "About",
   "@browserActions_showAboutTitle": {
-    "description": "Name of the browser action that opens the About screen. WebLibre is the app name, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short."
+    "description": "Name of the browser action that opens the About screen. Cat Browser is the app name, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short."
   },
-  "browserActions_showAboutDescription": "About WebLibre",
+  "browserActions_showAboutDescription": "About Cat Browser",
   "@browserActions_showAboutDescription": {
-    "description": "Explanation under that browser action's name in the action lists: it opens the About screen. WebLibre is the app name."
+    "description": "Explanation under that browser action's name in the action lists: it opens the About screen. Cat Browser is the app name."
   },
   "browserActions_newContainerTitle": "New Container",
   "@browserActions_newContainerTitle": {

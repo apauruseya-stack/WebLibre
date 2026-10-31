@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -440,7 +440,7 @@ class ProfileRestoreScreen extends HookConsumerWidget {
                     ),
                   ],
                   // Restoring over an existing user replays every participant,
-                  // so the WebLibre account, sync and proxy state in the
+                  // so the Cat Browser account, sync and proxy state in the
                   // archive is installed. A *new* user does not get it —
                   // see `applyCloneParticipantPolicy` — and saying so on only one of
                   // the two branches is what made the backup screen's

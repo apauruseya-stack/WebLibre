@@ -7,7 +7,7 @@
   "appLinks_bannerOpenApp": "Открыть приложение",
   "appLinks_dialogTitleNamed": "Открыть в {appName}?",
   "appLinks_dialogTitleGeneric": "Открыть в другом приложении?",
-  "appLinks_dialogBody": "Эту ссылку обрабатывает приложение вне WebLibre.",
+  "appLinks_dialogBody": "Эту ссылку обрабатывает приложение вне Cat Browser.",
   "appLinks_dialogRememberFor": "Запомнить мой выбор для {scope}",
   "appLinks_warningProtectedContext": "Здесь эта ссылка защищена. Приложение установит собственное соединение, не соблюдая правила этой вкладки.",
   "appLinks_warningPrivateTab": "Это приватная вкладка. Приложение ведёт собственную историю и сохраняет вход в аккаунт.",

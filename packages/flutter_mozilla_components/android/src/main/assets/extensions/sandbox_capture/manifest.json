@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "WebLibre Sandbox Capture",
+  "name": "Cat Browser Sandbox Capture",
   "version": "0.1.0",
-  "description": "Blocks all non-loopback requests from documents served by the WebLibre sandbox capture server.",
+  "description": "Blocks all non-loopback requests from documents served by the Cat Browser sandbox capture server.",
   "browser_specific_settings": {
     "gecko": {
       "id": "sandbox-capture@weblibre.eu"

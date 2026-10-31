@@ -19,7 +19,7 @@ private const val EXCLUDED_CONTEXT_IDS_PREF = "browser.weblibre.excludedHistoryC
  * Which sessions must not record browsing history ("Exclude from History" /
  * incognito container).
  *
- * WebLibre's container membership lives in Dart, so the decision is replicated
+ * Cat Browser's container membership lives in Dart, so the decision is replicated
  * here as a snapshot of tab ids and consulted by [TabScopedHistoryDelegate] —
  * the delegate each engine session runs — at record time. Keying on the tab is
  * what makes the feature work for containers *without* cookie isolation: those
@@ -27,12 +27,12 @@ private const val EXCLUDED_CONTEXT_IDS_PREF = "browser.weblibre.excludedHistoryC
  * while the session that produced the visit always can.
  *
  * Resolution, in order:
- *  1. [excludedTabIds] — the replicated answer for a tab WebLibre knows about.
+ *  1. [excludedTabIds] — the replicated answer for a tab Cat Browser knows about.
  *  2. [excludedContextIds] — the container's Gecko contextual identity. Covers
  *     cookie-isolated containers before the first snapshot lands (cold start,
  *     and the headless external path where no Flutter engine ever attaches).
  *  3. A provisional mark ([markProvisional]) — a tab that exists natively before
- *     WebLibre has a row for it: one just created in an excluded container, or
+ *     Cat Browser has a row for it: one just created in an excluded container, or
  *     one an excluded session opened via `window.open`. Honored only while the
  *     tab is missing from [knownTabIds], i.e. until the snapshot that covers it
  *     arrives and answers authoritatively.
@@ -80,14 +80,14 @@ object HistoryExclusions {
     }
 
     /**
-     * Whether WebLibre holds a row for [tabId], i.e. whether the replicated
+     * Whether Cat Browser holds a row for [tabId], i.e. whether the replicated
      * snapshot is authoritative about it. False for a session that only exists
-     * natively so far, and for one WebLibre never tracks (a custom tab).
+     * natively so far, and for one Cat Browser never tracks (a custom tab).
      */
     fun isTracked(tabId: String): Boolean = tabId in knownTabIds
 
     /**
-     * Exclude a tab WebLibre has no row for yet. Superseded by the next snapshot
+     * Exclude a tab Cat Browser has no row for yet. Superseded by the next snapshot
      * that lists [tabId], which may well say the tab is not excluded after all —
      * this only has to hold the line until then.
      */

@@ -14,7 +14,7 @@
     <string name="weblibre_lock_wrong_password_retry">Contraseña incorrecta. %1$s</string>
     <string name="weblibre_lock_too_many_attempts">Demasiados intentos fallidos. %1$s</string>
     <string name="weblibre_lock_check_failed">No se pudo comprobar la contraseña. Vuelve a intentarlo.</string>
-    <string name="weblibre_lock_interrupted">Saliste de WebLibre durante la comprobación. Vuelve a introducir la contraseña.</string>
+    <string name="weblibre_lock_interrupted">Saliste de Cat Browser durante la comprobación. Vuelve a introducir la contraseña.</string>
     <plurals name="weblibre_lock_retry_seconds">
         <item quantity="one">Vuelve a intentarlo en %d segundo.</item>
         <item quantity="other">Vuelve a intentarlo en %d segundos.</item>

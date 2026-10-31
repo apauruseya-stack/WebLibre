@@ -263,7 +263,7 @@ class Events(
                 }
         }
 
-        // Register the WebLibre "pure black" appearance content port whenever a
+        // Register the Cat Browser "pure black" appearance content port whenever a
         // tab's reader view becomes active. Store-driven (rather than the user's
         // reader toggle) so it also covers reader views restored on app start.
         //

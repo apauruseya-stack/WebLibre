@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -84,7 +84,7 @@ Future<SubscriptionImportResult> fetchSubscription(
   final actualClient = client ?? http.Client();
   try {
     final response = await actualClient
-        .get(url, headers: {'User-Agent': 'WebLibre/sing-box-subscriber'})
+        .get(url, headers: {'User-Agent': 'Cat Browser/sing-box-subscriber'})
         .timeout(const Duration(seconds: 30));
     if (response.statusCode >= 400) {
       throw SubscriptionHttpException(response.statusCode, url);

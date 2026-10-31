@@ -1,9 +1,9 @@
 # Go Mobile Runtime
 
-This directory builds the single Android `gomobile` AAR used by WebLibre.
+This directory builds the single Android `gomobile` AAR used by Cat Browser.
 
 `gomobile` does not support multiple Go mobile AARs in one Android app because
-the generated Go runtime/JNI symbols collide. WebLibre therefore binds sing-box
+the generated Go runtime/JNI symbols collide. Cat Browser therefore binds sing-box
 `libbox` and IPtProxy in one `gomobile bind` invocation.
 
 Pinned inputs are defined in `pins.env`:

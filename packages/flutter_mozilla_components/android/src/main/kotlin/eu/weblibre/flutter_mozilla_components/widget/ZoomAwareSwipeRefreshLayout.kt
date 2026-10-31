@@ -41,7 +41,7 @@ import kotlin.math.roundToInt
  * own intercept handling for the same event. Classifying there and latching the
  * verdict for the whole stroke is what makes the guard hold.
  *
- * See https://github.com/FaFre/WebLibre/issues/356.
+ * See https://github.com/FaFre/Cat Browser/issues/356.
  *
  * Derived from android-components `VerticalSwipeRefreshLayout` (MPL-2.0).
  */

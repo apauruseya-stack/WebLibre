@@ -63,7 +63,7 @@
   },
   "searchCredits_needsReauth": "Please sign in again to request tokens.",
   "@searchCredits_needsReauth": {
-    "description": "Error line when downloading search tokens failed because the account session expired; the user must sign in to their WebLibre account again."
+    "description": "Error line when downloading search tokens failed because the account session expired; the user must sign in to their Cat Browser account again."
   },
 
   "searchCredits_buySearchPackTitle": "Buy a search pack",

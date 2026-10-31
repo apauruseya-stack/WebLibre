@@ -38,7 +38,7 @@ import eu.weblibre.flutter_mozilla_components.ext.EventSequence
  * started on the window — including the one `BasicSelectionActionDelegate`
  * starts via `Activity.startActionMode`.
  *
- * See https://github.com/FaFre/WebLibre/issues/578.
+ * See https://github.com/FaFre/Cat Browser/issues/578.
  */
 object TextSelectionTracker {
     /**

@@ -1,4 +1,4 @@
-# WebLibre End User License Agreement (EULA)
+# Cat Browser End User License Agreement (EULA)
 
 **Version 1.2**
 **Last Updated:** 2026-03-15
@@ -14,7 +14,7 @@ info@ondevice.eu
 
 ## 1. Scope and Acceptance
 
-This End User License Agreement ("Agreement") governs your use of the WebLibre application, related software, updates, branding, websites, and any related services that OnDevice UG may make available in connection with WebLibre (together, the "Software").
+This End User License Agreement ("Agreement") governs your use of the Cat Browser application, related software, updates, branding, websites, and any related services that OnDevice UG may make available in connection with Cat Browser (together, the "Software").
 
 By downloading, installing, accessing, or using the Software, you agree to this Agreement. If you do not agree, do not use the Software.
 
@@ -22,11 +22,11 @@ By downloading, installing, accessing, or using the Software, you agree to this 
 
 ## 2. Open Source License
 
-The WebLibre source code is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). The AGPL-3.0 governs your rights to use, copy, modify, and redistribute the source code and any covered versions of the Software. The full license text is available at: https://www.gnu.org/licenses/agpl-3.0.html
+The Cat Browser source code is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). The AGPL-3.0 governs your rights to use, copy, modify, and redistribute the source code and any covered versions of the Software. The full license text is available at: https://www.gnu.org/licenses/agpl-3.0.html
 
 If this Agreement conflicts with the AGPL-3.0 regarding rights granted under that license, the AGPL-3.0 controls to the extent of that conflict.
 
-WebLibre incorporates third-party open source components, each subject to its own license terms. Key components include (non-exhaustive):
+Cat Browser incorporates third-party open source components, each subject to its own license terms. Key components include (non-exhaustive):
 
 - **GeckoView / Mozilla Android Components** — MPL-2.0 (Mozilla Public License 2.0)
 - **Tor libraries** — various open source licenses
@@ -35,7 +35,7 @@ WebLibre incorporates third-party open source components, each subject to its ow
 
 A complete list of components and their licenses is available in the source code repository and within the app's about/licenses screen.
 
-The WebLibre name, logo, and branding are not licensed under the AGPL-3.0 except to the limited extent required by applicable law.
+The Cat Browser name, logo, and branding are not licensed under the AGPL-3.0 except to the limited extent required by applicable law.
 
 ---
 
@@ -76,15 +76,15 @@ Your use of third-party offerings is solely between you and the relevant third p
 
 ### 6.1 Browser Extensions
 
-WebLibre supports Firefox-compatible browser extensions (WebExtensions). Extensions may be obtained from Mozilla Add-ons (addons.mozilla.org), configured add-on collections, or installed locally from `.xpi` files. Third-party extensions are not developed, reviewed, or endorsed by OnDevice UG. Installing extensions may grant them access to your browsing data and other information as described in their respective permission dialogs. You are responsible for reviewing extension permissions before installation.
+Cat Browser supports Firefox-compatible browser extensions (WebExtensions). Extensions may be obtained from Mozilla Add-ons (addons.mozilla.org), configured add-on collections, or installed locally from `.xpi` files. Third-party extensions are not developed, reviewed, or endorsed by OnDevice UG. Installing extensions may grant them access to your browsing data and other information as described in their respective permission dialogs. You are responsible for reviewing extension permissions before installation.
 
 ### 6.2 Search Engines
 
-When you perform a search, your query is sent directly to your selected search engine provider (e.g., DuckDuckGo, Brave Search, Kagi, Qwant, or others you configure). WebLibre does not intermediate or log these queries.
+When you perform a search, your query is sent directly to your selected search engine provider (e.g., DuckDuckGo, Brave Search, Kagi, Qwant, or others you configure). Cat Browser does not intermediate or log these queries.
 
 ### 6.3 Mozilla Services
 
-WebLibre supports optional integration with Mozilla services, including Firefox Sync via Mozilla accounts. When enabled, data is synchronized with Mozilla's servers under Mozilla's privacy policy. WebLibre also supports custom server overrides, in which case synchronization data is transmitted to the operator of the server endpoints you configure.
+Cat Browser supports optional integration with Mozilla services, including Firefox Sync via Mozilla accounts. When enabled, data is synchronized with Mozilla's servers under Mozilla's privacy policy. Cat Browser also supports custom server overrides, in which case synchronization data is transmitted to the operator of the server endpoints you configure.
 
 ### 6.4 Safe Browsing
 
@@ -92,15 +92,15 @@ When Google Safe Browsing or similar remote reputation features are active, URL-
 
 ### 6.5 DNS Services
 
-WebLibre supports DNS-over-HTTPS (DoH) and custom DNS resolvers. When enabled, DNS queries are sent to the selected provider instead of your default network resolver.
+Cat Browser supports DNS-over-HTTPS (DoH) and custom DNS resolvers. When enabled, DNS queries are sent to the selected provider instead of your default network resolver.
 
 ### 6.6 Tor Network
 
-WebLibre integrates optional Tor routing for anonymous browsing. OnDevice UG is not affiliated with The Tor Project. Your use of the Tor network is governed by The Tor Project's policies (https://www.torproject.org/about/privacy/). You are responsible for ensuring that your use of Tor complies with applicable laws in your jurisdiction.
+Cat Browser integrates optional Tor routing for anonymous browsing. OnDevice UG is not affiliated with The Tor Project. Your use of the Tor network is governed by The Tor Project's policies (https://www.torproject.org/about/privacy/). You are responsible for ensuring that your use of Tor complies with applicable laws in your jurisdiction.
 
 ### 6.7 URL Services
 
-WebLibre may use the `unshorten.me` service to expand shortened URLs and the ClearURLs catalog to strip tracking parameters from URLs.
+Cat Browser may use the `unshorten.me` service to expand shortened URLs and the ClearURLs catalog to strip tracking parameters from URLs.
 
 ### 6.8 General
 

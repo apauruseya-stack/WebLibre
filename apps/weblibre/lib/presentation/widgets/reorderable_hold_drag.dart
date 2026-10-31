@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -59,7 +59,7 @@ const _kMinRevealDelta = 0.5;
 /// immediately reports "the drag target sticks out past the viewport edge".
 /// Because the proxy is pinned to the stationary finger, that condition never
 /// clears again and the list auto-scrolls all the way to its min/max extent,
-/// dragging the item along with it (WebLibre issue #579).
+/// dragging the item along with it (Cat Browser issue #579).
 class ReorderableHoldDragListener extends HookWidget {
   /// Index of the item in the enclosing reorderable list.
   final int index;

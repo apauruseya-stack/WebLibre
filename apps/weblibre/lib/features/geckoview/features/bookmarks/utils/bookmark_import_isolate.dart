@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@ import 'package:weblibre/features/geckoview/features/bookmarks/domain/entities/i
 import 'package:weblibre/features/geckoview/features/bookmarks/utils/bookmark_html_utils.dart';
 import 'package:weblibre/features/geckoview/features/bookmarks/utils/bookmark_json_utils.dart';
 
-/// The bookmark file formats WebLibre can read.
+/// The bookmark file formats Cat Browser can read.
 enum BookmarkImportFormat { html, json }
 
 /// Reads and parses the bookmark file at [path] in a background isolate.

@@ -1,5 +1,5 @@
 /*
- * WebLibre cookie banner handler.
+ * Cat Browser cookie banner handler.
  *
  * Rejects non-essential consent where a reject control exists. It never clicks
  * accept-like text: the phrase list in rules.json contains reject phrases only,

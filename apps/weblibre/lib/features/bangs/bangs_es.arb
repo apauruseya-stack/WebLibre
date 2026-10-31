@@ -34,7 +34,7 @@
   "bangs_flagUrlEncodePlaceholderSubtitle": "Codifica los términos de búsqueda para URL. Algunos sitios no funcionan con términos codificados; desactiva esta opción para ellos.",
   "bangs_flagUrlEncodeSpaceToPlusTitle": "Codificar los espacios como +",
   "bangs_flagUrlEncodeSpaceToPlusSubtitle": "Codifica los espacios como + en lugar de %20. Algunos sitios requieren uno u otro formato.",
-  "bangs_tooltipOfficialSearch": "Búsqueda oficial de WebLibre",
+  "bangs_tooltipOfficialSearch": "Búsqueda oficial de Cat Browser",
   "bangs_tooltipCustomizeAsOwn": "Personalizar como bang propio",
   "bangs_tooltipUnpin": "Desfijar de los proveedores de búsqueda",
   "bangs_tooltipPin": "Fijar en los proveedores de búsqueda",

@@ -9,7 +9,7 @@ package eu.weblibre.flutter_mozilla_components.applinks
 import java.util.Locale
 
 /**
- * Frozen scheme classification tables for the WebLibre-owned app-links implementation
+ * Frozen scheme classification tables for the Cat Browser-owned app-links implementation
  * (see APP_LINKS_OWN_IMPLEMENTATION_PLAN.md §2.2).
  *
  * These tables initially match Mozilla Android Components

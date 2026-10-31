@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -131,7 +131,7 @@ class _BrowserViewState extends ConsumerState<BrowserView>
   /// Latched on pointer-down, because the engine hides the selection toolbar
   /// for the duration of a handle drag and [textSelectionActiveProvider] reads
   /// false while one is in progress. See
-  /// https://github.com/FaFre/WebLibre/issues/578.
+  /// https://github.com/FaFre/Cat Browser/issues/578.
   bool _selectionDragInFlight = false;
 
   /// Pointers currently down on the page, so [_selectionDragInFlight] spans the
@@ -166,7 +166,7 @@ class _BrowserViewState extends ConsumerState<BrowserView>
     // would force an off-screen render the user can't see and competes for the
     // GPU with the overlay's transition animation. The timer is kept alive so
     // capture resumes automatically once the browser is foregrounded again.
-    // See https://github.com/FaFre/WebLibre/issues/492.
+    // See https://github.com/FaFre/Cat Browser/issues/492.
     final topRoute = ref.read(currentTopRouteProvider);
     if (topRoute is! GoRoute || topRoute.name != BrowserRoute.name) {
       return;
@@ -461,7 +461,7 @@ class _BrowserViewState extends ConsumerState<BrowserView>
                   // dismissed. [GeckoView] attaches the browser fragment on every
                   // such report, so an engine kept alive but unpainted for the
                   // whole of startup still gets its fragment the moment it is
-                  // shown. See https://github.com/FaFre/WebLibre/issues/557.
+                  // shown. See https://github.com/FaFre/Cat Browser/issues/557.
                   viewReadyEvents: ref
                       .read(eventServiceProvider)
                       .viewReadyStateEvents,

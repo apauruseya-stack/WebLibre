@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -37,7 +37,7 @@ void main() {
       );
 
       expect(text, '''
-// WebLibre Gecko prefs snapshot
+// Cat Browser Gecko prefs snapshot
 // schema_version=1
 // exported_at=2026-04-15T12:00:00Z
 user_pref("alpha.pref", "value");

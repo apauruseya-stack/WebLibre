@@ -1,6 +1,6 @@
 {
   "@@locale": "ru",
-  "intentGatekeeper_dialogTitle": "Открыть ссылку в WebLibre?",
+  "intentGatekeeper_dialogTitle": "Открыть ссылку в Cat Browser?",
   "intentGatekeeper_appIsTryingToOpenLink": "{appName} пытается открыть ссылку в {browserName}.",
   "intentGatekeeper_alwaysAllow": "Всегда разрешать",
   "intentGatekeeper_allowOnce": "Разрешить один раз",

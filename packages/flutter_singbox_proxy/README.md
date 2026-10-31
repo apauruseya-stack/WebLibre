@@ -1,6 +1,6 @@
 # flutter_singbox_proxy
 
-Android sing-box proxy runtime plugin for WebLibre.
+Android sing-box proxy runtime plugin for Cat Browser.
 
 The public API is Pigeon-based and intentionally uses a generic JSON profile
 boundary. Flutter can add strongly typed editors over time while the native API
@@ -13,7 +13,7 @@ Current state:
 - Returns runtime endpoint metadata for Gecko container proxy integration.
 - Exposes status/log callbacks.
 - Starts libbox via reflection against the `io.nekohasekai.libbox.*` classes
-  shipped in the combined WebLibre gomobile AAR.
+  shipped in the combined Cat Browser gomobile AAR.
 
 ## Building the Android gomobile runtime
 

@@ -98,11 +98,11 @@ class ExternalAppResolverTest {
 
     /**
      * The regression that matters most in practice: holding the browser role is the ordinary state
-     * for this app, so if WebLibre being the default short-circuits the candidate search, http app
-     * links stop surfacing on exactly the devices whose users chose WebLibre.
+     * for this app, so if Cat Browser being the default short-circuits the candidate search, http app
+     * links stop surfacing on exactly the devices whose users chose Cat Browser.
      */
     @Test
-    fun `finds a non-browser handler when WebLibre itself is the default browser`() {
+    fun `finds a non-browser handler when Cat Browser itself is the default browser`() {
         val resolved = resolver(
             FakePackages(
                 defaultActivity = "eu.weblibre",
@@ -116,9 +116,9 @@ class ExternalAppResolverTest {
         assertEquals("com.google.android.youtube", resolved.packageName)
     }
 
-    /** The self guard still holds where it was meant to: an `intent:` URL naming WebLibre. */
+    /** The self guard still holds where it was meant to: an `intent:` URL naming Cat Browser. */
     @Test
-    fun `does not hunt for another app when WebLibre handles a custom scheme by default`() {
+    fun `does not hunt for another app when Cat Browser handles a custom scheme by default`() {
         val resolved = resolver(
             FakePackages(
                 defaultActivity = "eu.weblibre",
@@ -209,7 +209,7 @@ class ExternalAppResolverTest {
     }
 
     @Test
-    fun `an intent naming WebLibre itself never resolves`() {
+    fun `an intent naming Cat Browser itself never resolves`() {
         val resolved = resolver(
             FakePackages(candidates = listOf("com.some.app")),
         ).resolve(

@@ -7,7 +7,7 @@
   "appLinks_bannerOpenApp": "App öffnen",
   "appLinks_dialogTitleNamed": "In {appName} öffnen?",
   "appLinks_dialogTitleGeneric": "In einer anderen App öffnen?",
-  "appLinks_dialogBody": "Dieser Link wird von einer App außerhalb von WebLibre verarbeitet.",
+  "appLinks_dialogBody": "Dieser Link wird von einer App außerhalb von Cat Browser verarbeitet.",
   "appLinks_dialogRememberFor": "Auswahl für {scope} merken",
   "appLinks_warningProtectedContext": "Dieser Link ist hier geschützt. Die App baut eine eigene Verbindung auf, außerhalb der Regeln, die für diesen Tab gelten.",
   "appLinks_warningPrivateTab": "Dies ist ein privater Tab. Die App führt einen eigenen Verlauf und bleibt angemeldet.",

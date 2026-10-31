@@ -37,7 +37,7 @@ import androidx.annotation.MainThread
 import kotlinx.coroutines.withContext
 
 /**
- * WebLibre-owned implementation of [GeckoAppLinksApi] backed by [ExternalAppResolver] and
+ * Cat Browser-owned implementation of [GeckoAppLinksApi] backed by [ExternalAppResolver] and
  * [AppLinkLauncher] (APP_LINKS_OWN_IMPLEMENTATION_PLAN.md Phase 1). Policy lives in Dart; this
  * surface owns PackageManager resolution and Intent launch for the manual entry points.
  */

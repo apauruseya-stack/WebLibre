@@ -45,7 +45,7 @@ class GeckoRecentlyClosedTabsService {
   }
 
   /// Keeps the tabs [ids] off the list when they are closed next: tabs closed
-  /// by WebLibre rather than the user. Await it before closing them.
+  /// by Cat Browser rather than the user. Await it before closing them.
   Future<void> keepOff(List<String> ids) {
     return _api.keepOffRecentlyClosed(ids);
   }

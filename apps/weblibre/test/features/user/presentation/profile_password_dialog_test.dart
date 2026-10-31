@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -224,7 +224,7 @@ void main() {
     expect(result, isNull);
     expect(
       find.text(
-        'WebLibre was closed or switched away from during the check. '
+        'Cat Browser was closed or switched away from during the check. '
         'Enter the password again.',
       ),
       findsOneWidget,

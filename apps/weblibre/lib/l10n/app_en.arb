@@ -80,9 +80,9 @@
   "@profileCopy_dataDescription": {
     "description": "List fragment inserted into sentences about deleting, restoring or replacing a browser profile. Names everything the profile holds that would be lost. Lowercase, no final period."
   },
-  "profileCopy_secretDataDescription": "WebLibre account sign-in, sync setup and proxy details",
+  "profileCopy_secretDataDescription": "Cat Browser account sign-in, sync setup and proxy details",
   "@profileCopy_secretDataDescription": {
-    "description": "List fragment inserted into sentences about profile backups. Names the sensitive account data that backups include. Lowercase, no final period. WebLibre is the app name."
+    "description": "List fragment inserted into sentences about profile backups. Names the sensitive account data that backups include. Lowercase, no final period. Cat Browser is the app name."
   },
   "profileCopy_cannotBeUndone": "This cannot be undone.",
   "@profileCopy_cannotBeUndone": {
@@ -92,27 +92,27 @@
   "@profileCopy_nothingChanged": {
     "description": "Standalone sentence appended to error messages when a profile backup, restore or delete stopped before touching any data, reassuring the user that it is safe to retry."
   },
-  "profileCopy_restartsToWork": "WebLibre must restart to do this.",
+  "profileCopy_restartsToWork": "Cat Browser must restart to do this.",
   "@profileCopy_restartsToWork": {
     "description": "Standalone sentence in profile backup, restore and delete screens: the app has to restart to carry out the operation. Always followed by further sentences."
   },
-  "profileCopy_asksPasswordAfterRestart": "After restarting, WebLibre asks for the backup file password.",
+  "profileCopy_asksPasswordAfterRestart": "After restarting, Cat Browser asks for the backup file password.",
   "@profileCopy_asksPasswordAfterRestart": {
     "description": "Standalone sentence in the backup restore flow: after restarting, the app asks for the backup file password."
   },
-  "profileCopy_reopenToContinue": "Close WebLibre and open it again.",
+  "profileCopy_reopenToContinue": "Close Cat Browser and open it again.",
   "@profileCopy_reopenToContinue": {
     "description": "Standalone instruction appended to startup error messages that can only be cleared by fully closing and reopening the app."
   },
-  "profileCopy_signedInFromBackup": "The restored profile uses the WebLibre account from the backup.",
+  "profileCopy_signedInFromBackup": "The restored profile uses the Cat Browser account from the backup.",
   "@profileCopy_signedInFromBackup": {
     "description": "Standalone sentence in the warning before restoring a backup over an existing profile: account sign-ins are taken from the backup, not kept from the replaced profile."
   },
-  "profileCopy_olderBackupKeepsCredentials": "A backup made by an older version of WebLibre carries none of these, and the profile keeps the ones it has now.",
+  "profileCopy_olderBackupKeepsCredentials": "A backup made by an older version of Cat Browser carries none of these, and the profile keeps the ones it has now.",
   "@profileCopy_olderBackupKeepsCredentials": {
     "description": "Standalone sentence that follows the note that a restored profile uses the account from the backup. \"These\" refers to the account sign-in and credentials; backups from older app versions have none, so the current ones are kept."
   },
-  "profileCopy_restartCouldNotBeScheduled": "WebLibre could not schedule the restart required for this operation. {nothingChanged}",
+  "profileCopy_restartCouldNotBeScheduled": "Cat Browser could not schedule the restart required for this operation. {nothingChanged}",
   "@profileCopy_restartCouldNotBeScheduled": {
     "description": "Error message when a profile backup, restore or delete needs an app restart that the system refused to schedule. nothingChanged is the sentence \"Nothing has been changed.\"",
     "placeholders": {
@@ -204,13 +204,13 @@
   "@about_githubTitle": {
     "description": "Row in the About dialog that opens the project repository on GitHub. GitHub is a brand name."
   },
-  "account_screenTitle": "WebLibre Account",
+  "account_screenTitle": "Cat Browser Account",
   "@account_screenTitle": {
-    "description": "Title of the settings screen for the WebLibre Account (the app's own optional online account for the supporter subscription, search credits and encrypted settings sync). WebLibre is the app name."
+    "description": "Title of the settings screen for the Cat Browser Account (the app's own optional online account for the supporter subscription, search credits and encrypted settings sync). Cat Browser is the app name."
   },
   "account_searchHint": "Search account settings",
   "@account_searchHint": {
-    "description": "Placeholder of the search field on the WebLibre Account screen."
+    "description": "Placeholder of the search field on the Cat Browser Account screen."
   },
   "account_loadFailed": "Failed to load account",
   "@account_loadFailed": {
@@ -218,15 +218,15 @@
   },
   "account_sectionAccount": "Account",
   "@account_sectionAccount": {
-    "description": "Section heading on the WebLibre Account screen for sign-in status."
+    "description": "Section heading on the Cat Browser Account screen for sign-in status."
   },
   "account_sectionSubscription": "Subscription",
   "@account_sectionSubscription": {
-    "description": "Section heading on the WebLibre Account screen for the supporter subscription."
+    "description": "Section heading on the Cat Browser Account screen for the supporter subscription."
   },
   "account_sectionSearchCredits": "Search Credits",
   "@account_sectionSearchCredits": {
-    "description": "Section heading on the WebLibre Account screen for prepaid search credits."
+    "description": "Section heading on the Cat Browser Account screen for prepaid search credits."
   },
   "account_sectionSettingsSnapshots": "Settings Snapshots",
   "@account_sectionSettingsSnapshots": {
@@ -240,9 +240,9 @@
   "@account_sectionEncryptedSync": {
     "description": "Section heading for setting up end-to-end encrypted sync of settings."
   },
-  "account_signInTitle": "Sign in to WebLibre Account",
+  "account_signInTitle": "Sign in to Cat Browser Account",
   "@account_signInTitle": {
-    "description": "Row that starts signing in to the WebLibre Account; also the title of the account section while signed out."
+    "description": "Row that starts signing in to the Cat Browser Account; also the title of the account section while signed out."
   },
   "account_signInKeywords": "sign in, account, authentication",
   "@account_signInKeywords": {
@@ -368,7 +368,7 @@
   "@account_adoptTitleUnusable": {
     "description": "Heading of the same card when the leftover sign-in is damaged."
   },
-  "account_adoptBodyUsable": "WebLibre kept a sign-in for {name} from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so WebLibre will not guess.",
+  "account_adoptBodyUsable": "Cat Browser kept a sign-in for {name} from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so Cat Browser will not guess.",
   "@account_adoptBodyUsable": {
     "description": "Body of the leftover sign-in card. name is the account's email or name, or \"a previous sign-in\".",
     "placeholders": {
@@ -377,7 +377,7 @@
       }
     }
   },
-  "account_adoptBodyUnusable": "WebLibre kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.",
+  "account_adoptBodyUnusable": "Cat Browser kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.",
   "@account_adoptBodyUnusable": {
     "description": "Body of the card when the leftover sign-in is damaged and can only be removed."
   },
@@ -435,9 +435,9 @@
   "@account_signingInEllipsis": {
     "description": "Progress text while sign-in is in progress."
   },
-  "account_completeSignInInApp": "Complete sign-in in WebLibre",
+  "account_completeSignInInApp": "Complete sign-in in Cat Browser",
   "@account_completeSignInInApp": {
-    "description": "Instruction under the sign-in progress: finish signing in on the web page opened in WebLibre."
+    "description": "Instruction under the sign-in progress: finish signing in on the web page opened in Cat Browser."
   },
   "account_tooltipSignOut": "Sign Out",
   "@account_tooltipSignOut": {
@@ -447,9 +447,9 @@
   "@account_signOutConfirmTitle": {
     "description": "Title of the sign-out confirmation dialog."
   },
-  "account_signOutConfirmContent": "Are you sure you want to sign out of your WebLibre Account?",
+  "account_signOutConfirmContent": "Are you sure you want to sign out of your Cat Browser Account?",
   "@account_signOutConfirmContent": {
-    "description": "Body of the sign-out confirmation dialog. \"WebLibre Account\" is the account's name."
+    "description": "Body of the sign-out confirmation dialog. \"Cat Browser Account\" is the account's name."
   },
   "account_resetSyncKeyTitle": "Reset Sync Key",
   "@account_resetSyncKeyTitle": {
@@ -553,27 +553,27 @@
       }
     }
   },
-  "account_bannerTitle": "Support WebLibre",
+  "account_bannerTitle": "Support Cat Browser",
   "@account_bannerTitle": {
     "description": "Heading of the home screen banner inviting users to become supporters."
   },
-  "account_bannerBody": "Supporter is an optional subscription that funds WebLibre's development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.",
+  "account_bannerBody": "Supporter is an optional subscription that funds Cat Browser's development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.",
   "@account_bannerBody": {
-    "description": "Body of the supporter banner on the home screen. The text between <learnMore>…</learnMore> becomes a tappable link to more information; keep the tag pair and translate the text inside it. WebLibre is the app name."
+    "description": "Body of the supporter banner on the home screen. The text between <learnMore>…</learnMore> becomes a tappable link to more information; keep the tag pair and translate the text inside it. Cat Browser is the app name."
   },
-  "account_featureSearchLabel": "WebLibre Search",
+  "account_featureSearchLabel": "Cat Browser Search",
   "@account_featureSearchLabel": {
     "description": "Bullet heading in the supporter banner naming the search feature. Product name."
   },
   "account_featureSearchDescription": "A private, ad-free search built into the browser. It blends results from several independent sources, offers tunable search modes, can route over Tor, and lets you preview pages safely — while keeping your searches unlinkable to your account by design.",
   "@account_featureSearchDescription": {
-    "description": "Bullet text in the supporter banner describing WebLibre Search. Tor is a product name."
+    "description": "Bullet text in the supporter banner describing Cat Browser Search. Tor is a product name."
   },
   "account_featureSyncLabel": "Encrypted account sync",
   "@account_featureSyncLabel": {
     "description": "Bullet heading in the supporter banner naming encrypted settings sync."
   },
-  "account_featureSyncDescription": "Store and restore your WebLibre settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.",
+  "account_featureSyncDescription": "Store and restore your Cat Browser settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.",
   "@account_featureSyncDescription": {
     "description": "Bullet text in the supporter banner describing encrypted settings sync."
   },
@@ -629,7 +629,7 @@
   },
   "account_syncKindStored": "{kind, select, weblibreSettings{Settings stored} geckoUserJs{Gecko Prefs stored} other{Snapshot stored}}",
   "@account_syncKindStored": {
-    "description": "Confirmation after uploading a snapshot. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
+    "description": "Confirmation after uploading a snapshot. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
     "placeholders": {
       "kind": {
         "type": "String"
@@ -638,7 +638,7 @@
   },
   "account_syncKindSnapshotsTitle": "{kind, select, weblibreSettings{Settings Snapshots} geckoUserJs{Gecko Prefs Snapshots} other{Snapshots}}",
   "@account_syncKindSnapshotsTitle": {
-    "description": "Heading of a list of stored snapshots. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences (Gecko is the engine's name). Translate each case; keep the case names unchanged.",
+    "description": "Heading of a list of stored snapshots. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences (Gecko is the engine's name). Translate each case; keep the case names unchanged.",
     "placeholders": {
       "kind": {
         "type": "String"
@@ -651,7 +651,7 @@
   },
   "account_storeCurrentSubtitle": "{kind, select, weblibreSettings{Encrypt and upload the current settings} geckoUserJs{Encrypt and upload the current Gecko prefs} other{Encrypt and upload the current data}}",
   "@account_storeCurrentSubtitle": {
-    "description": "Line under \"Store Current\". kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
+    "description": "Line under \"Store Current\". kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
     "placeholders": {
       "kind": {
         "type": "String"
@@ -673,7 +673,7 @@
   },
   "account_syncKindRestored": "{kind, select, weblibreSettings{Settings restored} geckoUserJs{Gecko Prefs restored} other{Snapshot restored}}",
   "@account_syncKindRestored": {
-    "description": "Confirmation after restoring a snapshot. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
+    "description": "Confirmation after restoring a snapshot. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
     "placeholders": {
       "kind": {
         "type": "String"
@@ -1019,9 +1019,9 @@
   "@addons_removeConfirmTitle": {
     "description": "Title of the confirmation dialog before uninstalling an extension."
   },
-  "addons_removeConfirmContent": "Remove {name} from WebLibre?",
+  "addons_removeConfirmContent": "Remove {name} from Cat Browser?",
   "@addons_removeConfirmContent": {
-    "description": "Body of that dialog. name is the extension's name; WebLibre is the app name.",
+    "description": "Body of that dialog. name is the extension's name; Cat Browser is the app name.",
     "placeholders": {
       "name": {
         "type": "String"
@@ -1048,7 +1048,7 @@
   "@addons_switchEnabledTitle": {
     "description": "Switch on the extension details screen that turns the extension on or off."
   },
-  "addons_switchEnabledSubtitleAllow": "Allow this extension to run in WebLibre.",
+  "addons_switchEnabledSubtitleAllow": "Allow this extension to run in Cat Browser.",
   "@addons_switchEnabledSubtitleAllow": {
     "description": "Line under the enabled switch."
   },
@@ -1090,9 +1090,9 @@
   },
   "addons_menuFilterListsTitle": "Filter Lists & Hardenings",
   "@addons_menuFilterListsTitle": {
-    "description": "Row shown only for the uBlock Origin extension: manage its filter lists and WebLibre's extra hardening lists."
+    "description": "Row shown only for the uBlock Origin extension: manage its filter lists and Cat Browser's extra hardening lists."
   },
-  "addons_menuFilterListsSubtitle": "Manage filter lists and apply WebLibre hardenings",
+  "addons_menuFilterListsSubtitle": "Manage filter lists and apply Cat Browser hardenings",
   "@addons_menuFilterListsSubtitle": {
     "description": "Line under \"Filter Lists & Hardenings\"."
   },
@@ -1365,9 +1365,9 @@
   "@addons_statusSoftBlockedDisabled": {
     "description": "Warning on a disabled extension that Mozilla marked as risky (\"soft-blocked\"); it can still be turned on."
   },
-  "addons_statusUnsupported": "This extension is installed, but WebLibre does not currently support it.",
+  "addons_statusUnsupported": "This extension is installed, but Cat Browser does not currently support it.",
   "@addons_statusUnsupported": {
-    "description": "Warning on an installed extension this app cannot run. WebLibre is the app name."
+    "description": "Warning on an installed extension this app cannot run. Cat Browser is the app name."
   },
   "addons_permissionBookmarks": "Read and modify bookmarks",
   "@addons_permissionBookmarks": {
@@ -1517,9 +1517,9 @@
   "@appLinks_dialogTitleGeneric": {
     "description": "Title of the dialog asking whether to open a link in an installed app, when the app's name is unknown."
   },
-  "appLinks_dialogBody": "This link is handled by an app outside WebLibre.",
+  "appLinks_dialogBody": "This link is handled by an app outside Cat Browser.",
   "@appLinks_dialogBody": {
-    "description": "Body of the dialog asking whether to open a link in an installed app. WebLibre is the app name."
+    "description": "Body of the dialog asking whether to open a link in an installed app. Cat Browser is the app name."
   },
   "appLinks_dialogRememberFor": "Remember my choice for {scope}",
   "@appLinks_dialogRememberFor": {
@@ -1532,7 +1532,7 @@
   },
   "appLinks_warningProtectedContext": "This link is protected here. The app opens its own connection, outside the rules this tab follows.",
   "@appLinks_warningProtectedContext": {
-    "description": "Warning in the open-in-app prompt when WebLibre applies extra protection to this link (for example its connection rules or privacy settings): the other app connects on its own and does not follow them."
+    "description": "Warning in the open-in-app prompt when Cat Browser applies extra protection to this link (for example its connection rules or privacy settings): the other app connects on its own and does not follow them."
   },
   "appLinks_warningPrivateTab": "This is a private tab. The app keeps its own history and sign-in state.",
   "@appLinks_warningPrivateTab": {
@@ -1750,9 +1750,9 @@
   "@bangs_flagUrlEncodeSpaceToPlusSubtitle": {
     "description": "Explanation under \"URL Encode Space to Plus\". \"+\" and \"%20\" are literal characters and must stay unchanged."
   },
-  "bangs_tooltipOfficialSearch": "Official WebLibre search",
+  "bangs_tooltipOfficialSearch": "Official Cat Browser search",
   "@bangs_tooltipOfficialSearch": {
-    "description": "Tooltip of the crown icon marking a bang provided by WebLibre itself."
+    "description": "Tooltip of the crown icon marking a bang provided by Cat Browser itself."
   },
   "bangs_tooltipCustomizeAsOwn": "Customize as your own bang",
   "@bangs_tooltipCustomizeAsOwn": {
@@ -2339,17 +2339,17 @@
   "@browserActions_moveToBackgroundTitle": {
     "description": "Name of the browser action that sends the app to the background, like pressing the Home button, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and as the name of the toolbar button that does the same. Keep it short."
   },
-  "browserActions_moveToBackgroundDescription": "Send WebLibre to the background",
+  "browserActions_moveToBackgroundDescription": "Send Cat Browser to the background",
   "@browserActions_moveToBackgroundDescription": {
-    "description": "Explanation under that browser action's name in the action lists: it sends the app to the background, like pressing the Home button. WebLibre is the app name."
+    "description": "Explanation under that browser action's name in the action lists: it sends the app to the background, like pressing the Home button. Cat Browser is the app name."
   },
   "browserActions_quitBrowserTitle": "Quit",
   "@browserActions_quitBrowserTitle": {
     "description": "Name of the browser action that closes all tabs and exits the app, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and as the name of the toolbar button that does the same. Keep it short."
   },
-  "browserActions_quitBrowserDescription": "Close all tabs and quit WebLibre",
+  "browserActions_quitBrowserDescription": "Close all tabs and quit Cat Browser",
   "@browserActions_quitBrowserDescription": {
-    "description": "Explanation under that browser action's name in the action lists: it closes all tabs and exits the app. WebLibre is the app name."
+    "description": "Explanation under that browser action's name in the action lists: it closes all tabs and exits the app. Cat Browser is the app name."
   },
   "browserActions_categoryCreate": "Create",
   "@browserActions_categoryCreate": {
@@ -2461,11 +2461,11 @@
   },
   "browserActions_showAboutTitle": "About",
   "@browserActions_showAboutTitle": {
-    "description": "Name of the browser action that opens the About screen. WebLibre is the app name, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short."
+    "description": "Name of the browser action that opens the About screen. Cat Browser is the app name, shown in the lists for assigning keyboard shortcuts, drawn gestures and swipe or long-press actions, and in the Actions section of the search screen. Keep it short."
   },
-  "browserActions_showAboutDescription": "About WebLibre",
+  "browserActions_showAboutDescription": "About Cat Browser",
   "@browserActions_showAboutDescription": {
-    "description": "Explanation under that browser action's name in the action lists: it opens the About screen. WebLibre is the app name."
+    "description": "Explanation under that browser action's name in the action lists: it opens the About screen. Cat Browser is the app name."
   },
   "browserActions_newContainerTitle": "New Container",
   "@browserActions_newContainerTitle": {
@@ -5644,7 +5644,7 @@
   },
   "openLinkTools_openLinkTitle": "Open link",
   "@openLinkTools_openLinkTitle": {
-    "description": "Title of the sheet shown when a link is shared to or opened in WebLibre, offering ways to open it (new tab, custom tab, app) and to clean it."
+    "description": "Title of the sheet shown when a link is shared to or opened in Cat Browser, offering ways to open it (new tab, custom tab, app) and to clean it."
   },
   "openLinkTools_urlCleanedMessage": "URL cleaned",
   "@openLinkTools_urlCleanedMessage": {
@@ -7408,13 +7408,13 @@
   "@gestures_indexSuggestAfterSubtitle": {
     "description": "Summary of the \"Suggest after\" setting, shown as a settings search result."
   },
-  "intentGatekeeper_dialogTitle": "Open link in WebLibre?",
+  "intentGatekeeper_dialogTitle": "Open link in Cat Browser?",
   "@intentGatekeeper_dialogTitle": {
-    "description": "Title of the dialog shown when another app asks WebLibre to open a link, letting the user allow or block that app."
+    "description": "Title of the dialog shown when another app asks Cat Browser to open a link, letting the user allow or block that app."
   },
   "intentGatekeeper_appIsTryingToOpenLink": "{appName} is trying to open a link in {browserName}.",
   "@intentGatekeeper_appIsTryingToOpenLink": {
-    "description": "Body of the dialog shown when another app asks WebLibre to open a link. appName is the requesting app; browserName is the app name, WebLibre. Both placeholders are rendered in bold.",
+    "description": "Body of the dialog shown when another app asks Cat Browser to open a link. appName is the requesting app; browserName is the app name, Cat Browser. Both placeholders are rendered in bold.",
     "placeholders": {
       "appName": {
         "type": "String"
@@ -7569,11 +7569,11 @@
   },
   "onboarding_welcomeBackTitle": "Welcome back!",
   "@onboarding_welcomeBackTitle": {
-    "description": "Heading of the first-run welcome page when the user has used WebLibre before (e.g. after a major update)."
+    "description": "Heading of the first-run welcome page when the user has used Cat Browser before (e.g. after a major update)."
   },
-  "onboarding_welcomeReadyTitle": "WebLibre is ready",
+  "onboarding_welcomeReadyTitle": "Cat Browser is ready",
   "@onboarding_welcomeReadyTitle": {
-    "description": "Heading of the first-run welcome page for a new user. WebLibre is the app name."
+    "description": "Heading of the first-run welcome page for a new user. Cat Browser is the app name."
   },
   "onboarding_chooseExperience": "Choose your onboarding experience:",
   "@onboarding_chooseExperience": {
@@ -7647,7 +7647,7 @@
   "@onboarding_aiWarningTitle": {
     "description": "Heading of the notice box listing things to know about the AI features."
   },
-  "onboarding_aiWarningPoint1": "WebLibre uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.",
+  "onboarding_aiWarningPoint1": "Cat Browser uses a local AI model to analyze your open tab titles and suggest which containers to group the tabs into and what to name those containers. All processing happens entirely on your device.",
   "@onboarding_aiWarningPoint1": {
     "description": "Bullet point in the AI notice box."
   },
@@ -7697,11 +7697,11 @@
   },
   "onboarding_permissionsDefaultBrowserTitle": "Default Browser",
   "@onboarding_permissionsDefaultBrowserTitle": {
-    "description": "Switch that makes WebLibre the device's default browser."
+    "description": "Switch that makes Cat Browser the device's default browser."
   },
-  "onboarding_permissionsDefaultBrowserSubtitle": "Set WebLibre as your default browser",
+  "onboarding_permissionsDefaultBrowserSubtitle": "Set Cat Browser as your default browser",
   "@onboarding_permissionsDefaultBrowserSubtitle": {
-    "description": "Explanation under the default browser switch. WebLibre is the app name."
+    "description": "Explanation under the default browser switch. Cat Browser is the app name."
   },
   "onboarding_privacyTitle": "Privacy & Hardening",
   "@onboarding_privacyTitle": {
@@ -7791,7 +7791,7 @@
   "@onboarding_ublockTitle": {
     "description": "Heading of the first-run setup page offering the uBlock Origin ad blocker. Product name; do not translate."
   },
-  "onboarding_ublockDescription": "uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for WebLibre.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.",
+  "onboarding_ublockDescription": "uBlock Origin (uBO) is a CPU- and memory-efficient **wide-spectrum content blocker** by **Raymond Hill** and is available as a browser extension for Cat Browser.\n\nBy default, it blocks ads, trackers, coin miners, pop-ups, annoying anti-blockers, malware sites, and more using **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist, and uBO filter lists**.\n\nMany other lists are available to block additional content.",
   "@onboarding_ublockDescription": {
     "description": "Description of the uBlock Origin extension on its setup page. Uses Markdown: keep the ** markers around bold text. Names of people, products and filter lists stay unchanged."
   },
@@ -7801,11 +7801,11 @@
   },
   "onboarding_ublockApplyDefaultsTitle": "Apply optimized defaults",
   "@onboarding_ublockApplyDefaultsTitle": {
-    "description": "Switch, available once uBlock Origin is being installed: apply WebLibre's recommended uBlock Origin settings."
+    "description": "Switch, available once uBlock Origin is being installed: apply Cat Browser's recommended uBlock Origin settings."
   },
-  "onboarding_ublockApplyDefaultsSubtitle": "Enable WebLibre hardening filter lists.",
+  "onboarding_ublockApplyDefaultsSubtitle": "Enable Cat Browser hardening filter lists.",
   "@onboarding_ublockApplyDefaultsSubtitle": {
-    "description": "Explanation under \"Apply optimized defaults\": turns on WebLibre's own stricter filter lists in uBlock Origin."
+    "description": "Explanation under \"Apply optimized defaults\": turns on Cat Browser's own stricter filter lists in uBlock Origin."
   },
   "proxy_actionChange": "Change",
   "@proxy_actionChange": {
@@ -7900,9 +7900,9 @@
   "@proxy_autostartLabel": {
     "description": "Small chip on a proxy that starts automatically with the app. Keep it short."
   },
-  "proxy_autostartTooltip": "Starts with WebLibre",
+  "proxy_autostartTooltip": "Starts with Cat Browser",
   "@proxy_autostartTooltip": {
-    "description": "Tooltip of the autostart chip. WebLibre is the app name."
+    "description": "Tooltip of the autostart chip. Cat Browser is the app name."
   },
   "proxy_egressIpTooltip": "Egress IP {ip}",
   "@proxy_egressIpTooltip": {
@@ -8136,9 +8136,9 @@
   "@proxy_addMenuTip": {
     "description": "Tip at the bottom of the new-profile editor pointing to other ways to add a profile."
   },
-  "proxy_wireGuardTrademarkDisclaimer": "{brand} is a registered trademark of Jason A. Donenfeld; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.",
+  "proxy_wireGuardTrademarkDisclaimer": "{brand} is a registered trademark of Jason A. Donenfeld; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, Jason A. Donenfeld.",
   "@proxy_wireGuardTrademarkDisclaimer": {
-    "description": "Legal trademark notice. brand is \"WireGuard®\"; Jason A. Donenfeld is a person's name; WebLibre is the app name. Keep the legal meaning exact.",
+    "description": "Legal trademark notice. brand is \"WireGuard®\"; Jason A. Donenfeld is a person's name; Cat Browser is the app name. Keep the legal meaning exact.",
     "placeholders": {
       "brand": {
         "type": "String"
@@ -8174,9 +8174,9 @@
   "@proxy_startAutomaticallyTitle": {
     "description": "Switch in the proxy editor: connect this proxy when the app starts."
   },
-  "proxy_startAutomaticallySubtitle": "Connect this profile when WebLibre starts, so tabs using it are ready without a prompt",
+  "proxy_startAutomaticallySubtitle": "Connect this profile when Cat Browser starts, so tabs using it are ready without a prompt",
   "@proxy_startAutomaticallySubtitle": {
-    "description": "Explanation under that switch. WebLibre is the app name."
+    "description": "Explanation under that switch. Cat Browser is the app name."
   },
   "proxy_dnsOverrideExplanation": "Resolve names through a DNS server reachable over this connection (e.g., an internal DoH server behind a corporate {brand} tunnel). Leave this off to use automatic DNS handling.",
   "@proxy_dnsOverrideExplanation": {
@@ -8452,7 +8452,7 @@
       }
     }
   },
-  "proxy_importNoImportableProxy": "This sing-box config has no proxy WebLibre can import.",
+  "proxy_importNoImportableProxy": "This sing-box config has no proxy Cat Browser can import.",
   "@proxy_importNoImportableProxy": {
     "description": "Error when an imported sing-box config contains only entries that are not proxies (direct, block, DNS and the like)."
   },
@@ -8469,7 +8469,7 @@
       }
     }
   },
-  "proxy_importDetourThroughOtherOutbound": "This proxy connects through \"{tag}\", another outbound of its config. WebLibre cannot chain proxies, and connecting to it directly would show it your IP address.",
+  "proxy_importDetourThroughOtherOutbound": "This proxy connects through \"{tag}\", another outbound of its config. Cat Browser cannot chain proxies, and connecting to it directly would show it your IP address.",
   "@proxy_importDetourThroughOtherOutbound": {
     "description": "Error when an imported sing-box outbound dials through another outbound of the same config (its \"detour\"). tag is that outbound's tag from the config, untranslated. Explains why it is not imported without the chain: the server would see the device's real IP address.",
     "placeholders": {
@@ -8478,7 +8478,7 @@
       }
     }
   },
-  "proxy_importUnresolvedDetour": "This proxy connects through \"{tag}\", which is defined elsewhere in its config. Import the whole config so WebLibre can check what \"{tag}\" does.",
+  "proxy_importUnresolvedDetour": "This proxy connects through \"{tag}\", which is defined elsewhere in its config. Import the whole config so Cat Browser can check what \"{tag}\" does.",
   "@proxy_importUnresolvedDetour": {
     "description": "Error when a single sing-box outbound is imported on its own and dials through another outbound (its \"detour\") that is not part of what was imported. tag is that outbound's tag, untranslated. Asks for the whole config instead, since only that says whether the detour is safe to drop.",
     "placeholders": {
@@ -9465,7 +9465,7 @@
   },
   "searchCredits_needsReauth": "Please sign in again to request tokens.",
   "@searchCredits_needsReauth": {
-    "description": "Error line when downloading search tokens failed because the account session expired; the user must sign in to their WebLibre account again."
+    "description": "Error line when downloading search tokens failed because the account session expired; the user must sign in to their Cat Browser account again."
   },
   "searchCredits_buySearchPackTitle": "Buy a search pack",
   "@searchCredits_buySearchPackTitle": {
@@ -9592,13 +9592,13 @@
   "@settings_mlDownloadsClearDialogTitle": {
     "description": "Title of the confirmation dialog before deleting downloaded AI model files."
   },
-  "settings_mlDownloadsClearDialogContent": "This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart WebLibre before retrying ML features.",
+  "settings_mlDownloadsClearDialogContent": "This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart Cat Browser before retrying ML features.",
   "@settings_mlDownloadsClearDialogContent": {
-    "description": "Body of that dialog. ONNX is a technical name; WebLibre is the app name."
+    "description": "Body of that dialog. ONNX is a technical name; Cat Browser is the app name."
   },
-  "settings_mlDownloadsClearedMessage": "ML downloads cleared. Restart WebLibre before retrying.",
+  "settings_mlDownloadsClearedMessage": "ML downloads cleared. Restart Cat Browser before retrying.",
   "@settings_mlDownloadsClearedMessage": {
-    "description": "Confirmation after deleting downloaded AI model files. WebLibre is the app name."
+    "description": "Confirmation after deleting downloaded AI model files. Cat Browser is the app name."
   },
   "settings_mlDownloadsClearFailedMessage": "Failed to clear ML downloads: {error}",
   "@settings_mlDownloadsClearFailedMessage": {
@@ -9777,9 +9777,9 @@
   "@settings_externalLinkHandlingKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_externalLinkHandlingSubtitle": "Choose how external links open in WebLibre",
+  "settings_externalLinkHandlingSubtitle": "Choose how external links open in Cat Browser",
   "@settings_externalLinkHandlingSubtitle": {
-    "description": "Explanation under that setting. WebLibre is the app name."
+    "description": "Explanation under that setting. Cat Browser is the app name."
   },
   "settings_promptOptionLabel": "Prompt",
   "@settings_promptOptionLabel": {
@@ -10792,27 +10792,27 @@
   },
   "settings_defaultBrowserTileTitle": "Default Browser",
   "@settings_defaultBrowserTileTitle": {
-    "description": "Row showing whether WebLibre is the device's default browser, with a button to change it."
+    "description": "Row showing whether Cat Browser is the device's default browser, with a button to change it."
   },
   "settings_defaultBrowserTileKeywords": "system browser",
   "@settings_defaultBrowserTileKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_defaultBrowserTileSubtitleSet": "WebLibre is your default browser",
+  "settings_defaultBrowserTileSubtitleSet": "Cat Browser is your default browser",
   "@settings_defaultBrowserTileSubtitleSet": {
-    "description": "Line under that row when WebLibre is the default browser."
+    "description": "Line under that row when Cat Browser is the default browser."
   },
-  "settings_defaultBrowserTileSubtitleNotSet": "Set WebLibre as your default browser",
+  "settings_defaultBrowserTileSubtitleNotSet": "Set Cat Browser as your default browser",
   "@settings_defaultBrowserTileSubtitleNotSet": {
     "description": "Line under that row when it is not."
   },
   "settings_defaultBrowserButtonDefault": "Default",
   "@settings_defaultBrowserButtonDefault": {
-    "description": "Label of the disabled button when WebLibre is already the default browser. Keep it short."
+    "description": "Label of the disabled button when Cat Browser is already the default browser. Keep it short."
   },
   "settings_defaultBrowserButtonSet": "Set",
   "@settings_defaultBrowserButtonSet": {
-    "description": "Button that asks Android to make WebLibre the default browser. Keep it short."
+    "description": "Button that asks Android to make Cat Browser the default browser. Keep it short."
   },
   "settings_backupProfileTitle": "Back up this profile",
   "@settings_backupProfileTitle": {
@@ -10933,14 +10933,14 @@
   },
   "settings_appLanguageCurrentlyLabel": "Currently: {language}",
   "@settings_appLanguageCurrentlyLabel": {
-    "description": "Line under the \"System default\" app language option. language is the name of the language the device settings currently select, written in that language itself, e.g. \"English\" or \"Deutsch\". Differs from the device language when WebLibre is not translated into it.",
+    "description": "Line under the \"System default\" app language option. language is the name of the language the device settings currently select, written in that language itself, e.g. \"English\" or \"Deutsch\". Differs from the device language when Cat Browser is not translated into it.",
     "placeholders": {
       "language": {
         "type": "String"
       }
     }
   },
-  "settings_appLanguageTranslationsNote": "Translations are new and may be incomplete or inaccurate, so WebLibre uses English until you choose another language. Pick \"System default\" to follow your device's language.",
+  "settings_appLanguageTranslationsNote": "Translations are new and may be incomplete or inaccurate, so Cat Browser uses English until you choose another language. Pick \"System default\" to follow your device's language.",
   "@settings_appLanguageTranslationsNote": {
     "description": "Note above the app language list. Explains that the translations are still new and that the app stays in English until the user picks a language. \"System default\" is the option label settings_appLanguageSystemDefault; keep it identical to your translation of that label."
   },
@@ -10999,7 +10999,7 @@
   },
   "settings_externalDownloadManagerTitle": "Use external download manager",
   "@settings_externalDownloadManagerTitle": {
-    "description": "Switch: hand downloads to another app instead of downloading in WebLibre."
+    "description": "Switch: hand downloads to another app instead of downloading in Cat Browser."
   },
   "settings_externalDownloadManagerKeywords": "downloads",
   "@settings_externalDownloadManagerKeywords": {
@@ -11041,11 +11041,11 @@
   },
   "settings_preferredDownloadManagerSubtitleExternalOff": "Not set — only used with an external download manager",
   "@settings_preferredDownloadManagerSubtitleExternalOff": {
-    "description": "Line under that row when no app is remembered and the external download manager switch is off, so WebLibre downloads everything itself and no chooser appears."
+    "description": "Line under that row when no app is remembered and the external download manager switch is off, so Cat Browser downloads everything itself and no chooser appears."
   },
   "settings_preferredDownloadManagerSubtitleInactive": "{appName} — not used while the external download manager is off",
   "@settings_preferredDownloadManagerSubtitleInactive": {
-    "description": "Line under that row when an app is remembered but the external download manager switch is off, so WebLibre downloads everything itself. appName is the remembered app's name, or its Android package id when it is no longer installed.",
+    "description": "Line under that row when an app is remembered but the external download manager switch is off, so Cat Browser downloads everything itself. appName is the remembered app's name, or its Android package id when it is no longer installed.",
     "placeholders": {
       "appName": {
         "type": "String"
@@ -11064,7 +11064,7 @@
   "@settings_defaultBrowserSectionKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_indexDefaultBrowserSubtitle": "Set WebLibre as your default browser",
+  "settings_indexDefaultBrowserSubtitle": "Set Cat Browser as your default browser",
   "@settings_indexDefaultBrowserSubtitle": {
     "description": "Summary of the default browser setting, shown as a settings search result."
   },
@@ -11078,13 +11078,13 @@
   },
   "settings_indexAppLanguageTitle": "App Language",
   "@settings_indexAppLanguageTitle": {
-    "description": "Title of the app language setting (the language of WebLibre's own interface)."
+    "description": "Title of the app language setting (the language of Cat Browser's own interface)."
   },
   "settings_indexAppLanguageKeywords": "locale, translation, ui language",
   "@settings_indexAppLanguageKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_indexAppLanguageSubtitle": "Choose the language WebLibre's own interface uses",
+  "settings_indexAppLanguageSubtitle": "Choose the language Cat Browser's own interface uses",
   "@settings_indexAppLanguageSubtitle": {
     "description": "Summary of the app language setting."
   },
@@ -11577,19 +11577,19 @@
   "@settings_autoDeleteBrowsingDataKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_autoDeleteBrowsingDataSubtitle": "Delete selected browsing data when you quit or every time WebLibre starts",
+  "settings_autoDeleteBrowsingDataSubtitle": "Delete selected browsing data when you quit or every time Cat Browser starts",
   "@settings_autoDeleteBrowsingDataSubtitle": {
     "description": "Explanation under \"Delete Browsing Data Automatically\"."
   },
-  "settings_autoDeleteBrowsingDataQuitOnlySubtitle": "Delete selected browsing data when you quit WebLibre",
+  "settings_autoDeleteBrowsingDataQuitOnlySubtitle": "Delete selected browsing data when you quit Cat Browser",
   "@settings_autoDeleteBrowsingDataQuitOnlySubtitle": {
     "description": "Replaces the explanation under \"Delete Browsing Data Automatically\" while \"Also Delete on Start\" is off: the data is deleted only when the user taps Quit."
   },
   "settings_autoDeleteOnStartTitle": "Also Delete on Start",
   "@settings_autoDeleteOnStartTitle": {
-    "description": "Switch under \"Delete Browsing Data Automatically\", shown while it is on. On (the default), the chosen data is also deleted every time WebLibre starts; off, only when the user taps Quit."
+    "description": "Switch under \"Delete Browsing Data Automatically\", shown while it is on. On (the default), the chosen data is also deleted every time Cat Browser starts; off, only when the user taps Quit."
   },
-  "settings_autoDeleteOnStartSubtitle": "Covers sessions that ended without Quit, such as WebLibre being swiped away or closed by Android in the background. When off, their data stays until you next quit.",
+  "settings_autoDeleteOnStartSubtitle": "Covers sessions that ended without Quit, such as Cat Browser being swiped away or closed by Android in the background. When off, their data stays until you next quit.",
   "@settings_autoDeleteOnStartSubtitle": {
     "description": "Explanation under \"Also Delete on Start\". \"Quit\" is the Quit button / menu entry. Android may end an app it has kept in the background at any time."
   },
@@ -11601,7 +11601,7 @@
   "@settings_confirmBeforeQuitKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_confirmBeforeQuitSubtitle": "Ask before Quit closes WebLibre. Long press Quit to skip the question.",
+  "settings_confirmBeforeQuitSubtitle": "Ask before Quit closes Cat Browser. Long press Quit to skip the question.",
   "@settings_confirmBeforeQuitSubtitle": {
     "description": "Explanation under \"Confirm Before Quitting\". \"Quit\" is the Quit button / menu entry."
   },
@@ -11867,9 +11867,9 @@
   "@settings_uBlockFilterListsTileKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_uBlockFilterListsTileSubtitle": "Manage filter lists and apply WebLibre hardenings",
+  "settings_uBlockFilterListsTileSubtitle": "Manage filter lists and apply Cat Browser hardenings",
   "@settings_uBlockFilterListsTileSubtitle": {
-    "description": "Explanation under that row. WebLibre is the app name."
+    "description": "Explanation under that row. Cat Browser is the app name."
   },
   "settings_cookieBannersTitle": "Cookie banners",
   "@settings_cookieBannersTitle": {
@@ -11990,7 +11990,7 @@
   },
   "settings_appOpeningProtectionSectionHeader": "App-Opening Protection",
   "@settings_appOpeningProtectionSectionHeader": {
-    "description": "Heading of the settings that control which other apps may open links in WebLibre."
+    "description": "Heading of the settings that control which other apps may open links in Cat Browser."
   },
   "settings_blockAppsOpeningBrowserTitle": "Block apps from opening your browser",
   "@settings_blockAppsOpeningBrowserTitle": {
@@ -12000,9 +12000,9 @@
   "@settings_blockAppsOpeningBrowserKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "settings_blockAppsOpeningBrowserSubtitle": "Ask before opening links that other apps send to WebLibre.",
+  "settings_blockAppsOpeningBrowserSubtitle": "Ask before opening links that other apps send to Cat Browser.",
   "@settings_blockAppsOpeningBrowserSubtitle": {
-    "description": "Explanation under that switch. WebLibre is the app name."
+    "description": "Explanation under that switch. Cat Browser is the app name."
   },
   "settings_managedAppsSectionHeader": "Managed apps",
   "@settings_managedAppsSectionHeader": {
@@ -12176,9 +12176,9 @@
       }
     }
   },
-  "settings_transferImportNothingApplicable": "This export holds nothing this version of WebLibre can apply.",
+  "settings_transferImportNothingApplicable": "This export holds nothing this version of Cat Browser can apply.",
   "@settings_transferImportNothingApplicable": {
-    "description": "Error when the export contains no settings this app version understands. WebLibre is the app name."
+    "description": "Error when the export contains no settings this app version understands. Cat Browser is the app name."
   },
   "settings_transferImportedSuccess": "Settings imported",
   "@settings_transferImportedSuccess": {
@@ -12221,7 +12221,7 @@
   },
   "settings_transferSectionAppSettingsTitle": "App settings",
   "@settings_transferSectionAppSettingsTitle": {
-    "description": "Name of the export section holding WebLibre's own settings, shown as a checkbox on the export screen and in the import dialog."
+    "description": "Name of the export section holding Cat Browser's own settings, shown as a checkbox on the export screen and in the import dialog."
   },
   "settings_transferSectionAppSettingsDescription": "Appearance, browsing, tabs, privacy, {torBrand} and web engine settings",
   "@settings_transferSectionAppSettingsDescription": {
@@ -12244,15 +12244,15 @@
   "@settings_importErrorNotJson": {
     "description": "Error when importing settings: the chosen file or clipboard text is not JSON at all."
   },
-  "settings_importErrorNotSettingsExport": "This is not a WebLibre settings export.",
+  "settings_importErrorNotSettingsExport": "This is not a Cat Browser settings export.",
   "@settings_importErrorNotSettingsExport": {
-    "description": "Error when importing settings: the JSON is not a WebLibre settings export. WebLibre is the app name."
+    "description": "Error when importing settings: the JSON is not a Cat Browser settings export. Cat Browser is the app name."
   },
   "settings_importErrorMissingFormatVersion": "The export does not say which format version it is.",
   "@settings_importErrorMissingFormatVersion": {
     "description": "Error when importing settings: the file lacks its format version number."
   },
-  "settings_importErrorNewerFormatVersion": "This export was written by a newer version of WebLibre (format {version}, this version reads up to {supported}). Update the app and try again.",
+  "settings_importErrorNewerFormatVersion": "This export was written by a newer version of Cat Browser (format {version}, this version reads up to {supported}). Update the app and try again.",
   "@settings_importErrorNewerFormatVersion": {
     "description": "Error when importing settings from a newer app version. version is the file's format number; supported is the highest this app reads.",
     "placeholders": {
@@ -12286,7 +12286,7 @@
       }
     }
   },
-  "settings_importErrorUnreadablePrefsLine": "The \"{section}\" section has a line WebLibre cannot read: \"{line}\". Importing it would reset preferences rather than restore them.",
+  "settings_importErrorUnreadablePrefsLine": "The \"{section}\" section has a line Cat Browser cannot read: \"{line}\". Importing it would reset preferences rather than restore them.",
   "@settings_importErrorUnreadablePrefsLine": {
     "description": "Error when importing engine preferences: one line of the section is not in the expected format. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know. line is that line from the file, possibly shortened.",
     "placeholders": {
@@ -12298,9 +12298,9 @@
       }
     }
   },
-  "settings_importErrorNotPrefsSnapshot": "The \"{section}\" section is not a WebLibre preferences snapshot.",
+  "settings_importErrorNotPrefsSnapshot": "The \"{section}\" section is not a Cat Browser preferences snapshot.",
   "@settings_importErrorNotPrefsSnapshot": {
-    "description": "Error when importing engine preferences: the section lacks the marker WebLibre writes. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know.",
+    "description": "Error when importing engine preferences: the section lacks the marker Cat Browser writes. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know.",
     "placeholders": {
       "section": {
         "type": "String"
@@ -12316,7 +12316,7 @@
       }
     }
   },
-  "settings_importErrorUnreadablePref": "The \"{section}\" section holds a preference WebLibre could not read back: \"{pref}\".",
+  "settings_importErrorUnreadablePref": "The \"{section}\" section holds a preference Cat Browser could not read back: \"{pref}\".",
   "@settings_importErrorUnreadablePref": {
     "description": "Error when importing engine preferences: one preference would be lost on import. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know. pref is the preference name.",
     "placeholders": {
@@ -12328,7 +12328,7 @@
       }
     }
   },
-  "settings_importErrorNewerSectionSchema": "The \"{section}\" section was written by a newer version of WebLibre (schema {version}, this version reads up to {supported}). Update the app and try again.",
+  "settings_importErrorNewerSectionSchema": "The \"{section}\" section was written by a newer version of Cat Browser (schema {version}, this version reads up to {supported}). Update the app and try again.",
   "@settings_importErrorNewerSectionSchema": {
     "description": "Error when importing settings: one section comes from a newer app version. section is the name of an export section as shown in the export and import lists (such as \"App settings\"), or the raw key a file used for a section this version does not know. version is its schema number; supported is the highest this app reads.",
     "placeholders": {
@@ -12865,7 +12865,7 @@
   },
   "settings_ublockSectionManagement": "Management",
   "@settings_ublockSectionManagement": {
-    "description": "Section heading for whether WebLibre manages uBlock Origin's lists."
+    "description": "Section heading for whether Cat Browser manages uBlock Origin's lists."
   },
   "settings_ublockSectionQuickActions": "Quick Actions",
   "@settings_ublockSectionQuickActions": {
@@ -12891,9 +12891,9 @@
   "@settings_ublockResetDialogMessage": {
     "description": "Body of that dialog."
   },
-  "settings_ublockApplyHardeningsDialogTitle": "Apply WebLibre Hardenings?",
+  "settings_ublockApplyHardeningsDialogTitle": "Apply Cat Browser Hardenings?",
   "@settings_ublockApplyHardeningsDialogTitle": {
-    "description": "Title of the confirmation dialog before enabling WebLibre's recommended extra filter lists. WebLibre is the app name."
+    "description": "Title of the confirmation dialog before enabling Cat Browser's recommended extra filter lists. Cat Browser is the app name."
   },
   "settings_ublockApplyHardeningsDialogMessage": "This will enable a curated set of additional filter lists and add a legitimate URL shortener list as an external list.",
   "@settings_ublockApplyHardeningsDialogMessage": {
@@ -12920,19 +12920,19 @@
   "@settings_ublockQuickResetSubtitle": {
     "description": "Explanation under that row."
   },
-  "settings_ublockQuickApplyHardeningsTitle": "Apply WebLibre Hardenings",
+  "settings_ublockQuickApplyHardeningsTitle": "Apply Cat Browser Hardenings",
   "@settings_ublockQuickApplyHardeningsTitle": {
-    "description": "Row that enables WebLibre's recommended extra filter lists (asks for confirmation)."
+    "description": "Row that enables Cat Browser's recommended extra filter lists (asks for confirmation)."
   },
   "settings_ublockQuickApplyHardeningsSubtitle": "Enable a curated set of additional filter lists.",
   "@settings_ublockQuickApplyHardeningsSubtitle": {
     "description": "Explanation under that row."
   },
-  "settings_ublockManageTitle": "Manage with WebLibre",
+  "settings_ublockManageTitle": "Manage with Cat Browser",
   "@settings_ublockManageTitle": {
-    "description": "Switch: let WebLibre control which filter lists uBlock Origin uses."
+    "description": "Switch: let Cat Browser control which filter lists uBlock Origin uses."
   },
-  "settings_ublockManageSubtitle": "WebLibre controls uBlock Origin's enabled filter lists at the next browser start.",
+  "settings_ublockManageSubtitle": "Cat Browser controls uBlock Origin's enabled filter lists at the next browser start.",
   "@settings_ublockManageSubtitle": {
     "description": "Explanation under that switch."
   },
@@ -12960,7 +12960,7 @@
   "@settings_ublockVisitSupportTooltip": {
     "description": "Tooltip of the button that opens a filter list's support website."
   },
-  "settings_ublockExternalListsHint": "Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in WebLibre.",
+  "settings_ublockExternalListsHint": "Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in Cat Browser.",
   "@settings_ublockExternalListsHint": {
     "description": "Explanation above the external filter lists."
   },
@@ -13177,9 +13177,9 @@
   "@settings_categoryExtensionsSubtitle": {
     "description": "Summary under the \"Extensions\" category."
   },
-  "settings_categoryAccountTitle": "WebLibre Account",
+  "settings_categoryAccountTitle": "Cat Browser Account",
   "@settings_categoryAccountTitle": {
-    "description": "Category on the main settings screen for the app's own account. WebLibre is the app name."
+    "description": "Category on the main settings screen for the app's own account. Cat Browser is the app name."
   },
   "settings_categoryAccountKeywords": "account, subscription",
   "@settings_categoryAccountKeywords": {
@@ -13305,9 +13305,9 @@
   "@settings_privacySectionAppOpeningProtectionTitle": {
     "description": "Section heading on the privacy & security screen."
   },
-  "settings_indexAppOpeningProtectionSubtitle": "Control which apps may launch WebLibre directly",
+  "settings_indexAppOpeningProtectionSubtitle": "Control which apps may launch Cat Browser directly",
   "@settings_indexAppOpeningProtectionSubtitle": {
-    "description": "Summary of the app-opening protection setting, shown as a settings search result. WebLibre is the app name."
+    "description": "Summary of the app-opening protection setting, shown as a settings search result. Cat Browser is the app name."
   },
   "settings_privacySectionDataManagementTitle": "Data Management",
   "@settings_privacySectionDataManagementTitle": {
@@ -13871,9 +13871,9 @@
   "@settings_previewPageContent": {
     "description": "Placeholder text in the page area of the toolbar preview."
   },
-  "settings_previewPageTitle": "WebLibre Preview",
+  "settings_previewPageTitle": "Cat Browser Preview",
   "@settings_previewPageTitle": {
-    "description": "Title of the sample page shown in the toolbar preview. WebLibre is the app name."
+    "description": "Title of the sample page shown in the toolbar preview. Cat Browser is the app name."
   },
   "settings_previewTabNews": "News",
   "@settings_previewTabNews": {
@@ -13931,9 +13931,9 @@
   "@settings_importSettingsDescription": {
     "description": "Explanation at the top of that dialog."
   },
-  "settings_unreadableSections": "{count, plural, =1{1 section in this file ({sections}) can't be read by this version of WebLibre and will be skipped.} other{{count} sections in this file ({sections}) can't be read by this version of WebLibre and will be skipped.}}",
+  "settings_unreadableSections": "{count, plural, =1{1 section in this file ({sections}) can't be read by this version of Cat Browser and will be skipped.} other{{count} sections in this file ({sections}) can't be read by this version of Cat Browser and will be skipped.}}",
   "@settings_unreadableSections": {
-    "description": "Note in the import dialog when the export contains sections from a newer app version. count is the number of those sections; sections is their keys as written in the file, quoted and comma-separated (they have no translatable name). WebLibre is the app name.",
+    "description": "Note in the import dialog when the export contains sections from a newer app version. count is the number of those sections; sections is their keys as written in the file, quoted and comma-separated (they have no translatable name). Cat Browser is the app name.",
     "placeholders": {
       "count": {
         "type": "int"
@@ -14720,18 +14720,18 @@
   "@tor_startAutomaticallyKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "tor_startAutomaticallySectionSubtitle": "Connect the {brand} service when WebLibre starts",
+  "tor_startAutomaticallySectionSubtitle": "Connect the {brand} service when Cat Browser starts",
   "@tor_startAutomaticallySectionSubtitle": {
-    "description": "Short explanation of the Tor auto-start switch, shown as a settings search result. brand is \"Tor™\"; WebLibre is the app name.",
+    "description": "Short explanation of the Tor auto-start switch, shown as a settings search result. brand is \"Tor™\"; Cat Browser is the app name.",
     "placeholders": {
       "brand": {
         "type": "String"
       }
     }
   },
-  "tor_startAutomaticallySubtitle": "Connect the {brand} service when WebLibre starts, so tabs using it are ready without a prompt",
+  "tor_startAutomaticallySubtitle": "Connect the {brand} service when Cat Browser starts, so tabs using it are ready without a prompt",
   "@tor_startAutomaticallySubtitle": {
-    "description": "Explanation under the Tor auto-start switch: tabs that must use Tor can load right away without asking to start it. brand is \"Tor™\"; WebLibre is the app name.",
+    "description": "Explanation under the Tor auto-start switch: tabs that must use Tor can load right away without asking to start it. brand is \"Tor™\"; Cat Browser is the app name.",
     "placeholders": {
       "brand": {
         "type": "String"
@@ -14878,9 +14878,9 @@
   "@tor_trademarkKeywords": {
     "description": "Comma-separated search terms for this setting. Not displayed; include synonyms users might type."
   },
-  "tor_trademarkDisclaimer": "{brand} is a trademark of The Tor Project; all rights reserved. WebLibre is not endorsed or sponsored by, or affiliated with, the Tor Project.",
+  "tor_trademarkDisclaimer": "{brand} is a trademark of The Tor Project; all rights reserved. Cat Browser is not endorsed or sponsored by, or affiliated with, the Tor Project.",
   "@tor_trademarkDisclaimer": {
-    "description": "Legal trademark notice. brand is \"Tor™\". \"The Tor Project\" is an organization name; WebLibre is the app name. Keep the legal meaning exact.",
+    "description": "Legal trademark notice. brand is \"Tor™\". \"The Tor Project\" is an organization name; Cat Browser is the app name. Keep the legal meaning exact.",
     "placeholders": {
       "brand": {
         "type": "String"
@@ -14949,9 +14949,9 @@
   "@user_restartingToTakeBackup": {
     "description": "Message shown when the app restarts to create the backup."
   },
-  "user_backupRestartsTitle": "WebLibre restarts to do this",
+  "user_backupRestartsTitle": "Cat Browser restarts to do this",
   "@user_backupRestartsTitle": {
-    "description": "Row on the backup screen explaining that the app restarts to take the backup. WebLibre is the app name."
+    "description": "Row on the backup screen explaining that the app restarts to take the backup. Cat Browser is the app name."
   },
   "user_backupRestartsSubtitle": "{restartClosesCurrentProfile} The backup is taken while the profile is closed, so its contents cannot change during the backup.",
   "@user_backupRestartsSubtitle": {
@@ -14966,7 +14966,7 @@
   "@user_setPasswordNextTitle": {
     "description": "Row on the backup screen: the backup password is asked for in the next step, after the restart."
   },
-  "user_setPasswordNextSubtitle": "After restarting, WebLibre asks for the backup file password.",
+  "user_setPasswordNextSubtitle": "After restarting, Cat Browser asks for the backup file password.",
   "@user_setPasswordNextSubtitle": {
     "description": "Explanation under that row."
   },
@@ -14982,7 +14982,7 @@
   "@user_tempDataSkippedTitle": {
     "description": "Row on the backup screen: temporary data is not included in backups."
   },
-  "user_tempDataSkippedSubtitle": "Cache files and other data WebLibre can rebuild are not saved. {shortcutsNeedPinningAgain}",
+  "user_tempDataSkippedSubtitle": "Cache files and other data Cat Browser can rebuild are not saved. {shortcutsNeedPinningAgain}",
   "@user_tempDataSkippedSubtitle": {
     "description": "Explanation under that row. shortcutsNeedPinningAgain is a full sentence about re-adding home-screen shortcuts after restoring.",
     "placeholders": {
@@ -14991,20 +14991,20 @@
       }
     }
   },
-  "user_accountDataIncludedTitle": "WebLibre account data is included",
+  "user_accountDataIncludedTitle": "Cat Browser account data is included",
   "@user_accountDataIncludedTitle": {
-    "description": "Row on the backup screen: WebLibre account sign-in data is included in the backup file."
+    "description": "Row on the backup screen: Cat Browser account sign-in data is included in the backup file."
   },
   "user_accountDataIncludedSubtitle": "The backup file includes this profile’s {profileSecretDataDescription}. Replacing a profile restores them; creating a new profile does not. Use a strong password.",
   "@user_accountDataIncludedSubtitle": {
-    "description": "Explanation under that row. profileSecretDataDescription is a lowercase list such as \"WebLibre account sign-in, sync setup and proxy details\".",
+    "description": "Explanation under that row. profileSecretDataDescription is a lowercase list such as \"Cat Browser account sign-in, sync setup and proxy details\".",
     "placeholders": {
       "profileSecretDataDescription": {
         "type": "String"
       }
     }
   },
-  "user_closingToTakeBackup": "Closing WebLibre to take the backup…",
+  "user_closingToTakeBackup": "Closing Cat Browser to take the backup…",
   "@user_closingToTakeBackup": {
     "description": "Progress text while the app closes to take a backup."
   },
@@ -15101,7 +15101,7 @@
   "@user_lockMethodNoneTitle": {
     "description": "Lock method option: the profile opens without asking for anything."
   },
-  "user_lockMethodNoneSubtitle": "Anyone using WebLibre on this device can open this profile",
+  "user_lockMethodNoneSubtitle": "Anyone using Cat Browser on this device can open this profile",
   "@user_lockMethodNoneSubtitle": {
     "description": "Explanation under the \"No lock\" option."
   },
@@ -15115,7 +15115,7 @@
   },
   "user_lockMethodPasswordTitle": "Profile password",
   "@user_lockMethodPasswordTitle": {
-    "description": "Lock method option: a password set in WebLibre, only for this profile, opens it."
+    "description": "Lock method option: a password set in Cat Browser, only for this profile, opens it."
   },
   "user_lockMethodPasswordSubtitle": "A password only for this profile. Fingerprints and the device PIN can't open it.",
   "@user_lockMethodPasswordSubtitle": {
@@ -15129,7 +15129,7 @@
   "@user_profilePasswordUnrecoverableTitle": {
     "description": "Warning shown in the profile editor while the profile password lock is selected."
   },
-  "user_profilePasswordUnrecoverableSubtitle": "Without it, this profile can't be opened, backed up or deleted. The password locks WebLibre; it does not encrypt the profile's data.",
+  "user_profilePasswordUnrecoverableSubtitle": "Without it, this profile can't be opened, backed up or deleted. The password locks Cat Browser; it does not encrypt the profile's data.",
   "@user_profilePasswordUnrecoverableSubtitle": {
     "description": "Explanation under that warning. Says honestly that the password only guards the app, the files on the device are not encrypted."
   },
@@ -15157,7 +15157,7 @@
   "@user_profilePasswordCheckFailed": {
     "description": "Error under the profile password field when the password could not be checked at all (for example, the device storage failed). The profile stays locked."
   },
-  "user_profilePasswordInterrupted": "WebLibre was closed or switched away from during the check. Enter the password again.",
+  "user_profilePasswordInterrupted": "Cat Browser was closed or switched away from during the check. Enter the password again.",
   "@user_profilePasswordInterrupted": {
     "description": "Error under the profile password field when the password was right but the user left the app while it was being checked, so it did not take effect and has to be entered again."
   },
@@ -15257,9 +15257,9 @@
   "@user_lockInBackgroundTitle": {
     "description": "Auto-lock option: lock as soon as the app is left."
   },
-  "user_lockInBackgroundSubtitle": "As soon as WebLibre leaves the screen",
+  "user_lockInBackgroundSubtitle": "As soon as Cat Browser leaves the screen",
   "@user_lockInBackgroundSubtitle": {
-    "description": "Explanation under \"Lock in background\". WebLibre is the app name."
+    "description": "Explanation under \"Lock in background\". Cat Browser is the app name."
   },
   "user_lockAfterTimeoutTitle": "Lock after a timeout",
   "@user_lockAfterTimeoutTitle": {
@@ -15273,9 +15273,9 @@
   "@user_lockOnStartupTitle": {
     "description": "Auto-lock option: lock only when the app starts."
   },
-  "user_lockOnStartupSubtitle": "Unlock once at startup, then stay unlocked until WebLibre is fully closed",
+  "user_lockOnStartupSubtitle": "Unlock once at startup, then stay unlocked until Cat Browser is fully closed",
   "@user_lockOnStartupSubtitle": {
-    "description": "Explanation under \"Lock on startup only\". WebLibre is the app name."
+    "description": "Explanation under \"Lock on startup only\". Cat Browser is the app name."
   },
   "user_timeoutFieldTitle": "Timeout",
   "@user_timeoutFieldTitle": {
@@ -15362,9 +15362,9 @@
   "@user_replaceExistingProfileSubtitle": {
     "description": "Explanation under \"Replace an existing profile\"."
   },
-  "user_newProfileNoSignInTitle": "A new profile starts without WebLibre sign-in",
+  "user_newProfileNoSignInTitle": "A new profile starts without Cat Browser sign-in",
   "@user_newProfileNoSignInTitle": {
-    "description": "Note when restoring as a new profile: WebLibre account sign-in is not carried over."
+    "description": "Note when restoring as a new profile: Cat Browser account sign-in is not carried over."
   },
   "user_newProfileNoSignInSubtitle": "Tabs, history and bookmarks are restored. Sign-in and sync data stay with the original profile.",
   "@user_newProfileNoSignInSubtitle": {
@@ -15464,9 +15464,9 @@
       }
     }
   },
-  "user_accountDataRestoredTitle": "WebLibre account data is restored",
+  "user_accountDataRestoredTitle": "Cat Browser account data is restored",
   "@user_accountDataRestoredTitle": {
-    "description": "Note when replacing a profile: WebLibre account sign-in data from the backup is restored."
+    "description": "Note when replacing a profile: Cat Browser account sign-in data from the backup is restored."
   },
   "user_accountDataRestoredSubtitle": "Replacing restores the backup file's {profileSecretDataDescription}. {signedInFromBackup} {olderBackupKeepsCredentials}",
   "@user_accountDataRestoredSubtitle": {
@@ -15523,9 +15523,9 @@
   "@user_restoringBackupProgress": {
     "description": "Progress text while a backup is restored into a new profile."
   },
-  "user_closingToRestoreProgress": "Closing WebLibre to restore…",
+  "user_closingToRestoreProgress": "Closing Cat Browser to restore…",
   "@user_closingToRestoreProgress": {
-    "description": "Progress text while the app closes to replace a profile with a backup. WebLibre is the app name."
+    "description": "Progress text while the app closes to replace a profile with a backup. Cat Browser is the app name."
   },
   "user_actionRestore": "Restore",
   "@user_actionRestore": {
@@ -15540,9 +15540,9 @@
       }
     }
   },
-  "user_switchClosesReopensAs": "WebLibre closes and reopens as \"{profileName}\".",
+  "user_switchClosesReopensAs": "Cat Browser closes and reopens as \"{profileName}\".",
   "@user_switchClosesReopensAs": {
-    "description": "Body of that dialog. profileName is the target profile; WebLibre is the app name.",
+    "description": "Body of that dialog. profileName is the target profile; Cat Browser is the app name.",
     "placeholders": {
       "profileName": {
         "type": "String"
@@ -15622,7 +15622,7 @@
   "@user_quitBrowserDontAskAgainSavesQuit": {
     "description": "Replaces the small text under \"Don't ask again\" in the quit confirmation dialog while it is ticked and the user also ticked browsing data to delete. Without the dialog there is no other place to pick data for one quit, so the ticked data is added to the \"Delete Browsing Data Automatically\" setting and deleted on every quit from now on."
   },
-  "user_quitBrowserDontAskAgainSavesQuitAndStart": "The data ticked above will be deleted on every quit and every time WebLibre starts. You can change both in settings.",
+  "user_quitBrowserDontAskAgainSavesQuitAndStart": "The data ticked above will be deleted on every quit and every time Cat Browser starts. You can change both in settings.",
   "@user_quitBrowserDontAskAgainSavesQuitAndStart": {
     "description": "Same as user_quitBrowserDontAskAgainSavesQuit, for when \"Delete Browsing Data Automatically\" also deletes on every start: the ticked data is added to it and deleted on every quit and every start from now on."
   },
@@ -16099,7 +16099,7 @@
   },
   "webPush_distributorTileTitle": "UnifiedPush Distributor",
   "@webPush_distributorTileTitle": {
-    "description": "Title of the setting for the UnifiedPush distributor: a separate app (such as ntfy) that receives push messages from the internet and passes them to WebLibre. UnifiedPush is a product name."
+    "description": "Title of the setting for the UnifiedPush distributor: a separate app (such as ntfy) that receives push messages from the internet and passes them to Cat Browser. UnifiedPush is a product name."
   },
   "webPush_distributorTileKeywords": "notifications, push, unifiedpush, ntfy",
   "@webPush_distributorTileKeywords": {
@@ -16219,7 +16219,7 @@
   },
   "webPush_notificationPermissionTitle": "Notification Permission",
   "@webPush_notificationPermissionTitle": {
-    "description": "Title of the setting showing whether WebLibre has the Android permission to show notifications."
+    "description": "Title of the setting showing whether Cat Browser has the Android permission to show notifications."
   },
   "webPush_notificationPermissionKeywords": "notifications, permission",
   "@webPush_notificationPermissionKeywords": {
@@ -16795,17 +16795,17 @@
   "@startup_haltMaintenanceTitle": {
     "description": "Heading of the startup screen shown when a profile backup, restore or deletion from a previous session did not finish."
   },
-  "startup_haltMaintenanceBody": "A backup, restore or deletion from an earlier run did not finish. WebLibre must finish it before any profile can open.",
+  "startup_haltMaintenanceBody": "A backup, restore or deletion from an earlier run did not finish. Cat Browser must finish it before any profile can open.",
   "@startup_haltMaintenanceBody": {
-    "description": "Body of that startup screen. WebLibre is the app name."
+    "description": "Body of that startup screen. Cat Browser is the app name."
   },
   "startup_haltUnavailableTitle": "Startup is not ready",
   "@startup_haltUnavailableTitle": {
     "description": "Heading of the startup screen shown when the app cannot choose a profile yet and must restart."
   },
-  "startup_haltUnavailableBody": "WebLibre needs to restart before it can choose a profile. {reopenToContinue}",
+  "startup_haltUnavailableBody": "Cat Browser needs to restart before it can choose a profile. {reopenToContinue}",
   "@startup_haltUnavailableBody": {
-    "description": "Body of that startup screen. reopenToContinue is the sentence \"Close WebLibre and open it again.\"",
+    "description": "Body of that startup screen. reopenToContinue is the sentence \"Close Cat Browser and open it again.\"",
     "placeholders": {
       "reopenToContinue": {
         "type": "String"
@@ -16816,7 +16816,7 @@
   "@startup_haltProfileAccessBusyTitle": {
     "description": "Heading of the startup screen shown when the chosen profile is still being used by a background task."
   },
-  "startup_haltProfileAccessBusyBody": "Another WebLibre task is still using this profile. Try again in a moment.",
+  "startup_haltProfileAccessBusyBody": "Another Cat Browser task is still using this profile. Try again in a moment.",
   "@startup_haltProfileAccessBusyBody": {
     "description": "Body of that startup screen."
   },
@@ -16824,7 +16824,7 @@
   "@startup_haltNoProfileTitle": {
     "description": "Heading of the startup screen shown when no browser profile can be opened or created."
   },
-  "startup_haltNoProfileBody": "WebLibre could not read an existing profile or create a new one. Storage may be full or unavailable.",
+  "startup_haltNoProfileBody": "Cat Browser could not read an existing profile or create a new one. Storage may be full or unavailable.",
   "@startup_haltNoProfileBody": {
     "description": "Body of that startup screen: probably a storage problem."
   },
@@ -16832,9 +16832,9 @@
   "@startup_haltArbitrationFailedTitle": {
     "description": "Heading of the startup screen shown when the app cannot safely decide which profile to open."
   },
-  "startup_haltArbitrationFailedBody": "WebLibre will not guess which profile to use. {reopenToContinue}",
+  "startup_haltArbitrationFailedBody": "Cat Browser will not guess which profile to use. {reopenToContinue}",
   "@startup_haltArbitrationFailedBody": {
-    "description": "Body of that startup screen. reopenToContinue is the sentence \"Close WebLibre and open it again.\"",
+    "description": "Body of that startup screen. reopenToContinue is the sentence \"Close Cat Browser and open it again.\"",
     "placeholders": {
       "reopenToContinue": {
         "type": "String"
@@ -16849,9 +16849,9 @@
   "@startup_tryingAgain": {
     "description": "Label of the retry button on a startup problem screen while the retry is running."
   },
-  "startup_closeWebLibre": "Close WebLibre",
+  "startup_closeWebLibre": "Close Cat Browser",
   "@startup_closeWebLibre": {
-    "description": "Button on a startup problem screen that closes the app. WebLibre is the app name."
+    "description": "Button on a startup problem screen that closes the app. Cat Browser is the app name."
   },
   "startup_technicalDetails": "Technical details",
   "@startup_technicalDetails": {
@@ -16865,7 +16865,7 @@
   "@startup_maintenanceFinishingInterrupted": {
     "description": "Progress text on the profile maintenance screen while the app completes a backup, restore or deletion that was interrupted by a restart."
   },
-  "startup_maintenanceNotRunnableUnsupported": "This task was created by a newer version of WebLibre and cannot run here.",
+  "startup_maintenanceNotRunnableUnsupported": "This task was created by a newer version of Cat Browser and cannot run here.",
   "@startup_maintenanceNotRunnableUnsupported": {
     "description": "Reason shown when a pending profile task cannot be run: a newer app version created it."
   },
@@ -16877,11 +16877,11 @@
   "@startup_maintenanceNotRunnableNoBackupFile": {
     "description": "Reason shown when a pending profile restore cannot be run: the backup file to restore is unknown."
   },
-  "startup_maintenanceNotRunnableRestoreHere": "WebLibre cannot restore from this startup screen.",
+  "startup_maintenanceNotRunnableRestoreHere": "Cat Browser cannot restore from this startup screen.",
   "@startup_maintenanceNotRunnableRestoreHere": {
     "description": "Reason shown when a pending restore cannot be run from the startup maintenance screen."
   },
-  "startup_maintenanceNotRunnableDeleteHere": "WebLibre cannot delete a profile from this startup screen.",
+  "startup_maintenanceNotRunnableDeleteHere": "Cat Browser cannot delete a profile from this startup screen.",
   "@startup_maintenanceNotRunnableDeleteHere": {
     "description": "Reason shown when a pending profile deletion cannot be run from the startup maintenance screen."
   },
@@ -16905,9 +16905,9 @@
   "@startup_maintenanceTaskDidNotFinish": {
     "description": "Generic result message when a profile backup, restore or deletion failed without a more specific reason."
   },
-  "startup_maintenanceLeaseLost": "WebLibre can no longer safely work on this profile. {nothingChanged} {reopenToContinue}",
+  "startup_maintenanceLeaseLost": "Cat Browser can no longer safely work on this profile. {nothingChanged} {reopenToContinue}",
   "@startup_maintenanceLeaseLost": {
-    "description": "Error message when the profile task had to stop because another part of the app took over the profile. nothingChanged is \"Nothing has been changed.\"; reopenToContinue is \"Close WebLibre and open it again.\"",
+    "description": "Error message when the profile task had to stop because another part of the app took over the profile. nothingChanged is \"Nothing has been changed.\"; reopenToContinue is \"Close Cat Browser and open it again.\"",
     "placeholders": {
       "nothingChanged": {
         "type": "String"
@@ -16930,7 +16930,7 @@
   "@startup_maintenanceEvidenceDiscarded": {
     "description": "Result message after the user discarded the leftover record of an interrupted profile task."
   },
-  "startup_maintenanceEvidenceDiscardedKept": "The interrupted record was discarded. WebLibre could not tell which profile the saved data belonged to, so it kept the saved data on the device rather than removing it.",
+  "startup_maintenanceEvidenceDiscardedKept": "The interrupted record was discarded. Cat Browser could not tell which profile the saved data belonged to, so it kept the saved data on the device rather than removing it.",
   "@startup_maintenanceEvidenceDiscardedKept": {
     "description": "Result message after discarding that record, when saved profile data of unknown ownership was kept on the device."
   },
@@ -16961,7 +16961,7 @@
       }
     }
   },
-  "startup_maintenanceUnsupportedArchiveVersion": "This backup file was created by a newer version of WebLibre and cannot be read here. {nothingChanged}",
+  "startup_maintenanceUnsupportedArchiveVersion": "This backup file was created by a newer version of Cat Browser and cannot be read here. {nothingChanged}",
   "@startup_maintenanceUnsupportedArchiveVersion": {
     "description": "Error message when the backup file comes from a newer app version. nothingChanged is \"Nothing has been changed.\"",
     "placeholders": {
@@ -17051,15 +17051,15 @@
   "@startup_maintenanceHeadline": {
     "description": "Heading of the startup screen for pending profile backups, restores and deletions."
   },
-  "startup_maintenanceMustFinish": "This task must finish before any profile can open. WebLibre keeps the profile closed while it works.",
+  "startup_maintenanceMustFinish": "This task must finish before any profile can open. Cat Browser keeps the profile closed while it works.",
   "@startup_maintenanceMustFinish": {
-    "description": "Line under the maintenance heading while a task is pending. WebLibre is the app name."
+    "description": "Line under the maintenance heading while a task is pending. Cat Browser is the app name."
   },
   "startup_maintenanceNothingLeft": "Nothing is left to finish.",
   "@startup_maintenanceNothingLeft": {
     "description": "Line under the maintenance heading when all pending tasks are done."
   },
-  "startup_maintenanceCannotReadRecord": "WebLibre found interrupted profile work, but cannot read its record.",
+  "startup_maintenanceCannotReadRecord": "Cat Browser found interrupted profile work, but cannot read its record.",
   "@startup_maintenanceCannotReadRecord": {
     "description": "Line under the maintenance heading when interrupted work was found but its record is unreadable."
   },
@@ -17099,15 +17099,15 @@
   "@startup_maintenanceDiscardAndContinueNoTasks": {
     "description": "Same button as the previous one, shown when no task is listed but an unreadable record remains. Same wording."
   },
-  "startup_maintenanceOpenWebLibreRetry": "Open WebLibre",
+  "startup_maintenanceOpenWebLibreRetry": "Open Cat Browser",
   "@startup_maintenanceOpenWebLibreRetry": {
-    "description": "Secondary button after a failed profile task: leave the maintenance screen and open the browser anyway. WebLibre is the app name."
+    "description": "Secondary button after a failed profile task: leave the maintenance screen and open the browser anyway. Cat Browser is the app name."
   },
-  "startup_maintenanceOpenWebLibre": "Open WebLibre",
+  "startup_maintenanceOpenWebLibre": "Open Cat Browser",
   "@startup_maintenanceOpenWebLibre": {
-    "description": "Button after all profile tasks are done: continue into the browser. WebLibre is the app name."
+    "description": "Button after all profile tasks are done: continue into the browser. Cat Browser is the app name."
   },
-  "startup_maintenanceTakesSeveralMinutes": "This can take several minutes. Keep WebLibre open.",
+  "startup_maintenanceTakesSeveralMinutes": "This can take several minutes. Keep Cat Browser open.",
   "@startup_maintenanceTakesSeveralMinutes": {
     "description": "Note under the progress text while a profile task runs."
   },
@@ -17127,7 +17127,7 @@
   "@startup_maintenanceInterruptedFinishFailed": {
     "description": "Note on an interrupted task whose completion attempt also failed."
   },
-  "startup_maintenanceInterruptedUnreadable": "This was interrupted after it started, and WebLibre cannot read what it was doing. It cannot be run again until that record is dealt with.",
+  "startup_maintenanceInterruptedUnreadable": "This was interrupted after it started, and Cat Browser cannot read what it was doing. It cannot be run again until that record is dealt with.",
   "@startup_maintenanceInterruptedUnreadable": {
     "description": "Note on an interrupted task whose record cannot be read."
   },
@@ -17135,7 +17135,7 @@
   "@startup_maintenanceDiscardDialogTitle": {
     "description": "Title of the confirmation dialog before discarding the record of an interrupted profile task."
   },
-  "startup_maintenanceDiscardDialogContent": "WebLibre cannot read what a backup, restore or deletion was doing when it stopped. Discarding the record lets the browser open again, but a profile that was being replaced may need to be checked afterward.\n\nIf the profile is missing, WebLibre restores the data it saved before replacing it. If the profile is present, WebLibre removes that saved data. If WebLibre cannot tell which profile the saved data belongs to, it keeps the data rather than removing it.",
+  "startup_maintenanceDiscardDialogContent": "Cat Browser cannot read what a backup, restore or deletion was doing when it stopped. Discarding the record lets the browser open again, but a profile that was being replaced may need to be checked afterward.\n\nIf the profile is missing, Cat Browser restores the data it saved before replacing it. If the profile is present, Cat Browser removes that saved data. If Cat Browser cannot tell which profile the saved data belongs to, it keeps the data rather than removing it.",
   "@startup_maintenanceDiscardDialogContent": {
     "description": "Body of that dialog explaining what happens to data saved during an interrupted profile replacement. Keep the blank line (\\n\\n)."
   },
@@ -17166,7 +17166,7 @@
   },
   "startup_maintenanceBackupConsequence": "Writes an encrypted backup file of this profile, including its {secretDataDescription}.",
   "@startup_maintenanceBackupConsequence": {
-    "description": "Explanation under a pending backup task. secretDataDescription is a lowercase list such as \"WebLibre account sign-in, sync setup and proxy details\".",
+    "description": "Explanation under a pending backup task. secretDataDescription is a lowercase list such as \"Cat Browser account sign-in, sync setup and proxy details\".",
     "placeholders": {
       "secretDataDescription": {
         "type": "String"
@@ -17332,7 +17332,7 @@
       }
     }
   },
-  "startup_maintenanceRestoreCloneConsequence": "This restore was created by a newer version of WebLibre and cannot run here.",
+  "startup_maintenanceRestoreCloneConsequence": "This restore was created by a newer version of Cat Browser and cannot run here.",
   "@startup_maintenanceRestoreCloneConsequence": {
     "description": "Explanation under that task: it cannot run here."
   },
@@ -17375,7 +17375,7 @@
       }
     }
   },
-  "startup_maintenanceUnknownConsequence": "This task was created by a newer version of WebLibre and cannot run.",
+  "startup_maintenanceUnknownConsequence": "This task was created by a newer version of Cat Browser and cannot run.",
   "@startup_maintenanceUnknownConsequence": {
     "description": "Explanation under a task of an unknown kind: it was created by a newer app version."
   },

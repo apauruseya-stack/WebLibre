@@ -161,7 +161,7 @@ class TorService : Service() {
         )
 
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("WebLibre Tor™")
+            .setContentTitle("Cat Browser Tor™")
             .setContentText(text)
             .setSmallIcon(R.drawable.ic_onion)
             .setContentIntent(pendingIntent)

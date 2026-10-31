@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -52,7 +52,7 @@ const minGestureMinSuggestionStroke = 1;
 const maxGestureMinSuggestionStroke = 5;
 
 /// Default gesture-to-action bindings, aligned with the reference add-on's
-/// defaults for the actions WebLibre currently supports.
+/// defaults for the actions Cat Browser currently supports.
 const defaultGestureBindings = <String, BrowserAction>{
   'D-L': BrowserAction.forward,
   'D-R': BrowserAction.back,

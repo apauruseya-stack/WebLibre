@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024-2026 Fabian Freund.
  *
- * This file is part of WebLibre
+ * This file is part of Cat Browser
  * (see https://weblibre.eu).
  *
  * This program is free software: you can redistribute it and/or modify
@@ -1902,7 +1902,7 @@ class BrowserScreen extends HookConsumerWidget {
     // the view instead, which is what a plain `adjustResize` window would do
     // and what GeckoView's own keyboard handling (`onKeyboardHeight`, fed from
     // the window insets) expects. See
-    // https://github.com/FaFre/WebLibre/issues/502.
+    // https://github.com/FaFre/Cat Browser/issues/502.
     //
     // A sheet is excluded: it covers the page, so a keyboard opened for a field
     // *in the sheet* has nothing to make room for, and resizing the platform

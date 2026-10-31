@@ -28,9 +28,9 @@
   "@user_restartingToTakeBackup": {
     "description": "Message shown when the app restarts to create the backup."
   },
-  "user_backupRestartsTitle": "WebLibre restarts to do this",
+  "user_backupRestartsTitle": "Cat Browser restarts to do this",
   "@user_backupRestartsTitle": {
-    "description": "Row on the backup screen explaining that the app restarts to take the backup. WebLibre is the app name."
+    "description": "Row on the backup screen explaining that the app restarts to take the backup. Cat Browser is the app name."
   },
   "user_backupRestartsSubtitle": "{restartClosesCurrentProfile} The backup is taken while the profile is closed, so its contents cannot change during the backup.",
   "@user_backupRestartsSubtitle": {
@@ -45,7 +45,7 @@
   "@user_setPasswordNextTitle": {
     "description": "Row on the backup screen: the backup password is asked for in the next step, after the restart."
   },
-  "user_setPasswordNextSubtitle": "After restarting, WebLibre asks for the backup file password.",
+  "user_setPasswordNextSubtitle": "After restarting, Cat Browser asks for the backup file password.",
   "@user_setPasswordNextSubtitle": {
     "description": "Explanation under that row."
   },
@@ -61,7 +61,7 @@
   "@user_tempDataSkippedTitle": {
     "description": "Row on the backup screen: temporary data is not included in backups."
   },
-  "user_tempDataSkippedSubtitle": "Cache files and other data WebLibre can rebuild are not saved. {shortcutsNeedPinningAgain}",
+  "user_tempDataSkippedSubtitle": "Cache files and other data Cat Browser can rebuild are not saved. {shortcutsNeedPinningAgain}",
   "@user_tempDataSkippedSubtitle": {
     "description": "Explanation under that row. shortcutsNeedPinningAgain is a full sentence about re-adding home-screen shortcuts after restoring.",
     "placeholders": {
@@ -70,20 +70,20 @@
       }
     }
   },
-  "user_accountDataIncludedTitle": "WebLibre account data is included",
+  "user_accountDataIncludedTitle": "Cat Browser account data is included",
   "@user_accountDataIncludedTitle": {
-    "description": "Row on the backup screen: WebLibre account sign-in data is included in the backup file."
+    "description": "Row on the backup screen: Cat Browser account sign-in data is included in the backup file."
   },
   "user_accountDataIncludedSubtitle": "The backup file includes this profile’s {profileSecretDataDescription}. Replacing a profile restores them; creating a new profile does not. Use a strong password.",
   "@user_accountDataIncludedSubtitle": {
-    "description": "Explanation under that row. profileSecretDataDescription is a lowercase list such as \"WebLibre account sign-in, sync setup and proxy details\".",
+    "description": "Explanation under that row. profileSecretDataDescription is a lowercase list such as \"Cat Browser account sign-in, sync setup and proxy details\".",
     "placeholders": {
       "profileSecretDataDescription": {
         "type": "String"
       }
     }
   },
-  "user_closingToTakeBackup": "Closing WebLibre to take the backup…",
+  "user_closingToTakeBackup": "Closing Cat Browser to take the backup…",
   "@user_closingToTakeBackup": {
     "description": "Progress text while the app closes to take a backup."
   },
@@ -180,7 +180,7 @@
   "@user_lockMethodNoneTitle": {
     "description": "Lock method option: the profile opens without asking for anything."
   },
-  "user_lockMethodNoneSubtitle": "Anyone using WebLibre on this device can open this profile",
+  "user_lockMethodNoneSubtitle": "Anyone using Cat Browser on this device can open this profile",
   "@user_lockMethodNoneSubtitle": {
     "description": "Explanation under the \"No lock\" option."
   },
@@ -194,7 +194,7 @@
   },
   "user_lockMethodPasswordTitle": "Profile password",
   "@user_lockMethodPasswordTitle": {
-    "description": "Lock method option: a password set in WebLibre, only for this profile, opens it."
+    "description": "Lock method option: a password set in Cat Browser, only for this profile, opens it."
   },
   "user_lockMethodPasswordSubtitle": "A password only for this profile. Fingerprints and the device PIN can't open it.",
   "@user_lockMethodPasswordSubtitle": {
@@ -208,7 +208,7 @@
   "@user_profilePasswordUnrecoverableTitle": {
     "description": "Warning shown in the profile editor while the profile password lock is selected."
   },
-  "user_profilePasswordUnrecoverableSubtitle": "Without it, this profile can't be opened, backed up or deleted. The password locks WebLibre; it does not encrypt the profile's data.",
+  "user_profilePasswordUnrecoverableSubtitle": "Without it, this profile can't be opened, backed up or deleted. The password locks Cat Browser; it does not encrypt the profile's data.",
   "@user_profilePasswordUnrecoverableSubtitle": {
     "description": "Explanation under that warning. Says honestly that the password only guards the app, the files on the device are not encrypted."
   },
@@ -236,7 +236,7 @@
   "@user_profilePasswordCheckFailed": {
     "description": "Error under the profile password field when the password could not be checked at all (for example, the device storage failed). The profile stays locked."
   },
-  "user_profilePasswordInterrupted": "WebLibre was closed or switched away from during the check. Enter the password again.",
+  "user_profilePasswordInterrupted": "Cat Browser was closed or switched away from during the check. Enter the password again.",
   "@user_profilePasswordInterrupted": {
     "description": "Error under the profile password field when the password was right but the user left the app while it was being checked, so it did not take effect and has to be entered again."
   },
@@ -336,9 +336,9 @@
   "@user_lockInBackgroundTitle": {
     "description": "Auto-lock option: lock as soon as the app is left."
   },
-  "user_lockInBackgroundSubtitle": "As soon as WebLibre leaves the screen",
+  "user_lockInBackgroundSubtitle": "As soon as Cat Browser leaves the screen",
   "@user_lockInBackgroundSubtitle": {
-    "description": "Explanation under \"Lock in background\". WebLibre is the app name."
+    "description": "Explanation under \"Lock in background\". Cat Browser is the app name."
   },
   "user_lockAfterTimeoutTitle": "Lock after a timeout",
   "@user_lockAfterTimeoutTitle": {
@@ -352,9 +352,9 @@
   "@user_lockOnStartupTitle": {
     "description": "Auto-lock option: lock only when the app starts."
   },
-  "user_lockOnStartupSubtitle": "Unlock once at startup, then stay unlocked until WebLibre is fully closed",
+  "user_lockOnStartupSubtitle": "Unlock once at startup, then stay unlocked until Cat Browser is fully closed",
   "@user_lockOnStartupSubtitle": {
-    "description": "Explanation under \"Lock on startup only\". WebLibre is the app name."
+    "description": "Explanation under \"Lock on startup only\". Cat Browser is the app name."
   },
   "user_timeoutFieldTitle": "Timeout",
   "@user_timeoutFieldTitle": {
@@ -441,9 +441,9 @@
   "@user_replaceExistingProfileSubtitle": {
     "description": "Explanation under \"Replace an existing profile\"."
   },
-  "user_newProfileNoSignInTitle": "A new profile starts without WebLibre sign-in",
+  "user_newProfileNoSignInTitle": "A new profile starts without Cat Browser sign-in",
   "@user_newProfileNoSignInTitle": {
-    "description": "Note when restoring as a new profile: WebLibre account sign-in is not carried over."
+    "description": "Note when restoring as a new profile: Cat Browser account sign-in is not carried over."
   },
   "user_newProfileNoSignInSubtitle": "Tabs, history and bookmarks are restored. Sign-in and sync data stay with the original profile.",
   "@user_newProfileNoSignInSubtitle": {
@@ -543,9 +543,9 @@
       }
     }
   },
-  "user_accountDataRestoredTitle": "WebLibre account data is restored",
+  "user_accountDataRestoredTitle": "Cat Browser account data is restored",
   "@user_accountDataRestoredTitle": {
-    "description": "Note when replacing a profile: WebLibre account sign-in data from the backup is restored."
+    "description": "Note when replacing a profile: Cat Browser account sign-in data from the backup is restored."
   },
   "user_accountDataRestoredSubtitle": "Replacing restores the backup file's {profileSecretDataDescription}. {signedInFromBackup} {olderBackupKeepsCredentials}",
   "@user_accountDataRestoredSubtitle": {
@@ -602,9 +602,9 @@
   "@user_restoringBackupProgress": {
     "description": "Progress text while a backup is restored into a new profile."
   },
-  "user_closingToRestoreProgress": "Closing WebLibre to restore…",
+  "user_closingToRestoreProgress": "Closing Cat Browser to restore…",
   "@user_closingToRestoreProgress": {
-    "description": "Progress text while the app closes to replace a profile with a backup. WebLibre is the app name."
+    "description": "Progress text while the app closes to replace a profile with a backup. Cat Browser is the app name."
   },
   "user_actionRestore": "Restore",
   "@user_actionRestore": {
@@ -619,9 +619,9 @@
       }
     }
   },
-  "user_switchClosesReopensAs": "WebLibre closes and reopens as \"{profileName}\".",
+  "user_switchClosesReopensAs": "Cat Browser closes and reopens as \"{profileName}\".",
   "@user_switchClosesReopensAs": {
-    "description": "Body of that dialog. profileName is the target profile; WebLibre is the app name.",
+    "description": "Body of that dialog. profileName is the target profile; Cat Browser is the app name.",
     "placeholders": {
       "profileName": {
         "type": "String"
@@ -701,7 +701,7 @@
   "@user_quitBrowserDontAskAgainSavesQuit": {
     "description": "Replaces the small text under \"Don't ask again\" in the quit confirmation dialog while it is ticked and the user also ticked browsing data to delete. Without the dialog there is no other place to pick data for one quit, so the ticked data is added to the \"Delete Browsing Data Automatically\" setting and deleted on every quit from now on."
   },
-  "user_quitBrowserDontAskAgainSavesQuitAndStart": "The data ticked above will be deleted on every quit and every time WebLibre starts. You can change both in settings.",
+  "user_quitBrowserDontAskAgainSavesQuitAndStart": "The data ticked above will be deleted on every quit and every time Cat Browser starts. You can change both in settings.",
   "@user_quitBrowserDontAskAgainSavesQuitAndStart": {
     "description": "Same as user_quitBrowserDontAskAgainSavesQuit, for when \"Delete Browsing Data Automatically\" also deletes on every start: the ticked data is added to it and deleted on every quit and every start from now on."
   },

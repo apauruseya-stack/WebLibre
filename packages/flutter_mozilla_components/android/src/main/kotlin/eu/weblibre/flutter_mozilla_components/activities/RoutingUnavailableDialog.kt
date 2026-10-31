@@ -23,7 +23,7 @@ import eu.weblibre.flutter_mozilla_components.startup.BootstrapStage
  * the same in both and only the frame around it differs. Two copies would drift.
  *
  * Every line comes from `strings.xml`. This is the only screen some users will
- * ever see of WebLibre — a PWA that never opens the browser shows it and nothing
+ * ever see of Cat Browser — a PWA that never opens the browser shows it and nothing
  * else — so it is also the last place that should be stuck in English.
  */
 internal object RoutingUnavailableCopy {

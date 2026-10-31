@@ -5,7 +5,7 @@
   "onboarding_actionRestore": "Pulihkan",
   "onboarding_restoreTargetUnreadable": "Profil ini tidak dapat dibaca, jadi tidak ada yang dapat dipulihkan ke dalamnya.",
   "onboarding_welcomeBackTitle": "Selamat datang kembali!",
-  "onboarding_welcomeReadyTitle": "WebLibre sudah siap",
+  "onboarding_welcomeReadyTitle": "Cat Browser sudah siap",
   "onboarding_chooseExperience": "Pilih cara memulai:",
   "onboarding_modeExpressTitle": "Mulai Cepat",
   "onboarding_modeExpressSubtitle": "Gunakan pengaturan bawaan yang disarankan dan langsung menjelajah.",
@@ -24,7 +24,7 @@
   "onboarding_aiOnDeviceTitle": "AI di perangkat",
   "onboarding_aiOnDeviceSubtitle": "Fitur lokal di perangkat, termasuk saran topik kontainer dan tab",
   "onboarding_aiWarningTitle": "Hal yang perlu diperhatikan",
-  "onboarding_aiWarningPoint1": "WebLibre menggunakan model AI lokal untuk menganalisis judul tab yang terbuka dan menyarankan kontainer untuk mengelompokkan tab tersebut serta nama untuk kontainer itu. Semua pemrosesan berlangsung sepenuhnya di perangkat Anda.",
+  "onboarding_aiWarningPoint1": "Cat Browser menggunakan model AI lokal untuk menganalisis judul tab yang terbuka dan menyarankan kontainer untuk mengelompokkan tab tersebut serta nama untuk kontainer itu. Semua pemrosesan berlangsung sepenuhnya di perangkat Anda.",
   "onboarding_aiWarningPoint2": "Peningkatan AI bekerja sepenuhnya di dalam peramban Anda, sehingga semua data tetap berada di perangkat. Pemrosesan AI lokal menghormati privasi Anda dan memberikan saran kelompok dan nama kontainer yang lebih cepat. Anda dapat mengatur perilaku ini kapan saja di Pengaturan.",
   "onboarding_aiWarningPoint3": "AI terkadang bisa keliru, jadi harap tinjau nama kelompok dan pilihan tab yang disarankan.",
   "onboarding_searchTitle": "Pencarian",
@@ -37,7 +37,7 @@
   "onboarding_permissionsNotificationsTitle": "Notifikasi",
   "onboarding_permissionsNotificationsSubtitle": "Diperlukan untuk memberi tahu Anda tentang unduhan",
   "onboarding_permissionsDefaultBrowserTitle": "Peramban Bawaan",
-  "onboarding_permissionsDefaultBrowserSubtitle": "Jadikan WebLibre sebagai peramban bawaan Anda",
+  "onboarding_permissionsDefaultBrowserSubtitle": "Jadikan Cat Browser sebagai peramban bawaan Anda",
   "onboarding_privacyTitle": "Privasi & Pengerasan",
   "onboarding_privacyBrowserLanguagesTitle": "Bahasa Peramban",
   "onboarding_privacyBrowserLanguagesSubtitle": "Atur preferensi bahasa yang diperlihatkan ke situs web",
@@ -58,8 +58,8 @@
   "onboarding_blockAllLocalNetworkSubtitle": "Minta izin sebelum situs web mana pun mengakses perangkat di jaringan rumah Anda, bukan hanya pelacak yang dikenal",
   "onboarding_toolbarLayoutTitle": "Bilah Alat & Tata Letak",
   "onboarding_ublockTitle": "uBlock Origin",
-  "onboarding_ublockDescription": "uBlock Origin (uBO) adalah **pemblokir konten spektrum luas** yang hemat CPU dan memori buatan **Raymond Hill**, dan tersedia sebagai ekstensi peramban untuk WebLibre.\n\nSecara bawaan, uBO memblokir iklan, pelacak, penambang kripto, pop-up, anti-pemblokir yang mengganggu, situs malware, dan lainnya menggunakan **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist, dan daftar filter uBO**.\n\nBanyak daftar lain yang tersedia untuk memblokir konten tambahan.",
+  "onboarding_ublockDescription": "uBlock Origin (uBO) adalah **pemblokir konten spektrum luas** yang hemat CPU dan memori buatan **Raymond Hill**, dan tersedia sebagai ekstensi peramban untuk Cat Browser.\n\nSecara bawaan, uBO memblokir iklan, pelacak, penambang kripto, pop-up, anti-pemblokir yang mengganggu, situs malware, dan lainnya menggunakan **EasyList, EasyPrivacy, Peter Lowe's Blocklist, Online Malicious URL Blocklist, dan daftar filter uBO**.\n\nBanyak daftar lain yang tersedia untuk memblokir konten tambahan.",
   "onboarding_ublockInstallTitle": "Pasang Ekstensi uBlock Origin",
   "onboarding_ublockApplyDefaultsTitle": "Terapkan pengaturan bawaan yang dioptimalkan",
-  "onboarding_ublockApplyDefaultsSubtitle": "Aktifkan daftar filter pengerasan WebLibre."
+  "onboarding_ublockApplyDefaultsSubtitle": "Aktifkan daftar filter pengerasan Cat Browser."
 }

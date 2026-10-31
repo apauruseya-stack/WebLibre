@@ -148,7 +148,7 @@ class RecentlyClosedFilterMiddlewareTest {
     }
 
     @Test
-    fun `a tab WebLibre closes itself is not saved, also when a later close supersedes its undo`() {
+    fun `a tab Cat Browser closes itself is not saved, also when a later close supersedes its undo`() {
         val store = store(
             createTab("https://moved.example", id = "moved"),
             createTab("https://closed.example", id = "closed"),

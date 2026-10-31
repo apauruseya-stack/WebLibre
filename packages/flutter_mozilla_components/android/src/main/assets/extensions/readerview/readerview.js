@@ -5,17 +5,17 @@
 /* import-globals-from readability/readability-0.4.2.js */
 /* import-globals-from readability/JSDOMParser-0.4.2.js */
 
-/* WebLibre: this file overrides the upstream Mozilla Android Components reader
+/* Cat Browser: this file overrides the upstream Mozilla Android Components reader
  * view script (org.mozilla.components:feature-readerview). It is identical to
- * upstream except for the AMOLED / pure-black additions (search for "WebLibre").
- * The native side (ReaderViewAppearanceFeature) pushes the WebLibre "pure black"
+ * upstream except for the AMOLED / pure-black additions (search for "Cat Browser").
+ * The native side (ReaderViewAppearanceFeature) pushes the Cat Browser "pure black"
  * flag over a dedicated content port ("weblibreReaderviewActive") whenever a
  * reader page connects and whenever the user toggles the setting. The flag is
  * reflected as the `amoled` body class, which readerview.css uses to render the
  * dark scheme as pure black. We also cache it in browser.storage.local so a
  * freshly opened reader page can apply the last known value before the native
  * push arrives (avoiding a flash). When upgrading mozilla-components, re-sync
- * with upstream and re-apply the WebLibre additions. */
+ * with upstream and re-apply the Cat Browser additions. */
 
 // Class names to preserve in the readerized output. We preserve these class
 // names so that rules in readerview.css can match them. This list is taken from Fennec:
@@ -33,12 +33,12 @@ const preservedClasses = [
   "wp-smiley",
 ];
 
-// WebLibre: key in browser.storage.local caching the last known "pure black"
+// Cat Browser: key in browser.storage.local caching the last known "pure black"
 // flag, and the native content port the flag is pushed over.
 const WEBLIBRE_AMOLED_STORAGE_KEY = "amoled";
 const WEBLIBRE_APPEARANCE_PORT = "weblibreReaderviewActive";
 
-// WebLibre: last known "pure black" flag. Updated by the native push and the
+// Cat Browser: last known "pure black" flag. Updated by the native push and the
 // storage cache; re-applied whenever the body element is (re)created.
 let weblibreAmoled = false;
 
@@ -117,7 +117,7 @@ class ReaderView {
     this.setFontSize(options.fontSize);
     this.setFontType(options.fontType);
     this.setColorScheme(options.colorScheme);
-    // WebLibre: re-apply the pure-black flag once the article is rendered.
+    // Cat Browser: re-apply the pure-black flag once the article is rendered.
     // setHTML keeps the body from prepareBody, so this is only a guard.
     weblibreApplyAmoled(weblibreAmoled);
     if (options.scrollY) {
@@ -369,7 +369,7 @@ function getPreparedDocument(id, url) {
 }
 
 /**
- * WebLibre: applies the given pure-black flag to the body as the `amoled` class.
+ * Cat Browser: applies the given pure-black flag to the body as the `amoled` class.
  * readerview.css only acts on it when combined with the dark scheme. The latest
  * value is remembered so it can be re-applied after the body is recreated.
  */
@@ -381,7 +381,7 @@ function weblibreApplyAmoled(enabled) {
 }
 
 /**
- * WebLibre: applies the cached pure-black flag from extension storage. This is a
+ * Cat Browser: applies the cached pure-black flag from extension storage. This is a
  * fast path so a freshly opened reader page can paint with the right background
  * before the authoritative native push arrives over the appearance port.
  */
@@ -397,7 +397,7 @@ function weblibreApplyCachedAmoled() {
 }
 
 /**
- * WebLibre: connects the appearance port. The native side pushes the current
+ * Cat Browser: connects the appearance port. The native side pushes the current
  * pure-black flag on connect and whenever the user toggles the setting, so this
  * works both for newly opened reader pages and for live toggles while a reader
  * page is already on screen. The value is cached for the next page load.
@@ -418,7 +418,7 @@ function weblibreConnectAppearancePort() {
       }
     });
   } catch (e) {
-    console.error(`WebLibre reader appearance port failed: ${e}`);
+    console.error(`Cat Browser reader appearance port failed: ${e}`);
   }
 }
 
@@ -501,7 +501,7 @@ function prepareBody() {
   body.classList.add("mozac-readerview-body");
   body.classList.add(colorScheme);
   document.body = body;
-  // WebLibre: apply the cached pure-black flag as early as possible to avoid a
+  // Cat Browser: apply the cached pure-black flag as early as possible to avoid a
   // flash from the regular dark background to pure black once the article loads.
   // The native push over the appearance port corrects it if the cache is stale.
   weblibreApplyCachedAmoled();

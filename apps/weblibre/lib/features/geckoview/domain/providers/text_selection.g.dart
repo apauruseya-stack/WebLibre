@@ -23,7 +23,7 @@ part of 'text_selection.dart';
 /// grace window after the toolbar disappears and again after a selection drag
 /// ends, covering a quick re-grab of a handle.
 ///
-/// See https://github.com/FaFre/WebLibre/issues/578.
+/// See https://github.com/FaFre/Cat Browser/issues/578.
 
 @ProviderFor(TextSelectionActive)
 final textSelectionActiveProvider = TextSelectionActiveProvider._();
@@ -43,7 +43,7 @@ final textSelectionActiveProvider = TextSelectionActiveProvider._();
 /// grace window after the toolbar disappears and again after a selection drag
 /// ends, covering a quick re-grab of a handle.
 ///
-/// See https://github.com/FaFre/WebLibre/issues/578.
+/// See https://github.com/FaFre/Cat Browser/issues/578.
 final class TextSelectionActiveProvider
     extends $NotifierProvider<TextSelectionActive, bool> {
   /// Whether native text selection is currently on screen, mirroring the engine's
@@ -61,7 +61,7 @@ final class TextSelectionActiveProvider
   /// grace window after the toolbar disappears and again after a selection drag
   /// ends, covering a quick re-grab of a handle.
   ///
-  /// See https://github.com/FaFre/WebLibre/issues/578.
+  /// See https://github.com/FaFre/Cat Browser/issues/578.
   TextSelectionActiveProvider._()
     : super(
         from: null,
@@ -107,7 +107,7 @@ String _$textSelectionActiveHash() =>
 /// grace window after the toolbar disappears and again after a selection drag
 /// ends, covering a quick re-grab of a handle.
 ///
-/// See https://github.com/FaFre/WebLibre/issues/578.
+/// See https://github.com/FaFre/Cat Browser/issues/578.
 
 abstract class _$TextSelectionActive extends $Notifier<bool> {
   bool build();

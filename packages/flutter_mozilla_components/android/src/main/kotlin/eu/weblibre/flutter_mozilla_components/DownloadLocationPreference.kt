@@ -77,7 +77,7 @@ object DownloadLocationPreference {
      * picker took is recorded against the tree URI the system returned
      * (`…/tree/<id>`), and Mozilla's writer compares `directoryPath` against that
      * list by exact equality before it will write anything. But a picker that
-     * hands back `DocumentFile.fromTreeUri(...).uri` — as the one WebLibre uses
+     * hands back `DocumentFile.fromTreeUri(...).uri` — as the one Cat Browser uses
      * does — gives the *document* form of the same folder,
      * `…/tree/<id>/document/<id>`, which matches no grant. Stored as-is it would
      * fail the check here, and had it been let through it would have thrown in

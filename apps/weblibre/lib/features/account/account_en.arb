@@ -1,13 +1,13 @@
 {
   "@@locale": "en",
 
-  "account_screenTitle": "WebLibre Account",
+  "account_screenTitle": "Cat Browser Account",
   "@account_screenTitle": {
-    "description": "Title of the settings screen for the WebLibre Account (the app's own optional online account for the supporter subscription, search credits and encrypted settings sync). WebLibre is the app name."
+    "description": "Title of the settings screen for the Cat Browser Account (the app's own optional online account for the supporter subscription, search credits and encrypted settings sync). Cat Browser is the app name."
   },
   "account_searchHint": "Search account settings",
   "@account_searchHint": {
-    "description": "Placeholder of the search field on the WebLibre Account screen."
+    "description": "Placeholder of the search field on the Cat Browser Account screen."
   },
   "account_loadFailed": "Failed to load account",
   "@account_loadFailed": {
@@ -16,15 +16,15 @@
 
   "account_sectionAccount": "Account",
   "@account_sectionAccount": {
-    "description": "Section heading on the WebLibre Account screen for sign-in status."
+    "description": "Section heading on the Cat Browser Account screen for sign-in status."
   },
   "account_sectionSubscription": "Subscription",
   "@account_sectionSubscription": {
-    "description": "Section heading on the WebLibre Account screen for the supporter subscription."
+    "description": "Section heading on the Cat Browser Account screen for the supporter subscription."
   },
   "account_sectionSearchCredits": "Search Credits",
   "@account_sectionSearchCredits": {
-    "description": "Section heading on the WebLibre Account screen for prepaid search credits."
+    "description": "Section heading on the Cat Browser Account screen for prepaid search credits."
   },
   "account_sectionSettingsSnapshots": "Settings Snapshots",
   "@account_sectionSettingsSnapshots": {
@@ -39,9 +39,9 @@
     "description": "Section heading for setting up end-to-end encrypted sync of settings."
   },
 
-  "account_signInTitle": "Sign in to WebLibre Account",
+  "account_signInTitle": "Sign in to Cat Browser Account",
   "@account_signInTitle": {
-    "description": "Row that starts signing in to the WebLibre Account; also the title of the account section while signed out."
+    "description": "Row that starts signing in to the Cat Browser Account; also the title of the account section while signed out."
   },
   "account_signInKeywords": "sign in, account, authentication",
   "@account_signInKeywords": {
@@ -169,12 +169,12 @@
   "@account_adoptTitleUnusable": {
     "description": "Heading of the same card when the leftover sign-in is damaged."
   },
-  "account_adoptBodyUsable": "WebLibre kept a sign-in for {name} from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so WebLibre will not guess.",
+  "account_adoptBodyUsable": "Cat Browser kept a sign-in for {name} from before profiles had separate accounts. It is not from a backup, and nothing on this device records which profile it belonged to, so Cat Browser will not guess.",
   "@account_adoptBodyUsable": {
     "description": "Body of the leftover sign-in card. name is the account's email or name, or \"a previous sign-in\".",
     "placeholders": { "name": { "type": "String" } }
   },
-  "account_adoptBodyUnusable": "WebLibre kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.",
+  "account_adoptBodyUnusable": "Cat Browser kept a sign-in from before profiles had separate accounts, but the saved data is damaged and cannot be used to sign in. Signing in again is the only way back; removing it clears this message.",
   "@account_adoptBodyUnusable": {
     "description": "Body of the card when the leftover sign-in is damaged and can only be removed."
   },
@@ -225,9 +225,9 @@
   "@account_signingInEllipsis": {
     "description": "Progress text while sign-in is in progress."
   },
-  "account_completeSignInInApp": "Complete sign-in in WebLibre",
+  "account_completeSignInInApp": "Complete sign-in in Cat Browser",
   "@account_completeSignInInApp": {
-    "description": "Instruction under the sign-in progress: finish signing in on the web page opened in WebLibre."
+    "description": "Instruction under the sign-in progress: finish signing in on the web page opened in Cat Browser."
   },
   "account_tooltipSignOut": "Sign Out",
   "@account_tooltipSignOut": {
@@ -237,9 +237,9 @@
   "@account_signOutConfirmTitle": {
     "description": "Title of the sign-out confirmation dialog."
   },
-  "account_signOutConfirmContent": "Are you sure you want to sign out of your WebLibre Account?",
+  "account_signOutConfirmContent": "Are you sure you want to sign out of your Cat Browser Account?",
   "@account_signOutConfirmContent": {
-    "description": "Body of the sign-out confirmation dialog. \"WebLibre Account\" is the account's name."
+    "description": "Body of the sign-out confirmation dialog. \"Cat Browser Account\" is the account's name."
   },
 
   "account_resetSyncKeyTitle": "Reset Sync Key",
@@ -338,27 +338,27 @@
     "placeholders": { "date": { "type": "String" } }
   },
 
-  "account_bannerTitle": "Support WebLibre",
+  "account_bannerTitle": "Support Cat Browser",
   "@account_bannerTitle": {
     "description": "Heading of the home screen banner inviting users to become supporters."
   },
-  "account_bannerBody": "Supporter is an optional subscription that funds WebLibre's development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.",
+  "account_bannerBody": "Supporter is an optional subscription that funds Cat Browser's development and provides the features that need a hosted service to work. The browser and its privacy features need no subscription. <learnMore>Learn more</learnMore>.",
   "@account_bannerBody": {
-    "description": "Body of the supporter banner on the home screen. The text between <learnMore>…</learnMore> becomes a tappable link to more information; keep the tag pair and translate the text inside it. WebLibre is the app name."
+    "description": "Body of the supporter banner on the home screen. The text between <learnMore>…</learnMore> becomes a tappable link to more information; keep the tag pair and translate the text inside it. Cat Browser is the app name."
   },
-  "account_featureSearchLabel": "WebLibre Search",
+  "account_featureSearchLabel": "Cat Browser Search",
   "@account_featureSearchLabel": {
     "description": "Bullet heading in the supporter banner naming the search feature. Product name."
   },
   "account_featureSearchDescription": "A private, ad-free search built into the browser. It blends results from several independent sources, offers tunable search modes, can route over Tor, and lets you preview pages safely — while keeping your searches unlinkable to your account by design.",
   "@account_featureSearchDescription": {
-    "description": "Bullet text in the supporter banner describing WebLibre Search. Tor is a product name."
+    "description": "Bullet text in the supporter banner describing Cat Browser Search. Tor is a product name."
   },
   "account_featureSyncLabel": "Encrypted account sync",
   "@account_featureSyncLabel": {
     "description": "Bullet heading in the supporter banner naming encrypted settings sync."
   },
-  "account_featureSyncDescription": "Store and restore your WebLibre settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.",
+  "account_featureSyncDescription": "Store and restore your Cat Browser settings and preferences across profiles and devices. Everything is encrypted on your device before upload, so only you can read it.",
   "@account_featureSyncDescription": {
     "description": "Bullet text in the supporter banner describing encrypted settings sync."
   },
@@ -408,12 +408,12 @@
   },
   "account_syncKindStored": "{kind, select, weblibreSettings{Settings stored} geckoUserJs{Gecko Prefs stored} other{Snapshot stored}}",
   "@account_syncKindStored": {
-    "description": "Confirmation after uploading a snapshot. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
+    "description": "Confirmation after uploading a snapshot. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
     "placeholders": { "kind": { "type": "String" } }
   },
   "account_syncKindSnapshotsTitle": "{kind, select, weblibreSettings{Settings Snapshots} geckoUserJs{Gecko Prefs Snapshots} other{Snapshots}}",
   "@account_syncKindSnapshotsTitle": {
-    "description": "Heading of a list of stored snapshots. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences (Gecko is the engine's name). Translate each case; keep the case names unchanged.",
+    "description": "Heading of a list of stored snapshots. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences (Gecko is the engine's name). Translate each case; keep the case names unchanged.",
     "placeholders": { "kind": { "type": "String" } }
   },
   "account_storeCurrentTitle": "Store Current",
@@ -422,7 +422,7 @@
   },
   "account_storeCurrentSubtitle": "{kind, select, weblibreSettings{Encrypt and upload the current settings} geckoUserJs{Encrypt and upload the current Gecko prefs} other{Encrypt and upload the current data}}",
   "@account_storeCurrentSubtitle": {
-    "description": "Line under \"Store Current\". kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
+    "description": "Line under \"Store Current\". kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
     "placeholders": { "kind": { "type": "String" } }
   },
   "account_noSnapshotsYet": "No snapshots stored yet",
@@ -436,7 +436,7 @@
   },
   "account_syncKindRestored": "{kind, select, weblibreSettings{Settings restored} geckoUserJs{Gecko Prefs restored} other{Snapshot restored}}",
   "@account_syncKindRestored": {
-    "description": "Confirmation after restoring a snapshot. kind selects the kind of data: weblibreSettings is WebLibre's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
+    "description": "Confirmation after restoring a snapshot. kind selects the kind of data: weblibreSettings is Cat Browser's own settings, geckoUserJs the browser engine preferences. Translate each case; keep the case names unchanged.",
     "placeholders": { "kind": { "type": "String" } }
   },
   "account_snapshotNotFound": "Snapshot not found",
