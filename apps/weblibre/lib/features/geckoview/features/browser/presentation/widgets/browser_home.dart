@@ -28,6 +28,7 @@ import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/geckoview/domain/entities/tab_container_selection.dart';
 import 'package:weblibre/features/geckoview/domain/repositories/tab.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/providers/browser_viewport_toolbar_insets.dart';
+import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/home/home_clock.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/home/home_search_pill.dart';
 import 'package:weblibre/features/geckoview/features/search/domain/providers/empty_state_content.dart';
 import 'package:weblibre/features/geckoview/features/search/domain/providers/search_modules_view.dart';
@@ -293,7 +294,7 @@ class _HomeHeader extends ConsumerWidget {
           if (container != null)
             _ContainerHeader(container: container)
           else
-            BrandHeader(colorScheme: theme.colorScheme),
+            const HomeClock(),
           if (container != null) ...[
             const SizedBox(height: 12),
             Text(
