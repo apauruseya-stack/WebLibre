@@ -620,13 +620,14 @@ This is a full initiative on its own (~4-6 weeks). If passwords are not funded, 
 
 #### B1 - Bookmarks + history from Chrome-family and Firefox (3-4 weeks)
 
-- [ ] Chrome `Bookmarks` JSON parser (folders, order, roots).
-- [ ] Chrome `History` SQLite parser (read-only, chunked).
-- [ ] Firefox `places.sqlite` parser for bookmarks and history.
-- [ ] Canonical model + dedupe rules.
-- [ ] Bulk history insert API + progress + cancellation.
-- [ ] Merge vs replace per category.
-- [ ] Imported bookmarks land in a top-level folder `Imported from <source> (<date>)` so undo is one delete.
+- [x] Chrome `Bookmarks` JSON parser (folders, order, roots).
+- [x] Chrome `History` SQLite parser (read-only, chunked).
+- [x] Firefox `places.sqlite` parser for bookmarks and history.
+- [x] Canonical model + dedupe rules.
+- [x] Bulk history insert API + progress + cancellation.
+- [x] Merge vs replace per category.
+- [x] Imported bookmarks land in a top-level folder `Imported from <source> (<date>)` so undo is one delete.
+- [x] Undo the last import: exact history rows by (url, timestamp) plus the imported bookmark folder, persisted across restarts.
 
 **Acceptance:**
 

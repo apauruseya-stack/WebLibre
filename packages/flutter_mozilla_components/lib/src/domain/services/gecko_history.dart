@@ -74,6 +74,26 @@ class GeckoHistoryService {
     );
   }
 
+  /// Writes [visits] into Places at their original timestamps and returns how
+  /// many rows were accepted.
+  ///
+  /// Batch a large import into a few thousand entries per call so progress can
+  /// be reported between batches and the platform channel message stays small.
+  Future<int> importVisits(List<VisitImport> visits) {
+    if (visits.isEmpty) return Future.value(0);
+    return _api.importVisits(visits);
+  }
+
+  /// Deletes the visits in [visits] by exact (url, timestamp) and returns how
+  /// many rows were removed.
+  ///
+  /// Used to roll back a cancelled import or to undo a completed one. Other
+  /// history rows and bookmarks are untouched.
+  Future<int> deleteVisits(List<VisitImport> visits) {
+    if (visits.isEmpty) return Future.value(0);
+    return _api.deleteVisits(visits);
+  }
+
   Future<List<HistoryHighlight>> getHistoryHighlights({
     required HistoryHighlightWeights weights,
     required int limit,

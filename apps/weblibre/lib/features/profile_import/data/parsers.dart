@@ -212,33 +212,45 @@ class FirefoxPlacesParser {
     );
   }
 
+  static const _historyPageSize = 5000;
+
   static List<ImportHistoryEntry> _parseHistory(Database db) {
-    final rows = db.select(
-      'SELECT p.url, p.title, h.visit_date, p.visit_count '
-      'FROM moz_places p JOIN moz_historyvisits h ON h.place_id = p.id',
-    );
     final entries = <ImportHistoryEntry>[];
-    for (final r in rows) {
-      final url = r['url'] as String?;
-      if (url == null) continue;
-      final visitedMicros = r['visit_date'];
-      DateTime visitedAt;
-      if (visitedMicros is int) {
-        visitedAt = DateTime.fromMicrosecondsSinceEpoch(
-          visitedMicros,
-          isUtc: true,
-        );
-      } else {
-        visitedAt = DateTime.now().toUtc();
-      }
-      entries.add(
-        ImportHistoryEntry(
-          url: Uri.tryParse(url) ?? Uri(),
-          title: r['title'] as String?,
-          visitedAt: visitedAt,
-          visitCount: (r['visit_count'] as int?) ?? 1,
-        ),
+    var offset = 0;
+    while (true) {
+      final rows = db.select(
+        'SELECT p.url, p.title, h.visit_date, p.visit_count '
+        'FROM moz_places p JOIN moz_historyvisits h ON h.place_id = p.id '
+        'ORDER BY h.visit_date LIMIT ? OFFSET ?',
+        [_historyPageSize, offset],
       );
+      if (rows.isEmpty) break;
+
+      for (final r in rows) {
+        final url = r['url'] as String?;
+        if (url == null) continue;
+        final visitedMicros = r['visit_date'];
+        DateTime visitedAt;
+        if (visitedMicros is int) {
+          visitedAt = DateTime.fromMicrosecondsSinceEpoch(
+            visitedMicros,
+            isUtc: true,
+          );
+        } else {
+          visitedAt = DateTime.now().toUtc();
+        }
+        entries.add(
+          ImportHistoryEntry(
+            url: Uri.tryParse(url) ?? Uri(),
+            title: r['title'] as String?,
+            visitedAt: visitedAt,
+            visitCount: (r['visit_count'] as int?) ?? 1,
+          ),
+        );
+      }
+
+      if (rows.length < _historyPageSize) break;
+      offset += _historyPageSize;
     }
     return entries;
   }
@@ -248,32 +260,47 @@ class FirefoxPlacesParser {
 class ChromeHistoryParser {
   const ChromeHistoryParser();
 
+  /// Rows read per query. A 50k-visit History file is ten bounded queries
+  /// instead of one cursor over the whole table, which keeps peak native
+  /// memory low on a mid-range phone.
+  static const pageSize = 5000;
+
   static List<ImportHistoryEntry>? tryParsePath(String path) {
     Database? db;
     try {
       db = sqlite3.open(path, mode: OpenMode.readOnly);
-      final rows = db.select(
-        'SELECT u.url, u.title, v.visit_time FROM urls u '
-        'JOIN visits v ON v.url = u.id',
-      );
       final entries = <ImportHistoryEntry>[];
-      for (final r in rows) {
-        final url = r['url'] as String?;
-        if (url == null) continue;
-        final t = r['visit_time'];
-        DateTime visitedAt;
-        if (t is int) {
-          visitedAt = DateTime.utc(1601).add(Duration(microseconds: t));
-        } else {
-          visitedAt = DateTime.now().toUtc();
-        }
-        entries.add(
-          ImportHistoryEntry(
-            url: Uri.tryParse(url) ?? Uri(),
-            title: r['title'] as String?,
-            visitedAt: visitedAt,
-          ),
+      var offset = 0;
+      while (true) {
+        final rows = db.select(
+          'SELECT u.url, u.title, v.visit_time FROM urls u '
+          'JOIN visits v ON v.url = u.id '
+          'ORDER BY v.visit_time LIMIT ? OFFSET ?',
+          [pageSize, offset],
         );
+        if (rows.isEmpty) break;
+
+        for (final r in rows) {
+          final url = r['url'] as String?;
+          if (url == null) continue;
+          final t = r['visit_time'];
+          DateTime visitedAt;
+          if (t is int) {
+            visitedAt = DateTime.utc(1601).add(Duration(microseconds: t));
+          } else {
+            visitedAt = DateTime.now().toUtc();
+          }
+          entries.add(
+            ImportHistoryEntry(
+              url: Uri.tryParse(url) ?? Uri(),
+              title: r['title'] as String?,
+              visitedAt: visitedAt,
+            ),
+          );
+        }
+
+        if (rows.length < pageSize) break;
+        offset += pageSize;
       }
       return entries;
     } catch (_) {

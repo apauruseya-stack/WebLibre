@@ -169,6 +169,7 @@ export 'src/pigeons/gecko.g.dart'
         UnknownHitResult,
         VideoHitResult,
         VisitInfo,
+        VisitImport,
         VisitType,
         WebExtensionActionType,
         WebExtensionData;

@@ -14,10 +14,17 @@ import eu.weblibre.flutter_mozilla_components.pigeons.PageObservation
 import eu.weblibre.flutter_mozilla_components.pigeons.TopFrecentSiteInfo
 import eu.weblibre.flutter_mozilla_components.pigeons.VisitInfo
 import eu.weblibre.flutter_mozilla_components.pigeons.VisitType
+import eu.weblibre.flutter_mozilla_components.pigeons.VisitImport
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withContext
+import mozilla.appservices.places.PlacesWriterConnection
+import mozilla.appservices.places.uniffi.VisitObservation
+import mozilla.appservices.places.uniffi.VisitType as PlacesVisitType
 import mozilla.components.browser.state.state.content.DownloadState
+import mozilla.components.browser.storage.sync.PlacesHistoryStorage
 import mozilla.components.concept.storage.HistoryMetadataObservation
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -403,4 +410,61 @@ class GeckoHistoryApiImpl() : GeckoHistoryApi {
         components.core.historyStorage
             .deleteHistoryMetadataOlderThan(olderThanMillis)
     }
+
+    /**
+     * The public `HistoryStorage` API records a visit at "now" and cannot carry
+     * the original timestamp, which would flatten an imported history into a
+     * single moment. `PlacesHistoryStorage` writes through an application
+     * services writer whose `noteObservation` accepts `at`, so use that instead.
+     *
+     * The writer is an `internal` member of browser-storage-sync, hence the
+     * reflective lookup; it is stable for the pinned Components release and is
+     * the only way to keep visit times without writing to places.sqlite behind
+     * GeckoView's back.
+     */
+    private fun placesWriter(): PlacesWriterConnection {
+        val storage = components.core.historyStorage as? PlacesHistoryStorage
+            ?: error("History storage is not PlacesHistoryStorage")
+        val getter = storage.javaClass.getMethod("getWriter\$browser_storage_sync")
+        return getter.invoke(storage) as PlacesWriterConnection
+    }
+
+    override suspend fun importVisits(visits: List<VisitImport>): Long =
+        withContext(Dispatchers.IO) {
+            if (visits.isEmpty()) return@withContext 0L
+            val writer = placesWriter()
+            var inserted = 0L
+            for (visit in visits) {
+                try {
+                    writer.noteObservation(
+                        VisitObservation(
+                            url = visit.url,
+                            title = visit.title,
+                            visitType = PlacesVisitType.LINK,
+                            at = visit.visitedAtMillis,
+                        ),
+                    )
+                    inserted++
+                } catch (error: Throwable) {
+                    // Skip individual failures; never abort the whole import.
+                }
+            }
+            inserted
+        }
+
+    override suspend fun deleteVisits(visits: List<VisitImport>): Long =
+        withContext(Dispatchers.IO) {
+            if (visits.isEmpty()) return@withContext 0L
+            val writer = placesWriter()
+            var deleted = 0L
+            for (visit in visits) {
+                try {
+                    writer.deleteVisit(visit.url, visit.visitedAtMillis)
+                    deleted++
+                } catch (error: Throwable) {
+                    // A row that is already gone is not an error for an undo.
+                }
+            }
+            deleted
+        }
 }

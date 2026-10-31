@@ -2619,6 +2619,26 @@ abstract class GeckoHistoryEvents {
   void onVisitRecorded(String url, int visitTime, String tabId);
 }
 
+/// One visit to write into Places during a profile import.
+///
+/// Unlike [VisitInfo] this is input only: Places assigns the internal visit id
+/// and frecency. [visitedAtMillis] is the original visit time, so an imported
+/// history keeps its shape instead of collapsing into "everything happened at
+/// import time".
+class VisitImport {
+  final String url;
+  final String? title;
+  final int visitedAtMillis;
+  final int visitCount;
+
+  VisitImport({
+    required this.url,
+    required this.title,
+    required this.visitedAtMillis,
+    required this.visitCount,
+  });
+}
+
 @HostApi()
 abstract class GeckoHistoryApi {
   @async
@@ -2637,6 +2657,22 @@ abstract class GeckoHistoryApi {
 
   @async
   void deleteVisit(String url, int timestamp);
+
+  /// Writes [visits] into Places at their original timestamps.
+  ///
+  /// The call is a single native round trip for the whole list, so callers
+  /// batch a large import (a few thousand entries per call) to report progress
+  /// and to keep each platform-channel message bounded. Individual rows that
+  /// Places rejects are skipped; the return value is the number written.
+  @async
+  int importVisits(List<VisitImport> visits);
+
+  /// Removes the visits in [visits] by exact (url, timestamp).
+  ///
+  /// Used to roll back a cancelled import, or to undo a completed one. Returns
+  /// the number of rows removed. Bookmarks and other history are untouched.
+  @async
+  int deleteVisits(List<VisitImport> visits);
 
   @async
   void deleteDownload(String id);
