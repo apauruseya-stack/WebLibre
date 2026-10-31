@@ -100,22 +100,6 @@ class CookieBannerStatus extends _$CookieBannerStatus {
 ///
 /// A parent-domain entry also matches its subdomains, so a decision recorded
 /// for `example.com` still explains `www.example.com`.
-@Riverpod(keepAlive: true)
-class CookieBannerRuleStats extends _$CookieBannerRuleStats {
-  @override
-  Map<String, ({int success, int fail})> build() {
-    final sub = ref.watch(eventServiceProvider).cookieBannerEvents.listen((event) {
-      if (event.ruleId == null) return;
-      final current = state[event.ruleId!] ?? (success: 0, fail: 0);
-      final next = event.action == 'rejected' || event.action == 'hidden'
-          ? (success: current.success + 1, fail: current.fail)
-          : (success: current.success, fail: current.fail + 1);
-      state = {...state, event.ruleId!: next};
-    });
-    ref.onDispose(sub.cancel);
-    return const {};
-  }
-}
 
 /// The most recent cookie-banner decision for [host], if one was reported this
 /// session.
