@@ -116,3 +116,32 @@ class CookieBannerRuleStats extends _$CookieBannerRuleStats {
     return const {};
   }
 }
+
+/// The most recent cookie-banner decision for [host], if one was reported this
+/// session.
+///
+/// A parent-domain entry also matches its subdomains, so a decision recorded
+/// for `example.com` still explains `www.example.com`.
+@Riverpod(keepAlive: true)
+CookieBannerEventData? cookieBannerStatusFor(Ref ref, String? host) {
+  if (host == null || host.isEmpty) {
+    return null;
+  }
+
+  final statuses = ref.watch(cookieBannerStatusProvider);
+  final direct = statuses[host];
+  if (direct != null) {
+    return direct;
+  }
+
+  CookieBannerEventData? match;
+  var matchLength = 0;
+  for (final entry in statuses.entries) {
+    if (host.endsWith('.${entry.key}') && entry.key.length > matchLength) {
+      match = entry.value;
+      matchLength = entry.key.length;
+    }
+  }
+
+  return match;
+}
