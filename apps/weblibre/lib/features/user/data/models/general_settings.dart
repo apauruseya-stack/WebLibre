@@ -720,6 +720,10 @@ class GeneralSettings with FastEquatable {
   /// control, hide the overlay otherwise, and never accept on the user's behalf.
   final CookieBannerHandling cookieBannerHandling;
 
+  /// Whether the cookie banner handler may fetch rule updates over the network.
+  /// Off by default. Updates are a static JSON file with no identifiers.
+  final bool cookieBannerRuleUpdates;
+
   /// Per-site overrides for the cookie banner handler: host -> mode.
   /// Stored as JSON. Empty by default.
   final Map<String, String> cookieBannerSiteModes;
@@ -880,6 +884,7 @@ class GeneralSettings with FastEquatable {
     required this.pureBlack,
     required this.hideStatusBar,
     required this.cookieBannerHandling,
+    required this.cookieBannerRuleUpdates,
     required this.cookieBannerSiteModes,
     required this.textScaleMode,
     required this.textScaleFactor,
@@ -999,6 +1004,7 @@ class GeneralSettings with FastEquatable {
     bool? pureBlack,
     bool? hideStatusBar,
     CookieBannerHandling? cookieBannerHandling,
+    bool? cookieBannerRuleUpdates,
     Map<String, String>? cookieBannerSiteModes,
     TextScaleMode? textScaleMode,
     double? textScaleFactor,
@@ -1150,6 +1156,7 @@ class GeneralSettings with FastEquatable {
        hideStatusBar = hideStatusBar ?? false,
        cookieBannerHandling =
            cookieBannerHandling ?? CookieBannerHandling.rejectOrHide,
+       cookieBannerRuleUpdates = cookieBannerRuleUpdates ?? false,
        cookieBannerSiteModes = cookieBannerSiteModes ?? const {},
        textScaleMode = textScaleMode ?? TextScaleMode.system,
        textScaleFactor = (textScaleFactor ?? 1.0).clamp(0.5, 2.0),

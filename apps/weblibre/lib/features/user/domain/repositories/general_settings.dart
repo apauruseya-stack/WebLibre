@@ -147,6 +147,7 @@ const generalSettingColumnTypes = <String, DriftSqlType>{
   'pureBlack': DriftSqlType.bool,
   'hideStatusBar': DriftSqlType.bool,
   'cookieBannerHandling': DriftSqlType.string,
+  'cookieBannerRuleUpdates': DriftSqlType.bool,
   'textScaleMode': DriftSqlType.string,
   'textScaleFactor': DriftSqlType.double,
   'maxSystemScale': DriftSqlType.double,

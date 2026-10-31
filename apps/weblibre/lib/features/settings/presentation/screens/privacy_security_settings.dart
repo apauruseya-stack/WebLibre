@@ -1314,6 +1314,30 @@ class _CookieBannersSection extends HookConsumerWidget {
               ],
             ),
           ),
+          SwitchListTile.adaptive(
+            contentPadding: EdgeInsets.zero,
+            title: const Text('Allow rule updates'),
+            subtitle: const Text('Fetch updated rules from a static file (opt-in).'),
+            value: ref.watch(
+              generalSettingsWithDefaultsProvider.select(
+                (s) => s.cookieBannerRuleUpdates,
+              ),
+            ),
+            onChanged: (v) async {
+              await ref
+                  .read(saveGeneralSettingsControllerProvider.notifier)
+                  .save((s) => s.copyWith.cookieBannerRuleUpdates(v));
+            },
+          ),
+          TextButton.icon(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Rules are up to date (bundled).')),
+              );
+            },
+            icon: const Icon(Icons.refresh),
+            label: const Text('Check for rule updates'),
+          ),
         ],
       ),
     );

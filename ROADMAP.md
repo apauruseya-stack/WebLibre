@@ -390,7 +390,7 @@ CREATE TABLE cookie_banner_event (
 
 #### A3 - Rule repository (2-3 weeks)
 
-- [x] Bundled pack versioned with a hash; cached in `browser.storage.local`.
+- [ ] Bundled pack versioned with a hash; cached in `browser.storage.local`.
 - [ ] Optional rule updates: manual "Check for rule updates" plus an opt-in weekly check. No identifiers, no query parameters, no cookies on the request; download a static JSON and verify its hash against a pinned value shipped in the app.
 - [ ] Local overrides: disable a rule, add selectors for a site, export/import overrides as JSON.
 - [ ] Rule editor UI in the settings screen (advanced).
