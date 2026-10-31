@@ -30,6 +30,7 @@ import 'package:weblibre/features/geckoview/features/browser/presentation/dialog
 import 'package:weblibre/features/geckoview/features/browser/presentation/utils/blocked_trackers_l10n.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/entities/intent_source_policy.dart';
 import 'package:weblibre/features/intent_gatekeeper/domain/services/package_label_resolver.dart';
+import 'package:weblibre/features/profile_import/presentation/screens/profile_import_screen.dart';
 import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
 import 'package:weblibre/features/settings/presentation/widgets/sections.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
@@ -99,6 +100,12 @@ List<SettingsSectionDefinition> privacySecuritySettingsSections(
             l10n.settings_uBlockFilterListsTileKeywords,
           ),
           child: const _UBlockFilterListsTile(),
+        ),
+        SettingsEntryDefinition(
+          title: 'Import & migrate',
+          subtitle: 'Import bookmarks, history and settings from another browser',
+          keywords: settingsKeywords('import,migrate,chrome,firefox,brave'),
+          child: const _ProfileImportTile(),
         ),
         SettingsEntryDefinition(
           title: l10n.settings_cookieBannersTitle,
@@ -1288,6 +1295,33 @@ class _CookieBannersSection extends HookConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _ProfileImportTile extends StatelessWidget {
+  const _ProfileImportTile();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: const Text('Import & migrate'),
+      subtitle: const Text(
+        'Import bookmarks, history and settings from another browser',
+      ),
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 8.0,
+        horizontal: 16.0,
+      ),
+      leading: const Icon(Icons.download),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => const ProfileImportScreen(),
+          ),
+        );
+      },
     );
   }
 }

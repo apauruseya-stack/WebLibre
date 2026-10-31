@@ -611,10 +611,10 @@ This is a full initiative on its own (~4-6 weeks). If passwords are not funded, 
 
 #### B0 - Unify what exists (3-5 days)
 
-- [ ] Move the two bookmark import entry points into one "Import" screen.
-- [ ] Add source detection for HTML vs Firefox JSON.
-- [ ] Add a preview step (counts + top-level folders) before writing.
-- [ ] Add `import_job` records and a report screen.
+- [x] Move the two bookmark import entry points into one "Import" screen.
+- [x] Add source detection for HTML vs Firefox JSON.
+- [x] Add a preview step (counts + top-level folders) before writing.
+- [x] Add `import_job` records and a report screen.
 
 **Acceptance:** importing the same file twice does not duplicate bookmarks; cancel during preview writes nothing.
 
