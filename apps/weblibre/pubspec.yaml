@@ -39,8 +39,12 @@ dependencies:
     path: ../../packages/flutter_mozilla_components
   flutter_reorderable_grid_view: ^5.7.0
   flutter_secure_storage: ^11.2.0
+  flutter_singbox_proxy:
+    path: ../../packages/flutter_singbox_proxy
   flutter_slidable: ^4.0.3
   flutter_svg: ^2.3.0
+  flutter_tor:
+    path: ../../packages/flutter_tor
   go_router: ^18.1.1
   google_fonts: ^9.0.0
   graphview: ^1.5.1

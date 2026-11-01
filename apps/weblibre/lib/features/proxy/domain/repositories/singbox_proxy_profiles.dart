@@ -53,7 +53,7 @@ class SingboxProxyProfilesRepository extends _$SingboxProxyProfilesRepository {
     final profile = ProxyProfile(
       id: uuid.v4(),
       name: name,
-      type: type.name,
+      type: type,
       configJson: configJson,
       dnsOverrideJson: dnsOverrideJson,
       autostart: autostart,

@@ -9619,63 +9619,6 @@ class AppLocalizationsId extends AppLocalizations {
       'Kelola daftar filter dan terapkan pengerasan Cat Browser';
 
   @override
-  String get settings_cookieBannersTitle => 'Cookie banners';
-
-  @override
-  String get settings_cookieBannersKeywords =>
-      'consent, gdpr, cookiebot, onetrust, reject';
-
-  @override
-  String get settings_cookieBannersSubtitle =>
-      'Reject non-essential consent where a reject control exists. Never accepts on your behalf.';
-
-  @override
-  String get settings_cookieBannersOff => 'Off';
-
-  @override
-  String get settings_cookieBannersOffDescription =>
-      'No detection and no interaction.';
-
-  @override
-  String get settings_cookieBannersDetect => 'Detect only';
-
-  @override
-  String get settings_cookieBannersDetectDescription =>
-      'Report banners without clicking or hiding anything.';
-
-  @override
-  String get settings_cookieBannersReject => 'Reject';
-
-  @override
-  String get settings_cookieBannersRejectDescription =>
-      'Click a reject control where the site has one. Leave the banner alone otherwise.';
-
-  @override
-  String get settings_cookieBannersRejectOrHide => 'Reject or hide';
-
-  @override
-  String get settings_cookieBannersRejectOrHideDescription =>
-      'Reject where possible, hide the overlay otherwise.';
-
-  @override
-  String get browser_cookieBannerRejected => 'Cookie banner rejected';
-
-  @override
-  String get browser_cookieBannerHidden => 'Cookie banner hidden';
-
-  @override
-  String get browser_cookieBannerDetected => 'Cookie banner detected';
-
-  @override
-  String get browser_cookieBannerFailed =>
-      'Cookie banner could not be rejected';
-
-  @override
-  String browser_cookieBannerRule(String ruleId) {
-    return 'Rule: $ruleId';
-  }
-
-  @override
   String get settings_fissionEnabledTitle => 'Fission (Isolasi Situs)';
 
   @override
@@ -12240,7 +12183,8 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get user_accountDataIncludedTitle => 'Data akun Cat Browser disertakan';
+  String get user_accountDataIncludedTitle =>
+      'Data akun Cat Browser disertakan';
 
   @override
   String user_accountDataIncludedSubtitle(String profileSecretDataDescription) {
@@ -12609,7 +12553,8 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get user_accountDataRestoredTitle => 'Data akun Cat Browser dipulihkan';
+  String get user_accountDataRestoredTitle =>
+      'Data akun Cat Browser dipulihkan';
 
   @override
   String user_accountDataRestoredSubtitle(

@@ -178,11 +178,21 @@ abstract class _$CookieBannerStatus
 ///
 /// A parent-domain entry also matches its subdomains, so a decision recorded
 /// for `example.com` still explains `www.example.com`.
+/// The most recent cookie-banner decision for [host], if one was reported this
+/// session.
+///
+/// A parent-domain entry also matches its subdomains, so a decision recorded
+/// for `example.com` still explains `www.example.com`.
 
 @ProviderFor(cookieBannerStatusFor)
 final cookieBannerStatusForProvider = CookieBannerStatusForFamily._();
 
 /// The most recent decision for [host], if one was reported this session.
+///
+/// A parent-domain entry also matches its subdomains, so a decision recorded
+/// for `example.com` still explains `www.example.com`.
+/// The most recent cookie-banner decision for [host], if one was reported this
+/// session.
 ///
 /// A parent-domain entry also matches its subdomains, so a decision recorded
 /// for `example.com` still explains `www.example.com`.
@@ -199,13 +209,18 @@ final class CookieBannerStatusForProvider
   ///
   /// A parent-domain entry also matches its subdomains, so a decision recorded
   /// for `example.com` still explains `www.example.com`.
+  /// The most recent cookie-banner decision for [host], if one was reported this
+  /// session.
+  ///
+  /// A parent-domain entry also matches its subdomains, so a decision recorded
+  /// for `example.com` still explains `www.example.com`.
   CookieBannerStatusForProvider._({
     required CookieBannerStatusForFamily super.from,
     required String? super.argument,
   }) : super(
          retry: null,
          name: r'cookieBannerStatusForProvider',
-         isAutoDispose: true,
+         isAutoDispose: false,
          dependencies: null,
          $allTransitiveDependencies: null,
        );
@@ -252,9 +267,14 @@ final class CookieBannerStatusForProvider
 }
 
 String _$cookieBannerStatusForHash() =>
-    r'3a106f1dc59721148c570aa66c674cdfba5691bc';
+    r'f2f05b844a17bb5e16423994a5cf5c396520c068';
 
 /// The most recent decision for [host], if one was reported this session.
+///
+/// A parent-domain entry also matches its subdomains, so a decision recorded
+/// for `example.com` still explains `www.example.com`.
+/// The most recent cookie-banner decision for [host], if one was reported this
+/// session.
 ///
 /// A parent-domain entry also matches its subdomains, so a decision recorded
 /// for `example.com` still explains `www.example.com`.
@@ -267,10 +287,15 @@ final class CookieBannerStatusForFamily extends $Family
         name: r'cookieBannerStatusForProvider',
         dependencies: null,
         $allTransitiveDependencies: null,
-        isAutoDispose: true,
+        isAutoDispose: false,
       );
 
   /// The most recent decision for [host], if one was reported this session.
+  ///
+  /// A parent-domain entry also matches its subdomains, so a decision recorded
+  /// for `example.com` still explains `www.example.com`.
+  /// The most recent cookie-banner decision for [host], if one was reported this
+  /// session.
   ///
   /// A parent-domain entry also matches its subdomains, so a decision recorded
   /// for `example.com` still explains `www.example.com`.

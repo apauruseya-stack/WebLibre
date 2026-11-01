@@ -82,7 +82,7 @@ void main() {
         container: _container(),
       );
 
-      expect(p.basename(resolved!.file.path), 'profile.png');
+      expect(p.basename(resolved!.file!.path), 'profile.png');
       expect(resolved.blur, 8);
       expect(resolved.dim, 0.5);
     });
@@ -96,7 +96,7 @@ void main() {
         container: null,
       );
 
-      expect(p.basename(resolved!.file.path), 'profile.png');
+      expect(p.basename(resolved!.file!.path), 'profile.png');
     });
 
     test("the container's own wallpaper wins", () {
@@ -112,7 +112,7 @@ void main() {
         ),
       );
 
-      expect(p.basename(resolved!.file.path), 'container.png');
+      expect(p.basename(resolved!.file!.path), 'container.png');
       expect(resolved.blur, 12);
       expect(resolved.dim, 0.2);
     });
@@ -128,7 +128,7 @@ void main() {
         container: _container(wallpaperFile: 'container.png'),
       );
 
-      expect(p.basename(resolved!.file.path), 'container.png');
+      expect(p.basename(resolved!.file!.path), 'container.png');
       expect(resolved.blur, 6);
       expect(resolved.dim, 0.4);
     });
@@ -140,7 +140,7 @@ void main() {
         container: _container(wallpaperFile: 'container.png'),
       );
 
-      expect(p.basename(resolved!.file.path), 'container.png');
+      expect(p.basename(resolved!.file!.path), 'container.png');
       expect(resolved.dim, defaultHomeWallpaperDim);
     });
   });

@@ -1,4 +1,4 @@
-﻿// GENERATED CODE - DO NOT MODIFY BY HAND
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'proxy_profile_draft_controller.dart';
 
@@ -164,7 +164,7 @@ class _$ProxyProfileDraftStateCWProxyImpl
           ? _value.name
           // ignore: cast_nullable_to_non_nullable
           : name as String,
-      type: type == const $CopyWithPlaceholder()
+      type: type == const $CopyWithPlaceholder() || type == null
           ? _value.type
           // ignore: cast_nullable_to_non_nullable
           : type as SingboxProxyProfileType,
@@ -277,7 +277,7 @@ final class ProxyProfileDraftProvider
   }
 }
 
-String _$proxyProfileDraftHash() => r'4131992a23dcb46db339fa9a81a42d00340715db';
+String _$proxyProfileDraftHash() => r'd9f09466eec89999037296ab1e0c43cfdff94ac5';
 
 final class ProxyProfileDraftFamily extends $Family
     with

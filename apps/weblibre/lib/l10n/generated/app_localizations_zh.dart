@@ -69,7 +69,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get profileCopy_dataDescription => '标签页、历史记录、书签、设置和已保存的网站登录信息';
 
   @override
-  String get profileCopy_secretDataDescription => 'Cat Browser 账户登录信息、同步设置和代理详情';
+  String get profileCopy_secretDataDescription =>
+      'Cat Browser 账户登录信息、同步设置和代理详情';
 
   @override
   String get profileCopy_cannotBeUndone => '此操作无法撤销。';
@@ -88,7 +89,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get profileCopy_reopenToContinue => '请关闭 Cat Browser 后重新打开。';
 
   @override
-  String get profileCopy_signedInFromBackup => '恢复后的配置文件将使用备份中的 Cat Browser 账户。';
+  String get profileCopy_signedInFromBackup =>
+      '恢复后的配置文件将使用备份中的 Cat Browser 账户。';
 
   @override
   String get profileCopy_olderBackupKeepsCredentials =>
@@ -5842,7 +5844,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get onboarding_ublockApplyDefaultsTitle => '应用优化的默认设置';
 
   @override
-  String get onboarding_ublockApplyDefaultsSubtitle => '启用 Cat Browser 加固过滤规则列表。';
+  String get onboarding_ublockApplyDefaultsSubtitle =>
+      '启用 Cat Browser 加固过滤规则列表。';
 
   @override
   String get proxy_actionChange => '更改';
@@ -7104,7 +7107,8 @@ class AppLocalizationsZh extends AppLocalizations {
       '这将清除此配置文件已下载的 AI 模型和 ONNX 运行时文件，需要时会重新下载。重试机器学习功能前请重启 Cat Browser。';
 
   @override
-  String get settings_mlDownloadsClearedMessage => '机器学习下载已清除。重试前请重启 Cat Browser。';
+  String get settings_mlDownloadsClearedMessage =>
+      '机器学习下载已清除。重试前请重启 Cat Browser。';
 
   @override
   String settings_mlDownloadsClearFailedMessage(String error) {
@@ -7239,7 +7243,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_externalLinkHandlingKeywords => 'intent,外部链接';
 
   @override
-  String get settings_externalLinkHandlingSubtitle => '选择外部链接在 Cat Browser 中的打开方式';
+  String get settings_externalLinkHandlingSubtitle =>
+      '选择外部链接在 Cat Browser 中的打开方式';
 
   @override
   String get settings_promptOptionLabel => '询问';
@@ -8026,7 +8031,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings_defaultBrowserTileSubtitleSet => 'Cat Browser 是你的默认浏览器';
 
   @override
-  String get settings_defaultBrowserTileSubtitleNotSet => '将 Cat Browser 设为默认浏览器';
+  String get settings_defaultBrowserTileSubtitleNotSet =>
+      '将 Cat Browser 设为默认浏览器';
 
   @override
   String get settings_defaultBrowserButtonDefault => '默认';
@@ -8855,63 +8861,6 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String get settings_uBlockFilterListsTileSubtitle =>
       '管理过滤规则列表并应用 Cat Browser 加固';
-
-  @override
-  String get settings_cookieBannersTitle => 'Cookie banners';
-
-  @override
-  String get settings_cookieBannersKeywords =>
-      'consent, gdpr, cookiebot, onetrust, reject';
-
-  @override
-  String get settings_cookieBannersSubtitle =>
-      'Reject non-essential consent where a reject control exists. Never accepts on your behalf.';
-
-  @override
-  String get settings_cookieBannersOff => 'Off';
-
-  @override
-  String get settings_cookieBannersOffDescription =>
-      'No detection and no interaction.';
-
-  @override
-  String get settings_cookieBannersDetect => 'Detect only';
-
-  @override
-  String get settings_cookieBannersDetectDescription =>
-      'Report banners without clicking or hiding anything.';
-
-  @override
-  String get settings_cookieBannersReject => 'Reject';
-
-  @override
-  String get settings_cookieBannersRejectDescription =>
-      'Click a reject control where the site has one. Leave the banner alone otherwise.';
-
-  @override
-  String get settings_cookieBannersRejectOrHide => 'Reject or hide';
-
-  @override
-  String get settings_cookieBannersRejectOrHideDescription =>
-      'Reject where possible, hide the overlay otherwise.';
-
-  @override
-  String get browser_cookieBannerRejected => 'Cookie banner rejected';
-
-  @override
-  String get browser_cookieBannerHidden => 'Cookie banner hidden';
-
-  @override
-  String get browser_cookieBannerDetected => 'Cookie banner detected';
-
-  @override
-  String get browser_cookieBannerFailed =>
-      'Cookie banner could not be rejected';
-
-  @override
-  String browser_cookieBannerRule(String ruleId) {
-    return 'Rule: $ruleId';
-  }
 
   @override
   String get settings_fissionEnabledTitle => 'Fission（站点隔离）';
@@ -11417,7 +11366,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get user_lockOnStartupTitle => '仅在启动时锁定';
 
   @override
-  String get user_lockOnStartupSubtitle => '启动时解锁一次，之后保持解锁状态，直到 Cat Browser 完全关闭';
+  String get user_lockOnStartupSubtitle =>
+      '启动时解锁一次，之后保持解锁状态，直到 Cat Browser 完全关闭';
 
   @override
   String get user_timeoutFieldTitle => '超时时间';

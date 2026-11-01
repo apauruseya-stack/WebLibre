@@ -1,4 +1,4 @@
-﻿// GENERATED CODE - DO NOT MODIFY BY HAND
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'singbox_proxy_runtime.dart';
 
@@ -134,15 +134,15 @@ abstract class _$RunningSingboxProfileIds extends $Notifier<Set<String>> {
 
 /// The proxy connections a sing-box start is in flight for, encoded.
 ///
-/// The runtime's own status is one flag for the whole runtime ΓÇö it does not
-/// report which profiles a start covers until they are running ΓÇö so reading it
+/// The runtime's own status is one flag for the whole runtime — it does not
+/// report which profiles a start covers until they are running — so reading it
 /// as "sing-box is starting" holds every endpoint-less sing-box relation behind
 /// whichever profile happens to be coming up. The ids are known at exactly one
 /// place, the start call, so that is where they are recorded.
 ///
 /// Published separately from [SingboxProxyRuntimeRepository]'s own state
-/// because it answers a different question ΓÇö "is something bringing this
-/// connection up?" rather than "what is running?" ΓÇö and because the routing
+/// because it answers a different question — "is something bringing this
+/// connection up?" rather than "what is running?" — and because the routing
 /// snapshot has to recompute when it changes.
 
 @ProviderFor(SingboxProxyStartingConnections)
@@ -151,29 +151,29 @@ final singboxProxyStartingConnectionsProvider =
 
 /// The proxy connections a sing-box start is in flight for, encoded.
 ///
-/// The runtime's own status is one flag for the whole runtime ΓÇö it does not
-/// report which profiles a start covers until they are running ΓÇö so reading it
+/// The runtime's own status is one flag for the whole runtime — it does not
+/// report which profiles a start covers until they are running — so reading it
 /// as "sing-box is starting" holds every endpoint-less sing-box relation behind
 /// whichever profile happens to be coming up. The ids are known at exactly one
 /// place, the start call, so that is where they are recorded.
 ///
 /// Published separately from [SingboxProxyRuntimeRepository]'s own state
-/// because it answers a different question ΓÇö "is something bringing this
-/// connection up?" rather than "what is running?" ΓÇö and because the routing
+/// because it answers a different question — "is something bringing this
+/// connection up?" rather than "what is running?" — and because the routing
 /// snapshot has to recompute when it changes.
 final class SingboxProxyStartingConnectionsProvider
     extends $NotifierProvider<SingboxProxyStartingConnections, Set<String>> {
   /// The proxy connections a sing-box start is in flight for, encoded.
   ///
-  /// The runtime's own status is one flag for the whole runtime ΓÇö it does not
-  /// report which profiles a start covers until they are running ΓÇö so reading it
+  /// The runtime's own status is one flag for the whole runtime — it does not
+  /// report which profiles a start covers until they are running — so reading it
   /// as "sing-box is starting" holds every endpoint-less sing-box relation behind
   /// whichever profile happens to be coming up. The ids are known at exactly one
   /// place, the start call, so that is where they are recorded.
   ///
   /// Published separately from [SingboxProxyRuntimeRepository]'s own state
-  /// because it answers a different question ΓÇö "is something bringing this
-  /// connection up?" rather than "what is running?" ΓÇö and because the routing
+  /// because it answers a different question — "is something bringing this
+  /// connection up?" rather than "what is running?" — and because the routing
   /// snapshot has to recompute when it changes.
   SingboxProxyStartingConnectionsProvider._()
     : super(
@@ -207,15 +207,15 @@ String _$singboxProxyStartingConnectionsHash() =>
 
 /// The proxy connections a sing-box start is in flight for, encoded.
 ///
-/// The runtime's own status is one flag for the whole runtime ΓÇö it does not
-/// report which profiles a start covers until they are running ΓÇö so reading it
+/// The runtime's own status is one flag for the whole runtime — it does not
+/// report which profiles a start covers until they are running — so reading it
 /// as "sing-box is starting" holds every endpoint-less sing-box relation behind
 /// whichever profile happens to be coming up. The ids are known at exactly one
 /// place, the start call, so that is where they are recorded.
 ///
 /// Published separately from [SingboxProxyRuntimeRepository]'s own state
-/// because it answers a different question ΓÇö "is something bringing this
-/// connection up?" rather than "what is running?" ΓÇö and because the routing
+/// because it answers a different question — "is something bringing this
+/// connection up?" rather than "what is running?" — and because the routing
 /// snapshot has to recompute when it changes.
 
 abstract class _$SingboxProxyStartingConnections
@@ -241,7 +241,7 @@ abstract class _$SingboxProxyStartingConnections
 /// again, as [SingboxProxyRuntimeRepository] last reported them.
 ///
 /// Nobody asked for them to go down, and the error that reaches the caller is
-/// the start's, not theirs ΓÇö so they are announced here for the retries to
+/// the start's, not theirs — so they are announced here for the retries to
 /// pick up, rather than staying down with nothing to say so. A provider of its
 /// own because the retries already watch the runtime, and the runtime must not
 /// depend on them in turn.
@@ -253,7 +253,7 @@ final singboxProxyLostProfilesProvider = SingboxProxyLostProfilesProvider._();
 /// again, as [SingboxProxyRuntimeRepository] last reported them.
 ///
 /// Nobody asked for them to go down, and the error that reaches the caller is
-/// the start's, not theirs ΓÇö so they are announced here for the retries to
+/// the start's, not theirs — so they are announced here for the retries to
 /// pick up, rather than staying down with nothing to say so. A provider of its
 /// own because the retries already watch the runtime, and the runtime must not
 /// depend on them in turn.
@@ -267,7 +267,7 @@ final class SingboxProxyLostProfilesProvider
   /// again, as [SingboxProxyRuntimeRepository] last reported them.
   ///
   /// Nobody asked for them to go down, and the error that reaches the caller is
-  /// the start's, not theirs ΓÇö so they are announced here for the retries to
+  /// the start's, not theirs — so they are announced here for the retries to
   /// pick up, rather than staying down with nothing to say so. A provider of its
   /// own because the retries already watch the runtime, and the runtime must not
   /// depend on them in turn.
@@ -310,7 +310,7 @@ String _$singboxProxyLostProfilesHash() =>
 /// again, as [SingboxProxyRuntimeRepository] last reported them.
 ///
 /// Nobody asked for them to go down, and the error that reaches the caller is
-/// the start's, not theirs ΓÇö so they are announced here for the retries to
+/// the start's, not theirs — so they are announced here for the retries to
 /// pick up, rather than staying down with nothing to say so. A provider of its
 /// own because the retries already watch the runtime, and the runtime must not
 /// depend on them in turn.

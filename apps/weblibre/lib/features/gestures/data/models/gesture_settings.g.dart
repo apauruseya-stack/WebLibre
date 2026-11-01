@@ -326,6 +326,7 @@ const _$BrowserActionEnumMap = {
   BrowserAction.printPage: 'printPage',
   BrowserAction.copyLink: 'copyLink',
   BrowserAction.siteSettings: 'siteSettings',
+  BrowserAction.showPrivacyXRay: 'showPrivacyXRay',
   BrowserAction.addToHomeScreen: 'addToHomeScreen',
   BrowserAction.subscribeToPageFeed: 'subscribeToPageFeed',
   BrowserAction.showBrowserMenu: 'showBrowserMenu',

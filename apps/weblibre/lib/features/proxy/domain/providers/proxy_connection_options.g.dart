@@ -55,4 +55,4 @@ final class ProxyConnectionOptionsProvider
 }
 
 String _$proxyConnectionOptionsHash() =>
-    r'653c6144348522699dc7088d7ad5a88a56f9d0c9';
+    r'392dd6b274d6b5b405464d726cca2223d0f34331';

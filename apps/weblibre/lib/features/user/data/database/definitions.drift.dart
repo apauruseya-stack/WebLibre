@@ -3,10 +3,11 @@
 import 'package:drift/drift.dart' as i0;
 import 'package:weblibre/features/user/data/database/definitions.drift.dart'
     as i1;
-import 'dart:typed_data' as i2;
+import 'package:flutter_singbox_proxy/src/singbox_proxy_api.g.dart' as i2;
+import 'dart:typed_data' as i3;
 import 'package:weblibre/features/browser_actions/data/models/browser_action.dart'
-    as i3;
-import 'package:drift/internal/modular.dart' as i4;
+    as i4;
+import 'package:drift/internal/modular.dart' as i5;
 
 typedef $SettingCreateCompanionBuilder =
     i1.SettingCompanion Function({
@@ -185,7 +186,7 @@ typedef $ProxyProfileTableCreateCompanionBuilder =
     i1.ProxyProfileCompanion Function({
       required String id,
       required String name,
-      required String type,
+      required i2.SingboxProxyProfileType type,
       required String configJson,
       i0.Value<String?> dnsOverrideJson,
       i0.Value<bool> autostart,
@@ -197,7 +198,7 @@ typedef $ProxyProfileTableUpdateCompanionBuilder =
     i1.ProxyProfileCompanion Function({
       i0.Value<String> id,
       i0.Value<String> name,
-      i0.Value<String> type,
+      i0.Value<i2.SingboxProxyProfileType> type,
       i0.Value<String> configJson,
       i0.Value<String?> dnsOverrideJson,
       i0.Value<bool> autostart,
@@ -225,9 +226,14 @@ class $ProxyProfileTableFilterComposer
     builder: (column) => i0.ColumnFilters(column),
   );
 
-  i0.ColumnFilters<String> get type => $composableBuilder(
+  i0.ColumnWithTypeConverterFilters<
+    i2.SingboxProxyProfileType,
+    i2.SingboxProxyProfileType,
+    String
+  >
+  get type => $composableBuilder(
     column: $table.type,
-    builder: (column) => i0.ColumnFilters(column),
+    builder: (column) => i0.ColumnWithTypeConverterFilters(column),
   );
 
   i0.ColumnFilters<String> get configJson => $composableBuilder(
@@ -321,7 +327,8 @@ class $ProxyProfileTableAnnotationComposer
   i0.GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
 
-  i0.GeneratedColumn<String> get type =>
+  i0.GeneratedColumnWithTypeConverter<i2.SingboxProxyProfileType, String>
+  get type =>
       $composableBuilder(column: $table.type, builder: (column) => column);
 
   i0.GeneratedColumn<String> get configJson => $composableBuilder(
@@ -383,7 +390,8 @@ class $ProxyProfileTableTableManager
               ({
                 i0.Value<String> id = const i0.Value.absent(),
                 i0.Value<String> name = const i0.Value.absent(),
-                i0.Value<String> type = const i0.Value.absent(),
+                i0.Value<i2.SingboxProxyProfileType> type =
+                    const i0.Value.absent(),
                 i0.Value<String> configJson = const i0.Value.absent(),
                 i0.Value<String?> dnsOverrideJson = const i0.Value.absent(),
                 i0.Value<bool> autostart = const i0.Value.absent(),
@@ -405,7 +413,7 @@ class $ProxyProfileTableTableManager
               ({
                 required String id,
                 required String name,
-                required String type,
+                required i2.SingboxProxyProfileType type,
                 required String configJson,
                 i0.Value<String?> dnsOverrideJson = const i0.Value.absent(),
                 i0.Value<bool> autostart = const i0.Value.absent(),
@@ -464,14 +472,14 @@ typedef $ProxyProfileTableProcessedTableManager =
 typedef $IconCacheCreateCompanionBuilder =
     i1.IconCacheCompanion Function({
       required String origin,
-      required i2.Uint8List iconData,
+      required i3.Uint8List iconData,
       required DateTime fetchDate,
       i0.Value<int> rowid,
     });
 typedef $IconCacheUpdateCompanionBuilder =
     i1.IconCacheCompanion Function({
       i0.Value<String> origin,
-      i0.Value<i2.Uint8List> iconData,
+      i0.Value<i3.Uint8List> iconData,
       i0.Value<DateTime> fetchDate,
       i0.Value<int> rowid,
     });
@@ -490,7 +498,7 @@ class $IconCacheFilterComposer
     builder: (column) => i0.ColumnFilters(column),
   );
 
-  i0.ColumnFilters<i2.Uint8List> get iconData => $composableBuilder(
+  i0.ColumnFilters<i3.Uint8List> get iconData => $composableBuilder(
     column: $table.iconData,
     builder: (column) => i0.ColumnFilters(column),
   );
@@ -515,7 +523,7 @@ class $IconCacheOrderingComposer
     builder: (column) => i0.ColumnOrderings(column),
   );
 
-  i0.ColumnOrderings<i2.Uint8List> get iconData => $composableBuilder(
+  i0.ColumnOrderings<i3.Uint8List> get iconData => $composableBuilder(
     column: $table.iconData,
     builder: (column) => i0.ColumnOrderings(column),
   );
@@ -538,7 +546,7 @@ class $IconCacheAnnotationComposer
   i0.GeneratedColumn<String> get origin =>
       $composableBuilder(column: $table.origin, builder: (column) => column);
 
-  i0.GeneratedColumn<i2.Uint8List> get iconData =>
+  i0.GeneratedColumn<i3.Uint8List> get iconData =>
       $composableBuilder(column: $table.iconData, builder: (column) => column);
 
   i0.GeneratedColumn<DateTime> get fetchDate =>
@@ -581,7 +589,7 @@ class $IconCacheTableManager
           updateCompanionCallback:
               ({
                 i0.Value<String> origin = const i0.Value.absent(),
-                i0.Value<i2.Uint8List> iconData = const i0.Value.absent(),
+                i0.Value<i3.Uint8List> iconData = const i0.Value.absent(),
                 i0.Value<DateTime> fetchDate = const i0.Value.absent(),
                 i0.Value<int> rowid = const i0.Value.absent(),
               }) => i1.IconCacheCompanion(
@@ -593,7 +601,7 @@ class $IconCacheTableManager
           createCompanionCallback:
               ({
                 required String origin,
-                required i2.Uint8List iconData,
+                required i3.Uint8List iconData,
                 required DateTime fetchDate,
                 i0.Value<int> rowid = const i0.Value.absent(),
               }) => i1.IconCacheCompanion.insert(
@@ -994,7 +1002,7 @@ typedef $ToolbarButtonConfigsCreateCompanionBuilder =
       required String orderKey,
       i0.Value<bool> isVisible,
       i0.Value<String?> fallbackId,
-      i0.Value<i3.BrowserAction?> longPressAction,
+      i0.Value<i4.BrowserAction?> longPressAction,
       i0.Value<int> rowid,
     });
 typedef $ToolbarButtonConfigsUpdateCompanionBuilder =
@@ -1003,7 +1011,7 @@ typedef $ToolbarButtonConfigsUpdateCompanionBuilder =
       i0.Value<String> orderKey,
       i0.Value<bool> isVisible,
       i0.Value<String?> fallbackId,
-      i0.Value<i3.BrowserAction?> longPressAction,
+      i0.Value<i4.BrowserAction?> longPressAction,
       i0.Value<int> rowid,
     });
 
@@ -1022,7 +1030,7 @@ final class $ToolbarButtonConfigsReferences
 
   static i1.ToolbarButtonConfigs _fallbackIdTable(
     i0.GeneratedDatabase db,
-  ) => i4.ReadDatabaseContainer(db)
+  ) => i5.ReadDatabaseContainer(db)
       .resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs')
       .createAlias(
         'toolbar_button_configs__fallback_id__toolbar_button_configs__button_id',
@@ -1034,7 +1042,7 @@ final class $ToolbarButtonConfigsReferences
     final manager = i1
         .$ToolbarButtonConfigsTableManager(
           $_db,
-          i4.ReadDatabaseContainer(
+          i5.ReadDatabaseContainer(
             $_db,
           ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
         )
@@ -1071,7 +1079,7 @@ class $ToolbarButtonConfigsFilterComposer
     builder: (column) => i0.ColumnFilters(column),
   );
 
-  i0.ColumnWithTypeConverterFilters<i3.BrowserAction?, i3.BrowserAction, String>
+  i0.ColumnWithTypeConverterFilters<i4.BrowserAction?, i4.BrowserAction, String>
   get longPressAction => $composableBuilder(
     column: $table.longPressAction,
     builder: (column) => i0.ColumnWithTypeConverterFilters(column),
@@ -1081,7 +1089,7 @@ class $ToolbarButtonConfigsFilterComposer
     final i1.$ToolbarButtonConfigsFilterComposer composer = $composerBuilder(
       composer: this,
       getCurrentColumn: (t) => t.fallbackId,
-      referencedTable: i4.ReadDatabaseContainer(
+      referencedTable: i5.ReadDatabaseContainer(
         $db,
       ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
       getReferencedColumn: (t) => t.buttonId,
@@ -1092,7 +1100,7 @@ class $ToolbarButtonConfigsFilterComposer
             $removeJoinBuilderFromRootComposer,
           }) => i1.$ToolbarButtonConfigsFilterComposer(
             $db: $db,
-            $table: i4.ReadDatabaseContainer(
+            $table: i5.ReadDatabaseContainer(
               $db,
             ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
@@ -1138,7 +1146,7 @@ class $ToolbarButtonConfigsOrderingComposer
     final i1.$ToolbarButtonConfigsOrderingComposer composer = $composerBuilder(
       composer: this,
       getCurrentColumn: (t) => t.fallbackId,
-      referencedTable: i4.ReadDatabaseContainer(
+      referencedTable: i5.ReadDatabaseContainer(
         $db,
       ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
       getReferencedColumn: (t) => t.buttonId,
@@ -1149,7 +1157,7 @@ class $ToolbarButtonConfigsOrderingComposer
             $removeJoinBuilderFromRootComposer,
           }) => i1.$ToolbarButtonConfigsOrderingComposer(
             $db: $db,
-            $table: i4.ReadDatabaseContainer(
+            $table: i5.ReadDatabaseContainer(
               $db,
             ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
@@ -1180,7 +1188,7 @@ class $ToolbarButtonConfigsAnnotationComposer
   i0.GeneratedColumn<bool> get isVisible =>
       $composableBuilder(column: $table.isVisible, builder: (column) => column);
 
-  i0.GeneratedColumnWithTypeConverter<i3.BrowserAction?, String>
+  i0.GeneratedColumnWithTypeConverter<i4.BrowserAction?, String>
   get longPressAction => $composableBuilder(
     column: $table.longPressAction,
     builder: (column) => column,
@@ -1191,7 +1199,7 @@ class $ToolbarButtonConfigsAnnotationComposer
         $composerBuilder(
           composer: this,
           getCurrentColumn: (t) => t.fallbackId,
-          referencedTable: i4.ReadDatabaseContainer(
+          referencedTable: i5.ReadDatabaseContainer(
             $db,
           ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
           getReferencedColumn: (t) => t.buttonId,
@@ -1202,7 +1210,7 @@ class $ToolbarButtonConfigsAnnotationComposer
                 $removeJoinBuilderFromRootComposer,
               }) => i1.$ToolbarButtonConfigsAnnotationComposer(
                 $db: $db,
-                $table: i4.ReadDatabaseContainer(
+                $table: i5.ReadDatabaseContainer(
                   $db,
                 ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs'),
                 $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
@@ -1249,7 +1257,7 @@ class $ToolbarButtonConfigsTableManager
                 i0.Value<String> orderKey = const i0.Value.absent(),
                 i0.Value<bool> isVisible = const i0.Value.absent(),
                 i0.Value<String?> fallbackId = const i0.Value.absent(),
-                i0.Value<i3.BrowserAction?> longPressAction =
+                i0.Value<i4.BrowserAction?> longPressAction =
                     const i0.Value.absent(),
                 i0.Value<int> rowid = const i0.Value.absent(),
               }) => i1.ToolbarButtonConfigsCompanion(
@@ -1266,7 +1274,7 @@ class $ToolbarButtonConfigsTableManager
                 required String orderKey,
                 i0.Value<bool> isVisible = const i0.Value.absent(),
                 i0.Value<String?> fallbackId = const i0.Value.absent(),
-                i0.Value<i3.BrowserAction?> longPressAction =
+                i0.Value<i4.BrowserAction?> longPressAction =
                     const i0.Value.absent(),
                 i0.Value<int> rowid = const i0.Value.absent(),
               }) => i1.ToolbarButtonConfigsCompanion.insert(
@@ -1354,7 +1362,7 @@ typedef $QuickSwitcherButtonConfigsCreateCompanionBuilder =
       required String orderKey,
       i0.Value<bool> isVisible,
       i0.Value<String?> fallbackId,
-      i0.Value<i3.BrowserAction?> longPressAction,
+      i0.Value<i4.BrowserAction?> longPressAction,
       i0.Value<int> rowid,
     });
 typedef $QuickSwitcherButtonConfigsUpdateCompanionBuilder =
@@ -1363,7 +1371,7 @@ typedef $QuickSwitcherButtonConfigsUpdateCompanionBuilder =
       i0.Value<String> orderKey,
       i0.Value<bool> isVisible,
       i0.Value<String?> fallbackId,
-      i0.Value<i3.BrowserAction?> longPressAction,
+      i0.Value<i4.BrowserAction?> longPressAction,
       i0.Value<int> rowid,
     });
 
@@ -1382,7 +1390,7 @@ final class $QuickSwitcherButtonConfigsReferences
 
   static i1.QuickSwitcherButtonConfigs _fallbackIdTable(
     i0.GeneratedDatabase db,
-  ) => i4.ReadDatabaseContainer(db)
+  ) => i5.ReadDatabaseContainer(db)
       .resultSet<i1.QuickSwitcherButtonConfigs>('quick_switcher_button_configs')
       .createAlias(
         'quick_switcher_button_configs__fallback_id__quick_switcher_button_configs__button_id',
@@ -1394,7 +1402,7 @@ final class $QuickSwitcherButtonConfigsReferences
     final manager = i1
         .$QuickSwitcherButtonConfigsTableManager(
           $_db,
-          i4.ReadDatabaseContainer(
+          i5.ReadDatabaseContainer(
             $_db,
           ).resultSet<i1.QuickSwitcherButtonConfigs>(
             'quick_switcher_button_configs',
@@ -1433,7 +1441,7 @@ class $QuickSwitcherButtonConfigsFilterComposer
     builder: (column) => i0.ColumnFilters(column),
   );
 
-  i0.ColumnWithTypeConverterFilters<i3.BrowserAction?, i3.BrowserAction, String>
+  i0.ColumnWithTypeConverterFilters<i4.BrowserAction?, i4.BrowserAction, String>
   get longPressAction => $composableBuilder(
     column: $table.longPressAction,
     builder: (column) => i0.ColumnWithTypeConverterFilters(column),
@@ -1444,7 +1452,7 @@ class $QuickSwitcherButtonConfigsFilterComposer
         $composerBuilder(
           composer: this,
           getCurrentColumn: (t) => t.fallbackId,
-          referencedTable: i4.ReadDatabaseContainer($db)
+          referencedTable: i5.ReadDatabaseContainer($db)
               .resultSet<i1.QuickSwitcherButtonConfigs>(
                 'quick_switcher_button_configs',
               ),
@@ -1456,7 +1464,7 @@ class $QuickSwitcherButtonConfigsFilterComposer
                 $removeJoinBuilderFromRootComposer,
               }) => i1.$QuickSwitcherButtonConfigsFilterComposer(
                 $db: $db,
-                $table: i4.ReadDatabaseContainer($db)
+                $table: i5.ReadDatabaseContainer($db)
                     .resultSet<i1.QuickSwitcherButtonConfigs>(
                       'quick_switcher_button_configs',
                     ),
@@ -1504,7 +1512,7 @@ class $QuickSwitcherButtonConfigsOrderingComposer
         $composerBuilder(
           composer: this,
           getCurrentColumn: (t) => t.fallbackId,
-          referencedTable: i4.ReadDatabaseContainer($db)
+          referencedTable: i5.ReadDatabaseContainer($db)
               .resultSet<i1.QuickSwitcherButtonConfigs>(
                 'quick_switcher_button_configs',
               ),
@@ -1516,7 +1524,7 @@ class $QuickSwitcherButtonConfigsOrderingComposer
                 $removeJoinBuilderFromRootComposer,
               }) => i1.$QuickSwitcherButtonConfigsOrderingComposer(
                 $db: $db,
-                $table: i4.ReadDatabaseContainer($db)
+                $table: i5.ReadDatabaseContainer($db)
                     .resultSet<i1.QuickSwitcherButtonConfigs>(
                       'quick_switcher_button_configs',
                     ),
@@ -1548,7 +1556,7 @@ class $QuickSwitcherButtonConfigsAnnotationComposer
   i0.GeneratedColumn<bool> get isVisible =>
       $composableBuilder(column: $table.isVisible, builder: (column) => column);
 
-  i0.GeneratedColumnWithTypeConverter<i3.BrowserAction?, String>
+  i0.GeneratedColumnWithTypeConverter<i4.BrowserAction?, String>
   get longPressAction => $composableBuilder(
     column: $table.longPressAction,
     builder: (column) => column,
@@ -1559,7 +1567,7 @@ class $QuickSwitcherButtonConfigsAnnotationComposer
         $composerBuilder(
           composer: this,
           getCurrentColumn: (t) => t.fallbackId,
-          referencedTable: i4.ReadDatabaseContainer($db)
+          referencedTable: i5.ReadDatabaseContainer($db)
               .resultSet<i1.QuickSwitcherButtonConfigs>(
                 'quick_switcher_button_configs',
               ),
@@ -1571,7 +1579,7 @@ class $QuickSwitcherButtonConfigsAnnotationComposer
                 $removeJoinBuilderFromRootComposer,
               }) => i1.$QuickSwitcherButtonConfigsAnnotationComposer(
                 $db: $db,
-                $table: i4.ReadDatabaseContainer($db)
+                $table: i5.ReadDatabaseContainer($db)
                     .resultSet<i1.QuickSwitcherButtonConfigs>(
                       'quick_switcher_button_configs',
                     ),
@@ -1631,7 +1639,7 @@ class $QuickSwitcherButtonConfigsTableManager
                 i0.Value<String> orderKey = const i0.Value.absent(),
                 i0.Value<bool> isVisible = const i0.Value.absent(),
                 i0.Value<String?> fallbackId = const i0.Value.absent(),
-                i0.Value<i3.BrowserAction?> longPressAction =
+                i0.Value<i4.BrowserAction?> longPressAction =
                     const i0.Value.absent(),
                 i0.Value<int> rowid = const i0.Value.absent(),
               }) => i1.QuickSwitcherButtonConfigsCompanion(
@@ -1648,7 +1656,7 @@ class $QuickSwitcherButtonConfigsTableManager
                 required String orderKey,
                 i0.Value<bool> isVisible = const i0.Value.absent(),
                 i0.Value<String?> fallbackId = const i0.Value.absent(),
-                i0.Value<i3.BrowserAction?> longPressAction =
+                i0.Value<i4.BrowserAction?> longPressAction =
                     const i0.Value.absent(),
                 i0.Value<int> rowid = const i0.Value.absent(),
               }) => i1.QuickSwitcherButtonConfigsCompanion.insert(
@@ -1734,7 +1742,7 @@ typedef $QuickSwitcherButtonConfigsProcessedTableManager =
 typedef $SearchTokensCreateCompanionBuilder =
     i1.SearchTokensCompanion Function({
       i0.Value<int> id,
-      required i2.Uint8List token,
+      required i3.Uint8List token,
       required DateTime insertedAt,
       required String issuerKeyVersion,
       i0.Value<DateTime?> reservedAt,
@@ -1742,7 +1750,7 @@ typedef $SearchTokensCreateCompanionBuilder =
 typedef $SearchTokensUpdateCompanionBuilder =
     i1.SearchTokensCompanion Function({
       i0.Value<int> id,
-      i0.Value<i2.Uint8List> token,
+      i0.Value<i3.Uint8List> token,
       i0.Value<DateTime> insertedAt,
       i0.Value<String> issuerKeyVersion,
       i0.Value<DateTime?> reservedAt,
@@ -1762,7 +1770,7 @@ class $SearchTokensFilterComposer
     builder: (column) => i0.ColumnFilters(column),
   );
 
-  i0.ColumnFilters<i2.Uint8List> get token => $composableBuilder(
+  i0.ColumnFilters<i3.Uint8List> get token => $composableBuilder(
     column: $table.token,
     builder: (column) => i0.ColumnFilters(column),
   );
@@ -1797,7 +1805,7 @@ class $SearchTokensOrderingComposer
     builder: (column) => i0.ColumnOrderings(column),
   );
 
-  i0.ColumnOrderings<i2.Uint8List> get token => $composableBuilder(
+  i0.ColumnOrderings<i3.Uint8List> get token => $composableBuilder(
     column: $table.token,
     builder: (column) => i0.ColumnOrderings(column),
   );
@@ -1830,7 +1838,7 @@ class $SearchTokensAnnotationComposer
   i0.GeneratedColumn<int> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
 
-  i0.GeneratedColumn<i2.Uint8List> get token =>
+  i0.GeneratedColumn<i3.Uint8List> get token =>
       $composableBuilder(column: $table.token, builder: (column) => column);
 
   i0.GeneratedColumn<DateTime> get insertedAt => $composableBuilder(
@@ -1885,7 +1893,7 @@ class $SearchTokensTableManager
           updateCompanionCallback:
               ({
                 i0.Value<int> id = const i0.Value.absent(),
-                i0.Value<i2.Uint8List> token = const i0.Value.absent(),
+                i0.Value<i3.Uint8List> token = const i0.Value.absent(),
                 i0.Value<DateTime> insertedAt = const i0.Value.absent(),
                 i0.Value<String> issuerKeyVersion = const i0.Value.absent(),
                 i0.Value<DateTime?> reservedAt = const i0.Value.absent(),
@@ -1899,7 +1907,7 @@ class $SearchTokensTableManager
           createCompanionCallback:
               ({
                 i0.Value<int> id = const i0.Value.absent(),
-                required i2.Uint8List token,
+                required i3.Uint8List token,
                 required DateTime insertedAt,
                 required String issuerKeyVersion,
                 i0.Value<DateTime?> reservedAt = const i0.Value.absent(),
@@ -2196,14 +2204,21 @@ class ProxyProfileTable extends i0.Table
     requiredDuringInsert: true,
     $customConstraints: 'NOT NULL',
   );
-  late final i0.GeneratedColumn<String> type = i0.GeneratedColumn<String>(
-    'type',
-    aliasedName,
-    false,
-    type: i0.DriftSqlType.string,
-    requiredDuringInsert: true,
-    $customConstraints: 'NOT NULL',
-  );
+  late final i0.GeneratedColumnWithTypeConverter<
+    i2.SingboxProxyProfileType,
+    String
+  >
+  type =
+      i0.GeneratedColumn<String>(
+        'type',
+        aliasedName,
+        false,
+        type: i0.DriftSqlType.string,
+        requiredDuringInsert: true,
+        $customConstraints: 'NOT NULL',
+      ).withConverter<i2.SingboxProxyProfileType>(
+        i1.ProxyProfileTable.$convertertype,
+      );
   late final i0.GeneratedColumn<String> configJson = i0.GeneratedColumn<String>(
     'config_json',
     aliasedName,
@@ -2280,10 +2295,12 @@ class ProxyProfileTable extends i0.Table
         i0.DriftSqlType.string,
         data['${effectivePrefix}name'],
       )!,
-      type: attachedDatabase.typeMapping.read(
-        i0.DriftSqlType.string,
-        data['${effectivePrefix}type'],
-      )!,
+      type: i1.ProxyProfileTable.$convertertype.fromSql(
+        attachedDatabase.typeMapping.read(
+          i0.DriftSqlType.string,
+          data['${effectivePrefix}type'],
+        )!,
+      ),
       configJson: attachedDatabase.typeMapping.read(
         i0.DriftSqlType.string,
         data['${effectivePrefix}config_json'],
@@ -2312,6 +2329,10 @@ class ProxyProfileTable extends i0.Table
     return ProxyProfileTable(attachedDatabase, alias);
   }
 
+  static i0.JsonTypeConverter2<i2.SingboxProxyProfileType, String, String>
+  $convertertype = const i0.EnumNameConverter<i2.SingboxProxyProfileType>(
+    i2.SingboxProxyProfileType.values,
+  );
   @override
   bool get dontWriteConstraints => true;
 }
@@ -2320,7 +2341,7 @@ class ProxyProfile extends i0.DataClass
     implements i0.Insertable<i1.ProxyProfile> {
   final String id;
   final String name;
-  final String type;
+  final i2.SingboxProxyProfileType type;
   final String configJson;
   final String? dnsOverrideJson;
   final bool autostart;
@@ -2341,7 +2362,11 @@ class ProxyProfile extends i0.DataClass
     final map = <String, i0.Expression>{};
     map['id'] = i0.Variable<String>(id);
     map['name'] = i0.Variable<String>(name);
-    map['type'] = i0.Variable<String>(type);
+    {
+      map['type'] = i0.Variable<String>(
+        i1.ProxyProfileTable.$convertertype.toSql(type),
+      );
+    }
     map['config_json'] = i0.Variable<String>(configJson);
     if (!nullToAbsent || dnsOverrideJson != null) {
       map['dns_override_json'] = i0.Variable<String>(dnsOverrideJson);
@@ -2360,7 +2385,9 @@ class ProxyProfile extends i0.DataClass
     return ProxyProfile(
       id: serializer.fromJson<String>(json['id']),
       name: serializer.fromJson<String>(json['name']),
-      type: serializer.fromJson<String>(json['type']),
+      type: i1.ProxyProfileTable.$convertertype.fromJson(
+        serializer.fromJson<String>(json['type']),
+      ),
       configJson: serializer.fromJson<String>(json['config_json']),
       dnsOverrideJson: serializer.fromJson<String?>(json['dns_override_json']),
       autostart: serializer.fromJson<bool>(json['autostart']),
@@ -2374,7 +2401,9 @@ class ProxyProfile extends i0.DataClass
     return <String, dynamic>{
       'id': serializer.toJson<String>(id),
       'name': serializer.toJson<String>(name),
-      'type': serializer.toJson<String>(type),
+      'type': serializer.toJson<String>(
+        i1.ProxyProfileTable.$convertertype.toJson(type),
+      ),
       'config_json': serializer.toJson<String>(configJson),
       'dns_override_json': serializer.toJson<String?>(dnsOverrideJson),
       'autostart': serializer.toJson<bool>(autostart),
@@ -2386,7 +2415,7 @@ class ProxyProfile extends i0.DataClass
   i1.ProxyProfile copyWith({
     String? id,
     String? name,
-    String? type,
+    i2.SingboxProxyProfileType? type,
     String? configJson,
     i0.Value<String?> dnsOverrideJson = const i0.Value.absent(),
     bool? autostart,
@@ -2464,7 +2493,7 @@ class ProxyProfile extends i0.DataClass
 class ProxyProfileCompanion extends i0.UpdateCompanion<i1.ProxyProfile> {
   final i0.Value<String> id;
   final i0.Value<String> name;
-  final i0.Value<String> type;
+  final i0.Value<i2.SingboxProxyProfileType> type;
   final i0.Value<String> configJson;
   final i0.Value<String?> dnsOverrideJson;
   final i0.Value<bool> autostart;
@@ -2485,7 +2514,7 @@ class ProxyProfileCompanion extends i0.UpdateCompanion<i1.ProxyProfile> {
   ProxyProfileCompanion.insert({
     required String id,
     required String name,
-    required String type,
+    required i2.SingboxProxyProfileType type,
     required String configJson,
     this.dnsOverrideJson = const i0.Value.absent(),
     this.autostart = const i0.Value.absent(),
@@ -2523,7 +2552,7 @@ class ProxyProfileCompanion extends i0.UpdateCompanion<i1.ProxyProfile> {
   i1.ProxyProfileCompanion copyWith({
     i0.Value<String>? id,
     i0.Value<String>? name,
-    i0.Value<String>? type,
+    i0.Value<i2.SingboxProxyProfileType>? type,
     i0.Value<String>? configJson,
     i0.Value<String?>? dnsOverrideJson,
     i0.Value<bool>? autostart,
@@ -2554,7 +2583,9 @@ class ProxyProfileCompanion extends i0.UpdateCompanion<i1.ProxyProfile> {
       map['name'] = i0.Variable<String>(name.value);
     }
     if (type.present) {
-      map['type'] = i0.Variable<String>(type.value);
+      map['type'] = i0.Variable<String>(
+        i1.ProxyProfileTable.$convertertype.toSql(type.value),
+      );
     }
     if (configJson.present) {
       map['config_json'] = i0.Variable<String>(configJson.value);
@@ -2613,8 +2644,8 @@ class IconCache extends i0.Table
     requiredDuringInsert: true,
     $customConstraints: 'PRIMARY KEY NOT NULL',
   );
-  late final i0.GeneratedColumn<i2.Uint8List> iconData =
-      i0.GeneratedColumn<i2.Uint8List>(
+  late final i0.GeneratedColumn<i3.Uint8List> iconData =
+      i0.GeneratedColumn<i3.Uint8List>(
         'icon_data',
         aliasedName,
         false,
@@ -2671,7 +2702,7 @@ class IconCache extends i0.Table
 class IconCacheData extends i0.DataClass
     implements i0.Insertable<i1.IconCacheData> {
   final String origin;
-  final i2.Uint8List iconData;
+  final i3.Uint8List iconData;
   final DateTime fetchDate;
   const IconCacheData({
     required this.origin,
@@ -2682,7 +2713,7 @@ class IconCacheData extends i0.DataClass
   Map<String, i0.Expression> toColumns(bool nullToAbsent) {
     final map = <String, i0.Expression>{};
     map['origin'] = i0.Variable<String>(origin);
-    map['icon_data'] = i0.Variable<i2.Uint8List>(iconData);
+    map['icon_data'] = i0.Variable<i3.Uint8List>(iconData);
     map['fetch_date'] = i0.Variable<DateTime>(fetchDate);
     return map;
   }
@@ -2694,7 +2725,7 @@ class IconCacheData extends i0.DataClass
     serializer ??= i0.driftRuntimeOptions.defaultSerializer;
     return IconCacheData(
       origin: serializer.fromJson<String>(json['origin']),
-      iconData: serializer.fromJson<i2.Uint8List>(json['icon_data']),
+      iconData: serializer.fromJson<i3.Uint8List>(json['icon_data']),
       fetchDate: serializer.fromJson<DateTime>(json['fetch_date']),
     );
   }
@@ -2703,14 +2734,14 @@ class IconCacheData extends i0.DataClass
     serializer ??= i0.driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
       'origin': serializer.toJson<String>(origin),
-      'icon_data': serializer.toJson<i2.Uint8List>(iconData),
+      'icon_data': serializer.toJson<i3.Uint8List>(iconData),
       'fetch_date': serializer.toJson<DateTime>(fetchDate),
     };
   }
 
   i1.IconCacheData copyWith({
     String? origin,
-    i2.Uint8List? iconData,
+    i3.Uint8List? iconData,
     DateTime? fetchDate,
   }) => i1.IconCacheData(
     origin: origin ?? this.origin,
@@ -2749,7 +2780,7 @@ class IconCacheData extends i0.DataClass
 
 class IconCacheCompanion extends i0.UpdateCompanion<i1.IconCacheData> {
   final i0.Value<String> origin;
-  final i0.Value<i2.Uint8List> iconData;
+  final i0.Value<i3.Uint8List> iconData;
   final i0.Value<DateTime> fetchDate;
   final i0.Value<int> rowid;
   const IconCacheCompanion({
@@ -2760,7 +2791,7 @@ class IconCacheCompanion extends i0.UpdateCompanion<i1.IconCacheData> {
   });
   IconCacheCompanion.insert({
     required String origin,
-    required i2.Uint8List iconData,
+    required i3.Uint8List iconData,
     required DateTime fetchDate,
     this.rowid = const i0.Value.absent(),
   }) : origin = i0.Value(origin),
@@ -2768,7 +2799,7 @@ class IconCacheCompanion extends i0.UpdateCompanion<i1.IconCacheData> {
        fetchDate = i0.Value(fetchDate);
   static i0.Insertable<i1.IconCacheData> custom({
     i0.Expression<String>? origin,
-    i0.Expression<i2.Uint8List>? iconData,
+    i0.Expression<i3.Uint8List>? iconData,
     i0.Expression<DateTime>? fetchDate,
     i0.Expression<int>? rowid,
   }) {
@@ -2782,7 +2813,7 @@ class IconCacheCompanion extends i0.UpdateCompanion<i1.IconCacheData> {
 
   i1.IconCacheCompanion copyWith({
     i0.Value<String>? origin,
-    i0.Value<i2.Uint8List>? iconData,
+    i0.Value<i3.Uint8List>? iconData,
     i0.Value<DateTime>? fetchDate,
     i0.Value<int>? rowid,
   }) {
@@ -2801,7 +2832,7 @@ class IconCacheCompanion extends i0.UpdateCompanion<i1.IconCacheData> {
       map['origin'] = i0.Variable<String>(origin.value);
     }
     if (iconData.present) {
-      map['icon_data'] = i0.Variable<i2.Uint8List>(iconData.value);
+      map['icon_data'] = i0.Variable<i3.Uint8List>(iconData.value);
     }
     if (fetchDate.present) {
       map['fetch_date'] = i0.Variable<DateTime>(fetchDate.value);
@@ -3301,7 +3332,7 @@ class ToolbarButtonConfigs extends i0.Table
     $customConstraints:
         'REFERENCES toolbar_button_configs(button_id)ON DELETE SET NULL',
   );
-  late final i0.GeneratedColumnWithTypeConverter<i3.BrowserAction?, String>
+  late final i0.GeneratedColumnWithTypeConverter<i4.BrowserAction?, String>
   longPressAction =
       i0.GeneratedColumn<String>(
         'long_press_action',
@@ -3310,7 +3341,7 @@ class ToolbarButtonConfigs extends i0.Table
         type: i0.DriftSqlType.string,
         requiredDuringInsert: false,
         $customConstraints: '',
-      ).withConverter<i3.BrowserAction?>(
+      ).withConverter<i4.BrowserAction?>(
         i1.ToolbarButtonConfigs.$converterlongPressActionn,
       );
   @override
@@ -3363,11 +3394,11 @@ class ToolbarButtonConfigs extends i0.Table
     return ToolbarButtonConfigs(attachedDatabase, alias);
   }
 
-  static i0.JsonTypeConverter2<i3.BrowserAction, String, String>
-  $converterlongPressAction = const i0.EnumNameConverter<i3.BrowserAction>(
-    i3.BrowserAction.values,
+  static i0.JsonTypeConverter2<i4.BrowserAction, String, String>
+  $converterlongPressAction = const i0.EnumNameConverter<i4.BrowserAction>(
+    i4.BrowserAction.values,
   );
-  static i0.JsonTypeConverter2<i3.BrowserAction?, String?, String?>
+  static i0.JsonTypeConverter2<i4.BrowserAction?, String?, String?>
   $converterlongPressActionn = i0.JsonTypeConverter2.asNullable(
     $converterlongPressAction,
   );
@@ -3384,7 +3415,7 @@ class ToolbarButtonConfig extends i0.DataClass
 
   /// Replaces the button's own long press when set; NULL keeps the built-in one.
   /// By name, like every other persisted BrowserAction binding.
-  final i3.BrowserAction? longPressAction;
+  final i4.BrowserAction? longPressAction;
   const ToolbarButtonConfig({
     required this.buttonId,
     required this.orderKey,
@@ -3446,7 +3477,7 @@ class ToolbarButtonConfig extends i0.DataClass
     String? orderKey,
     bool? isVisible,
     i0.Value<String?> fallbackId = const i0.Value.absent(),
-    i0.Value<i3.BrowserAction?> longPressAction = const i0.Value.absent(),
+    i0.Value<i4.BrowserAction?> longPressAction = const i0.Value.absent(),
   }) => i1.ToolbarButtonConfig(
     buttonId: buttonId ?? this.buttonId,
     orderKey: orderKey ?? this.orderKey,
@@ -3502,7 +3533,7 @@ class ToolbarButtonConfigsCompanion
   final i0.Value<String> orderKey;
   final i0.Value<bool> isVisible;
   final i0.Value<String?> fallbackId;
-  final i0.Value<i3.BrowserAction?> longPressAction;
+  final i0.Value<i4.BrowserAction?> longPressAction;
   final i0.Value<int> rowid;
   const ToolbarButtonConfigsCompanion({
     this.buttonId = const i0.Value.absent(),
@@ -3544,7 +3575,7 @@ class ToolbarButtonConfigsCompanion
     i0.Value<String>? orderKey,
     i0.Value<bool>? isVisible,
     i0.Value<String?>? fallbackId,
-    i0.Value<i3.BrowserAction?>? longPressAction,
+    i0.Value<i4.BrowserAction?>? longPressAction,
     i0.Value<int>? rowid,
   }) {
     return i1.ToolbarButtonConfigsCompanion(
@@ -3645,7 +3676,7 @@ class QuickSwitcherButtonConfigs extends i0.Table
     $customConstraints:
         'REFERENCES quick_switcher_button_configs(button_id)ON DELETE SET NULL',
   );
-  late final i0.GeneratedColumnWithTypeConverter<i3.BrowserAction?, String>
+  late final i0.GeneratedColumnWithTypeConverter<i4.BrowserAction?, String>
   longPressAction =
       i0.GeneratedColumn<String>(
         'long_press_action',
@@ -3654,7 +3685,7 @@ class QuickSwitcherButtonConfigs extends i0.Table
         type: i0.DriftSqlType.string,
         requiredDuringInsert: false,
         $customConstraints: '',
-      ).withConverter<i3.BrowserAction?>(
+      ).withConverter<i4.BrowserAction?>(
         i1.QuickSwitcherButtonConfigs.$converterlongPressActionn,
       );
   @override
@@ -3710,11 +3741,11 @@ class QuickSwitcherButtonConfigs extends i0.Table
     return QuickSwitcherButtonConfigs(attachedDatabase, alias);
   }
 
-  static i0.JsonTypeConverter2<i3.BrowserAction, String, String>
-  $converterlongPressAction = const i0.EnumNameConverter<i3.BrowserAction>(
-    i3.BrowserAction.values,
+  static i0.JsonTypeConverter2<i4.BrowserAction, String, String>
+  $converterlongPressAction = const i0.EnumNameConverter<i4.BrowserAction>(
+    i4.BrowserAction.values,
   );
-  static i0.JsonTypeConverter2<i3.BrowserAction?, String?, String?>
+  static i0.JsonTypeConverter2<i4.BrowserAction?, String?, String?>
   $converterlongPressActionn = i0.JsonTypeConverter2.asNullable(
     $converterlongPressAction,
   );
@@ -3728,7 +3759,7 @@ class QuickSwitcherButtonConfig extends i0.DataClass
   final String orderKey;
   final bool isVisible;
   final String? fallbackId;
-  final i3.BrowserAction? longPressAction;
+  final i4.BrowserAction? longPressAction;
   const QuickSwitcherButtonConfig({
     required this.buttonId,
     required this.orderKey,
@@ -3790,7 +3821,7 @@ class QuickSwitcherButtonConfig extends i0.DataClass
     String? orderKey,
     bool? isVisible,
     i0.Value<String?> fallbackId = const i0.Value.absent(),
-    i0.Value<i3.BrowserAction?> longPressAction = const i0.Value.absent(),
+    i0.Value<i4.BrowserAction?> longPressAction = const i0.Value.absent(),
   }) => i1.QuickSwitcherButtonConfig(
     buttonId: buttonId ?? this.buttonId,
     orderKey: orderKey ?? this.orderKey,
@@ -3848,7 +3879,7 @@ class QuickSwitcherButtonConfigsCompanion
   final i0.Value<String> orderKey;
   final i0.Value<bool> isVisible;
   final i0.Value<String?> fallbackId;
-  final i0.Value<i3.BrowserAction?> longPressAction;
+  final i0.Value<i4.BrowserAction?> longPressAction;
   final i0.Value<int> rowid;
   const QuickSwitcherButtonConfigsCompanion({
     this.buttonId = const i0.Value.absent(),
@@ -3890,7 +3921,7 @@ class QuickSwitcherButtonConfigsCompanion
     i0.Value<String>? orderKey,
     i0.Value<bool>? isVisible,
     i0.Value<String?>? fallbackId,
-    i0.Value<i3.BrowserAction?>? longPressAction,
+    i0.Value<i4.BrowserAction?>? longPressAction,
     i0.Value<int>? rowid,
   }) {
     return i1.QuickSwitcherButtonConfigsCompanion(
@@ -3965,8 +3996,8 @@ class SearchTokens extends i0.Table
     requiredDuringInsert: false,
     $customConstraints: 'PRIMARY KEY AUTOINCREMENT',
   );
-  late final i0.GeneratedColumn<i2.Uint8List> token =
-      i0.GeneratedColumn<i2.Uint8List>(
+  late final i0.GeneratedColumn<i3.Uint8List> token =
+      i0.GeneratedColumn<i3.Uint8List>(
         'token',
         aliasedName,
         false,
@@ -4055,7 +4086,7 @@ class SearchTokens extends i0.Table
 class SearchToken extends i0.DataClass
     implements i0.Insertable<i1.SearchToken> {
   final int id;
-  final i2.Uint8List token;
+  final i3.Uint8List token;
   final DateTime insertedAt;
   final String issuerKeyVersion;
   final DateTime? reservedAt;
@@ -4070,7 +4101,7 @@ class SearchToken extends i0.DataClass
   Map<String, i0.Expression> toColumns(bool nullToAbsent) {
     final map = <String, i0.Expression>{};
     map['id'] = i0.Variable<int>(id);
-    map['token'] = i0.Variable<i2.Uint8List>(token);
+    map['token'] = i0.Variable<i3.Uint8List>(token);
     map['inserted_at'] = i0.Variable<DateTime>(insertedAt);
     map['issuer_key_version'] = i0.Variable<String>(issuerKeyVersion);
     if (!nullToAbsent || reservedAt != null) {
@@ -4086,7 +4117,7 @@ class SearchToken extends i0.DataClass
     serializer ??= i0.driftRuntimeOptions.defaultSerializer;
     return SearchToken(
       id: serializer.fromJson<int>(json['id']),
-      token: serializer.fromJson<i2.Uint8List>(json['token']),
+      token: serializer.fromJson<i3.Uint8List>(json['token']),
       insertedAt: serializer.fromJson<DateTime>(json['inserted_at']),
       issuerKeyVersion: serializer.fromJson<String>(json['issuer_key_version']),
       reservedAt: serializer.fromJson<DateTime?>(json['reserved_at']),
@@ -4097,7 +4128,7 @@ class SearchToken extends i0.DataClass
     serializer ??= i0.driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
       'id': serializer.toJson<int>(id),
-      'token': serializer.toJson<i2.Uint8List>(token),
+      'token': serializer.toJson<i3.Uint8List>(token),
       'inserted_at': serializer.toJson<DateTime>(insertedAt),
       'issuer_key_version': serializer.toJson<String>(issuerKeyVersion),
       'reserved_at': serializer.toJson<DateTime?>(reservedAt),
@@ -4106,7 +4137,7 @@ class SearchToken extends i0.DataClass
 
   i1.SearchToken copyWith({
     int? id,
-    i2.Uint8List? token,
+    i3.Uint8List? token,
     DateTime? insertedAt,
     String? issuerKeyVersion,
     i0.Value<DateTime?> reservedAt = const i0.Value.absent(),
@@ -4166,7 +4197,7 @@ class SearchToken extends i0.DataClass
 
 class SearchTokensCompanion extends i0.UpdateCompanion<i1.SearchToken> {
   final i0.Value<int> id;
-  final i0.Value<i2.Uint8List> token;
+  final i0.Value<i3.Uint8List> token;
   final i0.Value<DateTime> insertedAt;
   final i0.Value<String> issuerKeyVersion;
   final i0.Value<DateTime?> reservedAt;
@@ -4179,7 +4210,7 @@ class SearchTokensCompanion extends i0.UpdateCompanion<i1.SearchToken> {
   });
   SearchTokensCompanion.insert({
     this.id = const i0.Value.absent(),
-    required i2.Uint8List token,
+    required i3.Uint8List token,
     required DateTime insertedAt,
     required String issuerKeyVersion,
     this.reservedAt = const i0.Value.absent(),
@@ -4188,7 +4219,7 @@ class SearchTokensCompanion extends i0.UpdateCompanion<i1.SearchToken> {
        issuerKeyVersion = i0.Value(issuerKeyVersion);
   static i0.Insertable<i1.SearchToken> custom({
     i0.Expression<int>? id,
-    i0.Expression<i2.Uint8List>? token,
+    i0.Expression<i3.Uint8List>? token,
     i0.Expression<DateTime>? insertedAt,
     i0.Expression<String>? issuerKeyVersion,
     i0.Expression<DateTime>? reservedAt,
@@ -4204,7 +4235,7 @@ class SearchTokensCompanion extends i0.UpdateCompanion<i1.SearchToken> {
 
   i1.SearchTokensCompanion copyWith({
     i0.Value<int>? id,
-    i0.Value<i2.Uint8List>? token,
+    i0.Value<i3.Uint8List>? token,
     i0.Value<DateTime>? insertedAt,
     i0.Value<String>? issuerKeyVersion,
     i0.Value<DateTime?>? reservedAt,
@@ -4225,7 +4256,7 @@ class SearchTokensCompanion extends i0.UpdateCompanion<i1.SearchToken> {
       map['id'] = i0.Variable<int>(id.value);
     }
     if (token.present) {
-      map['token'] = i0.Variable<i2.Uint8List>(token.value);
+      map['token'] = i0.Variable<i3.Uint8List>(token.value);
     }
     if (insertedAt.present) {
       map['inserted_at'] = i0.Variable<DateTime>(insertedAt.value);
@@ -4261,7 +4292,7 @@ i0.Index get idxSearchTokensReservedAt => i0.Index(
   'CREATE INDEX idx_search_tokens_reserved_at ON search_tokens (reserved_at)',
 );
 
-class DefinitionsDrift extends i4.ModularAccessor {
+class DefinitionsDrift extends i5.ModularAccessor {
   DefinitionsDrift(i0.GeneratedDatabase db) : super(db);
   i0.Selectable<String> toolbarLeadingOrderKey({
     required int bucket,
@@ -4360,16 +4391,16 @@ class DefinitionsDrift extends i4.ModularAccessor {
     );
   }
 
-  i1.ToolbarButtonConfigs get toolbarButtonConfigs => i4.ReadDatabaseContainer(
+  i1.ToolbarButtonConfigs get toolbarButtonConfigs => i5.ReadDatabaseContainer(
     attachedDatabase,
   ).resultSet<i1.ToolbarButtonConfigs>('toolbar_button_configs');
   i1.QuickSwitcherButtonConfigs get quickSwitcherButtonConfigs =>
-      i4.ReadDatabaseContainer(
+      i5.ReadDatabaseContainer(
         attachedDatabase,
       ).resultSet<i1.QuickSwitcherButtonConfigs>(
         'quick_switcher_button_configs',
       );
-  i1.IconCache get iconCache => i4.ReadDatabaseContainer(
+  i1.IconCache get iconCache => i5.ReadDatabaseContainer(
     attachedDatabase,
   ).resultSet<i1.IconCache>('icon_cache');
 }
