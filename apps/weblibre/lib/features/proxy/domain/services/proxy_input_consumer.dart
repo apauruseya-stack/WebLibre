@@ -263,7 +263,7 @@ class ProxyInputConsumer extends _$ProxyInputConsumer {
           ProxyProfile(
             id: uuid.v4(),
             name: name,
-            type: seed.type,
+            type: seed.type.name,
             configJson: configJson,
             dnsOverrideJson: seed.dnsOverrideJson,
             autostart: false,

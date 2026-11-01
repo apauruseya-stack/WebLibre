@@ -87,7 +87,13 @@ class ProfileTile extends ConsumerWidget {
                 child: CircularProgressIndicator(strokeWidth: 2),
               ),
             )
-          : ProtocolBadge(type: profile.type, active: isRunning || isStarting),
+          : ProtocolBadge(
+              type: SingboxProxyProfileType.values.firstWhere(
+                (e) => e.name == profile.type,
+                orElse: () => SingboxProxyProfileType.socks,
+              ),
+              active: isRunning || isStarting,
+            ),
       title: Text(
         profile.name,
         style: TextStyle(

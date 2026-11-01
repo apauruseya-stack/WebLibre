@@ -386,7 +386,7 @@ class ProxyProfileDraft extends _$ProxyProfileDraft {
           final profile = ProxyProfile(
             id: existing?.id ?? uuid.v4(),
             name: trimmedName,
-            type: draft.type,
+            type: draft.type.name,
             configJson: configJson,
             dnsOverrideJson: draft.dnsOverrideJson,
             autostart: draft.autostart,
