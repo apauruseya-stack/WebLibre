@@ -211,10 +211,24 @@ jobs:
           name: appbundle
           path: apps/weblibre/build/app/outputs/bundle/stableRelease/app-stable-release.aab
 
+      - name: Check Play publishing credentials
+        id: play-key
+        # The secrets context is not allowed in if: conditionals, so publish
+        # availability is computed here and reused below.
+        if: steps.build-type.outputs.is_prerelease == 'false'
+        env:
+          PLAY_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+        run: |
+          if [ -n "$PLAY_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Release to Google Play (internal)
         # Skipped unless the Play service account is configured, so a fork
         # without publishing credentials still finishes green.
-        if: steps.build-type.outputs.is_prerelease == 'false' && secrets.GOOGLE_SERVICE_ACCOUNT_KEY != ''
+        if: steps.build-type.outputs.is_prerelease == 'false' && steps.play-key.outputs.available == 'true'
         working-directory: apps/weblibre
         env:
           SUPPLY_PACKAGE_NAME: ${{ secrets.ANDROID_PACKAGE_NAME }}
