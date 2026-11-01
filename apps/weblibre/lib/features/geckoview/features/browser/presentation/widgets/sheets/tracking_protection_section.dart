@@ -145,8 +145,8 @@ class _TrackingProtectionTile extends ConsumerWidget {
             .addException(tabId);
       }
 
-      // Reload tab to apply changes
-      await ref.read(selectedTabSessionProvider).reload();
+      // Reload the tab the sheet belongs to (it may no longer be selected).
+      await ref.read(tabSessionProvider(tabId: tabId).notifier).reload();
     } catch (e, s) {
       logger.e('Failed to toggle tracking protection', error: e, stackTrace: s);
       if (context.mounted) {

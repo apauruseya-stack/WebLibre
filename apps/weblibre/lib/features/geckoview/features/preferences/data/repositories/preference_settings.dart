@@ -36,9 +36,19 @@ part 'preference_settings.g.dart';
 
 const _preferenceMigrationVersionKey = 'preferenceMigrationVersion';
 const _preferenceMigrationPartitionKey = 'preferenceMigration';
-const _preferenceMigrationSchemaVersion = 3;
+const _preferenceMigrationSchemaVersion = 4;
 const _mainProcessDisableJitPref =
     'javascript.options.main_process_disable_jit';
+
+/// Tracking-protection exception for Cloudflare's challenge host.
+///
+/// Strict ETP blocks the tracking-content list, which matches `cloudflare.com`
+/// through the parent-domain lookup, so the Turnstile/challenge script served
+/// from `challenges.cloudflare.com` is blocked and protected sites loop on the
+/// challenge page forever. `settings.json` ships the same exception for new
+/// profiles and the hardening UI; the migration back-fills older profiles.
+const _cloudflareChallengeSkipPref = 'urlclassifier.trackingSkipURLs';
+const _cloudflareChallengeSkipPattern = '*://challenges.cloudflare.com/*';
 
 /// Preferences we used to ship and have since dropped from `settings.json`.
 ///
@@ -66,8 +76,15 @@ class StartupPreferenceEnforcementService
       0: () => _prefManager.resetPrefs([_mainProcessDisableJitPref]),
       1: _removeFxaProfileDomainFromLocalDnsBlocks,
       2: () => _prefManager.resetPrefs(_retiredPrefs),
+      3: _applyCloudflareChallengeException,
     },
   );
+
+  Future<void> _applyCloudflareChallengeException() {
+    return _prefManager.applyPrefs({
+      _cloudflareChallengeSkipPref: _cloudflareChallengeSkipPattern,
+    });
+  }
 
   Future<void> _removeFxaProfileDomainFromLocalDnsBlocks() async {
     const dnsLocalDomainsPref = 'network.dns.localDomains';

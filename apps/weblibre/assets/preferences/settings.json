@@ -902,6 +902,13 @@
                     "title": "Enable fingerprinting tracker protection",
                     "enforceOnStartup": true
                 },
+                "urlclassifier.trackingSkipURLs": {
+                    "value": "*://challenges.cloudflare.com/*",
+                    "title": "Keep Cloudflare challenges working",
+                    "description": "Cloudflare serves Turnstile and challenge scripts from challenges.cloudflare.com, which is on the tracking-content list. Blocking it makes protected sites loop on the challenge page forever. This exception only affects that challenge host.",
+                    "enforceOnStartup": true,
+                    "locked": true
+                },
                 "network.cookie.maxageCap": {
                     "value": 15552000,
                     "title": "Limit maximum cookie lifetime to 180 days"
