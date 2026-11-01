@@ -33,7 +33,7 @@ extension ProxyProfileExt on ProxyProfile {
     return SingboxProxyProfile(
       id: proxyConnectionId,
       name: name,
-      type: type,
+      type: SingboxProxyProfileType.values.byName(type),
       configJson: configJson,
       secretJson: secretJson,
     );

@@ -71,7 +71,10 @@ List<ProxyConnectionOption> proxyConnectionOptions(Ref ref) {
       ProxyConnectionOption(
         id: profile.proxyConnection,
         title: profile.name,
-        profileType: profile.type,
+        profileType: SingboxProxyProfileType.values.firstWhere(
+          (e) => e.name == profile.type,
+          orElse: () => SingboxProxyProfileType.socks,
+        ),
       ),
   ];
 }

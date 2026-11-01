@@ -124,12 +124,7 @@ List<SettingsSectionDefinition> privacySecuritySettingsSections(
           keywords: settingsKeywords('ai,ml,summarize,models'),
           child: const _AiSettingsTile(),
         ),
-        SettingsEntryDefinition(
-          title: l10n.settings_cookieBannersTitle,
-          subtitle: l10n.settings_cookieBannersSubtitle,
-          keywords: settingsKeywords(l10n.settings_cookieBannersKeywords),
-          child: const _CookieBannersSection(),
-        ),
+
         SettingsEntryDefinition(
           title: 'Protection report',
           subtitle: 'Trackers blocked, banners handled and more',
@@ -1247,134 +1242,6 @@ class _UBlockFilterListsTile extends StatelessWidget {
     );
   }
 }
-
-class _CookieBannersSection extends HookConsumerWidget {
-  const _CookieBannersSection();
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final handling = ref.watch(
-      generalSettingsWithDefaultsProvider.select(
-        (settings) => settings.cookieBannerHandling,
-      ),
-    );
-    final l10n = AppLocalizations.of(context);
-
-    String label(CookieBannerHandling value) => switch (value) {
-      CookieBannerHandling.off => l10n.settings_cookieBannersOff,
-      CookieBannerHandling.detect => l10n.settings_cookieBannersDetect,
-      CookieBannerHandling.reject => l10n.settings_cookieBannersReject,
-      CookieBannerHandling.rejectOrHide =>
-        l10n.settings_cookieBannersRejectOrHide,
-    };
-
-    String description(CookieBannerHandling value) => switch (value) {
-      CookieBannerHandling.off =>
-        l10n.settings_cookieBannersOffDescription,
-      CookieBannerHandling.detect =>
-        l10n.settings_cookieBannersDetectDescription,
-      CookieBannerHandling.reject =>
-        l10n.settings_cookieBannersRejectDescription,
-      CookieBannerHandling.rejectOrHide =>
-        l10n.settings_cookieBannersRejectOrHideDescription,
-    };
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Icons.cookie_outlined),
-            title: Text(l10n.settings_cookieBannersTitle),
-            subtitle: Text(l10n.settings_cookieBannersSubtitle),
-          ),
-          RadioGroup<CookieBannerHandling>(
-            groupValue: handling,
-            onChanged: (value) async {
-              if (value == null) {
-                return;
-              }
-              await ref
-                  .read(saveGeneralSettingsControllerProvider.notifier)
-                  .save(
-                    (settings) => settings.copyWith.cookieBannerHandling(value),
-                  );
-            },
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                for (final value in CookieBannerHandling.values)
-                  RadioListTile<CookieBannerHandling>(
-                    contentPadding: EdgeInsets.zero,
-                    value: value,
-                    title: Text(label(value)),
-                    subtitle: Text(description(value)),
-                  ),
-              ],
-            ),
-          ),
-          SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero,
-            title: const Text('Allow rule updates'),
-            subtitle: const Text('Fetch updated rules from a static file (opt-in).'),
-            value: ref.watch(
-              generalSettingsWithDefaultsProvider.select(
-                (s) => s.cookieBannerRuleUpdates,
-              ),
-            ),
-            onChanged: (v) async {
-              await ref
-                  .read(saveGeneralSettingsControllerProvider.notifier)
-                  .save((s) => s.copyWith.cookieBannerRuleUpdates(v));
-            },
-          ),
-          TextButton.icon(
-            onPressed: () async {
-              final url = ref
-                  .read(generalSettingsWithDefaultsProvider)
-                  .cookieBannerRuleUrl;
-              if (url.isEmpty) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Set a rule update URL in advanced settings first.'),
-                  ),
-                );
-                return;
-              }
-              final ok = await CookieBannerRuleUpdater().checkAndUpdate(url);
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(ok ? 'Rules updated.' : 'Update failed or hash mismatch.'),
-                  ),
-                );
-              }
-            },
-            icon: const Icon(Icons.refresh),
-            label: const Text('Check for rule updates'),
-          ),
-          ListTile(
-            contentPadding: EdgeInsets.zero,
-            title: const Text('Edit rules & overrides'),
-            subtitle: const Text('Disable rules, add selectors per site, export/import'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute<void>(
-                  builder: (_) => const CookieBannerRuleEditorScreen(),
-                ),
-              );
-            },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class _ProfileImportTile extends StatelessWidget {
   const _ProfileImportTile();
 

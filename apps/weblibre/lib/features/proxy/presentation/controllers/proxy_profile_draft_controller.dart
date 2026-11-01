@@ -281,11 +281,15 @@ class ProxyProfileDraft extends _$ProxyProfileDraft {
           .readSecretJson(profile.id);
       if (!ref.mounted) return;
 
-      final spec = singboxProxyFormSpecs[profile.type];
+      final resolvedType = SingboxProxyProfileType.values.firstWhere(
+        (e) => e.name == profile.type,
+        orElse: () => SingboxProxyProfileType.socks,
+      );
+      final spec = singboxProxyFormSpecs[resolvedType];
       state = state.copyWith(
         existingProfile: profile,
         name: profile.name,
-        type: profile.type,
+        type: resolvedType,
         values: spec == null
             ? const {}
             : spec.valuesFromJson(
