@@ -193,12 +193,16 @@ jobs:
         with:
           artifacts: "apps/weblibre/build/app/outputs/apk/alpha/release/*.apk,apps/weblibre/build/app/outputs/apk/alphaImpeller/release/*.apk"
           prerelease: true
+          allowUpdates: true
+          replacesArtifacts: true
 
       - name: Create github artifact release (Full)
         if: steps.build-type.outputs.is_prerelease == 'false'
         uses: ncipollo/release-action@v1.17.0
         with:
           artifacts: "apps/weblibre/build/app/outputs/apk/stable/release/*.apk,apps/weblibre/build/app/outputs/apk/stableImpeller/release/*.apk,apps/weblibre/build/app/outputs/bundle/stableRelease/app-stable-release.aab"
+          allowUpdates: true
+          replacesArtifacts: true
 
       - name: Upload app bundle artifact
         if: steps.build-type.outputs.is_prerelease == 'false'
