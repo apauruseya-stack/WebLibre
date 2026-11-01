@@ -60,7 +60,7 @@ if (-not (Test-Path $apk)) { throw "Build did not produce $apk" }
 # 5. Release (only with -Release)
 if ($Release -and $Tag) {
     $env:GH_TOKEN = (git credential fill 2>$null | Select-String "password=" | ForEach-Object { $_.Line -replace "password=","" })
-    gh release create $Tag $apk --repo apauruseya-stack/WebLibre --title "WebLibre $Tag" --notes "Synced with upstream + local patches."
+    gh release create $Tag $apk --repo apauruseya-stack/cat-browser --title "Cat Browser $Tag" --notes "Synced with upstream + local patches."
     git tag $Tag
     git push origin $Tag
 }
