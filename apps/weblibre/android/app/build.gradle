@@ -25,6 +25,20 @@ if (flutterVersionName == null) {
 
 def weblibreGoMobileAar = file("../../../../native/go_mobile_runtime/build/weblibre-go.aar")
 
+// Release builds are signed with the keystore in KEY_PATH when one is supplied,
+// and with the debug keystore otherwise. Without this fallback a missing or
+// unreadable CI secret fails the build at packaging time instead of producing a
+// testable (if debug-signed) APK.
+def releaseKeystorePath = System.getenv("KEY_PATH")
+def releaseKeyAlias = System.getenv("KEY_ALIAS")
+def releaseKeystoreFile = releaseKeystorePath ? file(releaseKeystorePath) : null
+def hasReleaseSigningKey =
+        releaseKeystoreFile != null &&
+        releaseKeystoreFile.exists() &&
+        releaseKeystoreFile.length() > 0 &&
+        releaseKeyAlias != null &&
+        !releaseKeyAlias.isEmpty()
+
 android {
     namespace = "eu.weblibre.gecko"
     compileSdk = 37
@@ -107,18 +121,23 @@ android {
 
     signingConfigs {
         release {
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
-            storeFile System.getenv("KEY_PATH") ? file(System.getenv("KEY_PATH")) : null
-            storePassword System.getenv("KEY_PASSWORD")
+            if (hasReleaseSigningKey) {
+                keyAlias releaseKeyAlias
+                keyPassword System.getenv("KEY_PASSWORD")
+                storeFile releaseKeystoreFile
+                storePassword System.getenv("KEY_PASSWORD")
+            }
         }
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.release
+            // Sign with the release key when one is configured, otherwise with
+            // the debug keys, so `flutter run --release` and CI artifacts stay
+            // installable without repository secrets.
+            signingConfig = hasReleaseSigningKey
+                    ? signingConfigs.release
+                    : signingConfigs.debug
 
             shrinkResources = !project.hasProperty("disableOptimization")
             minifyEnabled = !project.hasProperty("disableOptimization")

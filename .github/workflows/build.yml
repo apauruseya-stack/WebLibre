@@ -107,8 +107,22 @@ jobs:
       - name: Create key file
         working-directory: apps/weblibre
         run: |
-          echo $KEY_JKS | base64 -di > key.jks
+          if [ -z "$KEY_JKS" ]; then
+            echo "::warning::KEY_JKS is not set; release builds will be debug-signed"
+            echo "KEY_PATH=" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          echo "$KEY_JKS" | base64 -di > key.jks
           chmod 600 key.jks
+
+          # A corrupt or truncated secret must not fail packaging; fall back to
+          # debug signing so the APKs stay installable.
+          if ! keytool -list -keystore key.jks -storepass "$KEY_PASSWORD" > /dev/null 2>&1; then
+            echo "::warning::KEY_JKS does not decode to a readable keystore; release builds will be debug-signed"
+            rm -f key.jks
+            echo "KEY_PATH=" >> "$GITHUB_ENV"
+          fi
 
       - uses: subosito/flutter-action@v2
         with:
