@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:flutter_singbox_proxy/flutter_singbox_proxy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/core/design/display_features.dart';
 import 'package:weblibre/core/logger.dart';
@@ -103,7 +104,12 @@ class ProfileTile extends ConsumerWidget {
         ),
       ),
       subtitle: ProfileSubtitle(
-        typeLabel: profile.type.label(context),
+        typeLabel: SingboxProxyProfileType.values
+            .firstWhere(
+              (e) => e.name == profile.type,
+              orElse: () => SingboxProxyProfileType.socks,
+            )
+            .label(context),
         latency: latencyResult,
         autostart: profile.autostart,
         condition: condition,
@@ -226,7 +232,10 @@ class ProfileTile extends ConsumerWidget {
     final shareUri = encodeProxyShareUri(
       ProxyShareEnvelope(
         name: profile.name,
-        type: profile.type,
+        type: SingboxProxyProfileType.values.firstWhere(
+          (e) => e.name == profile.type,
+          orElse: () => SingboxProxyProfileType.socks,
+        ),
         configJson: profile.configJson,
         secretJson: secret,
         dnsOverrideJson: profile.dnsOverrideJson,

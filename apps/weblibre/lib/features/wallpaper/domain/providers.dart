@@ -42,7 +42,7 @@ WallpaperStore wallpaperStore(Ref ref) {
 /// Where a fetched online wallpaper is cached. Lives in the selected profile
 /// dir so it travels with backups and is cleaned up on profile deletion.
 File onlineWallpaperCacheFile() {
-  final dir = Directory(filesystem.selectedProfileDir);
+  final dir = filesystem.selectedProfileDir;
   return File('${dir.path}/home_wallpaper_online.jpg');
 }
 
@@ -133,7 +133,7 @@ class WallpaperSweeper extends _$WallpaperSweeper {
 /// marker file in the profile dir. Defaults to 'black'.
 String _readLogoChoice() {
   try {
-    final file = File('${filesystem.selectedProfileDir}/home_wallpaper_logo_choice.txt');
+    final file = File('${filesystem.selectedProfileDir.path}/home_wallpaper_logo_choice.txt');
     if (file.existsSync()) {
       final value = file.readAsStringSync().trim();
       if (value == 'white') return 'white';
@@ -145,7 +145,7 @@ String _readLogoChoice() {
 /// Persists the user's chosen logo variant.
 Future<void> setHomeWallpaperLogoChoice(String choice) async {
   try {
-    final file = File('${filesystem.selectedProfileDir}/home_wallpaper_logo_choice.txt');
+    final file = File('${filesystem.selectedProfileDir.path}/home_wallpaper_logo_choice.txt');
     await file.parent.create(recursive: true);
     await file.writeAsString(choice, flush: true);
   } catch (_) {}

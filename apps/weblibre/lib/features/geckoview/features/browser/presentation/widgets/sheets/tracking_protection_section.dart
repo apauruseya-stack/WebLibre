@@ -255,10 +255,10 @@ class _CookieBannerStatusRow extends ConsumerWidget {
     final l10n = AppLocalizations.of(context);
 
     final String title = switch (event.action) {
-      'rejected' => l10n.browser_cookieBannerRejected,
-      'hidden' => l10n.browser_cookieBannerHidden,
-      'detected' => l10n.browser_cookieBannerDetected,
-      _ => l10n.browser_cookieBannerFailed,
+      'rejected' => 'Cookie banner rejected',
+      'hidden' => 'Cookie banner hidden',
+      'detected' => 'Cookie banner detected',
+      _ => 'Cookie banner failed',
     };
 
     final IconData icon = switch (event.action) {
@@ -280,7 +280,7 @@ class _CookieBannerStatusRow extends ConsumerWidget {
           title: Text(title),
           subtitle: event.ruleId == null
               ? null
-              : Text(l10n.browser_cookieBannerRule(event.ruleId!)),
+              : Text('Rule: ${event.ruleId}'),
           trailing: TextButton(
             onPressed: () async {
               final current = ref.read(generalSettingsWithDefaultsProvider);

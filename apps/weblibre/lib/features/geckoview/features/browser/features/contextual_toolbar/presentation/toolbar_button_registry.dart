@@ -27,6 +27,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/geckoview/domain/entities/states/readerable.dart';
 import 'package:weblibre/features/geckoview/domain/controllers/bottom_sheet.dart';
+import 'package:weblibre/features/geckoview/features/browser/domain/entities/sheet.dart';
+import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/privacy_xray_badge.dart';
+import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/toolbar_button.dart';
 import 'package:weblibre/features/geckoview/domain/providers.dart';
 import 'package:weblibre/features/geckoview/domain/providers/desktop_mode.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_detail_state.dart';
@@ -617,6 +620,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
         icon: const Icon(MdiIcons.fire),
       );
     },
+  ),
   ToolbarButtonDefinition(
     spec: privacyXRayToolbarButtonSpec,
     icon: MdiIcons.shieldSearch,
@@ -645,7 +649,6 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
         },
       );
     },
-  ),
   ),
   ToolbarButtonDefinition(
     spec: quitToolbarButtonSpec,

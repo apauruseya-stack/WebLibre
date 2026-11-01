@@ -85,7 +85,7 @@ class HomeClock extends HookConsumerWidget {
           ),
         ),
       ],
-    );
+      ),
     );
   }
 
